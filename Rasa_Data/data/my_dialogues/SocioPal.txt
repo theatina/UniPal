@@ -2,7 +2,7 @@
 (U: user, DS_SP: Dialogue System)
 
 --> Dialogue1 
-U:
+U: Hi 
 DS_SP:
 
 
