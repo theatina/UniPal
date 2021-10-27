@@ -15,8 +15,8 @@ stories:
       request for another <means_of_transport> option  
   - action: describes route based on <means_of_transport> chosen by the user 
   - user: |
-      thanks_bot 
-  - action: SocioPal asks for further help  
+      thanks_bot
+  - action: SocioPal asks for further help 
   - user: |
       request for additional uni location access option
   - action: asks for preferable <means_of_transport> 
@@ -27,60 +27,55 @@ stories:
       request for another <means_of_transport> option  
   - action: describes route based on <means_of_transport> chosen by the user 
   - user: |
-      thanks_bot 
-  - action: SocioPal asks for further help  
+      thanks_bot
+  - action: SocioPal asks for further help 
   - user: | 
       negation, goodbye_bot 
   - action: utter_goodbye 
 
-# - story: UniPal StoryTime2 - Mail to <class_name> professor about prerequisites
-#   steps:
-#   - user: |
-#       hi_bot
-#   - action: utter_greet 
-#   - user: |
-#       request for post schedule on <social_media_name> on <page_name> 
-#   - action: asks for <post_content> 
-#   - user: |
-#       types <post_content>  
-#   - action: asks for <date_to_post> (simultaneous page_name confirmation) 
-#   - user: | 
-#       informs SocioPal about <date_to_post> 
-#   - action: SocioPal confirms the user request variables 
-#   - user: |
-#       affirmation 
-#   - action: SocioPal asks for further help  
-#   - user: |
-#       affirmation
-#   - action: SocioPal asks for further help (certain request) 
-#   - user: |
-#       goodbye_bot 
-#   - action: utter_goodbye 
+
+- story: UniPal StoryTime2 - Mail to <class_name> professor
+  steps:
+  - user: |
+      hi_bot
+  - action: utter_greet 
+  - user: |
+      request for mail to <class_name> professor 
+  - action: SocioPal returns <prof_name> and asks for confirmation 
+  - user: |
+      affirmation 
+  - action: asks for mail content
+  - user: | 
+      informs SocioPal about mail content
+  - action: SocioPal confirms the user request variables 
+  - user: |
+      affirmation 
+  - action: SocioPal asks for further help 
+  - user: |
+      negation, goodbye_bot
+  - action: utter_goodbye 
 
 
-# - story: UniPal StoryTime3 - Create Agenda deadline reminder
-#   steps:
-#   - user: |
-#       hi_bot
-#   - action: utter_greet 
-#   - user: |
-#       request for post schedule on <social_media_name> on <page_name> 
-#   - action: asks for <post_content> 
-#   - user: |
-#       types <post_content>  
-#   - action: asks for <date_to_post> (simultaneous page_name confirmation) 
-#   - user: | 
-#       informs SocioPal about <date_to_post> 
-#   - action: SocioPal confirms the user request variables 
-#   - user: |
-#       affirmation 
-#   - action: SocioPal asks for further help  
-#   - user: |
-#       affirmation
-#   - action: SocioPal asks for further help (certain request) 
-#   - user: |
-#       goodbye_bot 
-#   - action: utter_goodbye 
+- story: UniPal StoryTime3 - Create Agenda deadline reminder
+  steps:
+  - user: |
+      hi_bot 
+  - action: utter_greet 
+  - user: |
+      request for <class_name> projectX deadline info 
+  - action: returns <deadline_date_time> 
+  - user: |
+      request for <class_name> projectX deadline agenda reminder 
+  - action: SocioPal confirms the user request variables 
+  - user: |
+      affirmation 
+  - action: SocioPal asks for further help  
+  - user: |
+      affirmation
+  - action: SocioPal asks for further help (certain request) 
+  - user: |
+      negation, goodbye_bot
+  - action: utter_goodbye 
 
 # - story: UniPal_ex4
 #   steps:
