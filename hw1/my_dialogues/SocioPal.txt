@@ -1,30 +1,97 @@
 > SocioPal Dialogue Examples <
 (U: user, DS_SP: Dialogue System)
 
---> Dialogue1 
-U:
-DS_SP:
+--> Dialogue1 - [ message read 'n' reply ]
+(1) U: Hi.
+(2) DS_SP: Goodmorning!
+(3) U: How many unread messages do I have on Facebook?
+(4) DS_SP: There are 2 unread messages on Facebook.
+(5) U: Who are the messages from?
+(6) DS_SP: The messages are from Joey and Pheobe.
+(7) U: Read the message from Joey please.
+(8) DS_SP: Joey sent you "I can't make it today, see you tomorrow".
+(9) U: Ok, send Joey a message on Facebook.
+(10) DS_SP: What is the message?
+(11) U: "It's ok, I understand. See you!" (pause?!)
+(12) DS_SP: I'll now send a message to Joey saying: "It's ok, I understand. See you!", is that correct?
+(13) U: Yes, thank you.
+(14) DS_SP: Is anything else I can do for you?
+(15) U: No, thank you, goodbye!
+(16) DS_SP: Have a nice day!
 
 
 
---> Dialogue2
-U:
-DS_SP:
+--> Dialogue2 - [ notifs 'n' followers ]
+(1) U: Hello SocioPal!
+(2) DS_SP: Hi there!
+(3) U: Do I have any new notifications on Instagram?
+(4) DS_SP: There are 10 new notifications on Instagram.
+(5) U: Any follower requests?
+(6) DS_SP: Yes, you have 2 new follower requests.
+(7) U: What is the name of the accounts that request to follow me?
+(8) DS_SP: The follower requests are from Annie Bane and Tom Loop.
+(9) U: Accept the request of Annie Bane please.
+(10) DS_SP: You would like to accept Annie Bane's follow request, am I right?
+(11) U: Yeap.
+(12) DS_SP: Do you need anything else?
+(13) U: No, thanks, bye!
+(14) DS_SP: Bye Bye friend!
 
 
 
---> Dialogue3 
-U:
-DS_SP:
+--> Dialogue3 - [ account update ]
+(1) U: Hi.
+(2) DS_SP: Goodmorning!
+(3) U: How many unread messages do I have on Facebook?
+(4) DS_SP: There are 2 unread messages on Facebook.
+(5) U: Who are the messages from?
+(6) DS_SP: The messages are from Joey and Pheobe.
+(7) U: Read the message from Joey please.
+(8) DS_SP: Joey sent you "I can't make it today, see you tomorrow".
+(9) U: Ok, send Joey a message on Facebook.
+(10) DS_SP: What is the message?
+(11) U: "It's ok, I understand. See you!" (pause?!)
+(12) DS_SP: I'll now send a message to Joey saying: "It's ok, I understand. See you!", is that correct?
+(13) U: Yes, thank you.
+(14) DS_SP: Is anything else I can do for you?
+(15) U: No, thank you, goodbye!
+(16) DS_SP: Have a nice day!
 
 
 
---> Dialogue4
-U:
-DS_SP:
+--> Dialogue4 - [  ]
+(1) U: Hi.
+(2) DS_SP: Goodmorning!
+(3) U: How many unread messages do I have on Facebook?
+(4) DS_SP: There are 2 unread messages on Facebook.
+(5) U: Who are the messages from?
+(6) DS_SP: The messages are from Joey and Pheobe.
+(7) U: Read the message from Joey please.
+(8) DS_SP: Joey sent you "I can't make it today, see you tomorrow".
+(9) U: Ok, send Joey a message on Facebook.
+(10) DS_SP: What is the message?
+(11) U: "It's ok, I understand. See you!" (pause?!)
+(12) DS_SP: I'll now send a message to Joey saying: "It's ok, I understand. See you!", is that correct?
+(13) U: Yes, thank you.
+(14) DS_SP: Is anything else I can do for you?
+(15) U: No, thank you, goodbye!
+(16) DS_SP: Have a nice day!
 
 
-
---> Dialogue5 
-U:
-DS_SP:
+--> Dialogue5 - [  ]
+(1) U: Hi.
+(2) DS_SP: Goodmorning!
+(3) U: How many unread messages do I have on Facebook?
+(4) DS_SP: There are 2 unread messages on Facebook.
+(5) U: Who are the messages from?
+(6) DS_SP: The messages are from Joey and Pheobe.
+(7) U: Read the message from Joey please.
+(8) DS_SP: Joey sent you "I can't make it today, see you tomorrow".
+(9) U: Ok, send Joey a message on Facebook.
+(10) DS_SP: What is the message?
+(11) U: "It's ok, I understand. See you!" (pause?!)
+(12) DS_SP: I'll now send a message to Joey saying: "It's ok, I understand. See you!", is that correct?
+(13) U: Yes, thank you.
+(14) DS_SP: Is anything else I can do for you?
+(15) U: No, thank you, goodbye!
+(16) DS_SP: Have a nice day!

@@ -3,7 +3,7 @@
 --- Idea vol. 1 ---
 Name: UniPal
 Domain: Academic Support DS
-Tasks: University access/location/parking/storage info, Timetable info, Lecture info, Accessibility info, Examinations/Results info, Class info, Event info, Secretary/Professors contact, Resources, Activities
+Tasks: University access/location/parking/storage info, Timetable info, Lecture info, Accessibility info, Examinations/Results info, Class info, Event info, Secretary/Professors contact, Resources, Activities, New agenda events
 
 
 --- Idea vol. 2 ---
