@@ -1,0 +1,34 @@
+version: "2.0"
+
+stories:
+
+- story: SocioPal_ex1
+  steps:
+  - action: utter_greet
+  - action: utter_cheer_up
+  - action: utter_goodbye
+
+- story: SocioPal_ex2
+  steps:
+  - action: utter_greet
+  - action: utter_cheer_up
+  - action: utter_goodbye
+
+- story: SocioPal_ex3
+  steps:
+  - action: utter_greet
+  - action: utter_cheer_up
+  - action: utter_goodbye
+
+- story: SocioPal_ex4
+  steps:
+  - action: utter_greet
+  - action: utter_cheer_up
+  - action: utter_goodbye
+
+- story: SocioPal_ex5
+  steps:
+  - action: utter_greet
+  - action: utter_cheer_up
+  - action: utter_goodbye
+  

@@ -1,0 +1,30 @@
+> SocioPal Dialogue Examples <
+(U: user, DS_SP: Dialogue System)
+
+--> Dialogue1 
+U:
+DS_SP:
+
+
+
+--> Dialogue2
+U:
+DS_SP:
+
+
+
+--> Dialogue3 
+U:
+DS_SP:
+
+
+
+--> Dialogue4
+U:
+DS_SP:
+
+
+
+--> Dialogue5 
+U:
+DS_SP:

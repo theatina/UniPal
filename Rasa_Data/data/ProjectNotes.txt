@@ -1,0 +1,13 @@
+> Brainstorming <
+
+--- Idea vol. 1 ---
+Name: UniPal
+Domain: Academic Support DS
+Tasks: University access/location/parking/storage info, Timetable info, Lecture info, Accessibility info, Examinations/Results info, Class info, Event info, Secretary/Professors contact, Resources, Activities
+
+
+--- Idea vol. 2 ---
+Name: SocioPal
+Domain: Social Media Manager
+Tasks: Post schedule, Timeline info, Certain follower's/friend's/contact's info, Direct Message, Status update, Unread messages/mails/posts update
+(Facebook, Instagram, Discord, LinkedIn, Viber, Skype, WhatsApp, Signal, Mail)

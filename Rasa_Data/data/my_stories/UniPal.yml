@@ -1,0 +1,45 @@
+version: "2.0"
+
+stories:
+
+- story: UniPal_ex1
+  steps:
+  - action: utter_greet
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - action: utter_goodbye
+
+- story: UniPal_ex2
+  steps:
+  - action: utter_greet
+  - action: utter_cheer_up2
+  - action: utter_did_that_help
+  - action: utter_goodbye
+
+- story: UniPal_ex3
+  steps:
+  - action: utter_greet
+  - action: utter_cheer_up
+  - action: utter_did_that_help3
+  - action: utter_goodbye
+
+- story: UniPal_ex4
+  steps:
+  - action: utter_greet
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - action: utter_goodbye
+
+- story: UniPal_ex5
+  steps:
+  - user: hello there!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      amazing
+    intent: mood_great
+  - action: utter_happy
+  - user: |
+      bye-bye!
+    intent: goodbye
+  - action: utter_goodbye
