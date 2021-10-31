@@ -82,12 +82,12 @@ x = [i for i in range(len(temp_dt))]
 data_lists = [ temp_dt, temp_tw, temp_dw]
 
 # plt.boxplot(data_lists)
-fig,ax = plt.subplots(figsize=(12,50))
+fig,ax = plt.subplots(figsize=(12,26))
 bp1 = ax.boxplot(temp_dt, positions=[1], patch_artist=True, boxprops=dict(facecolor="C0"))
 bp2 = ax.boxplot(temp_tw, positions=[2], patch_artist=True, boxprops=dict(facecolor="C2"))
 bp3 = ax.boxplot(temp_dw, positions=[3], patch_artist=True, boxprops=dict(facecolor="C4"))
 
-y_ticks = [min(min(temp_dt),min(temp_tw), min(temp_dw)), max(max(temp_dt),max(temp_tw), max(temp_dw)), statistics.stdev(temp_dt), np.mean(temp_dt), statistics.stdev(temp_tw), np.mean(temp_tw), statistics.stdev(temp_dw), np.mean(temp_dw)]
+y_ticks = [min(min(temp_dt),min(temp_tw), min(temp_dw)), max(max(temp_dt),max(temp_tw), max(temp_dw)), np.mean(temp_dt), np.mean(temp_tw), np.mean(temp_dw)]
 y_ticks.sort()
 print(y_ticks)
 ax.set_xticks([1, 2, 3])
@@ -96,9 +96,13 @@ ax.set_yticks(y_ticks)
 
 ax.set_ylim([min(min(temp_dt),min(temp_tw)-10, min(temp_dw)), max(max(temp_dt),max(temp_tw), max(temp_dw))+10])
 # p1_mean = ax.plot(1, np.mean(temp_dt), "ro" )
-ax.annotate(f"Mean: {np.mean(temp_dt):0.1f}", xy=(1, np.mean(temp_dt)), xytext=(1.2, np.mean(temp_dt)), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.5", color='red') )
-ax.annotate(f"Mean: {np.mean(temp_tw):0.1f}", xy=(2, np.mean(temp_tw)), xytext=(2.2, np.mean(temp_tw)), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.5", color='red') )
-ax.annotate(f"Mean: {np.mean(temp_dw):0.1f}", xy=(3, np.mean(temp_dw)), xytext=(3-0.5, np.mean(temp_dw)), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.5", color='red') )
+ax.annotate(f"Mean: {np.mean(temp_dt):0.1f}", xy=(1, np.mean(temp_dt)), xytext=(1.2, np.mean(temp_dt)+2), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='red') )
+ax.annotate(f"Mean: {np.mean(temp_tw):0.1f}", xy=(2, np.mean(temp_tw)), xytext=(2.2, np.mean(temp_tw)+2), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='red') )
+ax.annotate(f"Mean: {np.mean(temp_dw):0.1f}", xy=(3, np.mean(temp_dw)), xytext=(3-0.5, np.mean(temp_dw)+2), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='red') )
+
+ax.annotate(f"Median: {int(np.median(temp_dt))}", xy=(1, np.median(temp_dt)), xytext=(1.2, np.median(temp_dt)-2), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='blue') )
+ax.annotate(f"Median: {int(np.median(temp_tw))}", xy=(2, np.median(temp_tw)), xytext=(2.2, np.median(temp_tw)-2), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='blue') )
+ax.annotate(f"Median: {int(np.median(temp_dw))}", xy=(3, np.median(temp_dw)), xytext=(3-0.5, np.median(temp_dw)-2), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='blue') )
 
 # plt.legend([bp1["boxes"][0], bp2["boxes"][0], bp3["boxes"][0]], ['Turns per Dialogue', 'Words per Turn', 'Words per Dialogue'], loc='upper right')
 
