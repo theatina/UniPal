@@ -6,18 +6,18 @@
 > Vocabulary Size: 903
 
 > Turns per Dialogue [9, 18] 
-Standard Deviation: 1.7
 Mean: 12.9
+Standard Deviation: 1.7
 Median: 13
 
 > Words per Turn [5, 29] 
-Standard Deviation: 5.8
 Mean: 13.7
+Standard Deviation: 5.8
 Median: 13
 
 > Words per Dialogue [112, 273] 
-Standard Deviation: 29.3
 Mean: 177.5
+Standard Deviation: 29.3
 Median: 178
 
 > Dialogue Turns:

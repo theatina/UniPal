@@ -14,9 +14,10 @@ def print_results(stats_filepath,tot_turns,tokenized_text,tot_dialogues,vocab_di
         writer.write(f"\n> Total Words: {len(tokenized_text)}")
         writer.write(f"\n> Total Dialogues: {tot_dialogues}")
         writer.write(f"\n> Vocabulary Size: {len(vocab_dict)}")
-        writer.write(f"\n\n> Turns per Dialogue [{min(dialogues_turns)}, {max(dialogues_turns)}] \nStandard Deviation: {statistics.stdev(dialogues_turns):0.1f}\nMean: {np.mean(dialogues_turns):0.1f}\nMedian: {int(np.median(dialogues_turns))}")
-        writer.write(f"\n\n> Words per Turn [{min(temp_tw)}, {max(temp_tw)}] \nStandard Deviation: {statistics.stdev(temp_tw):0.1f}\nMean: {np.mean(temp_tw):0.1f}\nMedian: {int(np.median(temp_tw))}")
-        writer.write(f"\n\n> Words per Dialogue [{min(temp_dw)}, {max(temp_dw)}] \nStandard Deviation: {statistics.stdev(temp_dw):0.1f}\nMean: {np.mean(temp_dw):0.1f}\nMedian: {int(np.median(temp_dw))}")
+       
+        writer.write(f"\n\n> Turns per Dialogue [{min(dialogues_turns)}, {max(dialogues_turns)}] \nMean: {np.mean(dialogues_turns):0.1f}\nStandard Deviation: {statistics.stdev(dialogues_turns):0.1f}\nMedian: {int(np.median(dialogues_turns))}")
+        writer.write(f"\n\n> Words per Turn [{min(temp_tw)}, {max(temp_tw)}] \nMean: {np.mean(temp_tw):0.1f}\nStandard Deviation: {statistics.stdev(temp_tw):0.1f}\nMedian: {int(np.median(temp_tw))}")
+        writer.write(f"\n\n> Words per Dialogue [{min(temp_dw)}, {max(temp_dw)}] \nMean: {np.mean(temp_dw):0.1f}\nStandard Deviation: {statistics.stdev(temp_dw):0.1f}\nMedian: {int(np.median(temp_dw))}")
 
         writer.write(f"\n\n> Dialogue Turns:")
         for i,d in enumerate(dialogues_turns):
@@ -79,10 +80,10 @@ def plotting(dialogues_turns,temp_tw,temp_dw):
 
     ax.set_ylim([min(min(dialogues_turns),min(temp_tw)-10, min(temp_dw)), max(max(dialogues_turns),max(temp_tw), max(temp_dw))+10])
 
-    # Annotate mean values
-    ax.annotate(f"Mean: {np.mean(dialogues_turns):0.1f}", xy=(1, np.mean(dialogues_turns)), xytext=(1.2, np.mean(dialogues_turns)+2), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='red') )
-    ax.annotate(f"Mean: {np.mean(temp_tw):0.1f}", xy=(2, np.mean(temp_tw)), xytext=(2.2, np.mean(temp_tw)+2), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='red') )
-    ax.annotate(f"Mean: {np.mean(temp_dw):0.1f}", xy=(3, np.mean(temp_dw)), xytext=(3-0.5, np.mean(temp_dw)+2), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='red') )
+    # Annotate mean/std values
+    ax.annotate(f"Mean: {np.mean(dialogues_turns):0.1f}\nStd: {statistics.stdev(dialogues_turns):0.1f}", xy=(1, np.mean(dialogues_turns)), xytext=(1.2, np.mean(dialogues_turns)+2), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='red') )
+    ax.annotate(f"Mean: {np.mean(temp_tw):0.1f}\nStd: {statistics.stdev(temp_tw):0.1f}", xy=(2, np.mean(temp_tw)), xytext=(2.2, np.mean(temp_tw)+2), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='red') )
+    ax.annotate(f"Mean: {np.mean(temp_dw):0.1f}\nStd: {statistics.stdev(temp_dw):0.1f}", xy=(3, np.mean(temp_dw)), xytext=(3-0.5, np.mean(temp_dw)+2), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='red') )
 
     # Annotate median values
     ax.annotate(f"Median: {int(np.median(dialogues_turns))}", xy=(1, np.median(dialogues_turns)), xytext=(1.2, np.median(dialogues_turns)-2), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='blue') )
@@ -90,12 +91,12 @@ def plotting(dialogues_turns,temp_tw,temp_dw):
     ax.annotate(f"Median: {int(np.median(temp_dw))}", xy=(3, np.median(temp_dw)), xytext=(3-0.5, np.median(temp_dw)-2), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='blue') )
 
     # Annotate max values
-    ax.annotate(f"Max: {int(max(dialogues_turns))}", xy=(1, max(dialogues_turns)), xytext=(1.2, max(dialogues_turns)+2), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='green') )
+    ax.annotate(f"Max: {int(max(dialogues_turns))}", xy=(1, max(dialogues_turns)), xytext=(1.2, max(dialogues_turns)+3), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='green') )
     ax.annotate(f"Max: {int(max(temp_tw))}", xy=(2, max(temp_tw)), xytext=(2.2, max(temp_tw)), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='green') )
     ax.annotate(f"Max: {int(max(temp_dw))}", xy=(3, max(temp_dw)), xytext=(3-0.5, max(temp_dw)), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='green') )
 
     # Annotate min values
-    ax.annotate(f"Min: {int(min(dialogues_turns))}", xy=(1, min(dialogues_turns)), xytext=(1.2, min(dialogues_turns)-2), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='purple') )
+    ax.annotate(f"Min: {int(min(dialogues_turns))}", xy=(1, min(dialogues_turns)), xytext=(1.2, min(dialogues_turns)-3), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='purple') )
     ax.annotate(f"Min: {int(min(temp_tw))}", xy=(2, min(temp_tw)), xytext=(2.2, min(temp_tw)), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='purple') )
     ax.annotate(f"Min: {int(min(temp_dw))}", xy=(3, min(temp_dw)), xytext=(3-0.5, min(temp_dw)), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.1", color='purple') )
 
