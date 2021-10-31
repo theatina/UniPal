@@ -40,7 +40,7 @@ my_funlib.print_vocab(vocab_filepath,vocab_dict)
 
 # Results to file
 stats_filepath = ".."+os.sep+"data"+os.sep+"results"+os.sep+"dataset_stats.txt"
-my_funlib.print_results(stats_filepath,tot_turns,tokenized_text,tot_dialogues,vocab_dict,temp_dt,temp_tw,temp_dw,dialogues_turns)
+my_funlib.print_results(stats_filepath,tot_turns,tokenized_text,tot_dialogues,vocab_dict,dialogues_turns,temp_tw,temp_dw)
 
 # Plot results
-my_funlib.plotting(temp_dt,temp_tw,temp_dw)
+my_funlib.plotting(dialogues_turns,temp_tw,temp_dw)
