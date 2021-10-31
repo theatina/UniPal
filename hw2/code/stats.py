@@ -95,8 +95,11 @@ ax.set_xticklabels(['Turns per Dialogue', 'Words per Turn', 'Words per Dialogue'
 ax.set_yticks(y_ticks)
 
 ax.set_ylim([min(min(temp_dt),min(temp_tw)-10, min(temp_dw)), max(max(temp_dt),max(temp_tw), max(temp_dw))+10])
-# p1_mean = ax.text(1, np.mean(temp_dt), str(np.mean(temp_dt)) )
-ax.annotate("", xy=(1, np.mean(temp_dt)), arrowprops=dict(arrowstyle="->") )
+# p1_mean = ax.plot(1, np.mean(temp_dt), "ro" )
+ax.annotate(f"Mean: {np.mean(temp_dt):0.1f}", xy=(1, np.mean(temp_dt)), xytext=(1.2, np.mean(temp_dt)), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.5", color='red') )
+ax.annotate(f"Mean: {np.mean(temp_tw):0.1f}", xy=(2, np.mean(temp_tw)), xytext=(2.2, np.mean(temp_tw)), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.5", color='red') )
+ax.annotate(f"Mean: {np.mean(temp_dw):0.1f}", xy=(3, np.mean(temp_dw)), xytext=(3-0.5, np.mean(temp_dw)), ha='left', va='bottom', arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=0.5", color='red') )
+
 # plt.legend([bp1["boxes"][0], bp2["boxes"][0], bp3["boxes"][0]], ['Turns per Dialogue', 'Words per Turn', 'Words per Dialogue'], loc='upper right')
 
 plot_filepath = ".."+os.sep+"data"+os.sep+"results"+os.sep+"boxplots_dt_tw_dw.png"
