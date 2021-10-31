@@ -48,6 +48,7 @@ stats_filepath = ".."+os.sep+"data"+os.sep+"results"+os.sep+"dataset_stats.txt"
 with open(stats_filepath,"w",encoding="utf-8") as writer:
     writer.write("-> Dataset Statistics <-\n")
     writer.write(f"\n> Total turns: {tot_turns}")
+    writer.write(f"\n> Total words: {len(tokenized_text)}")
     writer.write(f"\n> Vocabulary size: {len(vocab_dict)}")
     writer.write(f"\n> Total dialogues: {tot_dialogues}\n")
     writer.write(f"\n> Dialogue turns:")
