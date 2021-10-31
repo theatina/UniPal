@@ -102,3 +102,6 @@ def plotting(temp_dt,temp_tw,temp_dw):
     # Save figure
     plot_filepath = ".."+os.sep+"data"+os.sep+"results"+os.sep+"boxplots_dt_tw_dw.png"
     plt.savefig(plot_filepath,dpi=300)
+
+    plot_filepath = ".."+os.sep+"data"+os.sep+"results"+os.sep+"boxplots_dt_tw_dw__small.png"
+    plt.savefig(plot_filepath,dpi=100)
