@@ -1,6 +1,7 @@
 -> Dataset Statistics <-
 
 > Total turns: 12936
+> Vocabulary size: 903
 > Total dialogues: 1000
 
 > Dialogue turns:

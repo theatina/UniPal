@@ -1,6 +1,7 @@
 import pandas as pd
 import os
-from nltk.tokenize import TreebankWordTokenizer
+from nltk.tokenize import TreebankWordTokenizer, word_tokenize
+
 
 dataset_path = ".."+os.sep+"data"+os.sep+"dataset"+os.sep+"dataframe.txt"
 data = pd.read_csv(dataset_path, header=None, encoding='utf-8',sep="\t")
@@ -8,12 +9,9 @@ data = data.rename(columns={0: "Dialogue", 1: "Turn", 2: "User", 3: "Bot"})
 
 # Total Turns
 tot_turns = len(data)
-print(f"\nTotal turns: {tot_turns}")
 
 # Total Dialogues
 tot_dialogues = data.iloc[tot_turns-1,data.columns.get_loc("Dialogue")]
-print(f"\nTotal dialogues: {tot_turns}")
-
 
 # Turn in each dialogue
 dialogues_turns = []
@@ -38,6 +36,7 @@ for word in tokenized_text:
 
 vocab_filepath = ".."+os.sep+"data"+os.sep+"results"+os.sep+"vocab_dict.txt"
 with open(vocab_filepath,"w",encoding="utf-8") as voc_writer:
+    voc_writer.write(f"Treebank Word Tokenizer\n")
     voc_writer.write(f"Vocabulary size: {len(vocab_dict)}\n")
     voc_writer.write(f"\n> Dictionary:\n")
     for w in vocab_dict.keys():
@@ -49,6 +48,7 @@ stats_filepath = ".."+os.sep+"data"+os.sep+"results"+os.sep+"dataset_stats.txt"
 with open(stats_filepath,"w",encoding="utf-8") as writer:
     writer.write("-> Dataset Statistics <-\n")
     writer.write(f"\n> Total turns: {tot_turns}")
+    writer.write(f"\n> Vocabulary size: {len(vocab_dict)}")
     writer.write(f"\n> Total dialogues: {tot_dialogues}\n")
     writer.write(f"\n> Dialogue turns:")
     for i,d in enumerate(dialogues_turns):
