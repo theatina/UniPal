@@ -3,6 +3,15 @@
 > Total turns: 12936
 > Total words: 177538
 > Vocabulary size: 903
+
+> Turns per dialogue 
+Standard Diviation: 3.9
+Mean: 7.1
+
+> Words per dialogue 
+Standard Diviation: 5.8
+Mean: 13.7
+
 > Total dialogues: 1000
 
 > Dialogue turns:

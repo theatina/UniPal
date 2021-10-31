@@ -1,7 +1,8 @@
 import pandas as pd
 import os
 from nltk.tokenize import TreebankWordTokenizer, word_tokenize
-
+import statistics
+import numpy as np
 
 dataset_path = ".."+os.sep+"data"+os.sep+"dataset"+os.sep+"dataframe.txt"
 data = pd.read_csv(dataset_path, header=None, encoding='utf-8',sep="\t")
@@ -13,12 +14,19 @@ tot_turns = len(data)
 # Total Dialogues
 tot_dialogues = data.iloc[tot_turns-1,data.columns.get_loc("Dialogue")]
 
-# Turn in each dialogue
+# Turns per dialogue
 dialogues_turns = []
 temp_dt = data["Turn"].tolist()
 dialogues_turns = [ prev_t for prev_t,t in zip(temp_dt[:-1],temp_dt[1:]) if prev_t>t]
 
-# Vocabulary size
+# Words per turn
+with open(dataset_path,"r",encoding="utf-8") as r:
+    lines = r.read().split("\n")
+
+lines = [" ".join(l.split("\t")[2:]) for l in lines if l!=""]
+temp_dw = [len(TreebankWordTokenizer().tokenize(l)) for l in lines]
+
+# Vocabulary
 list_user = data["User"].tolist()
 list_bot = data["Bot"].tolist()
 list_user.extend(list_bot)
@@ -34,6 +42,7 @@ for word in tokenized_text:
         vocab_dict[word] = 1
 
 
+# Vocabulary dictionary to file
 vocab_filepath = ".."+os.sep+"data"+os.sep+"results"+os.sep+"vocab_dict.txt"
 with open(vocab_filepath,"w",encoding="utf-8") as voc_writer:
     voc_writer.write(f"Treebank Word Tokenizer\n")
@@ -50,6 +59,8 @@ with open(stats_filepath,"w",encoding="utf-8") as writer:
     writer.write(f"\n> Total turns: {tot_turns}")
     writer.write(f"\n> Total words: {len(tokenized_text)}")
     writer.write(f"\n> Vocabulary size: {len(vocab_dict)}")
+    writer.write(f"\n\n> Turns per dialogue \nStandard Diviation: {statistics.stdev(temp_dt):0.1f}\nMean: {np.mean(temp_dt):0.1f}")
+    writer.write(f"\n\n> Words per dialogue \nStandard Diviation: {statistics.stdev(temp_dw):0.1f}\nMean: {np.mean(temp_dw):0.1f}\n")
     writer.write(f"\n> Total dialogues: {tot_dialogues}\n")
     writer.write(f"\n> Dialogue turns:")
     for i,d in enumerate(dialogues_turns):
