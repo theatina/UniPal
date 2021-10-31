@@ -1,20 +1,23 @@
 -> Dataset Statistics <-
 
-> Total turns: 12936
-> Total words: 177538
-> Vocabulary size: 903
+> Total Turns: 12936
+> Total Words: 177538
+> Total Dialogues: 1000
+> Vocabulary Size: 903
 
-> Turns per dialogue 
-Standard Diviation: 3.9
+> Turns per Dialogue 
+Standard Deviation: 3.9
 Mean: 7.1
 
-> Words per dialogue 
-Standard Diviation: 5.8
+> Words per Turn 
+Standard Deviation: 5.8
 Mean: 13.7
 
-> Total dialogues: 1000
+> Words per Dialogue 
+Standard Deviation: 29.3
+Mean: 177.5
 
-> Dialogue turns:
+> Dialogue Turns:
 Dialogue no.1: 15
 Dialogue no.2: 13
 Dialogue no.3: 13
