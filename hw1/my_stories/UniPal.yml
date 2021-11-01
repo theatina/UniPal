@@ -77,12 +77,9 @@ stories:
       negation, goodbye_bot
   - action: utter_goodbye 
 
-# - story: UniPal_ex4
-#   steps:
-#   - action: utter_greet
-#   - action: utter_cheer_up
-#   - action: utter_did_that_help
-#   - action: utter_goodbye
+- story: UniPal_ex4
+  steps:
+
 
 # - story: UniPal_ex5
 #   steps:                   
