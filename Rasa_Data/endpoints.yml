@@ -10,8 +10,9 @@
 # Server which runs your custom actions.
 # https://rasa.com/docs/rasa/custom-actions
 
-#action_endpoint:
-#  url: "http://localhost:5055/webhook"
+action_endpoint:
+  url: "http://localhost:5005/webhooks"
+  # url: "https://ca42-2a02-85f-f0f6-9a00-d190-c26c-8-cb63.ngrok.io/webhooks/slack/webhook"
 
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
