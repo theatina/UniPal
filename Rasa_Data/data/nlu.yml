@@ -1,4 +1,4 @@
-version: "2.0"
+version: "3.0"
 
 nlu:
 - intent: greet
@@ -39,6 +39,7 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - yeap
 
 - intent: deny
   examples: |
@@ -49,6 +50,8 @@ nlu:
     - don't like that
     - no way
     - not really
+    - nope
+    - don't think so
 
 - intent: mood_great
   examples: |
@@ -90,3 +93,52 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+# - intent: inform
+#   examples: |
+#     - i would like the newest [10](num_of_announcements) announcements
+
+
+- intent: request_class_schedule
+  examples: |
+    - classes
+    - did they announce the class schedule?
+    - classes schedule
+    - any new information on class timetable?
+
+- intent: request_psychoSupport_info
+  examples: |
+    - is there any psychological support at the university?
+    - i need psychological support
+    - can you help me find psychological support?
+
+- intent: request_exam_schedule
+  examples: |
+    - exams
+    - did they announce the exam schedule?
+    - exams schedule
+    - exams timetable
+    - any new information on exams schedule?
+
+- intent: request_announcements
+  examples: |
+    - any news from uni?
+    - university announcements
+    - new announcements?
+    - are there any new announcements?
+    - can i have the latest [num of announcements]{"entity":"num_of_announcements","value":"num"} announcements of the uni?
+    - [num of announcements]{"entity":"num_of_announcements","value":"num"} announcements
+    - [num of announcements]{"entity":"num_of_announcements","value":"num"} news
+
+- regex: num_of_announcements
+  examples: |
+    - \d{1,2}
+
+- synonym: University
+  examples: |
+    - uni
+    - NKUA
+    - university
+    - EKPA
+
+

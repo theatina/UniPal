@@ -1,9 +1,9 @@
 > UniPal Dialogue Examples <
 (U: user, DS_UP: Dialogue System)
-
+ 
 --> Dialogue1 
-U:
-DS_UP:
+U: Hi
+DS_UP: 
 U:
 DS_UP:
 U:
