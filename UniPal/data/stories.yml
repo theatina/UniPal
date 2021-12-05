@@ -104,11 +104,27 @@ stories:
 #       negation, goodbye_bot
 #   - action: utter_goodbye 
 
+- story: UniPal Request Exam Timetable
+  steps:
+  - intent: session_start
+  - intent: greet
+  - action: utter_greet
+  - intent: request_exam_schedule
+    entities: 
+    - exams: true
+    - exam_period: jan
+  - slot_was_set:
+    - exams: true
+    - exam_period: jan
+    - grad_studies_type: pps 
+  - action: action_uni_exam_schedule
+  - intent: goodbye
+  - action: utter_goodbye
 
-- story: UniPal Request Class Schedule
+- story: UniPal Request Classes Timetable
   steps:
   - intent: greet
-  - action: action_greet_user
+  - action: utter_greet
   - intent: request_class_schedule
   - action: action_uni_class_schedule
   - intent: goodbye
@@ -118,11 +134,15 @@ stories:
 - story: UniPal Request PsychoSupport
   steps:               
   - intent: greet
+    entities:
+    - user_name: "Theatina"
   - action: utter_greet
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
-  - intent: deny
+  - or:
+    - intent: deny
+    - intent: request_psychoSupport_info
   - action: action_uni_psychoSupport_info
   - action: utter_did_that_help
   - intent: affirm
@@ -135,8 +155,6 @@ stories:
   - action: utter_greet
   - intent: request_announcements
     entities:
-    - num_of_announcements: 10.0
-  - slot_was_set:
     - num_of_announcements: 10.0
   - action: action_uni_announcements
   - intent: goodbye

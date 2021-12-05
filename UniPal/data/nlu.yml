@@ -5,8 +5,8 @@ nlu:
   examples: |
     - hey
     - hello
-    - hi
-    - hello there
+    - hi, it's [name]{"entity":"user_name", "value":"name"}
+    - hello there, my name is [name]{"entity":"user_name", "value":"name"}
     - good morning
     - good evening
     - moin
@@ -15,7 +15,7 @@ nlu:
     - hey dude
     - goodmorning
     - goodevening
-    - good afternoon
+    - hey, my name is [name]{"entity":"user_name", "value":"name"}
 
 - intent: goodbye
   examples: |
@@ -126,9 +126,9 @@ nlu:
     - university announcements
     - new announcements?
     - are there any new announcements?
-    - can i have the latest [num of announcements]{"entity":"num_of_announcements","value":"num"} announcements of the uni?
-    - [num of announcements]{"entity":"num_of_announcements","value":"num"} announcements
-    - [num of announcements]{"entity":"num_of_announcements","value":"num"} news
+    - can i have the latest [num]{"entity":"num_of_announcements","value":"num"} announcements of the uni?
+    - [num]{"entity":"num_of_announcements","value":"num"} announcements
+    - [num]{"entity":"num_of_announcements","value":"num"} news
 
 - regex: num_of_announcements
   examples: |

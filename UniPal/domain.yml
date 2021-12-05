@@ -28,9 +28,24 @@ actions:
   - action_uni_announcements
 
 entities:
-  - num_of_announcements
+  - user_name
 
+  - num_of_announcements
+  - exams
+  - exam_period
+  - semester
+  - grad_studies_type
+  - subject
+  - academic_year
+  
 slots:
+  user_name:
+    type: text
+    initial_value: "Pal"
+    mappings:
+    - type: from_entity
+      entity: user_name
+
   num_of_announcements:
     type: float
     min_value: 1.0
@@ -40,29 +55,90 @@ slots:
     - type: from_entity
       entity: num_of_announcements
 
+  exams:
+    type: bool
+    initial_value: false
+    mappings:
+    - type: from_entity
+      entity: exams
+
+  exam_period: 
+    type: categorical
+    values:
+      - jan
+      - jun
+      - sep
+    mappings:
+    - type: from_entity
+      entity: exam_period
+
+  semester: 
+    type: categorical
+    values:
+      - winter
+      - spring
+    mappings:
+    - type: from_entity
+      entity: semester
+  
+  grad_studies_type:
+    type: categorical
+    values:
+      - pps
+      - pms
+      - full
+    initial_value: pps
+    mappings:
+    - type: from_entity
+      entity: grad_studies_type
+
+  subject:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: subject
+
+  academic_year:
+    type: float
+    min_value: 9.0
+    max_value: 21.0
+    initial_value: 21.0
+    mappings:
+    - type: from_entity
+      entity: academic_year
+  
+  
+forms:
+  class_schedule_request_form:
+    required_slots:
+        - grad_studies_type
+        - semester
+        - exams
+
+  exam_schedule_request_form:
+    required_slots:
+        - grad_studies_type
+        - semester
+        - exams
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey {user_name}! How are you?"
+  - text: "Hi there! What's up?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+  - text: "Did that help you {user_name}?"
+  - text: "Was that helpful to you?"
 
   utter_goodbye:
   - text: "Bye"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
-
-  utter_howMany:
-  - text: "How many announcements would you like to fetch?"
 
 session_config:
   session_expiration_time: 60

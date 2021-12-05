@@ -1,3 +1,5 @@
+from datetime import time
+import pandas as pd
 import sys
 import re
 import os
@@ -60,56 +62,58 @@ def ActionUniClassSchedule():
     url = "https://www.chatzi.org/dit-schedule/"
     #/pps/jan/1819"
 
-    page = requests.get(url)
-    # html = page.read().decode("utf-8")
-    soup = BeautifulSoup(page.content, "html.parser")
-    print(soup.div)
+    page = urlopen(url)
+    html = page.read().decode("utf-8")
+    soup = BeautifulSoup(html, "html.parser")
 
-    # print("examsched" in soup.prettify())
+    schedule_path = "https://www.chatzi.org/dit-schedule/"
+    # year_list = [ f"{i:02d}{i+1:02d}" for i in range(9,22) ]
+    exam_year_list = [ f"{i:02d}" for i in range(10,23) ]
+    class_year_list = [ f"{i:02d}{i+1:02d}" for i in range(9,22) ]
+    url_year_list = [ f"{i:02d}-{i+1:02d}" for i in range(9,22) ]
+    # print(exam_year_list, class_year_list, url_year_list)
+    
+    semester_list = [ "winter", "spring" ]
+    exams_list = [ "jan", "jun", "sep" ]
+    programme_list = [ "PPS", "PMS" ]
+
+    # https://www.chatzi.org/dit-schedule/20-21/timetable_PPS_winter2021.xls
+    # https://www.chatzi.org/dit-schedule/20-21/timetable_PPS_spring2021.xls
+    # https://www.chatzi.org/dit-schedule/19-20/timetable_PPS_spring1920.xls
+   
+    # https://www.chatzi.org/dit-schedule/20-21/timetable_PMS_winter2021.xls
+
+    # https://www.chatzi.org/dit-schedule/20-21/timetable_winter2021.xls
+    # https://www.chatzi.org/dit-schedule/20-21/timetable_spring2021.xls
 
     
-    # all_tags= soup.find_all(True)
-    # tag_list = set( [i.name for i in all_tags] )
-    # for tag in tag_list:
-    #     tag_items = soup.find_all(tag)
-    #     for item in tag_items:
-    #         # print(item.children)
-    #         for i in item.children:
-    #             print(i)
-    #             if "examsched" in i:
-    #                 print(i)
-    #     # print("examsched" in soup.prettify())
+    # https://www.chatzi.org/dit-schedule/20-21/examsched_PPS_jan21.xls
+    # https://www.chatzi.org/dit-schedule/20-21/examsched_PPS_jun21.xls
+    # https://www.chatzi.org/dit-schedule/20-21/examsched_PPS_sep21.xls
+    # https://www.chatzi.org/dit-schedule/20-21/examsched_PMS_sep21.xls
 
+    # grad_stud_type = input("\nInsert graduate study programme type: ")
+    # semester = input("\nInsert semester of study: ")
+
+    # academic_year = input("\nInsert academic year: ")[-2:]
+
+    # if grad_stud_type in grad_stud_type:
+    #     filename = f"timetable_{grad_stud_type}_{semester}{academic_year}"
+    # else:
+    #     filename = f"timetable_{semester}{academic_year}"
+    # print(filename)
+
+    # file_url = os.path.join()
+    file_url = "https://www.chatzi.org/dit-schedule/20-21/examsched_PPS_jan21.xls"
+
+    timetable_df = pd.read_excel(file_url)
+
+    for index, column in enumerate(timetable_df):
+        print(f"Column no. {index}:\n {timetable_df[column].unique()}\n\n")
     
-    # exit()
-    # print(tags)
-
-    # links_raw = soup.find_all(string="examsched #")
-    # print(links_raw)
-    # for i in links_raw:
-    #     # if "examsched" in i and "href" in i:
-    #     print(i)
     
 
-    exit()
 
-    links = [ link for link in links_raw  ]
-    examsched_links = [ link for link_list in links_raw for link in link_list.find_all('a') if "examsched" in link['href'] ]
-    timetable_links = [ link for link_list in links_raw for link in link_list.find_all('a') if "timetable" in link['href'] ]
-    
-    for i in examsched_links:
-        print(i['href'])
-    for i in timetable_links:
-        print(i['href'])
-
-    # for link in i.find_all('a'):
-    #     if "examsched" in 
-    #     print(link['href'])
-
-    # ann_list = [ item:ann.contents for ann in links for item in ann['href'].split(os.sep) if item.isnumeric()  ]
-    # ann_list = { int(item):str(ann.contents[0]).strip() for ann in links for item in ann['href'].split(os.sep) if item.isnumeric()  }
-
-    # print(ann_list)
 
 
 

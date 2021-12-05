@@ -82,11 +82,56 @@ class ActionUniClassSchedule(Action):
 
         url = "https://www.di.uoa.gr/studies/undergraduate/schedules"
 
+        grad_stud_type = tracker.get_slot('grad_studies_type')
+        # exams
 
-        dispatcher.utter_message(text)
 
         return []
 
+
+class ActionUniExamSchedule(Action):
+    
+    def name(self) -> Text:
+        return "action_uni_exam_schedule"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        url = "https://www.chatzi.org/dit-schedule/"
+        #/pps/jan/1819"
+
+        page = urlopen(url)
+        html = page.read().decode("utf-8")
+        soup = BeautifulSoup(html, "html.parser")
+
+        schedule_path = "https://www.chatzi.org/dit-schedule/"
+        year_list = [ f"{i:02d}{i+1:02d}" for i in range(9,22) ]
+        print(year_list)
+        semester_list = [ "winter", "spring" ]
+        exams_list = [ "jan", "jun", "sep" ]
+        programme_list = [ "pps", "pms", "full" ]
+
+    
+        grad_stud_type = tracker.get_slot('grad_studies_type')
+        exams = tracker.get_slot('exams')
+        semester = tracker.get_slot('semester')
+        academic_year = tracker.get_slot('academic_year')
+
+        file_url = os.path.join(schedule_path, f"")
+        file_url = "https://www.chatzi.org/dit-schedule/20-21/examsched_PPS_jan21.xls"
+
+        
+        timetable_df = pd.read_excel(file_url)
+
+        dispatcher.utter_message(f"\nFound this timetable {file_url}\n")
+
+        # insert buttons for subject choice
+
+
+        return []
 
 class ActionUniAnnouncements(Action):
     
@@ -112,9 +157,10 @@ class ActionUniAnnouncements(Action):
         
         ann_list = { int(item):str(ann.contents[0]).strip() for ann in links for item in ann['href'].split(os.sep) if item.isnumeric()  }
 
-        ann_list_sorted = {k: v for k, v in sorted(ann_list.items(), key=lambda item: item[0])[:int(tracker.get_slot('num_of_announcements'))]}
+        num_of_anns = int(tracker.get_slot('num_of_announcements'))
+        ann_list_sorted = {k: v for k, v in sorted(ann_list.items(), key=lambda item: item[0])[:num_of_anns]}
 
-        text_all = f"Here are the 10 most recent NKUA Announcements:"
+        text_all = f"Here are the {num_of_anns} most recent NKUA Announcements:"
         for i,num in enumerate(ann_list_sorted):
             name = ann_list_sorted[num]
             link_path = os.path.join(announcements_url,str(num))
