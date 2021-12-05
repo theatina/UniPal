@@ -1,0 +1,31 @@
+_metadata:
+  major_version: 1
+  minor_version: 1
+display_information:
+  name: UniPal
+features:
+  bot_user:
+    display_name: UniPal
+    always_online: false
+oauth_config:
+  scopes:
+    bot:
+      - app_mentions:read
+      - channels:history
+      - chat:write
+      - groups:history
+      - im:history
+      - mpim:history
+      - reactions:write
+      - incoming-webhook
+settings:
+  event_subscriptions:
+    bot_events:
+      - message.channels
+      - message.groups
+      - message.im
+      - message.mpim
+    request_url: https://ca42-2a02-85f-f0f6-9a00-d190-c26c-8-cb63.ngrok.io/webhooks/slack/webhook
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false

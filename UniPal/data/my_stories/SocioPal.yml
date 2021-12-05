@@ -1,0 +1,103 @@
+# version: "2.0"
+
+# stories:
+
+# - story: SocioPal StoryTime1 - message read 'n' reply 
+#   steps:
+#   - user: |
+#       hi_bot 
+#   - action: utter_greet 
+#   - user: |
+#       asks for <type_of_message> message count on <social_media_name> 
+#   - action: returns <type_of_message> message count on <social_media_name> 
+#   - user: |
+#       asks for sender info
+#   - action: returns sender info (simultaneous grounding) 
+#   - user: |
+#       asks SocioPal to read the message from <sender_name> 
+#   - action: SocioPal reads the message from <sender_name> 
+#   - user: |
+#       asks SocioPal to send a message to <recipient_name> 
+#   - action: SocioPal asks the content of the message to send to <recipient_name> 
+#   - user: |
+#       conveys SocioPal the message from <sender_name> 
+#   - action: SocioPal confirms the user request variables  
+#   - user: |
+#       affirmation 
+#   - action: SocioPal asks for further help 
+#   - user: |
+#       negation, goodbye_bot 
+#   - action: utter_goodbye 
+
+# - story: SocioPal StoryTime2 -  notifs 'n' followers
+#   steps:
+#   - user: |
+#       hi_bot 
+#   - action: utter_greet 
+#   - user: |
+#       asks for new notifications on <social_media_name> 
+#   - action: returns <type_of_notifications> count on <social_media_name> 
+#   - user: |
+#       asks for new follower requests on <social_media_name> 
+#   - action: returns new follower requests on <social_media_name> 
+#   - user: |
+#       asks SocioPal for the follow requests account names  
+#   - action: returns follow requests account names 
+#   - user: |
+#       asks SocioPal to accept <account_name> follower request  
+#   - action: SocioPal confirms the user request variables 
+#   - user: |
+#       affirmation 
+#   - action: SocioPal asks for further help 
+#   - user: |
+#       goodbye_bot 
+#   - action: utter_goodbye 
+
+
+# - story: SocioPal StoryTime3 - account update
+#   steps:
+#   - user: |
+#       hi_bot 
+#   - action: utter_greet 
+#   - user: |
+#       asks for <account_name> account updates on <social_media_name> 
+#   - action: asks for update type (post, status, etc) 
+#   - user: |
+#       tells SocioPal the desired <update_type>  
+#   - action: returns <update_type> updates of <account_name> account 
+#   - user: |
+#       thanks_bot 
+#   - action: SocioPal asks for further help  
+#   - user: |
+#       negation, goodbye_bot 
+#   - action: utter_goodbye 
+
+
+# - story: SocioPal StoryTime4 - schedule new page post
+#   steps:
+#   - action: utter_greet 
+#   - user: |
+#       request for post schedule on <social_media_name> on <page_name> 
+#   - action: asks for <post_content> 
+#   - user: |
+#       types <post_content>  
+#   - action: asks for <date_to_post> (simultaneous page_name confirmation) 
+#   - user: | 
+#       informs SocioPal about <date_to_post> 
+#   - action: SocioPal confirms the user request variables 
+#   - user: |
+#       affirmation 
+#   - action: SocioPal asks for further help  
+#   - user: |
+#       affirmation
+#   - action: SocioPal asks for further help (certain request) 
+#   - user: |
+#       goodbye_bot 
+#   - action: utter_goodbye 
+
+# # - story: SocioPal_ex5
+# #   steps:
+# #   - action: utter_greet
+# #   - action: utter_cheer_up
+# #   - action: utter_goodbye
+  

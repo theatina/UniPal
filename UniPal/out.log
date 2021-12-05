@@ -1,0 +1,140 @@
+2021-11-10 14:38:29,994 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/slack                                    GET                            slack_webhook.health
+/webhooks/slack/webhook                            GET                            slack_webhook.webhook
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-11-10 14:38:29,997 [INFO ]  Starting Rasa server on http://localhost:5002
+2021-11-10 14:38:29,997 [DEBUG]  Using the default number of Sanic workers (1).
+2021-11-10 14:38:30,026 [INFO ]  Loading model models/20211025-181112.tar.gz...
+2021-11-10 14:38:30,496 [DEBUG]  Extracted model to '/var/folders/jw/yj3b35qn5x97wc0zvr7tfpqc0000gn/T/tmp6e18_jk4'.
+2021-11-10 14:38:30,535 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-11-10 14:38:31,572 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-11-10 14:38:31,584 [INFO ]  Enabling coroutine debugging. Loop id 140264160628752.
+2021-11-10 14:38:31,586 [INFO ]  Loading model models/20211025-181112.tar.gz...
+2021-11-10 14:38:31,939 [DEBUG]  Extracted model to '/var/folders/jw/yj3b35qn5x97wc0zvr7tfpqc0000gn/T/tmpovwy00m6'.
+2021-11-10 14:38:32,120 [DEBUG]  Loading the model from /var/folders/jw/yj3b35qn5x97wc0zvr7tfpqc0000gn/T/tmpovwy00m6/nlu/component_5_DIETClassifier.tf_model with finetune_mode=False...
+2021-11-10 14:38:32,386 [DEBUG]  Following metrics will be logged during training: 
+2021-11-10 14:38:32,387 [DEBUG]    t_loss (total loss)
+2021-11-10 14:38:32,387 [DEBUG]    i_acc (intent acc)
+2021-11-10 14:38:32,387 [DEBUG]    i_loss (intent loss)
+2021-11-10 14:38:44,044 [DEBUG]  Finished loading the model.
+2021-11-10 14:38:44,046 [DEBUG]  Failed to load model for 'ResponseSelector'. Maybe you did not provide enough training data and no model was trained or the path '/var/folders/jw/yj3b35qn5x97wc0zvr7tfpqc0000gn/T/tmpovwy00m6/nlu' doesn't exist?
+2021-11-10 14:38:44,059 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-11-10 14:38:44,059 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-11-10 14:38:44,406 [DEBUG]  Extracted model to '/var/folders/jw/yj3b35qn5x97wc0zvr7tfpqc0000gn/T/tmpxjct3fkf'.
+2021-11-10 14:38:44,438 [ERROR]  Could not load model due to Cannot retrieve policy from path 'rasa.core.policies.unexpected_intent_policy.UnexpecTEDIntentPolicy'.
+2021-11-10 14:38:44,440 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-11-10 14:38:44,440 [INFO ]  Rasa server is up and running.
+2021-11-10 14:44:11,814 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/slack                                    GET                            slack_webhook.health
+/webhooks/slack/webhook                            GET                            slack_webhook.webhook
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-11-10 14:44:11,823 [INFO ]  Starting Rasa server on http://localhost:5002
+2021-11-10 14:44:11,823 [DEBUG]  Using the default number of Sanic workers (1).
+2021-11-10 14:44:11,843 [INFO ]  Loading model models/20211025-181112.tar.gz...
+2021-11-10 14:44:12,215 [DEBUG]  Extracted model to '/var/folders/jw/yj3b35qn5x97wc0zvr7tfpqc0000gn/T/tmpmnm7_wqy'.
+2021-11-10 14:44:12,252 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-11-10 14:44:13,219 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-11-10 14:44:13,224 [INFO ]  Enabling coroutine debugging. Loop id 140683565862928.
+2021-11-10 14:44:13,225 [INFO ]  Loading model models/20211025-181112.tar.gz...
+2021-11-10 14:44:13,616 [DEBUG]  Extracted model to '/var/folders/jw/yj3b35qn5x97wc0zvr7tfpqc0000gn/T/tmplhr3pp5p'.
+2021-11-10 14:44:13,783 [DEBUG]  Loading the model from /var/folders/jw/yj3b35qn5x97wc0zvr7tfpqc0000gn/T/tmplhr3pp5p/nlu/component_5_DIETClassifier.tf_model with finetune_mode=False...
+2021-11-10 14:44:14,016 [DEBUG]  Following metrics will be logged during training: 
+2021-11-10 14:44:14,017 [DEBUG]    t_loss (total loss)
+2021-11-10 14:44:14,017 [DEBUG]    i_acc (intent acc)
+2021-11-10 14:44:14,017 [DEBUG]    i_loss (intent loss)
+2021-11-10 14:44:25,722 [DEBUG]  Finished loading the model.
+2021-11-10 14:44:25,727 [DEBUG]  Failed to load model for 'ResponseSelector'. Maybe you did not provide enough training data and no model was trained or the path '/var/folders/jw/yj3b35qn5x97wc0zvr7tfpqc0000gn/T/tmplhr3pp5p/nlu' doesn't exist?
+2021-11-10 14:44:25,740 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-11-10 14:44:25,741 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-11-10 14:44:26,098 [DEBUG]  Extracted model to '/var/folders/jw/yj3b35qn5x97wc0zvr7tfpqc0000gn/T/tmpdpcbnewt'.
+2021-11-10 14:44:26,160 [ERROR]  Could not load model due to Cannot retrieve policy from path 'rasa.core.policies.unexpected_intent_policy.UnexpecTEDIntentPolicy'.
+2021-11-10 14:44:26,164 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-11-10 14:44:26,165 [INFO ]  Rasa server is up and running.
+2021-11-10 14:57:10,942 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/slack                                    GET                            slack_webhook.health
+/webhooks/slack/webhook                            POST                           slack_webhook.webhook
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-11-10 14:57:10,952 [INFO ]  Starting Rasa server on http://localhost:5002
+2021-11-10 14:57:10,955 [DEBUG]  Using the default number of Sanic workers (1).
+2021-11-10 14:57:10,969 [INFO ]  Loading model models/20211025-181112.tar.gz...
+2021-11-10 14:57:11,779 [DEBUG]  Extracted model to '/var/folders/jw/yj3b35qn5x97wc0zvr7tfpqc0000gn/T/tmpv9kvdhoj'.
+2021-11-10 14:57:11,814 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-11-10 14:57:12,774 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-11-10 14:57:12,786 [INFO ]  Enabling coroutine debugging. Loop id 140302496567312.
+2021-11-10 14:57:12,787 [INFO ]  Loading model models/20211025-181112.tar.gz...
+2021-11-10 14:57:13,188 [DEBUG]  Extracted model to '/var/folders/jw/yj3b35qn5x97wc0zvr7tfpqc0000gn/T/tmp18ku6vtz'.
+2021-11-10 14:57:13,392 [DEBUG]  Loading the model from /var/folders/jw/yj3b35qn5x97wc0zvr7tfpqc0000gn/T/tmp18ku6vtz/nlu/component_5_DIETClassifier.tf_model with finetune_mode=False...
+2021-11-10 14:57:13,736 [DEBUG]  Following metrics will be logged during training: 
+2021-11-10 14:57:13,736 [DEBUG]    t_loss (total loss)
+2021-11-10 14:57:13,737 [DEBUG]    i_acc (intent acc)
+2021-11-10 14:57:13,737 [DEBUG]    i_loss (intent loss)
+2021-11-10 14:57:25,419 [DEBUG]  Finished loading the model.
+2021-11-10 14:57:25,422 [DEBUG]  Failed to load model for 'ResponseSelector'. Maybe you did not provide enough training data and no model was trained or the path '/var/folders/jw/yj3b35qn5x97wc0zvr7tfpqc0000gn/T/tmp18ku6vtz/nlu' doesn't exist?
+2021-11-10 14:57:25,431 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-11-10 14:57:25,431 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-11-10 14:57:25,896 [DEBUG]  Extracted model to '/var/folders/jw/yj3b35qn5x97wc0zvr7tfpqc0000gn/T/tmp85aaohej'.
+2021-11-10 14:57:25,931 [ERROR]  Could not load model due to Cannot retrieve policy from path 'rasa.core.policies.unexpected_intent_policy.UnexpecTEDIntentPolicy'.
+2021-11-10 14:57:25,934 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-11-10 14:57:25,934 [INFO ]  Rasa server is up and running.

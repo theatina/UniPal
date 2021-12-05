@@ -1,0 +1,98 @@
+# version: "3.0"
+
+# stories:
+
+# - story: UniPal StoryTime1 - University access options
+#   steps:
+#   - action: utter_greet 
+#   - user: |
+#       request for university location access 
+#   - action: asks for preferable <means_of_transport> 
+#   - user: |
+#       informs about <means_of_transport> to get info about
+#   - action: describes route based on <means_of_transport> chosen by the user  
+#   - user: | 
+#       request for another <means_of_transport> option  
+#   - action: describes route based on <means_of_transport> chosen by the user 
+#   - user: |
+#       thanks_bot
+#   - action: SocioPal asks for further help 
+#   - user: |
+#       request for additional uni location access option
+#   - action: asks for preferable <means_of_transport> 
+#   - user: |
+#       informs about <means_of_transport> to get info about
+#   - action: describes route based on <means_of_transport> chosen by the user  
+#   - user: | 
+#       request for another <means_of_transport> option  
+#   - action: describes route based on <means_of_transport> chosen by the user 
+#   - user: |
+#       thanks_bot
+#   - action: SocioPal asks for further help 
+#   - user: | 
+#       negation, goodbye_bot 
+#   - action: utter_goodbye 
+
+
+# - story: UniPal StoryTime2 - Mail to <class_name> professor
+#   steps:
+#   - user: |
+#       hi_bot
+#   - action: utter_greet 
+#   - user: |
+#       request for mail to <class_name> professor 
+#   - action: SocioPal returns <prof_name> and asks for confirmation 
+#   - user: |
+#       affirmation 
+#   - action: asks for mail content
+#   - user: | 
+#       informs SocioPal about mail content
+#   - action: SocioPal confirms the user request variables 
+#   - user: |
+#       affirmation 
+#   - action: SocioPal asks for further help 
+#   - user: |
+#       negation, goodbye_bot
+#   - action: utter_goodbye 
+
+
+# - story: UniPal StoryTime3 - Create Agenda deadline reminder
+#   steps:
+#   - user: |
+#       hi_bot 
+#   - action: utter_greet 
+#   - user: |
+#       request for <class_name> projectX deadline info 
+#   - action: returns <deadline_date_time> 
+#   - user: |
+#       request for <class_name> projectX deadline agenda reminder 
+#   - action: SocioPal confirms the user request variables 
+#   - user: |
+#       affirmation 
+#   - action: SocioPal asks for further help  
+#   - user: |
+#       affirmation
+#   - action: SocioPal asks for further help (certain request) 
+#   - user: |
+#       negation, goodbye_bot
+#   - action: utter_goodbye 
+
+# - story: UniPal_ex4
+#   steps:
+#   - user: |
+#       lala
+#   - action: utter_greet
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - action: utter_goodbye
+
+# # - story: UniPal_ex5
+# #   steps:                   
+# #   - action: utter_greet
+# #   - intent: utter_greet
+# #   - user: |
+# #       hi
+# #     intent: mood_great
+# #   - action: utter_happy
+# #   - user: goodbye
+# #   - action: utter_goodbye
