@@ -1,4 +1,4 @@
-version: "3.0"
+version: "3.1"
 
 stories:
 
@@ -112,11 +112,14 @@ stories:
   - intent: request_exam_schedule
     entities: 
     - exams: true
-    - exam_period: jan
-  - slot_was_set:
-    - exams: true
-    - exam_period: jan
-    - grad_studies_type: pps 
+    # - exam_period: jan
+  # - slot_was_set:
+  #   - exams: true
+  #   - exam_period: jan
+  #   - grad_studies_type: pps 
+  - action: utter_exam_schedule_year
+  - action: utter_exam_schedule_period
+  - action: utter_exam_schedule_programme
   - action: action_uni_exam_schedule
   - intent: goodbye
   - action: utter_goodbye
