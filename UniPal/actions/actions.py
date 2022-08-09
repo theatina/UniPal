@@ -7,6 +7,7 @@
 
 import sys
 import re
+import pandas as pd
 import os
 
 from bs4 import BeautifulSoup
@@ -119,7 +120,7 @@ class ActionUniExamSchedule(Action):
         exams = tracker.get_slot('exams')
         semester = tracker.get_slot('semester')
         academic_year = tracker.get_slot('academic_year')
-
+        print(grad_stud_type, semester, academic_year)
         file_url = os.path.join(schedule_path, f"")
         file_url = "https://www.chatzi.org/dit-schedule/20-21/examsched_PPS_jan21.xls"
 
