@@ -7,7 +7,20 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
+# - rule: Say 'I am a bot' anytime the user challenges
+#   steps:
+#   - intent: bot_challenge
+#   - action: utter_iamabot
+
+- rule: Provide info on class timetable when user asks
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: request_class_schedule
+  - action: action_uni_class_schedule
+
+- rule: Provide info on exam timetable when user asks
+  steps:
+  - intent: request_exam_schedule
+  - action: utter_exam_schedule_year
+  - action: utter_exam_schedule_period
+  - action: utter_exam_schedule_programme
+  # - action: action_uni_exam_schedule

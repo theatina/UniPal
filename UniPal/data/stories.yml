@@ -117,9 +117,24 @@ stories:
   #   - exams: true
   #   - exam_period: jan
   #   - grad_studies_type: pps 
-  - action: utter_exam_schedule_year
-  - action: utter_exam_schedule_period
-  - action: utter_exam_schedule_programme
+  - action: action_button_year
+  - intent: inform_year
+    entities:
+    - academic_year: 20
+  - slot_was_set: 
+    - academic_year: 20
+  - action: action_button_period
+  - intent: inform_period
+    entities:
+    - exam_period: sep
+  - slot_was_set: 
+    - exam_period: sep
+  - action: action_button_programme
+  - intent: inform_programme
+    entities:
+      - academic_year: PPS
+  - slot_was_set: 
+    - academic_year: PPS
   - action: action_uni_exam_schedule
   - intent: goodbye
   - action: utter_goodbye
@@ -137,8 +152,8 @@ stories:
 - story: UniPal Request PsychoSupport
   steps:               
   - intent: greet
-    entities:
-    - user_name: "Theatina"
+    # entities:
+    # - user_name: "Theatina"
   - action: utter_greet
   - intent: mood_unhappy
   - action: utter_cheer_up

@@ -28,6 +28,9 @@ actions:
   - action_uni_class_schedule
   - action_uni_exam_schedule
   - action_uni_announcements
+  - action_button_year
+  - action_button_period
+  - action_button_programme
 
 entities:
   - user_name
@@ -86,10 +89,10 @@ slots:
   grad_studies_type:
     type: categorical
     values:
-      - pps
-      - pms
-      - full
-    initial_value: pps
+      - PPS
+      - PMS
+      - FULL
+    initial_value: PPS
     mappings:
     - type: from_entity
       entity: grad_studies_type
@@ -126,7 +129,7 @@ forms:
 responses:
   utter_greet:
   - text: "Hey {user_name}! How are you?"
-  - text: "Hi there! What's up?"
+  - text: "Hi there! What's up {user_name}?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -137,7 +140,7 @@ responses:
   - text: "Was that helpful to you?"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Bye {user_name}"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
@@ -146,27 +149,27 @@ responses:
   - text: "Choose year"
     buttons: 
     - title: "2020-2021"
-      payload: '{{"academic_year":"20-21"}}'
+      payload: '/inform_year{{"academic_year":"20-21"}}'
     - title: "2021-2022"
-      payload: '{{"academic_year":"21-22"}}'
+      payload: '/inform_year{{"academic_year":"21-22"}}'
 
   utter_exam_schedule_period:
   - text: "Choose year"
     buttons: 
     - title: "January (winter)"
-      payload: '{{"exam_period":"jan"}}'
+      payload: '/inform_period{{"exam_period":"jan"}}'
     - title: "June (spring)" 
-      payload: '{{"exam_period":"jun"}}'
+      payload: '/inform_period{{"exam_period":"jun"}}'
     - title: "September"
-      payload: '{{"exam_period":"sep"}}'
+      payload: '/inform_period{{"exam_period":"sep"}}'
 
   utter_exam_schedule_programme:
   - text: "Choose programme type"
     buttons: 
     - title: "Undergraduate"
-      payload: '{{"grad_studies_type":"pps"}}'
+      payload: '/inform_programme{{"grad_studies_type":"PPS"}}'
     - title: "Postgraduate"
-      payload: '{{"grad_studies_type":"pms"}}'
+      payload: '/inform_programme{{"grad_studies_type":"PMS"}}'
 
 session_config:
   session_expiration_time: 60

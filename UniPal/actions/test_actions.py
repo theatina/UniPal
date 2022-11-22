@@ -1,8 +1,10 @@
-from datetime import time
+from ctypes.wintypes import HENHMETAFILE
+from datetime import time, datetime, date
 import pandas as pd
 import sys
 import re
 import os
+import numpy as np
 
 from bs4 import BeautifulSoup
 from tkinter import *
@@ -112,7 +114,79 @@ def ActionUniClassSchedule():
         print(f"Column no. {index}:\n {timetable_df[column].unique()}\n\n")
     
     
+def ActionUniExamSchedule():
+    
+    url = "https://www.chatzi.org/dit-schedule/"
+    #/pps/jan/1819"
 
+    page = urlopen(url)
+    html = page.read().decode("utf-8")
+    soup = BeautifulSoup(html, "html.parser")
+
+    schedule_path = "https://www.chatzi.org/dit-schedule/"
+    year_list = [ f"{i:02d}{i+1:02d}" for i in range(9,22) ]
+    print(year_list)
+    semester_list = [ "winter", "spring" ]
+    exams_list = [ "jan", "jun", "sep" ]
+    programme_list = [ "pps", "pms", "full" ]
+
+
+    # grad_stud_type = tracker.get_slot('grad_studies_type')
+    # exams = tracker.get_slot('exams')
+    # semester = tracker.get_slot('semester')
+    # academic_year = tracker.get_slot('academic_year')
+
+    grad_stud_type = "PPS"
+    exams = "sep"
+    semester = "winter"
+    academic_year = 18
+    acad_years=str(academic_year-1)+"-"+str(academic_year)
+
+    # print(grad_stud_type, semester, academic_year)
+    file_url = os.path.join(schedule_path, f"")
+    # file_url = "https://www.chatzi.org/dit-schedule/examsched_PMS_sep21.xls"
+    file_url = f"https://www.chatzi.org/dit-schedule/{acad_years}/examsched_{grad_stud_type}_{exams}{academic_year}.xls"
+    # file_url = f"https://www.chatzi.org/dit-schedule/#/{grad_stud_type}/{exams}/{academic_year}"
+    print(file_url)
+
+    timetable_df = pd.read_excel(file_url)
+    
+
+    # Πρόγραμμα Εξετάσεων Προπτυχιακών Μαθημάτων Χειμερινής Περιόδου 2021 -> Date -> Date
+    # Unnamed: 1 -> Time1
+    # Unnamed: 2 -> Time2
+    # Unnamed: 3 -> Time3
+    # Unnamed: 3 -> Time4
+    # timetable_df.rename(columns={"Πρόγραμμα Εξετάσεων Προπτυχιακών Μαθημάτων Χειμερινής Περιόδου 2021":"Date", "Unnamed: 1": "Time1", "Unnamed: 2": "Time2", "Unnamed: 3": "Time3"}, inplace=True)
+    if 'Unnamed: 4' in list(timetable_df.columns):
+        timetable_df.columns=["Date", "Time1", "Time2", "Time3", "Time4"]
+    else:
+        timetable_df.columns=["Date", "Time1", "Time2", "Time3"]
+        # timetable_df.rename(columns={"Unnamed 4": "Time4"}, inplace=True)
+    # print(type(timetable_df["Date"][2]))
+    # print(timetable_df["Date"][2].date().strftime('%A %d-%m-%y'))
+    timetable_df["Date"] = timetable_df["Date"].apply(lambda x: x.date().strftime('%A %d-%m-%Y') if isinstance(x, datetime) else x)
+    print(timetable_df["Date"])
+    timetable_df.to_csv(f"exams{grad_stud_type}{exams}{academic_year}Timetable.csv", index=False, header=True)
+
+
+    # print(timetable_df.columns)
+    mes=timetable_df
+
+    #TODO: list of classes arranged alphabetically - date(day, date) - time
+    # timetable_df[timetable_df == 7]
+
+    
+    all_classes=list(set([c for sublist in timetable_df.iloc[1:,1:].values for c in sublist if type(c)==str]))
+
+    all_classes=sorted(all_classes)
+    class_str=""
+    for element in all_classes:
+        i, c = np.where(timetable_df == element)
+        class_str+=f"{element} -> {timetable_df.iloc[i[0],0]}, {timetable_df.iloc[0,c[0]]}\n" 
+
+    print (class_str)
+    return class_str
 
 
 
@@ -125,4 +199,5 @@ ________________________________________________________________________________
 
 # ActionUniPsychoSupportInfo()
 # ActionUniAnnouncements()
-ActionUniClassSchedule()
+# ActionUniClassSchedule()
+ActionUniExamSchedule()

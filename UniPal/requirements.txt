@@ -1,0 +1,12 @@
+# pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple --use-deprecated=legacy-resolver
+PyJWT==2.1.0
+# aiohttp==3.6.3
+multidict==5.0.0
+pytz==2020.5
+SQLAlchemy==1.3.19
+scikit-learn==1.0.0
+sanic==21.12.0
+sanic-cors==2.0.0
+packaging==20.3
+numpy==1.17.5
+async-timeout==4.0.2

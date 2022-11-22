@@ -83,9 +83,9 @@ stories:
     intent: goodbye
   - action: utter_goodbye
 
-- story: bot challenge
-  steps:
-  - user: |
-      are you a bot?
-    intent: bot_challenge
-  - action: utter_iamabot
+# - story: bot challenge
+#   steps:
+#   - user: |
+#       are you a bot?
+#     intent: bot_challenge
+#   - action: utter_iamabot

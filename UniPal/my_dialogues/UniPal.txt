@@ -1,0 +1,70 @@
+> UniPal Dialogue Examples <
+(U: user, DS_UP: Dialogue System)
+
+--> Dialogue1 
+U:
+DS_UP:
+U:
+DS_UP:
+U:
+DS_UP:
+U:
+DS_UP:
+U:
+DS_UP:
+
+
+
+--> Dialogue2
+U:
+DS_UP:
+U:
+DS_UP:
+U:
+DS_UP:
+U:
+DS_UP:
+U:
+DS_UP:
+
+
+
+--> Dialogue3 
+U:
+DS_UP:
+U:
+DS_UP:
+U:
+DS_UP:
+U:
+DS_UP:
+U:
+DS_UP:
+
+
+
+--> Dialogue4
+U:
+DS_UP:
+U:
+DS_UP:
+U:
+DS_UP:
+U:
+DS_UP:
+U:
+DS_UP:
+
+
+
+--> Dialogue5 
+U:
+DS_UP:
+U:
+DS_UP:
+U:
+DS_UP:
+U:
+DS_UP:
+U:
+DS_UP:

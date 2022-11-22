@@ -22,7 +22,7 @@ nlu:
     - good afternoon
     - cu
     - good by
-    - cee you later
+    - see you later
     - good night
     - bye
     - goodbye
@@ -86,13 +86,15 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+    - not feeling well
+    - feeling sad
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+# - intent: bot_challenge
+#   examples: |
+#     - are you a bot?
+#     - are you a human?
+#     - am I talking to a bot?
+#     - am I talking to a human?
 
 # - intent: inform
 #   examples: |
@@ -105,6 +107,9 @@ nlu:
     - did they announce the class schedule?
     - classes schedule
     - any new information on class timetable?
+    - class
+    - class schedule
+    - class timetable
 
 - intent: request_psychoSupport_info
   examples: |
