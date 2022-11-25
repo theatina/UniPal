@@ -399,10 +399,22 @@ stories:
   - intent: affirm
   - action: action_button_programme
   - intent: inform_programme
+    entities:
+    - grad_studies_type: PMS
+  - slot_was_set:
+    - grad_studies_type: PMS
   - action: action_button_period
   - intent: inform_period
+    entities:
+    - exam_period: sep
+  - slot_was_set:
+    - exam_period: sep
   - action: action_button_year
   - intent: inform_year
+    entities:
+    - academic_year: 2012
+  - slot_was_set:
+    - academic_year: 2012
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_uni_exam_schedule

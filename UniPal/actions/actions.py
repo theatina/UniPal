@@ -197,7 +197,7 @@ class Button_Year(Action):
 
         #then display it using dispatcher
         # dispatcher.utter_message(text= "Choose year" , buttons=buttons)     
-        dispatcher.utter_message(text="Choose the year:")
+        dispatcher.utter_message(text="Choose the year:\n(2009-2021)")
         return []    
 
 class Button_Period(Action):
@@ -338,7 +338,7 @@ class ActionCheckExamsFormSlots(Action):
         
         ac_year=int(str(academic_year)[-2:]) if len(str(academic_year))>2 else int(str(academic_year))
         
-        file_url = f"https://www.chatzi.org/dit-schedule/{ac_year-1}-{ac_year}/examsched_{grad_stud_type}_{period}{ac_year}.xls"
+        file_url = f"https://www.chatzi.org/dit-schedule/{ac_year-1:02d}-{ac_year:02d}/examsched_{grad_stud_type}_{period}{ac_year}.xls"
         # timetable_df=pd.read_excel(file_url)
 
         dispatcher.utter_message(f"\nYou have chosen to see the {gradType[grad_stud_type]} exams timetable of {per[period]} for the year '{ac_year}, does anything need correction?\n(file: {file_url})")
@@ -371,7 +371,7 @@ class ActionUniAnnouncements(Action):
         
         num_of_anns = tracker.get_slot('num_of_announcements')
         if num_of_anns==None:
-            dispatcher.utter_message("You haven't chosem number of announcements, so I'm gonna show you the first 10 :)\n")
+            dispatcher.utter_message("You haven't chosen the number of announcements, so I'm gonna show you the first 10 =)\n")
             num_of_anns=10
         else:
             num_of_anns=int(num_of_anns)
@@ -382,6 +382,7 @@ class ActionUniAnnouncements(Action):
 
         ann_list_sorted = {k: v for k, v in sorted(ann_list.items(), key=lambda item: item[0])}
         
+        announcement_text=""
         text_all = f"Here are the {num_of_anns} most recent NKUA Announcements:"
         for i,num in enumerate(list(ann_list_sorted.keys())[:num_of_anns]):
             name = ann_list_sorted[num]
@@ -390,14 +391,16 @@ class ActionUniAnnouncements(Action):
             else:
                 link_path=f"{announcements_url}/{str(num)}"
             # link_path = os.path.join(announcements_url,str(num))
-            announcement_text = f"\n{i+1}. {name} ({link_path})"
+            announcement_text+=f"\n\n{i+1}. {name} ({link_path})"
             page = urlopen(link_path)
             html = page.read().decode("utf-8")
             soup = BeautifulSoup(html, "html.parser")
             summary=soup.find_all("div", attrs={"class":"clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"})
+
             announcement_text+=f"\nSummary: {summary[1].get_text()}"
-            dispatcher.utter_message(announcement_text)
         
+        dispatcher.utter_message(announcement_text)
+        dispatcher.utter_message(f"")
         dispatcher.utter_message(f"\nFor further information and announcements, you can visit the University's Announcements Page here: {announcements_url}\n")
 
         return []
