@@ -1,0 +1,24 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"academic_year\": [1.0, 0.8461538461538461], \"exam_period\": [1.0, 0.0, 0.0, 0.0], \"exams\": [1.0, 1.0], \"grad_studies_type\": [1.0, 0.0, 0.0, 0.0], \"num_of_announcements\": [1.0, 0.21052631578947367], \"semester\": [0.0, 1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"academic_year\": [1.0, 0.8461538461538461], \"exam_period\": [1.0, 0.0, 0.0, 0.0], \"exams\": [1.0, 1.0], \"grad_studies_type\": [1.0, 0.0, 0.0, 0.0], \"num_of_announcements\": [1.0, 0.21052631578947367], \"semester\": [0.0, 1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"slots\": {\"academic_year\": [1.0, 0.8461538461538461], \"exam_period\": [1.0, 0.0, 0.0, 0.0], \"exams\": [1.0, 1.0], \"grad_studies_type\": [1.0, 0.0, 0.0, 0.0], \"num_of_announcements\": [1.0, 0.21052631578947367], \"semester\": [0.0, 1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"utter_greet\"}, \"slots\": {\"academic_year\": [1.0, 0.8461538461538461], \"exam_period\": [1.0, 0.0, 0.0, 0.0], \"exams\": [1.0, 1.0], \"grad_studies_type\": [1.0, 0.0, 0.0, 0.0], \"num_of_announcements\": [1.0, 0.21052631578947367], \"semester\": [0.0, 1.0, 0.0], \"user_name\": [1.0]}}]": "action_UniPal_services",
+      "[{\"prev_action\": {\"action_name\": \"utter_greet\"}, \"slots\": {\"academic_year\": [1.0, 0.8461538461538461], \"exam_period\": [1.0, 0.0, 0.0, 0.0], \"exams\": [1.0, 1.0], \"grad_studies_type\": [1.0, 0.0, 0.0, 0.0], \"num_of_announcements\": [1.0, 0.21052631578947367], \"semester\": [0.0, 1.0, 0.0], \"user_name\": [1.0]}}, {\"prev_action\": {\"action_name\": \"action_UniPal_services\"}, \"slots\": {\"academic_year\": [1.0, 0.8461538461538461], \"exam_period\": [1.0, 0.0, 0.0, 0.0], \"exams\": [1.0, 1.0], \"grad_studies_type\": [1.0, 0.0, 0.0, 0.0], \"num_of_announcements\": [1.0, 0.21052631578947367], \"semester\": [0.0, 1.0, 0.0], \"user_name\": [1.0]}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "handling active loops and forms - class_schedule_form",
+      "predicting default action with intent back",
+      "handling active loops and forms - exam_schedule_form - action_listen",
+      "handling active loops and forms - class_schedule_form - action_listen",
+      "predicting default action with intent session_start",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"academic_year\": [1.0, 0.8461538461538461], \"exam_period\": [1.0, 0.0, 0.0, 0.0], \"exams\": [1.0, 1.0], \"grad_studies_type\": [1.0, 0.0, 0.0, 0.0], \"num_of_announcements\": [1.0, 0.21052631578947367], \"semester\": [0.0, 1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "handling active loops and forms - exam_schedule_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"academic_year\": [1.0, 0.8461538461538461], \"exam_period\": [1.0, 0.0, 0.0, 0.0], \"exams\": [1.0, 1.0], \"grad_studies_type\": [1.0, 0.0, 0.0, 0.0], \"num_of_announcements\": [1.0, 0.21052631578947367], \"semester\": [0.0, 1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"slots\": {\"academic_year\": [1.0, 0.8461538461538461], \"exam_period\": [1.0, 0.0, 0.0, 0.0], \"exams\": [1.0, 1.0], \"grad_studies_type\": [1.0, 0.0, 0.0, 0.0], \"num_of_announcements\": [1.0, 0.21052631578947367], \"semester\": [0.0, 1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"goodbye\"}}]"
+    ]
+  }
+}

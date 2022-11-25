@@ -20,6 +20,7 @@ from urllib.request import urlopen
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import SlotSet, AllSlotsReset
 
 class ActionHelloWorld(Action):
 
@@ -48,6 +49,20 @@ class ActionGreetUser(Action):
         dispatcher.utter_message(text = "Hi, Pal!")
 
         return []
+
+class ActionResetTimetableSlots(Action):
+    
+    def name(self) -> Text:
+        return "action_resetTimetableSlots"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        # reset slots about type, semester, year, period 
+        return [SlotSet("grad_studies_type", None), SlotSet("semester", None), SlotSet("academic_year", None), SlotSet("exam_period", None)]
 
 
 class ActionUniPsychoSupportInfo(Action):
@@ -91,37 +106,76 @@ class ActionUniClassSchedule(Action):
 
         return []
 
+class ActionUniPalServices(Action):
+    
+    def name(self) -> Text:
+        return "action_UniPal_services"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text="I can provide the following services/information:\n1. Announcements\n2. Exams Schedule\n3. Class Timetable\n4. University access\n5. Psychological Support\n")
+
+        return []
+
+# class Buttons_yearPeriodType(Action):
+#     def name(self) -> Text:
+#         return "action_button_year"
+
+#     async def run(
+#         self,
+#         dispatcher: CollectingDispatcher,
+#         tracker: Tracker,
+#         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+#         buttons = []
+#         #append the response of API in the form of title and payload
+#         programme_type_list = [ "PPS", "PMS" ]
+#         type_list = ["Undergraduate", "Postgraduate"]
+#         "/inform{\"grad_studies_type\":\"" + prog + "\"}"
+#         for prog,prog_name in zip(programme_type_list,type_list):
+#             buttons.append({"title": f"{prog_name}" , "payload": "/request_exam_schedule{\"grad_studies_type\":\"" + prog + "\"}", "value": prog})
+
+#         #then display it using dispatcher
+        
+#         dispatcher.utter_message(text= "Choose study programme type" , buttons=buttons)     
+    
+#         return []    
 
 class Button_Year(Action):
-    def name(self) -> float:
+    def name(self) -> Text:
         return "action_button_year"
 
     async def run(
         self,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
-        domain: Dict[float, Any]) -> List[Dict[float, Any]]:
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         buttons = []
         #append the response of API in the form of title and payload
         year_list = [ f"{i:02d}" for i in range(9,22) ]
         
-        for y in year_list:
-            buttons.append({"title": f"20{y}-20{y+1}" , "payload": "/inform_year{{'academic_year':y}}", "value": y})
+        # for y in year_list:
+            # buttons.append({"title": f"20{y}-20{int(y)+1}" , "payload": '/request_exam_schedule{"academic_year":"{y}"}'})
 
         #then display it using dispatcher
-        dispatcher.utter_message(text= "Choose year" , buttons=buttons)     
+        # dispatcher.utter_message(text= "Choose year" , buttons=buttons)     
+        dispatcher.utter_message(text="Choose the year:")
         return []    
 
 class Button_Period(Action):
-    def name(self) -> float:
+    def name(self) -> Text:
         return "action_button_period"
 
     async def run(
         self,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
-        domain: Dict[float, Any]) -> List[Dict[float, Any]]:
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         buttons = []
         #append the response of API in the form of title and payload
@@ -129,7 +183,7 @@ class Button_Period(Action):
         period_list_full=["January", "June", "September"] 
         
         for p,pf in zip(period_list, period_list_full):
-            buttons.append({"title": f"{pf}" , "payload": "/inform_period{{'exam_period':p}}", "value": p})
+            buttons.append({"title": f"{pf}" , "payload": '/inform_period{"exam_period":"{p}"}'})
 
         #then display it using dispatcher
         dispatcher.utter_message(text= "Choose exam period" , buttons=buttons)     
@@ -137,7 +191,7 @@ class Button_Period(Action):
 
 class Button_Programme(Action):
     def name(self) -> Text:
-        return "action_button_year"
+        return "action_button_programme"
 
     async def run(
         self,
@@ -151,10 +205,12 @@ class Button_Programme(Action):
         type_list = ["Undergraduate", "Postgraduate"]
         
         for prog,prog_name in zip(programme_type_list,type_list):
-            buttons.append({"title": f"{prog_name}" , "payload": "/inform_programme{{'grad_studies_type':prog}}", "value": prog})
+            buttons.append({"title": f"{prog_name}" , "payload": '/inform_programme{"grad_studies_type":"{prog}"}'})
 
         #then display it using dispatcher
+        
         dispatcher.utter_message(text= "Choose study programme type" , buttons=buttons)     
+    
         return []                                 
 
 class ActionUniExamSchedule(Action):
@@ -168,32 +224,28 @@ class ActionUniExamSchedule(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        url = "https://www.chatzi.org/dit-schedule/"
+        # url = "https://www.chatzi.org/dit-schedule/"
         #/pps/jan/1819"
 
-        page = urlopen(url)
-        html = page.read().decode("utf-8")
-        soup = BeautifulSoup(html, "html.parser")
+        # page = urlopen(url)
+        # html = page.read().decode("utf-8")
+        # soup = BeautifulSoup(html, "html.parser")
 
-        schedule_path = "https://www.chatzi.org/dit-schedule/"
-        year_list = [ f"{i:02d}{i+1:02d}" for i in range(9,22) ]
+        # schedule_path = "https://www.chatzi.org/dit-schedule/"
+        # year_list = [ f"{i:02d}{i+1:02d}" for i in range(9,22) ]
         # print(year_list)
         # semester_list = [ "winter", "spring" ]
-        exams_list = [ "jan", "jun", "sep" ]
+        period_list = [ "jan", "jun", "sep" ]
         programme_type_list = [ "PPS", "PMS" ]
 
-    
         grad_stud_type = tracker.get_slot('grad_studies_type')
-        grad_stud_type=grad_stud_type
         exams = tracker.get_slot('exams')
-        semester = tracker.get_slot('semester')
+        period = tracker.get_slot('exam_period')
         academic_year = tracker.get_slot('academic_year')
-        acad_years=f"{academic_year-1}{academic_year}"
+        academic_year=int(str(academic_year)[-2:]) if len(str(academic_year))>2 else int(str(academic_year))
 
-        # print(grad_stud_type, semester, academic_year)
-        file_url = os.path.join(schedule_path, f"")
-        # file_url = "https://www.chatzi.org/dit-schedule/20-21/examsched_PPS_jan21.xls"
-        file_url = f"https://www.chatzi.org/dit-schedule/{acad_years}/examsched_{grad_stud_type}_{exams}{academic_year}.xls"
+        acad_years=f"{academic_year-1}-{academic_year}"
+        file_url = f"https://www.chatzi.org/dit-schedule/{acad_years}/examsched_{grad_stud_type}_{period}{int(academic_year)}.xls"
         
         timetable_df = pd.read_excel(file_url)
     
@@ -218,15 +270,45 @@ class ActionUniExamSchedule(Action):
 
         all_classes=sorted(all_classes)
         class_str=""
-        for element in all_classes:
+        for i,element in enumerate(all_classes):
             i, c = np.where(timetable_df == element)
-            class_str+=f"{element} -> {timetable_df.iloc[i[0],0]}, {timetable_df.iloc[0,c[0]]}\n" 
+            class_str+=f"{i}. {element} -> {timetable_df.iloc[i[0],0]}, {timetable_df.iloc[0,c[0]]}\n" 
 
-        # print (class_str)
-    
         dispatcher.utter_message(f"\nFound this timetable {class_str}\n")
         
-        #TODO: insert buttons for subject choice
+        #TODO: insert buttons for subject choice ?
+        return []
+
+
+class ActionCheckExamsFormSlots(Action):
+    def name(self) -> Text:
+        return "action_correct_examform_slots"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        gradType={"PPS":"Undergraduate", "PMS":"Postgraduate"}
+        grad_stud_type=tracker.get_slot("grad_studies_type")
+        period=tracker.get_slot("exam_period")
+        per={"jan":"January", "jun":"June", "sep":"September"}
+        academic_year=tracker.get_slot("academic_year")
+        
+        if None in [grad_stud_type, period, academic_year]:
+            username=tracker.get_slot("user_name")
+            dispatcher.utter_message(f"\nYou haven't chosen the type and/or year and/or period of the exams {username} =)\nI will now help you fill the necessary information, is that ok?")
+            return []
+        
+        ac_year=int(str(academic_year)[-2:]) if len(str(academic_year))>2 else int(str(academic_year))
+        
+        file_url = f"https://www.chatzi.org/dit-schedule/{ac_year-1}-{ac_year}/examsched_{grad_stud_type}_{period}{ac_year}.xls"
+        # timetable_df=pd.read_excel(file_url)
+
+        dispatcher.utter_message(f"\nYou have chosen to see the {gradType[grad_stud_type]} exams timetable of {per[period]} for the year '{ac_year}, does anything need correction?\n(file: {file_url})")
+
+    
         return []
 
 
@@ -252,13 +334,16 @@ class ActionUniAnnouncements(Action):
 
         links = [ link for link in links_raw if "/announcements/" in link['href']  ]
         
-        ann_list = { int(item):str(ann.contents[0]).strip() for ann in links for item in ann['href'].split(os.sep) if item.isnumeric()  }
-
         num_of_anns = int(tracker.get_slot('num_of_announcements'))
-        ann_list_sorted = {k: v for k, v in sorted(ann_list.items(), key=lambda item: item[0])[:num_of_anns]}
+        
+        ann_list = { int(item):str(ann.contents[0]).strip() for ann in links for item in ann['href'].split("/") if item.isnumeric()  }
+        if not ann_list:
+            ann_list = { int(item):str(ann.contents[0]).strip() for ann in links for item in ann['href'].split(os.sep) if item.isnumeric()  }
+
+        ann_list_sorted = {k: v for k, v in sorted(ann_list.items(), key=lambda item: item[0])}
 
         text_all = f"Here are the {num_of_anns} most recent NKUA Announcements:"
-        for i,num in enumerate(ann_list_sorted):
+        for i,num in enumerate(list(ann_list_sorted.keys())[:num_of_anns]):
             name = ann_list_sorted[num]
             link_path = os.path.join(announcements_url,str(num))
             announcement_text = f"{i+1}. {name} ({link_path})"

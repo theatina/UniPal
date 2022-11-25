@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-\"entity\"",
+      "2": "I-\"entity\"",
+      "3": "L-\"entity\"",
+      "4": "U-\"entity\"",
+      "5": "B-num_of_announcements",
+      "6": "I-num_of_announcements",
+      "7": "L-num_of_announcements",
+      "8": "U-num_of_announcements",
+      "9": "B-user_name",
+      "10": "I-user_name",
+      "11": "L-user_name",
+      "12": "U-user_name",
+      "13": "B-{\"entity\"",
+      "14": "I-{\"entity\"",
+      "15": "L-{\"entity\"",
+      "16": "U-{\"entity\"",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-\"entity\"": 1,
+      "I-\"entity\"": 2,
+      "L-\"entity\"": 3,
+      "U-\"entity\"": 4,
+      "B-num_of_announcements": 5,
+      "I-num_of_announcements": 6,
+      "L-num_of_announcements": 7,
+      "U-num_of_announcements": 8,
+      "B-user_name": 9,
+      "I-user_name": 10,
+      "L-user_name": 11,
+      "U-user_name": 12,
+      "B-{\"entity\"": 13,
+      "I-{\"entity\"": 14,
+      "L-{\"entity\"": 15,
+      "U-{\"entity\"": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

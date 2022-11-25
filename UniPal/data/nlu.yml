@@ -1,21 +1,28 @@
 version: "3.1"
-
 nlu:
 - intent: greet
   examples: |
     - hey
     - hello
-    - hi, it's [name]{"entity":"user_name", "value":"name"}
-    - hello there, my name is [name]{"entity":"user_name", "value":"name"}
+    - hi, it's [Theatina](user_name)
+    - hello there, my name is [Nick](user_name)
     - good morning
     - good evening
     - moin
     - hey there
     - let's go
-    - hey dude
+    - hey dude, im [Tina](user_name)
     - goodmorning
     - goodevening
-    - hey, my name is [name]{"entity":"user_name", "value":"name"}
+    - hey, my name is [Pam](user_name)
+
+- intent: thank_bot
+  examples: |
+    - thank you
+    - thanks
+    - that's cool
+    - cool, thanks UniPal
+    - no, thank you bye!
 
 - intent: goodbye
   examples: |
@@ -29,7 +36,6 @@ nlu:
     - have a nice day
     - see you around
     - bye bye
-    - see you later
 
 - intent: affirm
   examples: |
@@ -40,6 +46,8 @@ nlu:
     - that sounds good
     - correct
     - yeap
+    - ok
+    - k
 
 - intent: deny
   examples: |
@@ -52,6 +60,8 @@ nlu:
     - not really
     - nope
     - don't think so
+    - no thank you
+    - nah
 
 - intent: mood_great
   examples: |
@@ -89,17 +99,11 @@ nlu:
     - not feeling well
     - feeling sad
 
-# - intent: bot_challenge
-#   examples: |
-#     - are you a bot?
-#     - are you a human?
-#     - am I talking to a bot?
-#     - am I talking to a human?
-
-# - intent: inform
-#   examples: |
-#     - i would like the newest [10](num_of_announcements) announcements
-
+- intent: ask_about_services
+  examples: |
+    - services
+    - what services do you provide?
+    - what can you do?
 
 - intent: request_class_schedule
   examples: |
@@ -116,6 +120,9 @@ nlu:
     - is there any psychological support at the university?
     - i need psychological support
     - can you help me find psychological support?
+    - i am not ok
+    - need help
+    - help me
 
 - intent: request_exam_schedule
   examples: |
@@ -124,6 +131,34 @@ nlu:
     - exams schedule
     - exams timetable
     - any new information on exams schedule?
+    - [jun](exam_period) exams
+    - [sep](exam_period) exam timetable
+    - [jan](exam_period) exams schedule
+    - [jun](exam_period) exams schedule
+    - [sep](exam_period) exams schedule
+    - [sep](exam_period) [PMS](grad_studies_type) exams schedule for [2019](academic_year)
+    - [jan](exam_period) [PPS](grad_studies_type) exams schedule for [2020](academic_year)
+    - [PPS](grad_studies_type) exams schedule of [january]{"entity": "exam_period", "value": "jan"} [2020](academic_year)
+    - [undergraduate]{"entity": "grad_studies_type", "value": "PPS"} exams
+    - [pps]{"entity": "grad_studies_type", "value": "PPS"} exams of [january]{"entity": "exam_period", "value": "jan"} [2020](academic_year)
+
+- intent: inform_period
+  examples: |
+    - [january]{"entity": "exam_period", "value": "jan"}
+    - [jan](exam_period)
+    - exams of [January]{"entity": "exam_period", "value": "jan"}
+
+- intent: inform_programme
+  examples: |
+    - [undergrad]{"entity": "grad_studies_type", "value": "PPS"}
+    - [pps]{"entity": "grad_studies_type", "value": "PPS"}
+    - [Undergraduate]{"entity": "grad_studies_type", "value": "PPS"} exams
+    
+- intent: inform_year
+  examples: |
+    - [2018](academic_year)
+    - [20](academic_year)
+    - exams of [2020](academic_year)
 
 - intent: request_announcements
   examples: |
@@ -131,19 +166,57 @@ nlu:
     - university announcements
     - new announcements?
     - are there any new announcements?
-    - can i have the latest [num]{"entity":"num_of_announcements","value":"num"} announcements of the uni?
-    - [num]{"entity":"num_of_announcements","value":"num"} announcements
-    - [num]{"entity":"num_of_announcements","value":"num"} news
+    - can i have the latest [2](num_of_announcements) announcements of the uni?
+    - [10](num_of_announcements) announcements
+    - [3](num_of_announcements) news
 
-- regex: num_of_announcements
+- synonym: jan
   examples: |
-    - \d{1,2}
-
+    - january
+    - January
+    - Jan
+- synonym: PPS
+  examples: |
+    - undergraduate
+    - pps
+    - Undergraduate
+    - undergrad
+- synonym: PMS
+  examples: |
+    - pms
+    - postgraduate
+    - Postgraduate
+    - postgrad
+- synonym: jun
+  examples: |
+    - june
+    - June
+    - Jun
+- synonym: sep
+  examples: |
+    - september
+    - September
+    - Sep
+- synonym: winter
+  examples: |
+    - wint
+    - Winter
+    - Wint
+- synonym: spring
+  examples: |
+    - Spring
+    - Sprin
+    - sprin
 - synonym: University
   examples: |
     - uni
     - NKUA
     - university
     - EKPA
-
-
+    
+- regex: num_of_announcements
+  examples: |
+    - \d{1,2}
+- regex: academic_year
+  examples: |
+    - \d{2,4}

@@ -7,20 +7,59 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-# - rule: Say 'I am a bot' anytime the user challenges
-#   steps:
-#   - intent: bot_challenge
-#   - action: utter_iamabot
-
-- rule: Provide info on class timetable when user asks
+- rule: Inform about services after greeting user
   steps:
-  - intent: request_class_schedule
-  - action: action_uni_class_schedule
+  - action: utter_greet
+  - action: action_UniPal_services
+  - action: action_resetTimetableSlots
 
-- rule: Provide info on exam timetable when user asks
+- rule: Inform about services after user asks
+  steps:
+  - intent: ask_about_services
+  - action: action_UniPal_services
+  - action: action_resetTimetableSlots
+
+- rule: Reset slots before next request
+  steps:
+  - action: action_UniPal_services
+  - action: action_resetTimetableSlots
+
+- rule: Check exam schedule slots
   steps:
   - intent: request_exam_schedule
-  - action: utter_exam_schedule_year
-  - action: utter_exam_schedule_period
-  - action: utter_exam_schedule_programme
-  # - action: action_uni_exam_schedule
+  - action: action_correct_examform_slots
+
+
+# - rule: Give info on psychosupport
+#   steps:
+#   - intent: request_psychoSupport_info
+#   - action: action_uni_psychoSupport_info
+
+# - rule: Provide info on class timetable when user asks
+#   steps:
+#   - intent: request_class_schedule
+#   - action: action_uni_class_schedule
+
+# - rule: Provide info on exam timetable when user asks
+#   steps:
+#   - intent: request_exam_schedule
+#   - action: utter_exam_schedule_year
+#   - action: utter_exam_schedule_period
+#   - action: utter_exam_schedule_programme
+#   - action: action_uni_exam_schedule
+
+# - rule: Activate exam schedule form
+#   steps:
+#   - intent: request_exam_schedule
+#     entities: 
+#       - exams: true
+#   # - action: exam_schedule_form
+#   - active_loop: exam_schedule_form
+
+# - rule: Activate class schedule form
+#   steps:
+#   - intent: request_class_schedule
+#     entities: 
+#         - exams: false
+#   # - action: class_schedule_form
+#   - active_loop: class_schedule_form
