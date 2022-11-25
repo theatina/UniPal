@@ -205,10 +205,10 @@ stories:
   - intent: request_exam_schedule
   - action: action_correct_examform_slots
   - intent: affirm
-  - action: utter_exam_schedule_period
-  - intent: inform_period
-  - action: utter_exam_schedule_programme
+  - action: action_button_programme
   - intent: inform_programme
+  - action: action_button_period
+  - intent: inform_period
   - action: action_button_year
   - intent: inform_year
   - action: action_correct_examform_slots
@@ -353,10 +353,10 @@ stories:
   - intent: request_exam_schedule
   - action: action_correct_examform_slots
   - intent: affirm
-  - action: utter_exam_schedule_period
-  - intent: inform_period
-  - action: utter_exam_schedule_programme
+  - action: action_button_programme
   - intent: inform_programme
+  - action: action_button_period
+  - intent: inform_period
   - action: action_button_year
   - intent: inform_year
   - action: action_correct_examform_slots

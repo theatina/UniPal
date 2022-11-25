@@ -182,11 +182,12 @@ class Button_Period(Action):
         period_list=[ "jan", "jun", "sep" ]
         period_list_full=["January", "June", "September"] 
         
-        for p,pf in zip(period_list, period_list_full):
-            buttons.append({"title": f"{pf}" , "payload": '/inform_period{"exam_period":"{p}"}'})
+        # for p,pf in zip(period_list, period_list_full):
+            # buttons.append({"title": f"{pf}" , "payload": '/inform_period{"exam_period":"{p}"}'})
 
         #then display it using dispatcher
-        dispatcher.utter_message(text= "Choose exam period" , buttons=buttons)     
+        # dispatcher.utter_message(text= "Choose exam period" , buttons=buttons)     
+        dispatcher.utter_message(text= "Choose exam period:\n(January, June or September)")  
         return []             
 
 class Button_Programme(Action):
@@ -204,12 +205,13 @@ class Button_Programme(Action):
         programme_type_list = [ "PPS", "PMS" ]
         type_list = ["Undergraduate", "Postgraduate"]
         
-        for prog,prog_name in zip(programme_type_list,type_list):
-            buttons.append({"title": f"{prog_name}" , "payload": '/inform_programme{"grad_studies_type":"{prog}"}'})
+        # for prog,prog_name in zip(programme_type_list,type_list):
+            # buttons.append({"title": f"{prog_name}" , "payload": '/inform_programme{"grad_studies_type":"{prog}"}'})
 
         #then display it using dispatcher
         
-        dispatcher.utter_message(text= "Choose study programme type" , buttons=buttons)     
+        # dispatcher.utter_message(text= "Choose study programme type:" , buttons=buttons)  
+        dispatcher.utter_message(text= "Choose study programme type:\n(Undergraduate or Postgraduate)")   
     
         return []                                 
 
@@ -270,9 +272,9 @@ class ActionUniExamSchedule(Action):
 
         all_classes=sorted(all_classes)
         class_str=""
-        for i,element in enumerate(all_classes):
+        for num,element in enumerate(all_classes):
             i, c = np.where(timetable_df == element)
-            class_str+=f"{i}. {element} -> {timetable_df.iloc[i[0],0]}, {timetable_df.iloc[0,c[0]]}\n" 
+            class_str+=f"{num}. {element} -> {timetable_df.iloc[i[0],0]}, {timetable_df.iloc[0,c[0]]}\n" 
 
         dispatcher.utter_message(f"\nFound this timetable {class_str}\n")
         
