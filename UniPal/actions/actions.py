@@ -369,10 +369,12 @@ class ActionUniAnnouncements(Action):
 
         links = [ link for link in links_raw if "/announcements/" in link['href']  ]
         
-        num_of_anns = int(tracker.get_slot('num_of_announcements'))
+        num_of_anns = tracker.get_slot('num_of_announcements')
         if num_of_anns==None:
             dispatcher.utter_message("You haven't chosem number of announcements, so I'm gonna show you the first 10 :)\n")
             num_of_anns=10
+        else:
+            num_of_anns=int(num_of_anns)
 
         ann_list = { int(item):str(ann.contents[0]).strip() for ann in links for item in ann['href'].split("/") if item.isnumeric()  }
         if not ann_list:
