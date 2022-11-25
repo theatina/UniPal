@@ -29,6 +29,10 @@ rules:
   - intent: request_exam_schedule
   - action: action_correct_examform_slots
 
+- rule: Be polite
+  steps:
+  - intent: thank_bot
+  - action: utter_welcome
 
 # - rule: Give info on psychosupport
 #   steps:

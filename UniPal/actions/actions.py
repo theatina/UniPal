@@ -276,7 +276,7 @@ class ActionUniExamSchedule(Action):
             i, c = np.where(timetable_df == element)
             class_str+=f"{num}. {element} -> {timetable_df.iloc[i[0],0]}, {timetable_df.iloc[0,c[0]]}\n" 
 
-        dispatcher.utter_message(f"\nFound this timetable {class_str}\n")
+        dispatcher.utter_message(f"\nFound this timetable: \n{class_str}\n")
         
         #TODO: insert buttons for subject choice ?
         return []

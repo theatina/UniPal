@@ -165,8 +165,11 @@ stories:
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_button_programme
-  - action: action_button_year
+  - intent: inform_programme
   - action: action_button_period
+  - intent: inform_period
+  - action: action_button_year
+  - intent: inform_year
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_uni_exam_schedule
@@ -255,6 +258,8 @@ stories:
   - intent: affirm
   - action: action_UniPal_services
   - action: action_resetTimetableSlots
+  - intent: thank_bot
+  - action: utter_welcome
   - intent: goodbye
   - action: utter_goodbye
 
@@ -297,7 +302,7 @@ stories:
   - action: action_uni_exam_schedule
   - action: utter_further_action
   - or:
-    - intent: thank_bot
+    - intent: deny
     - intent: goodbye
   - action: utter_goodbye
 
