@@ -20,7 +20,7 @@ from urllib.request import urlopen
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet, AllSlotsReset
+from rasa_sdk.events import SlotSet, AllSlotsReset, FollowupAction
 
 class ActionHelloWorld(Action):
 
@@ -63,6 +63,39 @@ class ActionResetTimetableSlots(Action):
 
         # reset slots about type, semester, year, period 
         return [SlotSet("grad_studies_type", None), SlotSet("semester", None), SlotSet("academic_year", None), SlotSet("exam_period", None)]
+
+
+class ActionResetAnnouncementSlot(Action):
+    
+    def name(self) -> Text:
+        return "action_resetAnnouncementSlot"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        # reset slots about type, semester, year, period 
+        return [SlotSet("num_of_announcements", None)]
+
+class ActionResetSlots(Action):
+    
+    def name(self) -> Text:
+        return "action_resetSlots"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        # reset slots about type, semester, year, period 
+        FollowupAction("action_resetAnnouncementSlot")
+        FollowupAction("action_resetTimetableSlots")
+
+        return []
+
 
 
 class ActionUniPsychoSupportInfo(Action):
@@ -337,18 +370,30 @@ class ActionUniAnnouncements(Action):
         links = [ link for link in links_raw if "/announcements/" in link['href']  ]
         
         num_of_anns = int(tracker.get_slot('num_of_announcements'))
-        
+        if num_of_anns==None:
+            dispatcher.utter_message("You haven't chosem number of announcements, so I'm gonna show you the first 10 :)\n")
+            num_of_anns=10
+
         ann_list = { int(item):str(ann.contents[0]).strip() for ann in links for item in ann['href'].split("/") if item.isnumeric()  }
         if not ann_list:
             ann_list = { int(item):str(ann.contents[0]).strip() for ann in links for item in ann['href'].split(os.sep) if item.isnumeric()  }
 
         ann_list_sorted = {k: v for k, v in sorted(ann_list.items(), key=lambda item: item[0])}
-
+        
         text_all = f"Here are the {num_of_anns} most recent NKUA Announcements:"
         for i,num in enumerate(list(ann_list_sorted.keys())[:num_of_anns]):
             name = ann_list_sorted[num]
-            link_path = os.path.join(announcements_url,str(num))
-            announcement_text = f"{i+1}. {name} ({link_path})"
+            if announcements_url[-1]=="/":
+                link_path=f"{announcements_url}{str(num)}"
+            else:
+                link_path=f"{announcements_url}/{str(num)}"
+            # link_path = os.path.join(announcements_url,str(num))
+            announcement_text = f"\n{i+1}. {name} ({link_path})"
+            page = urlopen(link_path)
+            html = page.read().decode("utf-8")
+            soup = BeautifulSoup(html, "html.parser")
+            summary=soup.find_all("div", attrs={"class":"clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"})
+            announcement_text+=f"\nSummary: {summary[1].get_text()}"
             dispatcher.utter_message(announcement_text)
         
         dispatcher.utter_message(f"\nFor further information and announcements, you can visit the University's Announcements Page here: {announcements_url}\n")

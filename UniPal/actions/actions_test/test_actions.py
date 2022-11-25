@@ -55,12 +55,28 @@ def ActionUniAnnouncements():
 
         # print(ann)
         name = ann_list_sorted[num]
-        link_path = os.path.join(announcements_url,str(num))
+        if announcements_url[-1]=="/":
+            link_path=f"{announcements_url}{str(num)}"
+        else:
+            link_path=f"{announcements_url}/{str(num)}"
+        # link_path = os.path.join(announcements_url,str(num))
         announcement_text = f"{i+1}. {name} ({link_path})"
-        print(announcement_text)                                                                                            
-    
-    print(f"\nFor further information and announcements, you can visit the University's Announcements Page here: {announcements_url}\n")
+        if "\\" in link_path:
+            link_path.replace("\\","/")
+            print(link_path)
+        page = urlopen(link_path)
+        html = page.read().decode("utf-8")
+        soup = BeautifulSoup(html, "html.parser")
+        summary=soup.find_all("div", attrs={"class":"clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"})
+        print(summary[1].get_text())
+        # links_raw = soup.find_all('a')
 
+
+        print(announcement_text)                                                                                            
+
+    print(f"\nFor further information and announcements, you can visit the University's Announcements Page here: {announcements_url}\n")
+    
+    
 
 def ActionUniClassSchedule():
     url = "https://www.chatzi.org/dit-schedule/"
@@ -203,6 +219,6 @@ ________________________________________________________________________________
 # main
 
 # ActionUniPsychoSupportInfo()
-# ActionUniAnnouncements()
+ActionUniAnnouncements()
 # ActionUniClassSchedule()
-ActionUniExamSchedule()
+# ActionUniExamSchedule()

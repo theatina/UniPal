@@ -30,7 +30,7 @@ actions:
 - action_uni_class_schedule
 - action_uni_exam_schedule
 - action_uni_psychoSupport_info
-- action_resetTimetableSlots
+- action_resetSlots
 - utter_further_action
 - utter_goodbye
 - utter_greet
@@ -54,7 +54,7 @@ slots:
     type: float
     min_value: 1
     max_value: 20
-    initial_value: 5
+    # initial_value: 5
     mappings:
     - type: from_entity
       entity: num_of_announcements
@@ -113,6 +113,10 @@ forms:
     - semester
     - academic_year
   exam_schedule_form:
+    ignored_intents: 
+      - request_announcements
+      - request_class_schedule
+      - request_psychoSupport_info
     required_slots:
     - grad_studies_type
     - exam_period

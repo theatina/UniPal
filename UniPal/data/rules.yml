@@ -11,18 +11,18 @@ rules:
   steps:
   - action: utter_greet
   - action: action_UniPal_services
-  - action: action_resetTimetableSlots
+  - action: action_resetSlots
 
 - rule: Inform about services after user asks
   steps:
   - intent: ask_about_services
   - action: action_UniPal_services
-  - action: action_resetTimetableSlots
+  - action: action_resetSlots
 
 - rule: Reset slots before next request
   steps:
   - action: action_UniPal_services
-  - action: action_resetTimetableSlots
+  - action: action_resetSlots
 
 - rule: Check exam schedule slots
   steps:
@@ -33,6 +33,20 @@ rules:
   steps:
   - intent: thank_bot
   - action: utter_welcome
+
+# - rule: Fill programme type slot
+#   steps:
+#   - action: action_button_programme
+#   - intent: inform_programme
+
+# - rule: Fill exam period slot
+#   - action: action_button_period
+#   - intent: inform_period
+
+# - rule: Fill academic year slot
+#   - action: action_button_year
+#   - intent: inform_year
+
 
 # - rule: Give info on psychosupport
 #   steps:
@@ -57,7 +71,8 @@ rules:
 #   - intent: request_exam_schedule
 #     entities: 
 #       - exams: true
-#   # - action: exam_schedule_form
+#   - action: exam_schedule_form
+#   - action: action_correct_examform_slots
 #   - active_loop: exam_schedule_form
 
 # - rule: Activate class schedule form
