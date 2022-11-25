@@ -1,6 +1,0 @@
-[
-  {
-    "name": "num_of_announcements",
-    "pattern": "\\d{1,2}"
-  }
-]
