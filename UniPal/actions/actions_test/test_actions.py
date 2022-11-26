@@ -300,8 +300,17 @@ def ActionUniClassSchedule():
     print(file_url)
 
     timetable_df = pd.read_excel(file_url)
+    timetable_df.to_csv("timetableTest.csv", index=False, header=True)
     
-    print(timetable_df.columns)
+    print(timetable_df["Δευτέρα"].values)
+    x=13
+    Monday_df=timetable_df[:x]
+    Tuesday_df=timetable_df[x+3:(x+3)+x]
+    Wednesday_df=timetable_df[(x+3)+x+1+3:(x+3)*2+x]
+    Thursday_df=timetable_df[(x+3)*2+x+1+3:(x+3)*3+x]
+    Friday_df=timetable_df[(x+3)*3+x+1+3:]
+
+    print(Monday_df, Tuesday_df, Wednesday_df, Thursday_df, Friday_df)
     exit()
     # Πρόγραμμα Εξετάσεων Προπτυχιακών Μαθημάτων Χειμερινής Περιόδου 2021 -> Date -> Date
     # Unnamed: 1 -> Time1
