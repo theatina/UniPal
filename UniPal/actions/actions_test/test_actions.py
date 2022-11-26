@@ -77,71 +77,16 @@ def ActionUniAnnouncements():
     print(f"\nFor further information and announcements, you can visit the University's Announcements Page here: {announcements_url}\n")
     
     
-
-def ActionUniClassSchedule():
-    url = "https://www.chatzi.org/dit-schedule/"
-    #/pps/jan/1819"
-
-    page = urlopen(url)
-    html = page.read().decode("utf-8")
-    soup = BeautifulSoup(html, "html.parser")
-
-    schedule_path = "https://www.chatzi.org/dit-schedule/"
-    # year_list = [ f"{i:02d}{i+1:02d}" for i in range(9,22) ]
-    exam_year_list = [ f"{i:02d}" for i in range(10,23) ]
-    class_year_list = [ f"{i:02d}{i+1:02d}" for i in range(9,22) ]
-    url_year_list = [ f"{i:02d}-{i+1:02d}" for i in range(9,22) ]
-    # print(exam_year_list, class_year_list, url_year_list)
-    
-    semester_list = [ "winter", "spring" ]
-    exams_list = [ "jan", "jun", "sep" ]
-    programme_list = [ "PPS", "PMS" ]
-
-    # https://www.chatzi.org/dit-schedule/20-21/timetable_PPS_winter2021.xls
-    # https://www.chatzi.org/dit-schedule/20-21/timetable_PPS_spring2021.xls
-    # https://www.chatzi.org/dit-schedule/19-20/timetable_PPS_spring1920.xls
-   
-    # https://www.chatzi.org/dit-schedule/20-21/timetable_PMS_winter2021.xls
-
-    # https://www.chatzi.org/dit-schedule/20-21/timetable_winter2021.xls
-    # https://www.chatzi.org/dit-schedule/20-21/timetable_spring2021.xls
-
-    
-    # https://www.chatzi.org/dit-schedule/20-21/examsched_PPS_jan21.xls
-    # https://www.chatzi.org/dit-schedule/20-21/examsched_PPS_jun21.xls
-    # https://www.chatzi.org/dit-schedule/20-21/examsched_PPS_sep21.xls
-    # https://www.chatzi.org/dit-schedule/20-21/examsched_PMS_sep21.xls
-
-    # grad_stud_type = input("\nInsert graduate study programme type: ")
-    # semester = input("\nInsert semester of study: ")
-
-    # academic_year = input("\nInsert academic year: ")[-2:]
-
-    # if grad_stud_type in grad_stud_type:
-    #     filename = f"timetable_{grad_stud_type}_{semester}{academic_year}"
-    # else:
-    #     filename = f"timetable_{semester}{academic_year}"
-    # print(filename)
-
-    # file_url = os.path.join()
-    file_url = "https://www.chatzi.org/dit-schedule/20-21/examsched_PPS_jan21.xls"
-
-    timetable_df = pd.read_excel(file_url)
-
-    for index, column in enumerate(timetable_df):
-        print(f"Column no. {index}:\n {timetable_df[column].unique()}\n\n")
-    
-    
 def ActionUniExamSchedule():
     
     url = "https://www.chatzi.org/dit-schedule/"
     #/pps/jan/1819"
 
-    page = urlopen(url)
-    html = page.read().decode("utf-8")
-    soup = BeautifulSoup(html, "html.parser")
+    # page = urlopen(url)
+    # html = page.read().decode("utf-8")
+    # soup = BeautifulSoup(html, "html.parser")
 
-    schedule_path = "https://www.chatzi.org/dit-schedule/"
+    # schedule_path = "https://www.chatzi.org/dit-schedule/"
     year_list = [ f"{i:02d}{i+1:02d}" for i in range(9,22) ]
     semester_list = [ "winter", "spring" ]
     exams_list = [ "jan", "jun", "sep" ]
@@ -318,6 +263,82 @@ def ActionUniAccessInfo():
     
     return None
 
+def ActionUniClassSchedule():
+    
+    url = "https://www.chatzi.org/schedule/"
+    #/pps/jan/1819"
+
+    # page = urlopen(url)
+    # html = page.read().decode("utf-8")
+    # soup = BeautifulSoup(html, "html.parser")
+
+    # schedule_path = "https://www.chatzi.org/dit-schedule/"
+    year_list = [ f"{i:02d}{i+1:02d}" for i in range(9,22) ]
+    semester_list = [ "winter", "spring" ]
+
+    # grad_stud_type = tracker.get_slot('grad_studies_type')
+    # exams = tracker.get_slot('exams')
+    # semester = tracker.get_slot('semester')
+    # academic_year = tracker.get_slot('academic_year')
+
+    grad_stud_type = "PPS"
+    semester = "winter"
+    # semester = "winter"
+    academic_year = 2020
+    if len(str(academic_year))>2:
+        academic_year = int(str(academic_year)[-2:])
+        academic_year=int(str(academic_year).zfill(2))
+
+    acad_years=str(academic_year-1).zfill(2)+"-"+str(academic_year).zfill(2)
+    acad_years_sem=str(academic_year-1).zfill(2)+str(academic_year).zfill(2)
+
+    # print(grad_stud_type, semester, academic_year)
+    # file_url = os.path.join(schedule_path, f"")
+    # file_url = "https://www.chatzi.org/dit-schedule/examsched_PMS_sep21.xls"
+    
+    file_url = f"https://www.di.uoa.gr/schedule/{acad_years}/timetable_{grad_stud_type}_{semester}{acad_years_sem}.xls"
+    print(file_url)
+
+    timetable_df = pd.read_excel(file_url)
+    
+    print(timetable_df.columns)
+    exit()
+    # Πρόγραμμα Εξετάσεων Προπτυχιακών Μαθημάτων Χειμερινής Περιόδου 2021 -> Date -> Date
+    # Unnamed: 1 -> Time1
+    # Unnamed: 2 -> Time2
+    # Unnamed: 3 -> Time3
+    # Unnamed: 3 -> Time4
+    # timetable_df.rename(columns={"Πρόγραμμα Εξετάσεων Προπτυχιακών Μαθημάτων Χειμερινής Περιόδου 2021":"Date", "Unnamed: 1": "Time1", "Unnamed: 2": "Time2", "Unnamed: 3": "Time3"}, inplace=True)
+    if 'Unnamed: 4' in list(timetable_df.columns):
+        timetable_df.columns=["Date", "Time1", "Time2", "Time3", "Time4"]
+    else:
+        timetable_df.columns=["Date", "Time1", "Time2", "Time3"]
+        # timetable_df.rename(columns={"Unnamed 4": "Time4"}, inplace=True)
+    # print(type(timetable_df["Date"][2]))
+    # print(timetable_df["Date"][2].date().strftime('%A %d-%m-%y'))
+    timetable_df["Date"] = timetable_df["Date"].apply(lambda x: x.date().strftime('%A %d-%m-%Y') if isinstance(x, datetime) else x)
+    # print(timetable_df["Date"])
+    timetable_df.to_csv(f"exams{grad_stud_type}{period}{academic_year}Timetable.csv", index=False, header=True)
+
+
+    # print(timetable_df.columns)
+    mes=timetable_df
+
+    #TODO: list of classes arranged alphabetically - date(day, date) - time
+    # timetable_df[timetable_df == 7]
+
+    
+    all_classes=list(set([c for sublist in timetable_df.iloc[1:,1:].values for c in sublist if type(c)==str]))
+
+    all_classes=sorted(all_classes)
+    class_str=""
+    for element in all_classes:
+        i, c = np.where(timetable_df == element)
+        class_str+=f"{element} -> {timetable_df.iloc[i[0],0]}, {timetable_df.iloc[0,c[0]]}\n" 
+
+    print (class_str)
+    return class_str
+
 
 
 '''
@@ -328,8 +349,8 @@ ________________________________________________________________________________
 
 # ActionUniPsychoSupportInfo()
 # ActionUniAnnouncements()
-# ActionUniClassSchedule()
+ActionUniClassSchedule()
 # ActionUniExamSchedule()
 # ActionUniStaffInfo()
-ActionUniAccessInfo()
+# ActionUniAccessInfo()
 
