@@ -14,6 +14,8 @@ intents:
 - request_class_schedule
 - request_exam_schedule
 - request_psychoSupport_info
+- request_staff_info
+- request_contact_loc_info
 - thank_bot
 - ask_about_services
 actions:
@@ -30,6 +32,8 @@ actions:
 - action_uni_class_schedule
 - action_uni_exam_schedule
 - action_uni_psychoSupport_info
+- action_uni_staff_info
+- action_uni_contact_loc_info
 - action_resetSlots
 - utter_further_action
 - utter_goodbye

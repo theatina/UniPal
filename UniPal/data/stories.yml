@@ -421,3 +421,34 @@ stories:
   - action: utter_further_action
   - intent: deny
   - action: utter_goodbye
+
+
+- story: UniPal Request Staff Information 
+  steps:               
+  - intent: greet
+  - action: utter_greet
+  - action: action_UniPal_services
+  - action: action_resetSlots
+  - intent: request_staff_info
+  - action: action_uni_staff_info
+  - action: utter_further_action
+  - intent: affirm
+  - action: action_UniPal_services
+  - action: action_resetSlots
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: UniPal Request Access-Location-Contact Information 
+  steps:               
+  - intent: greet
+  - action: utter_greet
+  - action: action_UniPal_services
+  - action: action_resetSlots
+  - intent: request_contact_loc_info
+  - action: action_uni_contact_loc_info
+  - action: utter_further_action
+  - intent: affirm
+  - action: action_UniPal_services
+  - action: action_resetSlots
+  - intent: goodbye
+  - action: utter_goodbye

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="el" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+<head>
+<meta charset="utf-8"/>
+<meta content="width" name="MobileOptimized"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://www.di.uoa.gr/en/department/contact-location" hreflang="en" rel="alternate"/>
+<link href="https://www.di.uoa.gr/department/contact-location" hreflang="el" rel="alternate"/>
+<link href="https://www.di.uoa.gr/department/contact-location" rel="canonical"/>
+<link href="https://www.di.uoa.gr/node/333" rel="shortlink"/>
+<link href="https://www.di.uoa.gr/department/contact-location" rel="revision"/>
+<title>Επικοινωνία &amp; Πρόσβαση | Τμήμα Πληροφορικής και Τηλεπικοινωνιών ΕΚΠΑ</title>
+<link href="/core/assets/vendor/normalize-css/normalize.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/misc/normalize-fixes.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/libraries/animateCSS/animate.css-master/animate.min.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/libraries/superfish/css/superfish.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/ajax-progress.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/align.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/autocomplete-loading.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/fieldgroup.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/container-inline.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/clearfix.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/details.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/hidden.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/item-list.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/js.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/nowrap.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/position-container.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/progress.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/reset-appearance.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/resize.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/sticky-header.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/system-status-counter.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/system-status-report-counters.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/system-status-report-general-info.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/tabledrag.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/tablesort.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/system/components/tree-child.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/stable/css/views/views.module.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/modules/bootstrap_paragraphs/css/bootstrap-paragraphs.min.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/modules/bootstrap_paragraphs/css/bootstrap-paragraphs-colors.min.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/modules/obfuscate/css/rot13.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/modules/bootstrap_paragraphs/css/bootstrap-paragraphs-accordion.min.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/modules/bootstrap_paragraphs/css/bootstrap-paragraphs-columns.min.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/modules/animations/css/theme/style.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" media="all" rel="stylesheet"/>
+<link href="https://use.fontawesome.com/releases/v5.4.1/css/v4-shims.css" media="all" rel="stylesheet"/>
+<link href="/core/modules/layout_discovery/layouts/onecol/onecol.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/modules/paragraphs/css/paragraphs.unpublished.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/js/owl-carousel/assets/owl.carousel.min.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/js/owl-carousel/assets/owl.theme.default.min.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/base/elements.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/base/layout.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/base/local-base.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/action-links.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/button.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/collapse-processed.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/container-inline.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/details.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/exposed-filters.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/field.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/form.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/icons.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/inline-form.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/item-list.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/link.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/links.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/menu.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/more-link.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/tabledrag.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/tableselect.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/tablesort.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/tabs.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/textarea.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/ui-dialog.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/messages.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/core/themes/classy/css/components/node.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/alert.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/accordion.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/block.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/buttons.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/better-exposed-filters.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/contact-info.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/call-to-action.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/dropdowns.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/fancy-block.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/fancy-block-2.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/highlights.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/more-links.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/fa-icons-list.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/forms.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/field-taxonomy-term.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/icons-list.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/social-links.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/social-media.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/item-list.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/inline-list.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/image-overlay.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/node-links.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/separators.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/search.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/site-branding.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/static-promoted-images-grid.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/pricing-tables.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/text-blocks.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/tables.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/tabs.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/team-members.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/pills.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/progress-bars.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/layout-switcher.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/language-switcher.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/menu.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/username.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/views.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/view-promoted-items.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/icon-features.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/view-showcases-grid-2.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/flexslider.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/logo_header.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/course-list.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/profile.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/undergraduate-course-page-layout.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/infrastructure.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/breadcrumb_and_intro.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/contact-location-page.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/background-image-block.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/messages.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/tooltip.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/in-page-navigation.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/owl-carousel-global.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/view-promoted-posts-carousel.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/node.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/breadcrumb.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/to-top.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/fixed-header.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/inverted-header.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/components/local-components.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="//fonts.googleapis.com/css?family=Noto+Sans:100,100i,300,300i,400,400i,600|Open+Sans:300i,400,300, 400i, 600" media="all" rel="stylesheet"/>       
+<link href="/themes/corporate_lite/css/theme/color-blue.css?rccfjd" media="all" rel="stylesheet"/>
+<link href="/themes/corporate_lite/css/theme/local-theme.css?rccfjd" media="all" rel="stylesheet"/>
+<!--[if lte IE 8]>
+<script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+<![endif]-->
+<script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+</head>
+<body class="page-node-333 layout-no-sidebars wide hff-33 pff-43 sff-33 slff-33 fixed-header-enabled slideout-side-right transparent-header-active inverted-header-enabled path-node page-node-type-page">
+<a class="visually-hidden focusable skip-link" href="#main-content">
+      Skip to main content
+    </a>
+<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+<div class="page-container">
+<div class="header-container">
+<div class="clearfix header-top-highlighted region--dark-typography region--white-background">
+<div class="container">
+<div class="clearfix header-top-highlighted__container">
+<div class="row">
+<div class="col-md-12">
+<div class="clearfix header-top-highlighted__section header-top-highlighted-first">
+<div class="region region-header-top-highlighted-first">
+<div class="language-switcher-language-url clearfix block block-language block-language-blocklanguage-interface" id="block-languageswitcher" role="navigation">
+<div class="content">
+<ul class="links"><li class="en" data-drupal-link-system-path="node/333" hreflang="en"><a class="language-link" data-drupal-link-system-path="node/333" href="/en/department/contact-location" hreflang="en">English</a></li><li class="el is-active" data-drupal-link-system-path="node/333" hreflang="el"><a class="language-link is-active" data-drupal-link-system-path="node/333" href="/department/contact-location" hreflang="el">Ελληνικα</a></li></ul>
+</div>
+</div>
+<nav aria-labelledby="block-headertoplinks-menu" class="clearfix block block-menu navigation menu--header-top-links" id="block-headertoplinks" role="navigation">
+<h2 class="visually-hidden" id="block-headertoplinks-menu">Header Top Links</h2>
+<ul class="clearfix menu">
+<li class="menu-item menu-item--active-trail">
+<a class="is-active" data-drupal-link-system-path="node/333" href="/department/contact-location">Επικοινωνία &amp; πρόσβαση</a>
+</li>
+</ul>
+</nav>
+<div class="clearfix block block-block-content block-block-content4c021c29-c206-46b1-83f5-98f3ed446a99" id="block-socialheadertop">
+<div class="content">
+<div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<div class="clearfix block block-layout-builder block-field-blockblock-contentbasicbody">
+<div class="content">
+<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><ul class="social-navigation">       
+<li><a href="http://www.facebook.com/dituoa/" target="_blank"><i class="fa fa-facebook-square"><span class="sr-only">facebook</span></i></a></li>
+<li><a href="http://twitter.com/dit_uoa/" target="_blank"><i class="fa fa-twitter-square"><span class="sr-only">twitter</span></i></a></li>
+<li><a href="https://www.linkedin.com/groups/51107/" target="_blank"><i class="fa fa-linkedin-square"><span class="sr-only">linkedin</span></i></a></li>       
+<li><a href="http://www.di.uoa.gr/rss.xml" target="_blank"><i class="fa fa-rss-square"></i><span class="sr-only">rss</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<header class="clearfix header region--dark-typography region--white-background fixed-width two-columns" role="banner">
+<div class="container">
+<div class="clearfix header__container">
+<div class="row">
+<div class="col-md-4">
+<div class="clearfix header__section header-first">
+<div class="region region-header-first">
+<div class="clearfix site-branding block block-system block-system-branding-block" id="block-corporate-lite-branding">
+<div class="logo-and-site-name-wrapper clearfix">
+<div class="logo">
+<a class="site-branding__logo" href="/" rel="home" title="Αρχική">
+<img alt="Αρχική" src="/themes/corporate_lite/logo_el.png"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="clearfix header__section header-second">
+<div class="region region-header">
+<div class="clearfix block block-superfish block-superfishmain" id="block-kentrikiploigisi">
+<div class="content">
+<ul class="menu sf-menu sf-main sf-horizontal sf-style-none" id="superfish-main">
+<li class="active-trail sf-depth-1 menuparent" id="main-menu-link-contentc23ff4df-f197-48d4-9ce8-d63c3c636fdc"><a class="sf-depth-1 menuparent" href="/department">Τμήμα</a><ul><li class="sf-depth-2 sf-no-children" id="main-menu-link-content27d9a866-16b4-4e57-ac29-c229e21b0e2d"><a class="sf-depth-2" href="/department/about" title="Ταυτότητα">Ταυτότητα</a></li><li class="sf-depth-2 sf-no-children" id="main-menu-link-content7c127200-f409-4f9c-bc99-4e7e5b1efb41"><a class="sf-depth-2" href="/department/administration">Διοίκηση</a></li><li class="sf-depth-2 sf-no-children" id="main-menu-link-content874bf77c-336e-4963-ac4a-3c64670422c4"><a class="sf-depth-2" href="/department/committees">Επιτροπές</a></li><li class="sf-depth-2 sf-no-children" id="main-menu-link-content4f58b32d-4df2-446d-a7b2-091b8f4ed928"><a class="sf-depth-2" href="/department/infrastructure">Υποδομές</a></li><li class="sf-depth-2 sf-no-children" id="main-menu-link-content0c554f7d-e624-44b3-86bf-c1c95a5ba7fe"><a class="sf-depth-2" href="/department/services" title="Υπηρεσίες &amp; Υποστήριξη">Υπηρεσίες &amp; Υποστήριξη</a></li><li class="active-trail sf-depth-2 sf-no-children" id="main-menu-link-contente0059047-da57-400f-a9c8-2061767697d9"><a class="is-active sf-depth-2" href="/department/contact-location">Επικοινωνία &amp; Πρόσβαση</a></li><li class="sf-depth-2 sf-no-children" id="main-menu-link-content3d6ee11b-667b-45ee-b07a-5805f764a47a"><a class="sf-depth-2" href="/department/evaluation">Διασφάλιση Ποιότητας &amp; Αξιολόγηση</a></li><li class="sf-depth-2 sf-no-children" id="main-menu-link-content0f9c8ee0-8ab6-4b11-9d5d-94c126f2ca00"><a class="sf-depth-2" href="/department/ethicsandconduct">Κώδικας Ηθικής και Συμπεριφοράς Υπαλλήλων</a></li></ul></li><li class="sf-depth-1 sf-no-children" id="main-menu-link-content8db59e59-2a2c-48e3-a75e-5b8655c2d208"><a class="sf-depth-1" href="/staff">Προσωπικό</a></li><li class="sf-depth-1 menuparent" id="main-menu-link-content96634706-8c87-4bb4-8693-830367fa5d17"><a class="sf-depth-1 menuparent" href="/studies">Σπουδές</a><ul><li class="sf-depth-2 sf-no-children" id="main-menu-link-contentdaa24f49-f7d5-44f4-882f-949a42392ea0"><a class="sf-depth-2" href="/studies/undergraduate">Προπτυχιακές</a></li><li class="sf-depth-2 sf-no-children" id="main-menu-link-contentf3911f47-283f-4236-a45e-ff7db55550e7"><a class="sf-depth-2" href="/studies/graduate">Μεταπτυχιακές</a></li><li class="sf-depth-2 sf-no-children" id="main-menu-link-contentae987a75-6d32-49fc-aee6-a0a64a99e018"><a class="sf-depth-2" href="/studies/phd">Διδακτορικές</a></li><li class="sf-depth-2 sf-no-children" id="main-menu-link-content2bae2965-4422-49d4-a967-a45eccbe3cca"><a class="sf-depth-2" href="/erasmus">ERASMUS</a></li><li class="sf-depth-2 sf-no-children" id="main-menu-link-content5cd8a092-e06a-4309-bea4-171c1583780d"><a class="sf-depth-2" href="/postdoc">Μεταδιδακτορική Έρευνα</a></li></ul></li><li class="sf-depth-1 sf-no-children" id="main-menu-link-contente9158c02-0cd4-4502-9306-2ce910fe07f4"><a class="sf-depth-1 sf-external" href="https://www.di.uoa.gr/civis" target="_blank" title="CIVIS">CIVIS</a></li><li class="sf-depth-1 menuparent" id="main-menu-link-contentc8c2b57d-5778-4bb3-8027-0f6a86214cb5"><a class="sf-depth-1 menuparent" href="/research">Έρευνα</a><ul><li class="sf-depth-2 sf-no-children" id="main-menu-link-contentbe4f9868-22e4-4d82-9488-ec08adcaa7ce"><a class="sf-depth-2" href="/research" title="Δραστηριότητες, Εργαστήρια και πεδία Έρευνας">Δραστηριότητες, Εργαστήρια και πεδία Έρευνας</a></li><li class="sf-depth-2 sf-no-children" id="main-menu-link-content4d1b26e9-3f34-4d97-bf1b-209ae7f712b4"><a class="sf-depth-2" href="/postdoc" title="Μεταδιδακτορική Έρευνα">Μεταδιδακτορική Έρευνα</a></li></ul></li><li class="sf-depth-1 sf-no-children" id="main-menu-link-content375f147b-31d2-4b2b-b719-49dc099c172b"><a class="sf-depth-1" href="/announcements">Ανακοινώσεις</a></li><li class="sf-depth-1 sf-no-children" id="main-menu-link-content2972b280-37b1-437e-9633-a1cadd976e03"><a class="sf-depth-1" href="/documents">Έντυπα</a></li><li class="sf-depth-1 sf-no-children" id="main-menu-link-content3fc7cb55-44bd-478e-8fd9-29ae6c36e211"><a class="sf-depth-1" href="/outreach">Δράσεις</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div class="system-messages clearfix">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="region region-system-messages">
+<div class="clearfix block block-system block-system-breadcrumb-block" id="block-corporate-lite-breadcrumbs">
+<div class="content">
+<nav aria-labelledby="system-breadcrumb" class="breadcrumb" role="navigation">
+<h2 class="visually-hidden" id="system-breadcrumb">Breadcrumb</h2>
+<ol class="breadcrumb__items">
+<li class="breadcrumb__item">
+<span class="breadcrumb__item-separator fa fa-angle-right"></span>
+<a href="/">
+<span>Αρχική</span>
+</a>
+</li>
+<li class="breadcrumb__item">
+<span class="breadcrumb__item-separator fa fa-angle-right"></span>
+<a href="/department">
+<span>Το Τμήμα</span>
+</a>
+</li>
+<li class="breadcrumb__item">
+<span class="breadcrumb__item-separator fa fa-angle-right"></span>
+<span>Επικοινωνία &amp; Πρόσβαση</span>
+</li>
+</ol>
+</nav>
+</div>
+</div>
+<div class="hidden" data-drupal-messages-fallback=""></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix main-content region--dark-typography region--white-background region--no-separator" id="main-content">
+<div class="container">
+<div class="clearfix main-content__container">
+<div class="row">
+<section class="col-md-12">
+<div class="clearfix main-content__section">
+<div class="region region-content">
+<div class="clearfix block block-core block-page-title-block" id="block-corporate-lite-page-title">
+<div class="content">
+<h1 class="title page-title"><span class="field field--name-title field--type-string field--label-hidden" property="schema:name">Επικοινωνία &amp; Πρόσβαση</span>
+</h1>
+</div>
+</div>
+<div class="clearfix block block-system block-system-main-block" id="block-corporate-lite-content">
+<div class="content">
+<article about="/department/contact-location" class="node node--type-page node--view-mode-full clearfix" data-history-node-id="333" role="article" typeof="schema:WebPage">
+<div class="node__container">
+<div class="node__main-content clearfix">
+<header class="node__header">
+<span class="rdf-meta hidden" content="Επικοινωνία &amp; Πρόσβαση" property="schema:name"></span>
+</header>
+<div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<div class="clearfix block block-layout-builder block-extra-field-blocknodepagelinks">
+<div class="content">
+</div>
+</div>
+<div class="clearfix block block-layout-builder block-field-blocknodepagefield-two-column-layout">
+<div class="content">
+<div class="field--label">Paragraph Section</div>
+<div>
+<div class="paragraph paragraph--type--bp-column-wrapper paragraph--view-mode--default paragraph--id--1684">
+<div class="paragraph__column">
+<div>
+<div class="paragraph paragraph--type--bp-simple paragraph--view-mode--default paragraph--id--1685">
+<div class="paragraph__column">
+<div class="field field--name-field-title field--type-string field--label-hidden field__item">Επικοινωνία</div>
+<div class="clearfix text-formatted field field--name-bp-text field--type-text-long field--label-hidden field__item"><p>Η Γραμματεία είναι ανοικτή για το κοινό Δευτέρα–Τετάρτη–Παρασκευή 11:00-14:00 τις εργάσιμες ημέρες.</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class="paragraph paragraph--type--bp-columns paragraph--view-mode--default paragraph--id--1680">
+<div class="paragraph__column">
+<div class="paragraph--type--bp-columns__2col">
+<div>
+<div class="paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--1679">
+<div class="paragraph__column">
+<div class="field field--name-bp-view field--type-viewsreference field--label-hidden field__items">
+<div class="field__item"><div class="views-element-container"><div class="view view-contact-info view-id-contact_info view-display-id-block_6 js-view-dom-id-202f1a9a82ffa7c27aee3d9704f2489b7cd3c6e6b35aa0acfa9da6e6a9cc6eef">
+<div class="view-content">
+<div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="email">
+<span><i class="fas fa-envelope"></i> secret@di.uoa.gr </span>
+</div>
+<div class="phone">
+<span><i class="fas fa-phone"></i> +30 210 727 5161 </span>
+</div>
+<div class="phone">
+<span><i class="fas fa-phone"></i> +30 210 727 5338 </span>
+</div> </span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="paragraph--type--bp-columns__2col">
+<div>
+<div class="paragraph--bp-accordion-container">
+<div aria-multiselectable="true" class="paragraph paragraph--type--bp-accordion paragraph--view-mode--default paragraph--id--1688" id="accordion-1688" role="tablist">
+<div class="paragraph__column">
+<div class="card panel panel-default">
+<div class="card-header panel-heading" id="heading-accordion-1688-1" role="tab">
+<div class="panel-title">
+<a aria-controls="collapse-accordion-1688-1" aria-expanded="false" class="normal" data-parent="accordion-1688" data-toggle="collapse" href="#collapse-accordion-1688-1" role="button">
+                                Γραμματειακή Υποστήριξη Προπτυχιακών Σπουδών
+              </a>
+</div>
+</div>
+<div aria-labelledby="heading-accordion-1688-1" class="card-block panel-collapse collapse" id="collapse-accordion-1688-1" role="tabpanel">
+<div class="paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--1686">
+<div class="paragraph__column">
+<div class="field field--name-bp-view field--type-viewsreference field--label-hidden field__items">
+<div class="field__item"><div class="views-element-container"><div class="contact-page view view-contact-info view-id-contact_info view-display-id-block_2 js-view-dom-id-01b1b9cee280bd91ffe0d2e67e7f7183457acfd98f4601dadb79dd472f21789c">
+<div class="view-content">
+<div class="views-row"><div class="views-field views-field-title"><span class="field-content">Λούπα Κίτυ</span></div><div class="views-field views-field-field-office"><div class="field-content"><div class="office">
+<span><i class="fas fa-map-marker-alt"></i> Γραφείο Γραμματείας - Ισόγειο</span>
+</div></div></div><div class="views-field views-field-field-profile-int-phone"><div class="field-content"><div class="phone">
+<span><i class="fas fa-phone"></i> +30 210 7275154</span>
+</div></div></div><div class="views-field views-field-field-fax"><div class="field-content"></div></div><div class="views-field views-field-field-email"><div class="field-content"><div class="email">
+<span><i class="fas fa-envelope"></i>secret@di.uoa.gr</span>
+</div></div></div></div>
+<div class="views-row"><div class="views-field views-field-title"><span class="field-content">Κασιμάτη Αθανασία</span></div><div class="views-field views-field-field-office"><div class="field-content"><div class="office">
+<span><i class="fas fa-map-marker-alt"></i> Γραφείο Γραμματείας - Ισόγειο</span>
+</div></div></div><div class="views-field views-field-field-profile-int-phone"><div class="field-content"><div class="phone">
+<span><i class="fas fa-phone"></i> +30 210 7275338</span>
+</div></div></div><div class="views-field views-field-field-fax"><div class="field-content"></div></div><div class="views-field views-field-field-email"><div class="field-content"><div class="email">
+<span><i class="fas fa-envelope"></i>secret@di.uoa.gr</span>
+</div></div></div></div>
+</div>
+<div class="view-footer">
+      Η Γραμματεία είναι ανοικτή για το κοινό Δευτέρα–Τετάρτη–Παρασκευή 11:00-14:00 τις εργάσιμες μέρες.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card-header panel-heading" id="heading-accordion-1688-2" role="tab">
+<div class="panel-title">
+<a aria-controls="collapse-accordion-1688-2" aria-expanded="false" class="normal" data-parent="accordion-1688" data-toggle="collapse" href="#collapse-accordion-1688-2" role="button">
+                                Γραμματειακή Υποστήριξη Μεταπτυχιακών Σπουδών
+              </a>
+</div>
+</div>
+<div aria-labelledby="heading-accordion-1688-2" class="card-block panel-collapse collapse" id="collapse-accordion-1688-2" role="tabpanel">
+<div class="paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--1702">
+<div class="paragraph__column">
+<div class="field field--name-bp-view field--type-viewsreference field--label-hidden field__items">
+<div class="field__item"><div class="views-element-container"><div class="contact-page view view-contact-info view-id-contact_info view-display-id-block_3 js-view-dom-id-95f144af0557677717871fa2b2979b2456a120601f1137115d320972772a792a">
+<div class="view-content">
+<div class="views-row"><div class="views-field views-field-title"><span class="field-content">Κολοβός Σταμάτιος</span></div><div class="views-field views-field-field-office"><div class="field-content"><div class="office">
+<span><i class="fas fa-map-marker-alt"></i> Γραφείο Γραμματείας - Ισόγειο</span>
+</div></div></div><div class="views-field views-field-field-profile-int-phone"><div class="field-content"><div class="phone">
+<span><i class="fas fa-phone"></i> +30 210 7275138</span>
+</div></div></div><div class="views-field views-field-field-fax"><div class="field-content"></div></div><div class="views-field views-field-field-email"><div class="field-content"><div class="email">
+<span><i class="fas fa-envelope"></i>secret@di.uoa.gr</span>
+</div></div></div></div>
+<div class="views-row"><div class="views-field views-field-title"><span class="field-content">Μπουρογιάννη Παναγιώτα </span></div><div class="views-field views-field-field-office"><div class="field-content"><div class="office">
+<span><i class="fas fa-map-marker-alt"></i> Γραφείο Γραμματείας - Ισόγειο</span>
+</div></div></div><div class="views-field views-field-field-profile-int-phone"><div class="field-content"><div class="phone">
+<span><i class="fas fa-phone"></i> +30 210 7275173</span>
+</div></div></div><div class="views-field views-field-field-fax"><div class="field-content"></div></div><div class="views-field views-field-field-email"><div class="field-content"><div class="email">
+<span><i class="fas fa-envelope"></i>secret@di.uoa.gr</span>
+</div></div></div></div>
+<div class="views-row"><div class="views-field views-field-title"><span class="field-content">Παλάσκα Φρόσω</span></div><div class="views-field views-field-field-office"><div class="field-content"><div class="office">
+<span><i class="fas fa-map-marker-alt"></i> Γραφείο Γραμματείας - Ισόγειο</span>
+</div></div></div><div class="views-field views-field-field-profile-int-phone"><div class="field-content"><div class="phone">
+<span><i class="fas fa-phone"></i> +30 210 7275192</span>
+</div></div></div><div class="views-field views-field-field-fax"><div class="field-content"></div></div><div class="views-field views-field-field-email"><div class="field-content"><div class="email">
+<span><i class="fas fa-envelope"></i>secret@di.uoa.gr</span>
+</div></div></div></div>
+</div>
+<div class="view-footer">
+      Η Γραμματεία είναι ανοικτή για το κοινό Δευτέρα–Τετάρτη–Παρασκευή 11:00-14:00 τις εργάσιμες μέρες.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card-header panel-heading" id="heading-accordion-1688-3" role="tab">
+<div class="panel-title">
+<a aria-controls="collapse-accordion-1688-3" aria-expanded="false" class="normal" data-parent="accordion-1688" data-toggle="collapse" href="#collapse-accordion-1688-3" role="button">
+                                Γραμματειακή Υποστήριξη Διδακτορικών Σπουδών
+              </a>
+</div>
+</div>
+<div aria-labelledby="heading-accordion-1688-3" class="card-block panel-collapse collapse" id="collapse-accordion-1688-3" role="tabpanel">
+<div class="paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--1704">
+<div class="paragraph__column">
+<div class="field field--name-bp-view field--type-viewsreference field--label-hidden field__items">
+<div class="field__item"><div class="views-element-container"><div class="contact-page view view-contact-info view-id-contact_info view-display-id-block_4 js-view-dom-id-f81c00506908efe359443e49ed778a72ad6cc50b6559472c554c9d59987f1401">
+<div class="view-content">
+<div class="views-row"><div class="views-field views-field-title"><span class="field-content">Γαλανάκη Αντιγόνη </span></div><div class="views-field views-field-field-office"><div class="field-content"><div class="office">
+<span><i class="fas fa-map-marker-alt"></i> Γραφείο Γραμματείας - Ισόγειο</span>
+</div></div></div><div class="views-field views-field-field-profile-int-phone"><div class="field-content"><div class="phone">
+<span><i class="fas fa-phone"></i> +30 210 7275228</span>
+</div></div></div><div class="views-field views-field-field-fax"><div class="field-content"></div></div><div class="views-field views-field-field-email"><div class="field-content"><div class="email">
+<span><i class="fas fa-envelope"></i>secret@di.uoa.gr</span>
+</div></div></div></div>
+</div>
+<div class="view-footer">
+      Η Γραμματεία είναι ανοικτή για το κοινό Δευτέρα–Τετάρτη–Παρασκευή 11:00-14:00 τις εργάσιμες μέρες.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card-header panel-heading" id="heading-accordion-1688-4" role="tab">
+<div class="panel-title">
+<a aria-controls="collapse-accordion-1688-4" aria-expanded="false" class="normal" data-parent="accordion-1688" data-toggle="collapse" href="#collapse-accordion-1688-4" role="button">
+                                Θυρωρείο
+              </a>
+</div>
+</div>
+<div aria-labelledby="heading-accordion-1688-4" class="card-block panel-collapse collapse" id="collapse-accordion-1688-4" role="tabpanel">
+<div class="paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--1707">
+<div class="paragraph__column">
+<div class="field field--name-bp-view field--type-viewsreference field--label-hidden field__items">
+<div class="field__item"><div class="views-element-container"><div class="view view-contact-info view-id-contact_info view-display-id-block_8 js-view-dom-id-2e84ec58eea1bd38e93ef33cac5c1596465a5d2f56023c26e016bda550854aa0">
+<div class="view-content">
+<div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="phone">
+<span><i class="fas fa-phone"></i> +30 210 727 5111</span>
+</div>
+</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class="paragraph paragraph--type--bp-simple paragraph--view-mode--default paragraph--id--3057">
+<div class="paragraph__column">
+<div class="field field--name-field-title field--type-string field--label-hidden field__item">Ώρες Λειτουργίας</div>
+<div class="clearfix text-formatted field field--name-bp-text field--type-text-long field--label-hidden field__item"><p><strong>Γραμματεία Τμήματος:</strong> 09:00-17:00 τις εργάσιμες ημέρες</p>
+<p><strong>Γραμματεία Τμήματος-Υποδοχή Φοιτητών:</strong> 11:00-14:00 Δευτέρα, Τετάρτη, Παρασκευή</p>
+<p><em>Λόγω των μέτρων προστασίας covid-19,  τα αιτήματα των φοιτητών εξυπηρετούνται από τη Γραμματεία μέσω mail εφόσον αποσταλλούν από το φοιτητικό τους λογαριασμό.</em></p>
+<p><strong>Κτήριο:</strong> 09:00-21:00 τις εργάσιμες ημέρες</p>
+<p><strong>Εκπαιδευτικά Εργαστήρια:</strong> 09:00-21:00 τις εργάσιμες ημέρες</p>
+<p><strong>Αναγνωστήριο Τμήματος: </strong>09:00-21:00 τις εργάσιμες ημέρες</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class="paragraph paragraph--type--bp-simple paragraph--view-mode--default paragraph--id--1709">
+<div class="paragraph__column">
+<div class="field field--name-field-title field--type-string field--label-hidden field__item">Τοποθεσία</div>
+</div>
+</div>
+</div>
+<div>
+<div class="paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--1710">
+<div class="paragraph__column">
+<div class="field field--name-bp-view field--type-viewsreference field--label-hidden field__items">
+<div class="field__item"><div class="views-element-container"><div class="view view-contact-info view-id-contact_info view-display-id-block_7 js-view-dom-id-1427807a173db0053014034bbaf08cdcc8bcaed2a89a3528f0e70861c56fe21e">
+<div class="view-content">
+<div class="views-row"><div class="views-field views-field-nothing"><span class="field-content">Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών
+<br/>Τμήμα Πληροφορικής και Τηλεπικοινωνιών
+<br/>Πανεπιστημιούπολη, Ιλίσια
+<br/>Αθήνα, 157 84
+</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class="paragraph paragraph--type--bp-simple paragraph--view-mode--default paragraph--id--1711">
+<div class="paragraph__column">
+<div class="clearfix text-formatted field field--name-bp-text field--type-text-long field--label-hidden field__item"><p><iframe allowfullscreen="" frameborder="0" height="380" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.372428826032!2d23.76471991574404!3d37.96843700876585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a197e10ffd248b%3A0x9e1a1dd511c44165!2sDepartment+of+Informatics+and+Telecommunications!5e0!3m2!1sen!2sgr!4v1545152991810" width="100%"></iframe></p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class="paragraph paragraph--type--bp-simple paragraph--view-mode--default paragraph--id--1712">
+<div class="paragraph__column">
+<div class="field field--name-field-title field--type-string field--label-hidden field__item">Πρόσβαση</div>
+<div class="clearfix text-formatted field field--name-bp-text field--type-text-long field--label-hidden field__item"><p><strong>Λεωφορεία - Συγκοινωνίες</strong></p>
+<p>Οι ακόλουθες λεωφορειακές γραμμές εξυπηρετούν την πρόσβαση στην περιοχή της Πανεπιστημιούπολης:</p>
+<p><br/>
+220: <a href="http://telematics.oasa.gr/#lineDetails_949_220%20:%20ANO%20ILISIA%20-%20AKADIMIA%20_147-54" target="_blank">Ακαδημία – Άνω Ιλίσια</a> έως Κεντρική Πύλη</p>
+<p>221: <a href="http://telematics.oasa.gr/#lineDetails_1004_221%20:%20PANEPISTIMIOYPOLI%20-%20AKADIMIA%20_147-54" target="_blank">Ακαδημία – Πανεπιστημιούπολη</a> έως Κεντρική Πύλη</p>
+<p>224: <a href="http://telematics.oasa.gr/#lineDetails_799_224%20:%20KAISARIANI%20-%20EL.%20VENIZELOY_1-54" target="_blank">Καισαριανή – Ελ. Βενιζέλου</a> (Στάση «10η ΚΑΙΣΑΡΙΑΝΗΣ»)</p>
+<p>230: <a href="http://telematics.oasa.gr/#lineDetails_975_230%20:%20AKROPOLI%20-%20ZOGRAFOY_207-54" target="_blank">Ακρόπολη – Ζωγράφου</a> έως Πύλη Ζωγράφου</p>
+<p>235: <a href="http://telematics.oasa.gr/#lineDetails_950_235%20:%20ZOGRAFOY%20-%20AKADIMIA%20_119-54" target="_blank">Ακαδημία – Ζωγράφου</a> έως Πύλη Ζωγράφου</p>
+<p><strong>250</strong>: <a href="http://telematics.oasa.gr/#lineDetails_952_250%20:%20PANEPISTIMIOUPOLI%20-%20ST.%20EVAGGELISMOS_121-54" target="_blank">Πανεπιστημιούπολη – Ευαγγελισμός</a>* Στάθ. Ευαγγελισμού (Στάση «2η ΠΑΝΕΠΙΣΤΗΜΙΟΥΠΟΛΗΣ»)</p>
+<p><strong>Ε90</strong>: <a href="http://telematics.oasa.gr/#lineDetails_1203_%CE%9590%20:%20PEIRAIAS%20-%20PANEPISTIMIOYPOLI%20(SCHOLIKI%20EXPRESS)_230-54" target="_blank">Πειραιάς – Πανεπιστημιούπολη</a> (Express)* (Στάση «2η ΠΑΝΕΠΙΣΤΗΜΙΟΥΠΟΛΗΣ»)</p>
+<p>608: <a href="http://telematics.oasa.gr/#lineDetails_960_608%20:%20GALATSI%20-%20AKADIMIA%20-%20NEKR.%20ZOGRAFOY_134-54" target="_blank">Γαλάτσι – Ακαδημία – Νεκρ. Ζωγράφου</a></p>
+<p>(*) Οι λεωφορειακές γραμμές 250 και Ε90 διασχίζουν όλη την Πανεπιστημιούπολη.</p>
+<p><br/>
+Για περισσότερες πληροφορίες επισκεφθείτε τον ιστότοπο του <a href="http://telematics.oasa.gr/" target="_blank">ΟΑΣΑ</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+<footer class="clearfix footer region--dark-typography region--white-background region--no-separator" id="footer">
+<div class="container">
+<div class="clearfix footer__container">
+<div class="row">
+<div class="col-sm-6 col-md-3">
+<div class="clearfix footer__section footer-first">
+<div class="region region-footer-first">
+<div class="clearfix block block-block-content block-block-content06a0f3fd-2805-4f5c-947f-59e6379c9c06" id="block-social">
+<h2 class="title">Social Networks</h2>
+<div class="content">
+<div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<div class="clearfix block block-layout-builder block-field-blockblock-contentbasicbody">
+<div class="content">
+<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><ul class="icons-list icons-list--large">
+<li><a href="https://www.facebook.com/dituoa/" target="_blank"><i class="fa fa-facebook-square"><span class="sr-only">facebook</span></i></a></li>
+<li><a href="https://twitter.com/dit_uoa/" target="_blank"><i class="fa fa-twitter-square"><span class="sr-only">twitter</span></i></a></li>
+<li><a href="https://www.linkedin.com/groups/51107" target="_blank"><i class="fa fa-linkedin-square"><span class="sr-only">linkedin</span></i></a></li>        
+<li><a href="https://www.youtube.com/channel/UCBe-uucrwt5NpkQN3mNcQtQ/about" target="_blank"><i class="fa fa-youtube"><span class="sr-only">youtube</span></i></a></li>
+<li><a href="http://www.di.uoa.gr/rss.xml" target="_blank"><i class="fa fa-rss-square"><span class="sr-only">rss</span></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav aria-labelledby="block-variouslinks-menu" class="clearfix block block-menu navigation menu--various-links" id="block-variouslinks" role="navigation">     
+<h2 class="visually-hidden" id="block-variouslinks-menu">Various links</h2>
+<ul class="clearfix menu">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/131" href="/credits" title="Συντελεστές">Συντελεστές</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="clearfix footer__section footer-second">
+<div class="region region-footer-second">
+<div class="views-element-container clearfix block block-views block-views-blockcontact-info-block-5" id="block-views-block-contact-info-block-5">
+<h2 class="title">Επικοινωνία</h2>
+<div class="content">
+<div><div class="view view-contact-info view-id-contact_info view-display-id-block_5 js-view-dom-id-1add6088531ce4805337eec0861872bb58c38cb59f243838c7c5391220a3d888">
+<div class="view-content">
+<div class="views-row"><div class="views-field views-field-nothing"><span class="field-content">Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών
+<br/>Τμήμα Πληροφορικής και Τηλεπικοινωνιών
+<br/>Πανεπιστημιούπολη, Ιλίσια
+<br/>Αθήνα, 157 84
+
+<div class="email">
+<span><i class="fas fa-envelope"></i> secret@di.uoa.gr </span>
+</div>
+<div class="phone">
+<span><i class="fas fa-phone"></i> +30 210 727 5173  </span>
+</div>
+<div class="phone">
+<span><i class="fas fa-phone"></i> +30 210 727 5192 </span>
+</div>
+Θυρωρείο:
+<div class="phone">
+<span><i class="fas fa-phone"></i> +30 210 727 5111</span>
+</div></span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix visible-sm-block"></div>
+<div class="col-sm-6 col-md-3">
+<div class="clearfix footer__section footer-third">
+<div class="region region-footer-third">
+<nav aria-labelledby="block-yposelido-menu" class="clearfix block block-menu navigation menu--footer" id="block-yposelido" role="navigation">
+<h2 id="block-yposelido-menu">Υπηρεσίες και Προσβασιμότητα</h2>
+<ul class="clearfix menu">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/943" href="/department/services">Υπηρεσίες</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/944" href="/department/services/support">Υποστήριξη</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/945" href="/department/services/accessibility">Προσβασιμότητα</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="clearfix visible-xs-block visible-xs-block"></div>
+<div class="col-sm-6 col-md-3">
+<div class="clearfix footer__section footer-fourth">
+<div class="region region-footer-fourth">
+<div class="clearfix block block-block-content block-block-content528fd3e8-4ddc-43b2-bdf2-75dc68d878eb" id="block-adip">
+<div class="content">
+<div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<div class="clearfix block block-layout-builder block-field-blockblock-contentbasicbody">
+<div class="content">
+<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><img alt="ΑΔΙΠ" class="align-center" data-entity-type="file" data-entity-uuid="815b708f-68ab-4bd9-aec0-e40f093614e8" src="/sites/default/files/inline-images/adip.png"/></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<div class="to-top"><i class="fa fa-angle-double-up"></i></div>
+</div>
+</div>
+<script data-drupal-selector="drupal-settings-json" type="application/json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/333","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"el"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"animations":{"typewriterMultiple":{"name":"Typewriter effect for displaying multiple children elements in a queue.","desc":"CSS selectors of the parent elements. As an example, you may have a parent wrapper with multiple li, p or any other children, in which case the effect will type each children element after the other.","classes":[]},"typewriter":{"classes":[]},"bounce":{"classes":[]},"flash":{"classes":[]},"pulse":{"classes":[]},"rubberBand":{"classes":[]},"shake":{"classes":[]},"headShake":{"classes":[]},"swing":{"classes":[]},"tada":{"classes":[]},"wobble":{"classes":[]},"jello":{"classes":[]},"bounceIn":{"classes":[]},"bounceInDown":{"classes":[]},"bounceInLeft":{"classes":[]},"bounceInRight":{"classes":[]},"bounceInUp":{"classes":[]},"bounceOut":{"classes":[]},"bounceOutDown":{"classes":[]},"bounceOutLeft":{"classes":[]},"bounceOutRight":{"classes":[]},"bounceOutUp":{"classes":[]},"fadeIn":{"classes":[]},"fadeInDown":{"classes":[]},"fadeInDownBig":{"classes":[]},"fadeInLeft":{"classes":[]},"fadeInLeftBig":{"classes":[]},"fadeInRight":{"classes":[]},"fadeInRightBig":{"classes":[]},"fadeInUp":{"classes":[]},"fadeInUpBig":{"classes":[]},"fadeOut":{"classes":[]},"fadeOutDown":{"classes":[]},"fadeOutDownBig":{"classes":[]},"fadeOutLeft":{"classes":[]},"fadeOutLeftBig":{"classes":[]},"fadeOutRight":{"classes":[]},"fadeOutRightBig":{"classes":[]},"fadeOutUp":{"classes":[]},"fadeOutUpBig":{"classes":[]},"flipInX":{"classes":[]},"flipInY":{"classes":[]},"flipOutX":{"classes":[]},"flipOutY":{"classes":[]},"lightSpeedIn":{"classes":[]},"lightSpeedOut":{"classes":[]},"rotateIn":{"classes":[]},"rotateInDownLeft":{"classes":[]},"rotateInDownRight":{"classes":[]},"rotateInUpLeft":{"classes":[]},"rotateInUpRight":{"classes":[]},"rotateOut":{"classes":[]},"rotateOutDownLeft":{"classes":[]},"rotateOutDownRight":{"classes":[]},"rotateOutUpLeft":{"classes":[]},"rotateOutUpRight":{"classes":[]},"hinge":{"classes":[]},"rollIn":{"classes":[]},"rollOut":{"classes":[]},"zoomIn":{"classes":[]},"zoomInDown":{"classes":[]},"zoomInLeft":{"classes":[]},"zoomInRight":{"classes":[]},"zoomInUp":{"classes":[]},"zoomOut":{"classes":[]},"zoomOutDown":{"classes":[]},"zoomOutLeft":{"classes":[]},"zoomOutRight":{"classes":[]},"zoomOutUp":{"classes":[]},"slideInDown":{"classes":[]},"slideInLeft":{"classes":[]},"slideInRight":{"classes":[]},"slideInUp":{"classes":[]},"slideOutDown":{"classes":[]},"slideOutLeft":{"classes":[]},"slideOutRight":{"classes":[]},"slideOutUp":{"classes":[]}},"corporate_lite":{"flexsliderInPageInit":{"inPageSliderEffect":"slide"},"inPageNavigation":{"inPageNavigationOffset":74},"slideoutInit":{"slideoutSide":"right","slideoutTouchSwipe":true}},"superfish":{"superfish-main":{"id":"superfish-main","sf":{"animation":{"opacity":"show","height":"show"},"speed":"fast"},"plugins":{"smallscreen":{"mode":"window_width","title":"\u039a\u03b5\u03bd\u03c4\u03c1\u03b9\u03ba\u03ae \u03c0\u03bb\u03bf\u03ae\u03b3\u03b7\u03c3\u03b7"},"supposition":true,"supersubs":true}}},"user":{"uid":0,"permissionsHash":"34b6ff34b62a6814e220ba6339a7cbaeedbb74d6404f3678de5036c7b4ddea47"}}</script>
+<script src="/modules/bootstrap_paragraphs/js/bootstrap-paragraphs-accordion.js?rccfjd"></script>
+<script src="/libraries/superfish/superfish.js?rccfjd"></script>
+<script src="/libraries/superfish/jquery.hoverIntent.minified.js?rccfjd"></script>
+<script src="/libraries/superfish/sfsmallscreen.js?rccfjd"></script>
+<script src="/libraries/superfish/supposition.js?rccfjd"></script>
+<script src="/libraries/superfish/supersubs.js?rccfjd"></script>
+<script src="/modules/superfish/js/superfish.js?v=2.0"></script>
+<script src="/themes/corporate_lite/js/custom/to-top.js?v=8.8.4"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/themes/corporate_lite/js/waypoints/jquery.waypoints.min.js?v=4.0.1"></script>
+<script src="/themes/corporate_lite/js/waypoints/shortcuts/sticky.min.js?v=4.0.1"></script>
+<script src="/themes/corporate_lite/js/init/waypoints-fixed-header-init.js?v=8.8.4"></script>
+</body>
+</html>

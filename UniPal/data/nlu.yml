@@ -170,6 +170,27 @@ nlu:
     - [10](num_of_announcements) announcements
     - [3](num_of_announcements) news
 
+- intent: request_staff_info
+  examples: |
+    - staff info
+    - staff
+    - staff contact details
+    - professors' email
+    - phone numbers of lecturers
+    - staff contact
+    - uni staff members phones
+
+- intent: request_contact_loc_info
+  examples: |
+    - uni contact info
+    - uni location info
+    - uni access info
+    - access
+    - location
+    - how can i get to uni
+    - uni location
+    - access to uni
+
 - synonym: jan
   examples: |
     - january

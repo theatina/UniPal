@@ -156,11 +156,12 @@ def ActionUniExamSchedule():
     grad_stud_type = "PPS"
     period = "jan"
     # semester = "winter"
-    academic_year = 2020
+    academic_year = 2010
     if len(str(academic_year))>2:
         academic_year = int(str(academic_year)[-2:])
+        academic_year=int(str(academic_year).zfill(2))
 
-    acad_years=str(academic_year-1)+"-"+str(academic_year)
+    acad_years=str(academic_year-1).zfill(2)+"-"+str(academic_year).zfill(2)
 
     # print(grad_stud_type, semester, academic_year)
     # file_url = os.path.join(schedule_path, f"")
@@ -187,7 +188,7 @@ def ActionUniExamSchedule():
     # print(type(timetable_df["Date"][2]))
     # print(timetable_df["Date"][2].date().strftime('%A %d-%m-%y'))
     timetable_df["Date"] = timetable_df["Date"].apply(lambda x: x.date().strftime('%A %d-%m-%Y') if isinstance(x, datetime) else x)
-    print(timetable_df["Date"])
+    # print(timetable_df["Date"])
     timetable_df.to_csv(f"exams{grad_stud_type}{period}{academic_year}Timetable.csv", index=False, header=True)
 
 
@@ -210,6 +211,113 @@ def ActionUniExamSchedule():
     return class_str
 
 
+def ActionUniStaffInfo():
+    announcements_url = "https://www.di.uoa.gr/staff/"
+    uoa_url = "https://www.di.uoa.gr"
+
+    # DEP:      announcements_url + ?field_staff_specialty_target_id=7
+    # EDIP:     announcements_url + ?field_staff_specialty_target_id=8
+    # ETEP:     announcements_url + ?field_staff_specialty_target_id=30
+    # SECRET:   announcements_url + ?field_staff_specialty_target_id=29
+    info_dict={}
+    for specialty_id in [7,8,30,29]:
+        # if secretary, display them separately, first
+        # if specialty_id==29:
+        #     print("\n--> Secretary:")
+        page = urlopen(announcements_url+f"?field_staff_specialty_target_id={specialty_id}")
+        html = page.read().decode("utf-8")
+        soup = BeautifulSoup(html, "html.parser")
+        links_raw = soup.find_all('div', attrs={"class":"col col-xs-12 col-sm-12 col-md-6 col-lg-4"})
+        
+        for i,l in enumerate(links_raw):
+            staff_id=int(l.find_all('a')[0]["href"].split("/")[-1])
+            info_dict[staff_id]={}
+
+            # Name
+            name=l.find_all('a')[0].get_text()
+            name=name.strip()
+
+            # Phone Number
+            ph_num=l.find_all("div", attrs={"class":"field-content people-phone"} )[0].get_text()
+            ph_num=ph_num.strip()
+            ph_num=re.sub(" ","",ph_num)
+
+            # Email Address
+            mail_add=l.find_all("div", attrs={"class":"email"} )[0].get_text()
+            mail_add=mail_add.strip()
+            mail_parts=mail_add.split(' ')
+            # username + @di.uoa.gr 
+            mail_add=f"{mail_parts[0]}@di.uoa.gr"
+            
+            # Stuff Type
+            stuff_type=l.find_all("div", attrs={"class":"field-content people-speciality"})[0].get_text()
+            stuff_type=stuff_type.strip()
+
+            info_dict[staff_id]["Name"]=name
+            info_dict[staff_id]["StaffType"]=stuff_type
+            # info_dict[staff_id]["Level"]=lvl
+            info_dict[staff_id]["MailAddress"]=mail_add
+            info_dict[staff_id]["Number"]=ph_num
+
+            # if secretary, display them separately, first
+            # if specialty_id==29:
+                # print(f"{name}: {ph_num} - {mail_add} ({stuff_type})")
+
+    # with open(r"staff.txt", "w", encoding="utf-8") as writer:
+
+        for st_id in info_dict.keys():
+            
+            staff_str=f"{info_dict[st_id]['Name']}: {info_dict[st_id]['Number']} - {info_dict[st_id]['MailAddress']} ({info_dict[st_id]['StaffType']})"
+            print(staff_str)
+            # writer.write(staff_str+"\n")
+
+    return None
+
+
+def ActionUniAccessInfo():
+    cont_loc_url = "https://www.di.uoa.gr/department/contact-location"
+    uoa_url = "https://www.di.uoa.gr"
+
+    # DEP:      announcements_url + ?field_staff_specialty_target_id=7
+    # EDIP:     announcements_url + ?field_staff_specialty_target_id=8
+    # ETEP:     announcements_url + ?field_staff_specialty_target_id=30
+    # SECRET:   announcements_url + ?field_staff_specialty_target_id=29
+    info_dict={}
+    
+    # if secretary, display them separately, first
+    # if specialty_id==29:
+    #     print("\n--> Secretary:")
+    page = urlopen(cont_loc_url)
+    html = page.read().decode("utf-8")
+    soup = BeautifulSoup(html, "html.parser")
+    
+    contact = soup.find_all('div', attrs={"class":"views-element-container clearfix block block-views block-views-blockcontact-info-block-5"})
+    contact=contact[0].get_text()
+    contact=re.sub(" +"," ",contact)
+    contact=re.sub("\n+","\n", contact)
+    contact_lines=contact.split("\n")
+    contact_lines=[c_line.strip() for c_line in contact_lines[2:]]
+    contact="\n".join(contact_lines)
+    print(f"Contact/Location Information: \n{contact}")
+    
+    access = soup.find_all('div', attrs={"class":"paragraph paragraph--type--bp-simple paragraph--view-mode--default paragraph--id--1712"})
+    access=access[0].get_text()
+    access=re.sub(" +"," ",access)
+    access=re.sub("\n+","\n", access)
+    access_lines=access.split("\n")
+    access_lines=[a_line.strip() for a_line in access_lines[3:]]
+    access="\n".join(access_lines)
+    print(f"University Access: \n{access}")
+
+    # loc = soup.find_all('div', attrs={"class":"paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--1710"})
+    # loc=loc[0].get_text()
+    # loc=re.sub(" +"," ",loc)
+    # loc=re.sub("\n+","\n", loc)
+    # print(f"Location: {loc}")
+
+    
+    return None
+
 
 
 '''
@@ -219,6 +327,9 @@ ________________________________________________________________________________
 # main
 
 # ActionUniPsychoSupportInfo()
-ActionUniAnnouncements()
+# ActionUniAnnouncements()
 # ActionUniClassSchedule()
 # ActionUniExamSchedule()
+# ActionUniStaffInfo()
+ActionUniAccessInfo()
+

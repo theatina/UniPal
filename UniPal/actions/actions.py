@@ -150,7 +150,7 @@ class ActionUniPalServices(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text="I can provide the following services/information:\n1. Announcements\n2. Exams Schedule\n3. Class Timetable\n4. University access\n5. Psychological Support\n")
+        dispatcher.utter_message(text="I can provide the following services/information:\n1. Announcements\n2. Exams Schedule\n3. Class Timetable\n4. University access\n5. University Staff Contact Detailss\n6. Psychological Support Information\n")
 
         return []
 
@@ -259,17 +259,7 @@ class ActionUniExamSchedule(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        # url = "https://www.chatzi.org/dit-schedule/"
-        #/pps/jan/1819"
 
-        # page = urlopen(url)
-        # html = page.read().decode("utf-8")
-        # soup = BeautifulSoup(html, "html.parser")
-
-        # schedule_path = "https://www.chatzi.org/dit-schedule/"
-        # year_list = [ f"{i:02d}{i+1:02d}" for i in range(9,22) ]
-        # print(year_list)
-        # semester_list = [ "winter", "spring" ]
         period_list = [ "jan", "jun", "sep" ]
         programme_type_list = [ "PPS", "PMS" ]
 
@@ -277,9 +267,9 @@ class ActionUniExamSchedule(Action):
         exams = tracker.get_slot('exams')
         period = tracker.get_slot('exam_period')
         academic_year = tracker.get_slot('academic_year')
-        academic_year=int(str(academic_year)[-2:]) if len(str(academic_year))>2 else int(str(academic_year))
+        # academic_year=int(str(academic_year)[-2:]) if len(str(academic_year))>2 else int(str(academic_year))
 
-        acad_years=f"{academic_year-1}-{academic_year}"
+        acad_years=str(academic_year-1).zfill(2)+"-"+str(academic_year).zfill(2)
         file_url = f"https://www.chatzi.org/dit-schedule/{acad_years}/examsched_{grad_stud_type}_{period}{int(academic_year)}.xls"
         
         timetable_df = pd.read_excel(file_url)
@@ -403,4 +393,140 @@ class ActionUniAnnouncements(Action):
         dispatcher.utter_message(f"")
         dispatcher.utter_message(f"\nFor further information and announcements, you can visit the University's Announcements Page here: {announcements_url}\n")
 
+        return []
+
+
+class ActionUniStaffInfo(Action):
+    
+    def name(self) -> Text:
+        return "action_uni_staff_info"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        staff_url = "https://www.di.uoa.gr/staff/"
+
+        # DEP:      announcements_url + ?field_staff_specialty_target_id=7
+        # EDIP:     announcements_url + ?field_staff_specialty_target_id=8
+        # ETEP:     announcements_url + ?field_staff_specialty_target_id=30
+        # SECRET:   announcements_url + ?field_staff_specialty_target_id=29
+        info_dict={}
+        for specialty_id in [7,8,30,29]:
+            # if secretary, display them separately, first
+            # if specialty_id==29:
+            #     print("\n--> Secretary:")
+            page = urlopen(staff_url+f"?field_staff_specialty_target_id={specialty_id}")
+            html = page.read().decode("utf-8")
+            soup = BeautifulSoup(html, "html.parser")
+            links_raw = soup.find_all('div', attrs={"class":"col col-xs-12 col-sm-12 col-md-6 col-lg-4"})
+            
+            for i,l in enumerate(links_raw):
+                staff_id=int(l.find_all('a')[0]["href"].split("/")[-1])
+                info_dict[staff_id]={}
+
+                # Name
+                name=l.find_all('a')[0].get_text()
+                name=name.strip()
+
+                # Phone Number
+                ph_num=l.find_all("div", attrs={"class":"field-content people-phone"} )[0].get_text()
+                ph_num=ph_num.strip()
+                ph_num=re.sub(" ","",ph_num)
+
+                # Email Address
+                mail_add=l.find_all("div", attrs={"class":"email"} )[0].get_text()
+                mail_add=mail_add.strip()
+                mail_parts=mail_add.split(' ')
+                # username + @di.uoa.gr 
+                mail_add=f"{mail_parts[0]}@di.uoa.gr"
+                
+                # Stuff Type
+                stuff_type=l.find_all("div", attrs={"class":"field-content people-speciality"})[0].get_text()
+                stuff_type=stuff_type.strip()
+
+                info_dict[staff_id]["Name"]=name
+                info_dict[staff_id]["StaffType"]=stuff_type
+                # info_dict[staff_id]["Level"]=lvl
+                info_dict[staff_id]["MailAddress"]=mail_add
+                info_dict[staff_id]["Number"]=ph_num
+
+                # if secretary, display them separately, first
+                # if specialty_id==29:
+                    # print(f"{name}: {ph_num} - {mail_add} ({stuff_type})")
+
+        staff_str="Here is the contact information of Uni's Staff:\n()\n"
+        for st_id in info_dict.keys():
+            
+            staff_str+=f"{info_dict[st_id]['Name']}: {info_dict[st_id]['Number']} - {info_dict[st_id]['MailAddress']} ({info_dict[st_id]['StaffType']})\n"
+            # print(staff_str)
+        
+        dispatcher.utter_message(staff_str)
+        dispatcher.utter_message(f"")
+        dispatcher.utter_message(f"\nFor further staff information, you can visit the University's Staff Page here: {staff_url}\n")
+
+        return []
+
+class ActionUniContactLocInfo(Action):
+    
+    def name(self) -> Text:
+        return "action_uni_contact_loc_info"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        cont_loc_url = "https://www.di.uoa.gr/department/contact-location"
+        uoa_url = "https://www.di.uoa.gr"
+
+        # DEP:      announcements_url + ?field_staff_specialty_target_id=7
+        # EDIP:     announcements_url + ?field_staff_specialty_target_id=8
+        # ETEP:     announcements_url + ?field_staff_specialty_target_id=30
+        # SECRET:   announcements_url + ?field_staff_specialty_target_id=29
+        info_dict={}
+        
+        # if secretary, display them separately, first
+        # if specialty_id==29:
+        #     print("\n--> Secretary:")
+        page = urlopen(cont_loc_url)
+        html = page.read().decode("utf-8")
+        soup = BeautifulSoup(html, "html.parser")
+        
+        contact = soup.find_all('div', attrs={"class":"views-element-container clearfix block block-views block-views-blockcontact-info-block-5"})
+        contact=contact[0].get_text()
+        contact=re.sub(" +"," ",contact)
+        contact=re.sub("\n+","\n", contact)
+        contact_lines=contact.split("\n")
+        contact_lines=[c_line.strip() for c_line in contact_lines[2:]]
+        contact="\n".join(contact_lines)
+        # print(f"Contact/Location Information: \n{contact}")
+        
+        access = soup.find_all('div', attrs={"class":"paragraph paragraph--type--bp-simple paragraph--view-mode--default paragraph--id--1712"})
+        access=access[0].get_text()
+        access=re.sub(" +"," ",access)
+        access=re.sub("\n+","\n", access)
+        access_lines=access.split("\n")
+        access_lines=[a_line.strip() for a_line in access_lines[3:]]
+        access="\n".join(access_lines)
+        # print(f"University Access: \n{access}")
+
+        # loc = soup.find_all('div', attrs={"class":"paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--1710"})
+        # loc=loc[0].get_text()
+        # loc=re.sub(" +"," ",loc)
+        # loc=re.sub("\n+","\n", loc)
+        # print(f"Location: {loc}")
+
+        cont_loc_str=f"Contact/Location Information: \n{contact}"
+        cont_loc_str+="\n\n" 
+        cont_loc_str+=f"University Access: \n{access}"
+
+        dispatcher.utter_message(cont_loc_str)
+        dispatcher.utter_message(f"")
+        dispatcher.utter_message(f"\nFor further Uni Access/Contact/Location information, you can visit the University's Page here: {cont_loc_url}\n")
+
+        
         return []
