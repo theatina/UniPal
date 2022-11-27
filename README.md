@@ -12,8 +12,10 @@ UniPal brings the necessary university information at your fingertips!
 - University Contact, Location & Access information
 - University's Staff contact details
 
+<!-- 
 <br>UniPal assistant will soon be able to:
 - Create Google calendar reminders (of exams/lectures/project deadlines)
+-->
 
 <br>
 
