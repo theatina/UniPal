@@ -1,0 +1,172 @@
+version: '3.1'
+intents:
+- affirm
+- ask_about_services
+- bot_challenge
+- deny
+- goodbye
+- greet
+- inform_period
+- inform_programme
+- inform_semester
+- inform_year
+- mood_great
+- mood_unhappy
+- request_announcements
+- request_class_schedule
+- request_contact_loc_info
+- request_exam_schedule
+- request_psychoSupport_info
+- request_staff_info
+- thank_bot
+actions:
+- action_UniPal_services
+- action_button_period
+- action_button_programme
+- action_button_semester
+- action_button_year
+- action_check_examform_slots
+- action_correct_examform_slots
+- action_greet_user
+- action_hello_world
+- action_resetSlots
+- action_send_playlist
+- action_uni_announcements
+- action_uni_class_schedule
+- action_uni_contact_loc_info
+- action_uni_exam_schedule
+- action_uni_psychoSupport_info
+- action_uni_staff_info
+- utter_further_action
+- utter_goodbye
+- utter_greet
+entities:
+- semester
+- grad_studies_type
+- academic_year
+- user_name
+- exam_period
+- num_of_announcements
+- exams
+- subject
+slots:
+  user_name:
+    type: text
+    initial_value: Pal
+    mappings:
+    - type: from_entity
+      entity: user_name
+  num_of_announcements:
+    type: float
+    min_value: 1
+    max_value: 20
+    mappings:
+    - type: from_entity
+      entity: num_of_announcements
+  exams:
+    type: bool
+    influence_conversation: true
+    initial_value: false
+    mappings:
+    - type: from_entity
+      entity: exams
+      action: action_correct_examform_slots
+  exam_period:
+    type: categorical
+    values:
+    - jan
+    - jun
+    - sep
+    mappings:
+    - type: from_entity
+      entity: exam_period
+  semester:
+    type: categorical
+    values:
+    - winter
+    - spring
+    mappings:
+    - type: from_entity
+      entity: semester
+  grad_studies_type:
+    type: categorical
+    values:
+    - PPS
+    - PMS
+    - FULL
+    mappings:
+    - type: from_entity
+      entity: grad_studies_type
+  subject:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: subject
+  academic_year:
+    type: float
+    min_value: 2009
+    max_value: 2022
+    mappings:
+    - type: from_entity
+      entity: academic_year
+forms:
+  class_schedule_form:
+    required_slots:
+    - grad_studies_type
+    - semester
+    - academic_year
+  exam_schedule_form:
+    ignored_intents:
+    - request_announcements
+    - request_class_schedule
+    - request_psychoSupport_info
+    required_slots:
+    - grad_studies_type
+    - exam_period
+    - academic_year
+responses:
+  utter_greet:
+  - text: Hey {user_name}! How are you?
+  - text: Hi there! What's up {user_name}?
+  - text: How can I help you {user_name}?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_welcome:
+  - text: You're welcome my friend!
+  - text: You're welcome {user_name}
+  - text: At your service !
+  utter_did_that_help:
+  - text: Did that help you {user_name}?
+  - text: Was that helpful to you?
+  utter_further_action:
+  - text: Would you like anything else?
+  - text: Can I help you with anything else?
+  - text: Would you need further assistance {user_name}?
+  utter_goodbye:
+  - text: Bye {user_name}
+  - text: Antios {user_name}
+  - text: Ciao {user_name}
+  utter_exam_schedule_year:
+  - text: Choose the year
+  utter_exam_schedule_period:
+  - text: Choose the exam period
+    buttons:
+    - title: January
+      payload: /request_exam_schedule{{"exam_period":"jan"}}
+    - title: June
+      payload: /request_exam_schedule{{"exam_period":"jun"}}
+    - title: September
+      payload: /request_exam_schedule{{"exam_period":"sep"}}
+  utter_exam_schedule_programme:
+  - text: Choose the programme type
+    buttons:
+    - title: Undergraduate
+      payload: /request_exam_schedule{{"grad_studies_type":"PPS"}}
+    - title: Postgraduate
+      payload: /request_exam_schedule{{"grad_studies_type":"PMS"}}
+  utter_create_gCalendar_event:
+  - text: Do you want to create a Google Calendar event for any exams?
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

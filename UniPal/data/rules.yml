@@ -29,10 +29,29 @@ rules:
   - intent: request_exam_schedule
   - action: action_correct_examform_slots
 
+# - rule: Activate exams flag
+#   steps:
+#   - intent: request_exam_schedule
+#   - slot_was_set:
+#     - exams: true
+
+- rule: Check class schedule slots
+  steps:
+  - intent: request_class_schedule
+  - action: action_correct_examform_slots
+
+# - rule: Activate class flag (deactivate exams flag)
+#   steps:
+#   - intent: request_class_schedule
+#   - slot_was_set:
+#     - exams: false
+
 - rule: Be polite
   steps:
   - intent: thank_bot
   - action: utter_welcome
+
+
 
 # - rule: Fill programme type slot
 #   steps:

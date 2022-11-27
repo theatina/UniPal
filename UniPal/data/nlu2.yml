@@ -1,0 +1,18 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey there
+- intent: inform_semester
+  examples: |
+    - class timetable of [PPS](grad_studies_type) for [spring](semester) semester of [2020](academic_year)
+- intent: deny
+  examples: |
+    - n
+    - no thanks
+- intent: affirm
+  examples: |
+    - y
+- intent: request_class_schedule
+  examples: |
+    - class of [PPS](grad_studies_type) for [winter](semester) [2019](academic_year)

@@ -112,8 +112,20 @@ nlu:
     - classes schedule
     - any new information on class timetable?
     - class
+    - classes
     - class schedule
     - class timetable
+    - [spring](semester) classes
+    - [winter](semester) class timetable
+    - [spring](semester) class schedule
+    - [winter](semester) class schedule
+    - [winter](semester) classes schedule
+    - [winter](semester) [PMS](grad_studies_type) class schedule for [2019](academic_year)
+    - [spring](semester) [PPS](grad_studies_type) classes schedule for [2020](academic_year)
+    - [PPS](grad_studies_type) classes schedule of [Spring]{"entity": "semester", "value": "spring"} [2020](academic_year)
+    - [undergraduate]{"entity": "grad_studies_type", "value": "PPS"} classes
+    - [pps]{"entity": "grad_studies_type", "value": "PPS"} classes of [Winter]{"entity": "semester", "value": "winter"} [2020](academic_year)
+
 
 - intent: request_psychoSupport_info
   examples: |
@@ -147,6 +159,13 @@ nlu:
     - [january]{"entity": "exam_period", "value": "jan"}
     - [jan](exam_period)
     - exams of [January]{"entity": "exam_period", "value": "jan"}
+
+- intent: inform_semester
+  examples: |
+    - [Winter]{"entity": "semester", "value": "winter"}
+    - [spring](semester)
+    - classes of [Spring]{"entity": "semester", "value": "spring"} semester
+    - [winter](semester) semester
 
 - intent: inform_programme
   examples: |

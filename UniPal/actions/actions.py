@@ -62,7 +62,7 @@ class ActionResetTimetableSlots(Action):
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         # reset slots about type, semester, year, period 
-        return [SlotSet("grad_studies_type", None), SlotSet("semester", None), SlotSet("academic_year", None), SlotSet("exam_period", None)]
+        return [SlotSet("exams", False),SlotSet("grad_studies_type", None), SlotSet("semester", None), SlotSet("academic_year", None), SlotSet("exam_period", None)]
 
 
 class ActionResetAnnouncementSlot(Action):
@@ -91,10 +91,10 @@ class ActionResetSlots(Action):
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         # reset slots about type, semester, year, period 
-        FollowupAction("action_resetAnnouncementSlot")
-        FollowupAction("action_resetTimetableSlots")
+        # FollowupAction("action_resetAnnouncementSlot")
+        # FollowupAction("action_resetTimetableSlots")
 
-        return []
+        return [SlotSet("num_of_announcements", None), SlotSet("exams", False),SlotSet("grad_studies_type", None), SlotSet("semester", None), SlotSet("academic_year", None), SlotSet("exam_period", None) ]
 
 
 
@@ -120,24 +120,24 @@ class ActionUniPsychoSupportInfo(Action):
         return []
 
 
-class ActionUniClassSchedule(Action):
+# class ActionUniClassSchedule(Action):
     
-    def name(self) -> Text:
-        return "action_uni_class_schedule"
+#     def name(self) -> Text:
+#         return "action_uni_class_schedule"
 
-    async def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#     async def run(
+#         self,
+#         dispatcher: CollectingDispatcher,
+#         tracker: Tracker,
+#         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        url = "https://www.di.uoa.gr/studies/undergraduate/schedules"
+#         url = "https://www.di.uoa.gr/studies/undergraduate/schedules"
 
-        grad_stud_type = tracker.get_slot('grad_studies_type')
-        # exams
+#         grad_stud_type = tracker.get_slot('grad_studies_type')
+#         # exams
 
 
-        return []
+#         return []
 
 class ActionUniPalServices(Action):
     
@@ -150,7 +150,7 @@ class ActionUniPalServices(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text="I can provide the following services/information:\n1. Announcements\n2. Exams Schedule\n3. Class Timetable\n4. University access\n5. University Staff Contact Detailss\n6. Psychological Support Information\n")
+        dispatcher.utter_message(text=" \n \n I can provide the following services/information:\n1. Announcements\n2. Exams Schedule\n3. Class Timetable\n4. University access\n5. University Staff Contact Detailss\n6. Psychological Support Information\n")
 
         return []
 
@@ -197,7 +197,7 @@ class Button_Year(Action):
 
         #then display it using dispatcher
         # dispatcher.utter_message(text= "Choose year" , buttons=buttons)     
-        dispatcher.utter_message(text="Choose the year:\n(2009-2021)")
+        dispatcher.utter_message(text="Choose the academic year:\n(2009-2021)")
         return []    
 
 class Button_Period(Action):
@@ -221,7 +221,29 @@ class Button_Period(Action):
         #then display it using dispatcher
         # dispatcher.utter_message(text= "Choose exam period" , buttons=buttons)     
         dispatcher.utter_message(text= "Choose exam period:\n(January, June or September)")  
-        return []             
+        return []    
+
+class Button_Semester(Action):
+    def name(self) -> Text:
+        return "action_button_semester"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        buttons = []
+        #append the response of API in the form of title and payload
+        semester_list=[ "winter", "spring"]
+        
+        # for p,pf in zip(period_list, period_list_full):
+            # buttons.append({"title": f"{pf}" , "payload": '/inform_period{"exam_period":"{p}"}'})
+
+        #then display it using dispatcher
+        # dispatcher.utter_message(text= "Choose exam period" , buttons=buttons)     
+        dispatcher.utter_message(text= "Choose studies semester:\n(Spring or Winter")  
+        return []   
 
 class Button_Programme(Action):
     def name(self) -> Text:
@@ -247,6 +269,118 @@ class Button_Programme(Action):
         dispatcher.utter_message(text= "Choose study programme type:\n(Undergraduate or Postgraduate)")   
     
         return []                                 
+
+# working well (due to different .xls format): 19-20, 20-21, 21-22 
+class ActionUniClassSchedule(Action):
+    def name(self) -> Text:
+        return "action_uni_class_schedule"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        # schedule_path = "https://www.chatzi.org/dit-schedule/"
+        # year_list = [ f"{i:02d}{i+1:02d}" for i in range(9,22) ]
+        # semester_list = [ "winter", "spring" ]
+
+        grad_stud_type = tracker.get_slot('grad_studies_type')
+        exams = tracker.get_slot('exams')
+        semester = tracker.get_slot('semester')
+        academic_year = tracker.get_slot('academic_year')
+
+        if len(str(academic_year))>2:
+            academic_year = int(str(academic_year)[-2:])
+            academic_year=int(str(academic_year).zfill(2))
+
+        acad_years=str(academic_year).zfill(2)+"-"+str(academic_year+1).zfill(2)
+        acad_years_sem=str(academic_year).zfill(2)+str(academic_year+1).zfill(2)
+
+        # print(grad_stud_type, semester, academic_year)
+        # file_url = os.path.join(schedule_path, f"")
+        # file_url = "https://www.chatzi.org/dit-schedule/examsched_PMS_sep21.xls"
+        
+        file_url = f"https://www.di.uoa.gr/schedule/{acad_years}/timetable_{grad_stud_type}_{semester}{acad_years_sem}.xls"
+        # print(file_url)
+
+        timetable_df = pd.read_excel(file_url)
+        timetable_df.to_csv("timetableTest.csv", index=False, header=True)
+        
+        # print(timetable_df["Δευτέρα"].values)
+        x=13
+        Monday_df=timetable_df[:x]
+        Tuesday_df=timetable_df[x+3:(x+3)+x].reset_index(drop=True)
+        Wednesday_df=timetable_df[(x+3)+x+1+3:(x+3)*2+x].reset_index(drop=True)
+        Thursday_df=timetable_df[(x+3)*2+x+1+3:(x+3)*3+x].reset_index(drop=True)
+        Friday_df=timetable_df[(x+3)*3+x+1+3:].reset_index(drop=True)
+
+
+        # print(Monday_df, Tuesday_df, Wednesday_df, Thursday_df, Friday_df)
+        # columns ["Main", "A_1", "A_2", "B_", "C", "D", "E_", "ST", "Z_"]
+        lecture_halls={"Main":"Αμφιθέατρο", "A_1":"Α1", "A_2":"Α2", "B_":"Β", "C":"Γ", "D":"Δ", "E_":"Ε", "ST":"ΣΤ", "Z_":"Ζ" }
+        weekday_df=[Monday_df, Tuesday_df, Wednesday_df, Thursday_df, Friday_df]
+        for df in weekday_df:
+            if "Online" in timetable_df.values:
+                col_names=["Time"]
+                col_names.extend([f"Online{i}" for i in range(1,len(timetable_df.columns))])
+                df.columns=col_names
+            else:
+                df.columns=["Time", "Main", "A_1", "A_2", "B_", "C", "D", "E_", "ST", "Z_"]
+                # print(df.columns)
+
+        
+        weekday_num_to_name={1:"Monday", 2:"Tuesday", 3:"Wednesday", 4:"Thursday", 5:"Friday"}
+        class_sched_dict={}
+        for weekday,df in enumerate(weekday_df):
+            for (c_name,c_items) in df.iteritems():
+                if c_name in lecture_halls or ("Online" in timetable_df.values):
+                    if "Online" in timetable_df.values:
+                        hall_name="Online"
+                    else:
+                        hall_name=lecture_halls[c_name]
+                    lects=c_items.values.tolist()
+                    # print(len(lects),len(df["Time"]))
+                    lects=[ item.split("\n") if type(item)==str else item for item in lects ]
+                    for l_ind,l in enumerate(lects):
+                        if type(l)==list and len(l)>1:
+                            # if len(l)>3:
+                            #     print(l)
+                            class_name=l[0].strip()
+                            class_type=l[1].strip()
+                            professors=l[2:]
+
+                            weekday_name=weekday_num_to_name[weekday+1]
+                            if class_name not in class_sched_dict:
+                                class_sched_dict[class_name]={}
+                                class_sched_dict[class_name]["Type"]=class_type
+                                class_sched_dict[class_name]["Professors"]=professors
+                                class_sched_dict[class_name]["Timetable"]={}
+
+                            if weekday_name not in class_sched_dict[class_name]["Timetable"]:
+                                class_sched_dict[class_name]["Timetable"][weekday_name]={}
+                                class_sched_dict[class_name]["Timetable"][weekday_name]["Hall"]=hall_name
+                                # print(class_name, df["Time"].values[l_ind])
+                                class_sched_dict[class_name]["Timetable"][weekday_name]["Start"]=df["Time"].values[l_ind].split("-")[0]
+                                class_sched_dict[class_name]["Timetable"][weekday_name]["End"]=df["Time"].values[l_ind].split("-")[1]
+                            
+                            # if class_sched_dict[class_name]["Timetable"][weekday_name]["End"]!=None:
+                                # class_sched_dict[class_name]["Timetable"][weekday_name]["Start"]=df["Time"].values[l.index].split("-")[0]
+                            class_sched_dict[class_name]["Timetable"][weekday_name]["End"]=df["Time"].values[l_ind].split("-")[1]
+                            
+                    # print(hall_name, lects)
+        class_sched_dict = dict(sorted(class_sched_dict.items()))
+        # print(class_sched_dict)
+        print_str=""
+        for i,k in enumerate(class_sched_dict):
+            print_str+=f"{k} ({class_sched_dict[k]['Type']} | {', '.join(class_sched_dict[k]['Professors'])})\n"
+            for day in class_sched_dict[k]['Timetable']:
+                print_str+=f"{day}: {class_sched_dict[k]['Timetable'][day]['Hall']} | {class_sched_dict[k]['Timetable'][day]['Start']}-{class_sched_dict[k]['Timetable'][day]['End']}\n"
+            print_str+=" \n"
+        
+        dispatcher.utter_message(f"\nFound this timetable: \n{print_str} \n \n ")
+        # print(print_str)
+        return []
 
 class ActionUniExamSchedule(Action):
     
@@ -318,23 +452,49 @@ class ActionCheckExamsFormSlots(Action):
         gradType={"PPS":"Undergraduate", "PMS":"Postgraduate"}
         grad_stud_type=tracker.get_slot("grad_studies_type")
         period=tracker.get_slot("exam_period")
+        semester=tracker.get_slot("semester")
         per={"jan":"January", "jun":"June", "sep":"September"}
         academic_year=tracker.get_slot("academic_year")
+        if int(academic_year) not in [19,20,21,2019,2020,2021]:
+            academic_year=None
+            dispatcher.utter_message(f"The year must be either 2019, 2020 or 2021 !\n")
         
-        if None in [grad_stud_type, period, academic_year]:
-            username=tracker.get_slot("user_name")
-            dispatcher.utter_message(f"\nYou haven't chosen the type and/or year and/or period of the exams {username} =)\nI will now help you fill the necessary information, is that ok?")
-            return []
-        
-        ac_year=int(str(academic_year)[-2:]) if len(str(academic_year))>2 else int(str(academic_year))
-        
-        file_url = f"https://www.chatzi.org/dit-schedule/{ac_year-1:02d}-{ac_year:02d}/examsched_{grad_stud_type}_{period}{ac_year}.xls"
-        # timetable_df=pd.read_excel(file_url)
+        exams = tracker.get_slot("exams")
+        exams_str="exams" if exams else "classes"
 
-        dispatcher.utter_message(f"\nYou have chosen to see the {gradType[grad_stud_type]} exams timetable of {per[period]} for the year '{ac_year}, does anything need correction?\n(file: {file_url})")
+        intent=tracker.latest_message['intent'].get('name')
+        # dispatcher.utter_message(f"Intent: {intent}")
+        if intent=="request_exam_schedule":
+            exam_flag_value="true"
+            exams=True
+        else:
+            exam_flag_value="false"
+            exams=False
+
+        if exams:
+            list_to_fill=[grad_stud_type, period, academic_year]
+        else:
+            list_to_fill=[grad_stud_type, semester, academic_year]
+        
+        if None in list_to_fill:
+            username=tracker.get_slot("user_name")
+            dispatcher.utter_message(f"\nYou haven't chosen the type and/or year and/or period/semester of the {exams_str} {username} =)\nI will now help you fill the necessary information, is that ok?")
+            return [SlotSet("exams",exam_flag_value)]
+        
+        
+        
+        if exams:
+            ac_year=int(str(academic_year)[-2:]) if len(str(academic_year))>2 else int(str(academic_year))
+            file_url = f"https://www.chatzi.org/dit-schedule/{ac_year-1:02d}-{ac_year:02d}/examsched_{grad_stud_type}_{period}{ac_year}.xls"
+            dispatcher.utter_message(f"\nYou have chosen to see the {gradType[grad_stud_type]} {exams_str} timetable of {per[period]} for the year '{ac_year}, does anything need correction?\n(file: {file_url})")
+        # timetable_df=pd.read_excel(file_url)
+        else:
+            ac_year=int(str(academic_year)[-2:]) if len(str(academic_year))>2 else int(str(academic_year))
+            file_url = f"https://www.chatzi.org/dit-schedule/{ac_year:02d}-{ac_year+1:02d}/examsched_{grad_stud_type}_{semester}{ac_year}{ac_year+1}.xls"
+            dispatcher.utter_message(f"\nYou have chosen to see the {gradType[grad_stud_type]} {exams_str} timetable of {semester} for the year '{ac_year}, does anything need correction?\n(file: {file_url})")
 
     
-        return []
+        return [SlotSet("exams",exam_flag_value)]
 
 
 class ActionUniAnnouncements(Action):

@@ -6,6 +6,7 @@ intents:
 - goodbye
 - greet
 - inform_period
+- inform_semester
 - inform_programme
 - inform_year
 - mood_great
@@ -21,6 +22,7 @@ intents:
 actions:
 - action_UniPal_services
 - action_button_period
+- action_button_semester
 - action_button_programme
 - action_button_year
 - action_check_examform_slots
@@ -46,7 +48,7 @@ entities:
 - num_of_announcements
 - exams
 - semester
-- subject
+# - subject
 slots:
   user_name:
     type: text
@@ -64,10 +66,13 @@ slots:
       entity: num_of_announcements
   exams:
     type: bool
-    # initial_value: true
+    influence_conversation: true
+    initial_value: false
     mappings:
     - type: from_entity
       entity: exams
+      action: action_correct_examform_slots
+  
   exam_period:
     type: categorical
     values:
@@ -97,11 +102,11 @@ slots:
     mappings:
     - type: from_entity
       entity: grad_studies_type
-  subject:
-    type: text
-    mappings:
-    - type: from_entity
-      entity: subject
+  # subject:
+  #   type: text
+  #   mappings:
+  #   - type: from_entity
+  #     entity: subject
   academic_year:
     type: float
     min_value: 2009

@@ -302,6 +302,9 @@ def ActionUniClassSchedule():
     timetable_df = pd.read_excel(file_url)
     timetable_df.to_csv("timetableTest.csv", index=False, header=True)
     
+    # print(timetable_df.head)
+    # exit()
+    
     # print(timetable_df["Δευτέρα"].values)
     x=13
     Monday_df=timetable_df[:x]
@@ -316,7 +319,12 @@ def ActionUniClassSchedule():
     lecture_halls={"Main":"Αμφιθέατρο", "A_1":"Α1", "A_2":"Α2", "B_":"Β", "C":"Γ", "D":"Δ", "E_":"Ε", "ST":"ΣΤ", "Z_":"Ζ" }
     weekday_df=[Monday_df, Tuesday_df, Wednesday_df, Thursday_df, Friday_df]
     for df in weekday_df:
-        df.columns=["Time", "Main", "A_1", "A_2", "B_", "C", "D", "E_", "ST", "Z_"]
+        if "Online" in timetable_df.values:
+            col_names=["Time"]
+            col_names.extend([f"Online{i}" for i in range(1,len(timetable_df.columns))])
+            df.columns=col_names
+        else:
+            df.columns=["Time", "Main", "A_1", "A_2", "B_", "C", "D", "E_", "ST", "Z_"]
         # print(df.columns)
 
     
@@ -324,11 +332,17 @@ def ActionUniClassSchedule():
     class_sched_dict={}
     for weekday,df in enumerate(weekday_df):
         for (c_name,c_items) in df.iteritems():
-            if c_name in lecture_halls:
-                hall_name=lecture_halls[c_name]
+            if c_name in lecture_halls or ("Online" in timetable_df.values):
+                # print(c_name)
+                if "Online" in timetable_df.values:
+                    hall_name="Online"
+                else:
+                    hall_name=lecture_halls[c_name]
                 lects=c_items.values.tolist()
                 # print(len(lects),len(df["Time"]))
+                # print(lects)
                 lects=[ item.split("\n") if type(item)==str else item for item in lects ]
+                # print(lects)
                 for l_ind,l in enumerate(lects):
                     if type(l)==list and len(l)>1:
                         # if len(l)>3:
@@ -358,45 +372,18 @@ def ActionUniClassSchedule():
 
 
                 # print(hall_name, lects)
+    class_sched_dict = dict(sorted(class_sched_dict.items()))
+    # print(class_sched_dict)
+    print_str=""
+    for i,k in enumerate(class_sched_dict):
+        print_str+=f"{k} ({class_sched_dict[k]['Type']} | {', '.join(class_sched_dict[k]['Professors'])})\n"
+        for day in class_sched_dict[k]['Timetable']:
+            print_str+=f"{day}: {class_sched_dict[k]['Timetable'][day]['Hall']} | {class_sched_dict[k]['Timetable'][day]['Start']}-{class_sched_dict[k]['Timetable'][day]['End']}\n"
+        print_str+="\n"
 
-    print(class_sched_dict)
-
-    exit()
-    # Πρόγραμμα Εξετάσεων Προπτυχιακών Μαθημάτων Χειμερινής Περιόδου 2021 -> Date -> Date
-    # Unnamed: 1 -> Time1
-    # Unnamed: 2 -> Time2
-    # Unnamed: 3 -> Time3
-    # Unnamed: 3 -> Time4
-    # timetable_df.rename(columns={"Πρόγραμμα Εξετάσεων Προπτυχιακών Μαθημάτων Χειμερινής Περιόδου 2021":"Date", "Unnamed: 1": "Time1", "Unnamed: 2": "Time2", "Unnamed: 3": "Time3"}, inplace=True)
-    if 'Unnamed: 4' in list(timetable_df.columns):
-        timetable_df.columns=["Date", "Time1", "Time2", "Time3", "Time4"]
-    else:
-        timetable_df.columns=["Date", "Time1", "Time2", "Time3"]
-        # timetable_df.rename(columns={"Unnamed 4": "Time4"}, inplace=True)
-    # print(type(timetable_df["Date"][2]))
-    # print(timetable_df["Date"][2].date().strftime('%A %d-%m-%y'))
-    timetable_df["Date"] = timetable_df["Date"].apply(lambda x: x.date().strftime('%A %d-%m-%Y') if isinstance(x, datetime) else x)
-    # print(timetable_df["Date"])
-    timetable_df.to_csv(f"exams{grad_stud_type}{period}{academic_year}Timetable.csv", index=False, header=True)
-
-
-    # print(timetable_df.columns)
-    mes=timetable_df
-
-    #TODO: list of classes arranged alphabetically - date(day, date) - time
-    # timetable_df[timetable_df == 7]
-
+    print(print_str)
+    return None
     
-    all_classes=list(set([c for sublist in timetable_df.iloc[1:,1:].values for c in sublist if type(c)==str]))
-
-    all_classes=sorted(all_classes)
-    class_str=""
-    for element in all_classes:
-        i, c = np.where(timetable_df == element)
-        class_str+=f"{element} -> {timetable_df.iloc[i[0],0]}, {timetable_df.iloc[0,c[0]]}\n" 
-
-    print (class_str)
-    return class_str
 
 
 
