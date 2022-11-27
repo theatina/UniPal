@@ -137,7 +137,8 @@ responses:
   - text: How can I help you {user_name}?
   utter_cheer_up:
   - text: 'Here is something to cheer you up:'
-    image: https://i.imgur.com/nGF1K8f.jpg
+    # image: https://i.imgur.com/nGF1K8f.jpg
+    image: https://scontent.fath4-2.fna.fbcdn.net/v/t39.30808-6/301541142_5088115794651173_7751236870145359519_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5b7eaf&_nc_eui2=AeE1AUW6-B8ERw_AQMEjfpna0zTAYv89tWPTNMBi_z21Y_a1j2ImbibbJlrJdJgyIswLZKvjHbL1kpr5L2k9oWGr&_nc_ohc=phxk5_pWpzMAX83odOz&_nc_ht=scontent.fath4-2.fna&oh=00_AfCIGCuwqWsQU1PBV2ABWDZOqgc0C-0GN_zRiKLeGHtfLg&oe=638879F1
   utter_welcome:
   - text: You're welcome my friend!
   - text: You're welcome {user_name}

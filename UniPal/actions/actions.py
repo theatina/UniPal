@@ -401,11 +401,12 @@ class ActionUniExamSchedule(Action):
         exams = tracker.get_slot('exams')
         period = tracker.get_slot('exam_period')
         academic_year = tracker.get_slot('academic_year')
-        # academic_year=int(str(academic_year)[-2:]) if len(str(academic_year))>2 else int(str(academic_year))
 
-        acad_years=str(academic_year-1).zfill(2)+"-"+str(academic_year).zfill(2)
-        file_url = f"https://www.chatzi.org/dit-schedule/{acad_years}/examsched_{grad_stud_type}_{period}{int(academic_year)}.xls"
-        
+        academic_year=int(str(academic_year)[-2:]) if len(str(academic_year))>2 else int(str(academic_year))
+
+        acad_years=str(int(academic_year)-1).zfill(2)+"-"+str(academic_year).zfill(2)
+        file_url = f"https://www.chatzi.org/dit-schedule/{acad_years}/examsched_{grad_stud_type}_{period}{str(academic_year).zfill(2)}.xls"
+        # print(file_url)
         timetable_df = pd.read_excel(file_url)
     
         # Πρόγραμμα Εξετάσεων Προπτυχιακών Μαθημάτων Χειμερινής Περιόδου 2021 -> Date -> Date
@@ -431,12 +432,12 @@ class ActionUniExamSchedule(Action):
         class_str=""
         for num,element in enumerate(all_classes):
             i, c = np.where(timetable_df == element)
-            class_str+=f"{num}. {element} -> {timetable_df.iloc[i[0],0]}, {timetable_df.iloc[0,c[0]]}\n" 
+            class_str+=f"{num+1}. {element} -> {timetable_df.iloc[i[0],0]}, {timetable_df.iloc[0,c[0]]}\n" 
 
         dispatcher.utter_message(f"\nFound this timetable: \n{class_str}\n")
         
         #TODO: insert buttons for subject choice ?
-        return []
+        return [SlotSet("exams", False)]
 
 
 class ActionCheckExamsFormSlots(Action):
@@ -455,21 +456,25 @@ class ActionCheckExamsFormSlots(Action):
         semester=tracker.get_slot("semester")
         per={"jan":"January", "jun":"June", "sep":"September"}
         academic_year=tracker.get_slot("academic_year")
-        if int(academic_year) not in [19,20,21,2019,2020,2021]:
-            academic_year=None
-            dispatcher.utter_message(f"The year must be either 2019, 2020 or 2021 !\n")
         
-        exams = tracker.get_slot("exams")
-        exams_str="exams" if exams else "classes"
+        # exams = tracker.get_slot("exams")
+        # exams_str="exams" if exams else "classes"
 
         intent=tracker.latest_message['intent'].get('name')
         # dispatcher.utter_message(f"Intent: {intent}")
         if intent=="request_exam_schedule":
             exam_flag_value="true"
             exams=True
+            exams_str="exams"
         else:
             exam_flag_value="false"
             exams=False
+            exams_str="classes"
+        
+        if academic_year!=None and not exams and int(academic_year) not in [19,20,21,2019,2020,2021]:
+            academic_year=None
+            dispatcher.utter_message(f"The year must be either 2019, 2020 or 2021 !\n")
+        
 
         if exams:
             list_to_fill=[grad_stud_type, period, academic_year]
@@ -482,7 +487,6 @@ class ActionCheckExamsFormSlots(Action):
             return [SlotSet("exams",exam_flag_value)]
         
         
-        
         if exams:
             ac_year=int(str(academic_year)[-2:]) if len(str(academic_year))>2 else int(str(academic_year))
             file_url = f"https://www.chatzi.org/dit-schedule/{ac_year-1:02d}-{ac_year:02d}/examsched_{grad_stud_type}_{period}{ac_year}.xls"
@@ -490,7 +494,7 @@ class ActionCheckExamsFormSlots(Action):
         # timetable_df=pd.read_excel(file_url)
         else:
             ac_year=int(str(academic_year)[-2:]) if len(str(academic_year))>2 else int(str(academic_year))
-            file_url = f"https://www.chatzi.org/dit-schedule/{ac_year:02d}-{ac_year+1:02d}/examsched_{grad_stud_type}_{semester}{ac_year}{ac_year+1}.xls"
+            file_url = f"https://www.di.uoa.gr/schedule/{str(ac_year).zfill(2)}-{str(int(ac_year+1)).zfill(2)}/timetable_{grad_stud_type}_{semester}{str(ac_year).zfill(2)}{str(ac_year+1).zfill(2)}.xls"
             dispatcher.utter_message(f"\nYou have chosen to see the {gradType[grad_stud_type]} {exams_str} timetable of {semester} for the year '{ac_year}, does anything need correction?\n(file: {file_url})")
 
     
@@ -617,7 +621,7 @@ class ActionUniStaffInfo(Action):
                 # if specialty_id==29:
                     # print(f"{name}: {ph_num} - {mail_add} ({stuff_type})")
 
-        staff_str="Here is the contact information of Uni's Staff:\n()\n"
+        staff_str="Here is the contact information of Uni's Staff:\n"
         for st_id in info_dict.keys():
             
             staff_str+=f"{info_dict[st_id]['Name']}: {info_dict[st_id]['Number']} - {info_dict[st_id]['MailAddress']} ({info_dict[st_id]['StaffType']})\n"
