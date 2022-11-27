@@ -289,6 +289,8 @@ class ActionUniClassSchedule(Action):
         exams = tracker.get_slot('exams')
         semester = tracker.get_slot('semester')
         academic_year = tracker.get_slot('academic_year')
+        if academic_year==None:
+            academic_year=21
 
         if len(str(academic_year))>2:
             academic_year = int(str(academic_year)[-2:])
@@ -401,7 +403,9 @@ class ActionUniExamSchedule(Action):
         exams = tracker.get_slot('exams')
         period = tracker.get_slot('exam_period')
         academic_year = tracker.get_slot('academic_year')
-
+        if academic_year==None:
+            academic_year=22
+        
         academic_year=int(str(academic_year)[-2:]) if len(str(academic_year))>2 else int(str(academic_year))
 
         acad_years=str(int(academic_year)-1).zfill(2)+"-"+str(academic_year).zfill(2)
@@ -466,10 +470,12 @@ class ActionCheckExamsFormSlots(Action):
             exam_flag_value="true"
             exams=True
             exams_str="exams"
+            per_sem="period"
         else:
             exam_flag_value="false"
             exams=False
             exams_str="classes"
+            per_sem="semester"
         
         if academic_year!=None and not exams and int(academic_year) not in [19,20,21,2019,2020,2021]:
             academic_year=None
@@ -483,7 +489,7 @@ class ActionCheckExamsFormSlots(Action):
         
         if None in list_to_fill:
             username=tracker.get_slot("user_name")
-            dispatcher.utter_message(f"\nYou haven't chosen the type and/or year and/or period/semester of the {exams_str} {username} =)\nI will now help you fill the necessary information, is that ok?")
+            dispatcher.utter_message(f"\nYou haven't chosen the type and/or year and/or {per_sem} of the {exams_str} {username} =)\nI will now help you fill the necessary information, is that ok?")
             return [SlotSet("exams",exam_flag_value)]
         
         
