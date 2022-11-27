@@ -7,10 +7,10 @@ Your personal academic assistant for Under/Post-graduate students of National & 
 ### Features
 UniPal brings the necessary university information at your fingertips!
 <br>By asking so, you can get:
-- Latest [Di (department) site](https://www.di.uoa.gr/) announcements and the respective summaries
-- Exam & Class lectures timetables
-- University Contact, Location & Access information
-- University's Staff contact details
+- Latest [Di (department) site](https://www.di.uoa.gr/) **Announcements** and the respective summaries
+- Exam & Class lectures **timetables**
+- University **Contact**, **Location** & **Access** information
+- University's **Staff** contact details
 
 <!-- 
 <br>UniPal assistant will soon be able to:
