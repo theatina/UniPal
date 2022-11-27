@@ -302,15 +302,65 @@ def ActionUniClassSchedule():
     timetable_df = pd.read_excel(file_url)
     timetable_df.to_csv("timetableTest.csv", index=False, header=True)
     
-    print(timetable_df["Δευτέρα"].values)
+    # print(timetable_df["Δευτέρα"].values)
     x=13
     Monday_df=timetable_df[:x]
-    Tuesday_df=timetable_df[x+3:(x+3)+x]
-    Wednesday_df=timetable_df[(x+3)+x+1+3:(x+3)*2+x]
-    Thursday_df=timetable_df[(x+3)*2+x+1+3:(x+3)*3+x]
-    Friday_df=timetable_df[(x+3)*3+x+1+3:]
+    Tuesday_df=timetable_df[x+3:(x+3)+x].reset_index(drop=True)
+    Wednesday_df=timetable_df[(x+3)+x+1+3:(x+3)*2+x].reset_index(drop=True)
+    Thursday_df=timetable_df[(x+3)*2+x+1+3:(x+3)*3+x].reset_index(drop=True)
+    Friday_df=timetable_df[(x+3)*3+x+1+3:].reset_index(drop=True)
 
-    print(Monday_df, Tuesday_df, Wednesday_df, Thursday_df, Friday_df)
+
+    # print(Monday_df, Tuesday_df, Wednesday_df, Thursday_df, Friday_df)
+    # columns ["Main", "A_1", "A_2", "B_", "C", "D", "E_", "ST", "Z_"]
+    lecture_halls={"Main":"Αμφιθέατρο", "A_1":"Α1", "A_2":"Α2", "B_":"Β", "C":"Γ", "D":"Δ", "E_":"Ε", "ST":"ΣΤ", "Z_":"Ζ" }
+    weekday_df=[Monday_df, Tuesday_df, Wednesday_df, Thursday_df, Friday_df]
+    for df in weekday_df:
+        df.columns=["Time", "Main", "A_1", "A_2", "B_", "C", "D", "E_", "ST", "Z_"]
+        # print(df.columns)
+
+    
+    weekday_num_to_name={1:"Monday", 2:"Tuesday", 3:"Wednesday", 4:"Thursday", 5:"Friday"}
+    class_sched_dict={}
+    for weekday,df in enumerate(weekday_df):
+        for (c_name,c_items) in df.iteritems():
+            if c_name in lecture_halls:
+                hall_name=lecture_halls[c_name]
+                lects=c_items.values.tolist()
+                # print(len(lects),len(df["Time"]))
+                lects=[ item.split("\n") if type(item)==str else item for item in lects ]
+                for l_ind,l in enumerate(lects):
+                    if type(l)==list and len(l)>1:
+                        # if len(l)>3:
+                        #     print(l)
+                        class_name=l[0].strip()
+                        class_type=l[1].strip()
+                        professors=l[2:]
+
+                        weekday_name=weekday_num_to_name[weekday+1]
+                        if class_name not in class_sched_dict:
+                            class_sched_dict[class_name]={}
+                            class_sched_dict[class_name]["Type"]=class_type
+                            class_sched_dict[class_name]["Professors"]=professors
+                            class_sched_dict[class_name]["Timetable"]={}
+
+                        if weekday_name not in class_sched_dict[class_name]["Timetable"]:
+                            class_sched_dict[class_name]["Timetable"][weekday_name]={}
+                            class_sched_dict[class_name]["Timetable"][weekday_name]["Hall"]=hall_name
+                            # print(class_name, df["Time"].values[l_ind])
+                            class_sched_dict[class_name]["Timetable"][weekday_name]["Start"]=df["Time"].values[l_ind].split("-")[0]
+                            class_sched_dict[class_name]["Timetable"][weekday_name]["End"]=df["Time"].values[l_ind].split("-")[1]
+                        
+                        # if class_sched_dict[class_name]["Timetable"][weekday_name]["End"]!=None:
+                            # class_sched_dict[class_name]["Timetable"][weekday_name]["Start"]=df["Time"].values[l.index].split("-")[0]
+                        class_sched_dict[class_name]["Timetable"][weekday_name]["End"]=df["Time"].values[l_ind].split("-")[1]
+                        
+
+
+                # print(hall_name, lects)
+
+    print(class_sched_dict)
+
     exit()
     # Πρόγραμμα Εξετάσεων Προπτυχιακών Μαθημάτων Χειμερινής Περιόδου 2021 -> Date -> Date
     # Unnamed: 1 -> Time1
@@ -362,4 +412,5 @@ ActionUniClassSchedule()
 # ActionUniExamSchedule()
 # ActionUniStaffInfo()
 # ActionUniAccessInfo()
-
+# ActionUniRetrieveAllFiles()
+# ActionUniAcademicTimetable()
