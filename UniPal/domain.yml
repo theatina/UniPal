@@ -25,6 +25,7 @@ actions:
 - action_button_semester
 - action_button_programme
 - action_button_year
+- action_button_period_semester
 - action_check_examform_slots
 - action_correct_examform_slots
 - action_greet_user
@@ -67,7 +68,7 @@ slots:
   exams:
     type: bool
     influence_conversation: true
-    initial_value: false
+    initial_value: False
     mappings:
     - type: from_entity
       entity: exams
@@ -99,6 +100,8 @@ slots:
     - PMS
     - FULL
     # initial_value: PPS
+    
+    # check filling in interactive when correcting intent!!!
     mappings:
     - type: from_entity
       entity: grad_studies_type

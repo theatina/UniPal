@@ -2,154 +2,20 @@ version: "3.1"
 
 stories:
 
-# - story: happy path
-#   steps:
-#   - action: action_hello_world
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: mood_great
-#   - action: utter_happy
-
-# - story: sad path 1
-#   steps:
-#   - intent: greet
-#   - action: action_greet_user
-#   - intent: mood_unhappy
-#   - action: utter_cheer_up
-#   - action: utter_did_that_help
-#   - intent: affirm
-#   - action: utter_happy
-
-# - story: sad path 2
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - action: utter_did_that_help
-#   - intent: deny
-#   - action: utter_goodbye
-
-
-# - story: UniPal StoryTime1 - University access options
-#   steps:
-#   - action: utter_greet 
-#   - user: |
-#       request for university location access 
-#   - action: asks for preferable <means_of_transport> 
-#   - user: |
-#       informs about <means_of_transport> to get info about
-#   - action: describes route based on <means_of_transport> chosen by the user  
-#   - user: | 
-#       request for another <means_of_transport> option  
-#   - action: describes route based on <means_of_transport> chosen by the user 
-#   - user: |
-#       thanks_bot
-#   - action: SocioPal asks for further help 
-#   - user: |
-#       request for additional uni location access option
-#   - action: asks for preferable <means_of_transport> 
-#   - user: |
-#       informs about <means_of_transport> to get info about
-#   - action: describes route based on <means_of_transport> chosen by the user  
-#   - user: | 
-#       request for another <means_of_transport> option  
-#   - action: describes route based on <means_of_transport> chosen by the user 
-#   - user: |
-#       thanks_bot
-#   - action: SocioPal asks for further help 
-#   - user: | 
-#       negation, goodbye_bot 
-#   - action: utter_goodbye 
-
-
-# - story: UniPal StoryTime2 - Mail to <class_name> professor
-#   steps:
-#   - user: |
-#       hi_bot
-#   - action: utter_greet 
-#   - user: |
-#       request for mail to <class_name> professor 
-#   - action: SocioPal returns <prof_name> and asks for confirmation 
-#   - user: |
-#       affirmation 
-#   - action: asks for mail content
-#   - user: | 
-#       informs SocioPal about mail content
-#   - action: SocioPal confirms the user request variables 
-#   - user: |
-#       affirmation 
-#   - action: SocioPal asks for further help 
-#   - user: |
-#       negation, goodbye_bot
-#   - action: utter_goodbye 
-
-
-# - story: UniPal StoryTime3 - Create Agenda deadline reminder
-#   steps:
-#   - user: |
-#       hi_bot 
-#   - action: utter_greet 
-#   - user: |
-#       request for <class_name> projectX deadline info 
-#   - action: returns <deadline_date_time> 
-#   - user: |
-#       request for <class_name> projectX deadline agenda reminder 
-#   - action: SocioPal confirms the user request variables 
-#   - user: |
-#       affirmation 
-#   - action: SocioPal asks for further help  
-#   - user: |
-#       affirmation
-#   - action: SocioPal asks for further help (certain request) 
-#   - user: |
-#       negation, goodbye_bot
-#   - action: utter_goodbye 
-
 - story: UniPal Request Exam Timetable
   steps:
-  - intent: session_start
   - intent: greet
   - action: utter_greet
   - action: action_UniPal_services
   - action: action_resetSlots
   - intent: request_exam_schedule
-  # - action: exam_schedule_form
-    # entities: 
-    # - exams: true
-    # - exam_period: jan
-  # - slot_was_set:
-  #   - exams: true
-  #   - exam_period: jan
-  #   - grad_studies_type: pps 
-  # - action: action_button_year
-  # - action: utter_exam_schedule_year
-  # - intent: inform_year
-    # entities:
-    # - academic_year: 2020
-  # - slot_was_set: 
-  #   - academic_year: 2020
-  # - action: action_button_period
-  # - action: utter_exam_schedule_period
-  # - intent: inform_period
-  #   entities:
-  #   - exam_period: "sep"
-  # - slot_was_set: 
-  #   - exam_period: "sep"
-  # - action: action_button_programme
-  # - action: utter_exam_schedule_programme
-  # - intent: inform_programme
-  #   entities:
-  #     - academic_year: "PPS"
-  # - slot_was_set: 
-  #   - academic_year: "PPS"
-  # - action: utter_confirm_exam_form_completion
-  # - intent: affirm
   - slot_was_set:
-    - exams: true
+    - exams: True
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_uni_exam_schedule
-  - action: utter_create_gCalendar_event
-  - intent: deny
+  # - action: utter_create_gCalendar_event
+  # - intent: deny
   - action: utter_further_action
   - or:
     - intent: deny
@@ -158,7 +24,6 @@ stories:
 
 - story: UniPal Request Exam Timetable request slots
   steps:
-  - intent: session_start
   - intent: greet
   - action: utter_greet
   - action: action_UniPal_services
@@ -166,20 +31,32 @@ stories:
   - intent: request_exam_schedule
   # - action: exam_schedule_form
   - slot_was_set:
-    - exams: true
+    - exams: True
   - action: action_correct_examform_slots
   - intent: affirm
   - action: action_button_programme
   - intent: inform_programme
-  - action: action_button_period
+    entities:
+      - grad_studies_type: PMS
+  - slot_was_set:
+    - grad_studies_type: PMS
+  - action: action_button_period_semester
   - intent: inform_period
+    entities:
+      - exam_period: jun
+  - slot_was_set:
+    - exam_period: jun
   - action: action_button_year
   - intent: inform_year
+    entities:
+      - academic_year: 2021
+  - slot_was_set:
+    - academic_year: 2021
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_uni_exam_schedule
-  - action: utter_create_gCalendar_event
-  - intent: deny
+  # - action: utter_create_gCalendar_event
+  # - intent: deny
   - action: utter_further_action
   - or:
     - intent: deny
@@ -188,7 +65,6 @@ stories:
 
 - story: UniPal Request Exam Timetable simple
   steps:
-  - intent: session_start
   - intent: greet
   - action: utter_greet
   - action: action_UniPal_services
@@ -196,7 +72,7 @@ stories:
   - intent: request_exam_schedule
   # - action: exam_schedule_form
   - slot_was_set:
-    - exams: true
+    - exams: True
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_uni_exam_schedule
@@ -208,23 +84,33 @@ stories:
 
 - story: UniPal Request Exam Timetable complex
   steps:
-  - intent: session_start
   - intent: greet
   - action: utter_greet
   - action: action_UniPal_services
   - action: action_resetSlots
   - intent: request_exam_schedule
-  # - action: exam_schedule_form
   - slot_was_set:
-    - exams: true
+    - exams: True
   - action: action_correct_examform_slots
   - intent: affirm
   - action: action_button_programme
   - intent: inform_programme
-  - action: action_button_period
+    entities:
+      - grad_studies_type: PPS
+  - slot_was_set:
+    - grad_studies_type: PPS
+  - action: action_button_period_semester
   - intent: inform_period
+    entities:
+      - exam_period: sep
+  - slot_was_set:
+    - exam_period: sep
   - action: action_button_year
   - intent: inform_year
+    entities:
+      - academic_year: 2019
+  - slot_was_set:
+    - academic_year: 2019
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_uni_exam_schedule
@@ -320,14 +206,14 @@ stories:
     entities:
     - grad_studies_type: PPS
     - exam_period: jan
-    - academic_year: '2020'
+    - academic_year: 2020
   # - action: exam_schedule_form
   - slot_was_set:
-    - exams: true
-  - slot_was_set:
-    - exam_period: jan
+    - exams: True
   - slot_was_set:
     - grad_studies_type: PPS
+  - slot_was_set:
+    - exam_period: jan
   - slot_was_set:
     - academic_year: 2020
   - action: action_correct_examform_slots
@@ -353,7 +239,7 @@ stories:
     - academic_year: 2020
   # - action: exam_schedule_form
   - slot_was_set:
-    - exams: true
+    - exams: True
   - slot_was_set:
     - exam_period: jan
   - slot_was_set:
@@ -384,7 +270,7 @@ stories:
     - academic_year: 21
   # - action: exam_schedule_form
   - slot_was_set:
-    - exams: true
+    - exams: True
   - slot_was_set:
     - exam_period: jan
   - slot_was_set:
@@ -398,7 +284,7 @@ stories:
   - intent: request_exam_schedule
   # - action: exam_schedule_form
   - slot_was_set:
-    - exams: true
+    - exams: True
   - action: action_correct_examform_slots
   - intent: affirm
   - action: action_button_programme
@@ -407,7 +293,7 @@ stories:
     - grad_studies_type: PMS
   - slot_was_set:
     - grad_studies_type: PMS
-  - action: action_button_period
+  - action: action_button_period_semester
   - intent: inform_period
     entities:
     - exam_period: sep
@@ -460,16 +346,13 @@ stories:
 
 - story: UniPal Request Class Timetable simple
   steps:
-  - intent: session_start
   - intent: greet
   - action: utter_greet
   - action: action_UniPal_services
   - action: action_resetSlots
   - intent: request_class_schedule
-    entities:
-      - exams: false
   - slot_was_set:
-    - exams: false
+    - exams: False
   # - action: exam_schedule_form
   - action: action_correct_examform_slots
   - intent: deny
@@ -482,25 +365,34 @@ stories:
 
 - story: UniPal Request Class Timetable complex
   steps:
-  - intent: session_start
   - intent: greet
   - action: utter_greet
   - action: action_UniPal_services
   - action: action_resetSlots
   - intent: request_class_schedule
-    entities:
-      - exams: false
   - slot_was_set:
-    - exams: false
+    - exams: False
   # - action: exam_schedule_form
   - action: action_correct_examform_slots
   - intent: affirm
   - action: action_button_programme
   - intent: inform_programme
-  - action: action_button_semester
+    entities:
+      - grad_studies_type: PMS
+  - slot_was_set:
+    - grad_studies_type: PMS
+  - action: action_button_period_semester
   - intent: inform_semester
+    entities:
+      - exam_period: winter
+  - slot_was_set:
+    - exam_period: winter
   - action: action_button_year
   - intent: inform_year
+    entities:
+      - academic_year: 2021
+  - slot_was_set:
+    - academic_year: 2021
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_uni_class_schedule
@@ -520,16 +412,16 @@ stories:
     entities:
     - grad_studies_type: PPS
     - semester: spring
-    - academic_year: '2020'
+    - academic_year: 2020
   - slot_was_set:
     - semester: spring
   - slot_was_set:
     - grad_studies_type: PPS
   - slot_was_set:
-    - academic_year: '2020'
+    - academic_year: 2020
   - action: action_correct_examform_slots
   - slot_was_set:
-    - exams: false
+    - exams: False
   - intent: deny
   - action: action_uni_class_schedule
   - action: utter_further_action
@@ -540,18 +432,90 @@ stories:
     entities:
     - grad_studies_type: PPS
     - semester: winter
-    - academic_year: '2019'
-  - slot_was_set:
-    - semester: winter
+    - academic_year: 2019
   - slot_was_set:
     - grad_studies_type: PPS
   - slot_was_set:
-    - academic_year: '2019'
+    - semester: winter
+  - slot_was_set:
+    - academic_year: 2019
   - action: action_correct_examform_slots
   - slot_was_set:
-    - exams: false
+    - exams: False
   - intent: deny
   - action: action_uni_class_schedule
   - action: utter_further_action
   - intent: deny
   - action: utter_goodbye
+
+
+
+# - story: interactive_story_5
+#   steps:
+#   - intent: greet
+#     entities:
+#     - user_name: Tina
+#   - slot_was_set:
+#     - user_name: Tina
+#   - action: utter_greet
+#   - action: action_UniPal_services
+#   - action: action_resetSlots
+#   - slot_was_set:
+#     - num_of_announcements: null
+#   - slot_was_set:
+#     - exams: false
+#   - slot_was_set:
+#     - grad_studies_type: null
+#   - slot_was_set:
+#     - semester: null
+#   - slot_was_set:
+#     - academic_year: null
+#   - slot_was_set:
+#     - exam_period: null
+#   - intent: request_class_schedule
+#     entities:
+#     - grad_studies_type: PPS
+#     - semester: spring
+#     - academic_year: 2021
+#   - slot_was_set:
+#     - semester: spring
+#   - slot_was_set:
+#     - grad_studies_type: PPS
+#   - slot_was_set:
+#     - academic_year: 2021
+#   - action: action_correct_examform_slots
+#   - slot_was_set:
+#     - exams: false
+#   - intent: deny
+#   - action: action_uni_class_schedule
+#   - action: utter_further_action
+#   - intent: affirm
+#   - action: action_UniPal_services
+#   - action: action_resetSlots
+#   - slot_was_set:
+#     - num_of_announcements: null
+#   - slot_was_set:
+#     - exams: false
+#   - slot_was_set:
+#     - grad_studies_type: null
+#   - slot_was_set:
+#     - semester: null
+#   - slot_was_set:
+#     - academic_year: null
+#   - slot_was_set:
+#     - exam_period: null
+#   - intent: request_exam_schedule
+#   - action: action_correct_examform_slots
+#   - slot_was_set:
+#     - exams: true
+#   - intent: affirm
+#   - action: action_button_programme
+#   - intent: inform_programme
+#     entities:
+#     - grad_studies_type: PPS
+#   - slot_was_set: 
+#     - grad_studies_type: PPS
+#   - action: action_button_period
+#   - intent: goodbye
+#   - action: utter_goodbye
+

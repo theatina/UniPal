@@ -1,10 +1,18 @@
+
 from ctypes.wintypes import HENHMETAFILE
 from datetime import time, datetime, date
 import pandas as pd
 import sys
 import re
 import os
+import certifi
+os.environ["REQUESTS_CA_BUNDLE"] = certifi.where()
+os.environ["SSL_CERT_FILE"] = certifi.where()
 import numpy as np
+
+import certifi
+os.environ["REQUESTS_CA_BUNDLE"] = certifi.where()
+os.environ["SSL_CERT_FILE"] = certifi.where()
 
 from bs4 import BeautifulSoup
 from tkinter import *
@@ -101,7 +109,7 @@ def ActionUniExamSchedule():
     grad_stud_type = "PPS"
     period = "jan"
     # semester = "winter"
-    academic_year = 2010
+    academic_year = 2014
     if len(str(academic_year))>2:
         academic_year = int(str(academic_year)[-2:])
         academic_year=int(str(academic_year).zfill(2))
@@ -117,7 +125,7 @@ def ActionUniExamSchedule():
     print(file_url)
 
     timetable_df = pd.read_excel(file_url)
-    
+    print(timetable_df)
 
     # Πρόγραμμα Εξετάσεων Προπτυχιακών Μαθημάτων Χειμερινής Περιόδου 2021 -> Date -> Date
     # Unnamed: 1 -> Time1
@@ -265,32 +273,37 @@ def ActionUniAccessInfo():
 
 def ActionUniClassSchedule():
     
-    url = "https://www.chatzi.org/schedule/"
+    url = "https://www.di.uoa.gr/announcements"
     #/pps/jan/1819"
 
     # page = urlopen(url)
     # html = page.read().decode("utf-8")
     # soup = BeautifulSoup(html, "html.parser")
+    # print(soup)
+    # tags=soup.find_all('a')
+    # for t in tags:
+    #     print(t.get_text())
 
     # schedule_path = "https://www.chatzi.org/dit-schedule/"
-    year_list = [ f"{i:02d}{i+1:02d}" for i in range(9,22) ]
-    semester_list = [ "winter", "spring" ]
+    # year_list = [ f"{i:02d}{i+1:02d}" for i in range(9,22) ]
+    # semester_list = [ "winter", "spring" ]
 
     # grad_stud_type = tracker.get_slot('grad_studies_type')
     # exams = tracker.get_slot('exams')
     # semester = tracker.get_slot('semester')
     # academic_year = tracker.get_slot('academic_year')
 
+    # exit()
     grad_stud_type = "PPS"
     semester = "winter"
     # semester = "winter"
-    academic_year = 2020
+    academic_year = 2022
     if len(str(academic_year))>2:
         academic_year = int(str(academic_year)[-2:])
         academic_year=int(str(academic_year).zfill(2))
 
-    acad_years=str(academic_year-1).zfill(2)+"-"+str(academic_year).zfill(2)
-    acad_years_sem=str(academic_year-1).zfill(2)+str(academic_year).zfill(2)
+    acad_years=str(academic_year).zfill(2)+"-"+str(academic_year+1).zfill(2)
+    acad_years_sem=str(academic_year).zfill(2)+str(academic_year+1).zfill(2)
 
     # print(grad_stud_type, semester, academic_year)
     # file_url = os.path.join(schedule_path, f"")
@@ -395,8 +408,8 @@ ________________________________________________________________________________
 
 # ActionUniPsychoSupportInfo()
 # ActionUniAnnouncements()
-ActionUniClassSchedule()
-# ActionUniExamSchedule()
+# ActionUniClassSchedule()
+ActionUniExamSchedule()
 # ActionUniStaffInfo()
 # ActionUniAccessInfo()
 # ActionUniRetrieveAllFiles()

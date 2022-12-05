@@ -1,0 +1,267 @@
+version: "3.1"
+stories:
+
+- story: 1a - UniPal Request Announcements
+  steps:
+  - user: |
+      hi, my name is Tin
+    intent: greet
+  - action: utter_greet
+  - action: action_UniPal_services
+  - action: action_resetSlots
+  - user: |
+      what about fist [2](num_of_announcements) uni news?
+    intent: request_announcements
+    entities:
+    - num_of_announcements: 2
+  - slot_was_set:
+    - num_of_announcements: 2
+  - action: action_uni_announcements
+  - action: utter_further_action
+  - user: |
+      nah
+    intent: deny
+  - action: utter_goodbye
+
+
+
+- story: 2a - UniPal Request Class Timetable complex
+  steps:
+  - user: |
+      hello unipal
+    intent: greet
+  - action: utter_greet
+  - action: action_UniPal_services
+  - action: action_resetSlots
+  - user: |
+      i would like to check the classes timetable
+    intent: request_class_schedule
+    entities:
+      - exams: false
+  - slot_was_set:
+    - exams: false
+  - action: action_correct_examform_slots
+  - user: |
+      yes
+    intent: affirm
+  - action: action_button_programme
+  - user: |
+      [undergrad]{"entity": "grad_studies_type", "value": "PPS"}
+    intent: inform_programme
+  - action: action_button_semester
+  - user: |
+      [Sprinf]{"entity": "semester", "value": "spring"}
+    intent: inform_semester
+  - action: action_button_year
+  - user: |
+      [2021](academic_year)
+    intent: inform_year
+  - action: action_correct_examform_slots
+  - user: |
+      no
+    intent: deny
+  - action: action_uni_class_schedule
+  - action: utter_further_action
+  - user: |
+      bye pal
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: 2b - UniPal Request Class Timetable simple
+  steps:
+  - user: |
+      hello unipal
+    intent: greet
+  - action: utter_greet
+  - action: action_UniPal_services
+  - action: action_resetSlots
+  - user: |
+      what [undergraduate]{"entity": "grad_studies_type", "value": "PPS"}  class lectures are there for winter 2021
+    intent: request_class_schedule
+    entities:
+      - exams: false
+  - slot_was_set:
+    - exams: false
+  - action: action_correct_examform_slots
+  - user: |
+      yes
+    intent: affirm
+  - action: action_button_programme
+  - user: |
+      [undergrad]{"entity": "grad_studies_type", "value": "PPS"}
+    intent: inform_programme
+  - action: action_button_semester
+  - user: |
+      [Sprinf]{"entity": "semester", "value": "spring"}
+    intent: inform_semester
+  - action: action_button_year
+  - user: |
+      [2021](academic_year)
+    intent: inform_year
+  - action: action_correct_examform_slots
+  - user: |
+      no
+    intent: deny
+  - action: action_uni_class_schedule
+  - action: utter_further_action
+  - user: |
+      bye pal
+    intent: goodbye
+  - action: utter_goodbye
+
+
+
+- story: 3a - UniPal Request Exams Timetable complex
+  steps:
+  - user: |
+      hello unipal
+    intent: greet
+  - action: utter_greet
+  - action: action_UniPal_services
+  - action: action_resetSlots
+  - user: |
+      i would like to check the exams
+    intent: request_exams_schedule
+    entities:
+      - exams: false
+  - slot_was_set:
+    - exams: false
+  - action: action_correct_examform_slots
+  - user: |
+      yes
+    intent: affirm
+  - action: action_button_programme
+  - user: |
+      [undergrad]{"entity": "grad_studies_type", "value": "PPS"}
+    intent: inform_programme
+  - action: action_button_semester
+  - user: |
+      [Spring]{"entity": "semester", "value": "spring"}
+    intent: inform_semester
+  - action: action_button_year
+  - user: |
+      [2021](academic_year)
+    intent: inform_year
+  - action: action_correct_examform_slots
+  - user: |
+      no
+    intent: deny
+  - action: action_uni_class_schedule
+  - action: utter_further_action
+  - user: |
+      bye pal
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: 3b - UniPal Request Exams Timetable simple
+  steps:
+  - user: |
+      hello unipal
+    intent: greet
+  - action: utter_greet
+  - action: action_UniPal_services
+  - action: action_resetSlots
+  - user: |
+      i would like to check the exams schedule
+    intent: request_exam_schedule
+    entities:
+      - exams: false
+  - slot_was_set:
+    - exams: false
+  - action: action_correct_examform_slots
+  - user: |
+      yes
+    intent: affirm
+  - action: action_button_programme
+  - user: |
+      [undergrad]{"entity": "grad_studies_type", "value": "PPS"}
+    intent: inform_programme
+  - action: action_button_semester
+  - user: |
+      [Spring]{"entity": "period", "value": "spring"}
+    intent: inform_period
+  - action: action_button_year
+  - user: |
+      [2021](academic_year)
+    intent: inform_year
+  - action: action_correct_examform_slots
+  - user: |
+      no
+    intent: deny
+  - action: action_uni_class_schedule
+  - action: utter_further_action
+  - user: |
+      bye pal
+    intent: goodbye
+  - action: utter_goodbye
+
+
+
+
+- story: 4a - UniPal Request Access-Location-Contact Information 
+  steps:               
+  - user: |
+      hey there, I'm [Theatina](user_name)
+    intent: greet
+  - action: utter_greet
+  - action: action_UniPal_services
+  - action: action_resetSlots
+  - user: |
+      What is the university's location?
+    intent: request_contact_loc_info
+  - action: action_uni_contact_loc_info
+  - action: utter_further_action
+  - user: |
+      yes
+    intent: affirm
+  - action: action_UniPal_services
+  - action: action_resetSlots
+  - user: |
+      bye Pal !
+    intent: goodbye
+  - action: utter_goodbye
+
+
+
+- story: 5a - UniPal Request Staff Information 
+  steps:             
+  - user: |
+      yo bro, me [tina](user_name)
+    intent: greet
+  - action: utter_greet
+  - action: action_UniPal_services
+  - action: action_resetSlots
+  - user: |
+      Uni staff information please
+    intent: request_staff_info
+  - action: action_uni_staff_info
+  - action: utter_further_action
+  - user: |
+     no thanks
+    intent: deny
+  - action: utter_goodbye
+
+- story: 5b - UniPal Request Staff Information 
+  steps:          
+  - user: |
+      yo bro, me [tina](user_name)
+    intent: greet
+  - action: utter_greet
+  - action: action_UniPal_services
+  - action: action_resetSlots
+  - user: |
+      Uni staff information please
+    intent: request_staff_info
+  - action: action_uni_staff_info
+  - action: utter_further_action
+  - user: |
+      y
+    intent: affirm
+  - action: action_UniPal_services
+  - action: action_resetSlots
+  - user: |
+      ok thanks, bye
+    intent: goodbye
+  - action: utter_goodbye
+
+

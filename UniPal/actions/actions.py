@@ -4,13 +4,17 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 
-
 import sys
 import re
 import pandas as pd
 import os
-from datetime import time, datetime, date
 import numpy as np
+
+import certifi
+os.environ["REQUESTS_CA_BUNDLE"] = certifi.where()
+os.environ["SSL_CERT_FILE"] = certifi.where()
+
+from datetime import time, datetime, date
 
 from bs4 import BeautifulSoup
 from tkinter import *
@@ -94,7 +98,7 @@ class ActionResetSlots(Action):
         # FollowupAction("action_resetAnnouncementSlot")
         # FollowupAction("action_resetTimetableSlots")
 
-        return [SlotSet("num_of_announcements", None), SlotSet("exams", False),SlotSet("grad_studies_type", None), SlotSet("semester", None), SlotSet("academic_year", None), SlotSet("exam_period", None) ]
+        return [SlotSet("num_of_announcements", None), SlotSet("exams", False), SlotSet("grad_studies_type", None), SlotSet("semester", None), SlotSet("academic_year", None), SlotSet("exam_period", None) ]
 
 
 
@@ -150,7 +154,7 @@ class ActionUniPalServices(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text=" \n \n I can provide the following services/information:\n1. Announcements\n2. Exams Schedule\n3. Class Timetable\n4. University access\n5. University Staff Contact Detailss\n6. Psychological Support Information\n")
+        dispatcher.utter_message(text=" \n \n I can provide the following services/information:\n1. Announcements\n2. Exams Schedule\n3. Class Timetable\n4. University Contact/Location/Access Info\n5. University Staff Contact Details\n6. Psychological Support Information\n")
 
         return []
 
@@ -223,6 +227,24 @@ class Button_Period(Action):
         dispatcher.utter_message(text= "Choose exam period:\n(January, June or September)")  
         return []    
 
+
+class Button_Period_Semester(Action):
+    def name(self) -> Text:
+        return "action_button_period_semester"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        exams_flag=tracker.get_slot("exams")
+        if exams_flag:
+            dispatcher.utter_message(text= "Choose exam period:\n(January, June or September)")  
+        else:
+            dispatcher.utter_message(text= "Choose studies semester:\n(Spring or Winter)") 
+        return []    
+
 class Button_Semester(Action):
     def name(self) -> Text:
         return "action_button_semester"
@@ -242,7 +264,7 @@ class Button_Semester(Action):
 
         #then display it using dispatcher
         # dispatcher.utter_message(text= "Choose exam period" , buttons=buttons)     
-        dispatcher.utter_message(text= "Choose studies semester:\n(Spring or Winter")  
+        dispatcher.utter_message(text= "Choose studies semester:\n(Spring or Winter)")  
         return []   
 
 class Button_Programme(Action):
@@ -270,7 +292,7 @@ class Button_Programme(Action):
     
         return []                                 
 
-# working well (due to different .xls format): 19-20, 20-21, 21-22 
+# working well (due to different .xls format): 19-20, 20-21, 21-22, 22-23 
 class ActionUniClassSchedule(Action):
     def name(self) -> Text:
         return "action_uni_class_schedule"
@@ -307,7 +329,7 @@ class ActionUniClassSchedule(Action):
         # print(file_url)
 
         timetable_df = pd.read_excel(file_url)
-        timetable_df.to_csv("timetableTest.csv", index=False, header=True)
+        # timetable_df.to_csv("timetableTest.csv", index=False, header=True)
         
         # print(timetable_df["Δευτέρα"].values)
         x=13
@@ -380,7 +402,7 @@ class ActionUniClassSchedule(Action):
                 print_str+=f"{day}: {class_sched_dict[k]['Timetable'][day]['Hall']} | {class_sched_dict[k]['Timetable'][day]['Start']}-{class_sched_dict[k]['Timetable'][day]['End']}\n"
             print_str+=" \n"
         
-        dispatcher.utter_message(f"\nFound this timetable: \n{print_str} \n \n ")
+        dispatcher.utter_message(f"\nFound this timetable ({grad_stud_type,semester,acad_years}) : \n{print_str} \n \n ")
         # print(print_str)
         return []
 
@@ -464,18 +486,32 @@ class ActionCheckExamsFormSlots(Action):
         # exams = tracker.get_slot("exams")
         # exams_str="exams" if exams else "classes"
 
+        exams_slot=tracker.get_slot("exams")
         intent=tracker.latest_message['intent'].get('name')
         # dispatcher.utter_message(f"Intent: {intent}")
-        if intent=="request_exam_schedule":
-            exam_flag_value="true"
-            exams=True
-            exams_str="exams"
-            per_sem="period"
+        # dispatcher.utter_message(f"{exams_slot},{type(exams_slot)==type(True)}")
+        if intent not in ["request_exam_schedule", "request_class_schedule"]:
+            if exams_slot:
+                exam_flag_value=True
+                exams=True
+                exams_str="exams"
+                per_sem="period"
+            else:
+                exam_flag_value=False
+                exams=False
+                exams_str="classes"
+                per_sem="semester"
         else:
-            exam_flag_value="false"
-            exams=False
-            exams_str="classes"
-            per_sem="semester"
+            if intent=="request_exam_schedule":
+                exam_flag_value=True
+                exams=True
+                exams_str="exams"
+                per_sem="period"
+            else:
+                exam_flag_value=False
+                exams=False
+                exams_str="classes"
+                per_sem="semester"
         
         if academic_year!=None and not exams and int(academic_year) not in [19,20,21,2019,2020,2021]:
             academic_year=None
@@ -700,3 +736,6 @@ class ActionUniContactLocInfo(Action):
 
         
         return []
+
+
+# write action to fill all the slots from intent values after step-by-step intent filling ?!

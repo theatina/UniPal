@@ -1,10 +1,10 @@
 [
   {
-    "text": "good afternoon",
-    "intent": "greet",
+    "text": "undergraduate exams",
+    "intent": "request_exam_schedule",
     "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.8392269611358643
+      "name": "inform_programme",
+      "confidence": 0.5541187524795532
     }
   }
 ]

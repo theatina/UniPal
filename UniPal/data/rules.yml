@@ -29,6 +29,26 @@ rules:
   - intent: request_exam_schedule
   - action: action_correct_examform_slots
 
+- rule: Ask for next slot 
+  steps:
+  - intent: inform_programme
+  - action: action_button_period_semester
+
+- rule: Ask for next slot (exams | period->year)
+  steps:
+  - intent: inform_period
+  - action: action_button_year
+
+- rule: Ask for next slot (classes | semester->year)
+  steps:
+  - intent: inform_semester
+  - action: action_button_year
+
+- rule: Recheck slots after academic year slot filling (exams & classes)
+  steps:
+  - intent: inform_year
+  - action: action_correct_examform_slots
+
 # - rule: Activate exams flag
 #   steps:
 #   - intent: request_exam_schedule
@@ -78,12 +98,12 @@ rules:
 #   - action: action_uni_class_schedule
 
 # - rule: Provide info on exam timetable when user asks
-#   steps:
-#   - intent: request_exam_schedule
-#   - action: utter_exam_schedule_year
-#   - action: utter_exam_schedule_period
-#   - action: utter_exam_schedule_programme
-#   - action: action_uni_exam_schedule
+  # steps:
+  # - intent: request_exam_schedule
+  # - action: utter_exam_schedule_year
+  # - action: utter_exam_schedule_period
+  # - action: utter_exam_schedule_programme
+  # - action: action_uni_exam_schedule
 
 # - rule: Activate exam schedule form
 #   steps:

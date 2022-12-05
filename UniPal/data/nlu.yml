@@ -113,6 +113,8 @@ nlu:
     - any new information on class timetable?
     - class
     - classes
+    - lectures
+    - class lectures
     - class schedule
     - class timetable
     - [spring](semester) classes
