@@ -349,6 +349,8 @@ class ActionUniClassSchedule(Action):
                 col_names=["Time"]
                 col_names.extend([f"Online{i}" for i in range(1,len(timetable_df.columns))])
                 df.columns=col_names
+            elif len(df.columns)==9:
+                df.columns=["Time", "Main", "A_1", "A_2", "B_", "C", "D", "ST", "Z_"]
             else:
                 df.columns=["Time", "Main", "A_1", "A_2", "B_", "C", "D", "E_", "ST", "Z_"]
                 # print(df.columns)
@@ -441,10 +443,15 @@ class ActionUniExamSchedule(Action):
         # Unnamed: 3 -> Time3
         # Unnamed: 3 -> Time4
         # timetable_df.rename(columns={"Πρόγραμμα Εξετάσεων Προπτυχιακών Μαθημάτων Χειμερινής Περιόδου 2021":"Date", "Unnamed: 1": "Time1", "Unnamed: 2": "Time2", "Unnamed: 3": "Time3"}, inplace=True)
-        if 'Unnamed: 4' in list(timetable_df.columns):
+        if 'Unnamed: 5' in list(timetable_df.columns):
+        # better make a general rule about multiple column counts
+            timetable_df.columns=["Date", "Time1", "Time2", "Time3", "Time4","Time5"]
+        elif 'Unnamed: 4' in list(timetable_df.columns):
             timetable_df.columns=["Date", "Time1", "Time2", "Time3", "Time4"]
-        else:
+        elif 'Unnamed: 3' in list(timetable_df.columns):
             timetable_df.columns=["Date", "Time1", "Time2", "Time3"]
+        else:
+            timetable_df.columns=["Date", "Time1", "Time2"]
             # timetable_df.rename(columns={"Unnamed 4": "Time4"}, inplace=True)
         # print(type(timetable_df["Date"][2]))
         # print(timetable_df["Date"][2].date().strftime('%A %d-%m-%y'))
