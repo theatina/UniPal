@@ -4,7 +4,7 @@
     "intent": "request_exam_schedule",
     "intent_prediction": {
       "name": "inform_programme",
-      "confidence": 0.5541187524795532
+      "confidence": 0.5958540439605713
     }
   }
 ]

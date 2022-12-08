@@ -34,14 +34,9 @@ rules:
   - intent: inform_programme
   - action: action_button_period_semester
 
-- rule: Ask for next slot (exams | period->year)
+- rule: Ask for next slot (exams/classes | period/semester->year)
   steps:
-  - intent: inform_period
-  - action: action_button_year
-
-- rule: Ask for next slot (classes | semester->year)
-  steps:
-  - intent: inform_semester
+  - intent: inform_period_semester
   - action: action_button_year
 
 - rule: Recheck slots after academic year slot filling (exams & classes)
@@ -49,22 +44,10 @@ rules:
   - intent: inform_year
   - action: action_correct_examform_slots
 
-# - rule: Activate exams flag
-#   steps:
-#   - intent: request_exam_schedule
-#   - slot_was_set:
-#     - exams: true
-
 - rule: Check class schedule slots
   steps:
   - intent: request_class_schedule
   - action: action_correct_examform_slots
-
-# - rule: Activate class flag (deactivate exams flag)
-#   steps:
-#   - intent: request_class_schedule
-#   - slot_was_set:
-#     - exams: false
 
 - rule: Be polite
   steps:
@@ -72,6 +55,18 @@ rules:
   - action: utter_welcome
 
 
+
+# - rule: Activate exams flag
+#   steps:
+#   - intent: request_exam_schedule
+#   - slot_was_set:
+#     - exams: true
+
+# - rule: Activate class flag (deactivate exams flag)
+#   steps:
+#   - intent: request_class_schedule
+#   - slot_was_set:
+#     - exams: false
 
 # - rule: Fill programme type slot
 #   steps:

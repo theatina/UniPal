@@ -4,17 +4,15 @@ stories:
 - story: 1a - UniPal Request Announcements
   steps:
   - user: |
-      hi, my name is Tin
+      hi there
     intent: greet
   - action: utter_greet
   - action: action_UniPal_services
   - action: action_resetSlots
   - user: |
-      what about fist [2](num_of_announcements) uni news?
+      what about fist [2]{"entity":"num_of_announcements"} uni news?
     intent: request_announcements
     entities:
-    - num_of_announcements: 2
-  - slot_was_set:
     - num_of_announcements: 2
   - action: action_uni_announcements
   - action: utter_further_action
@@ -37,9 +35,7 @@ stories:
       i would like to check the classes timetable
     intent: request_class_schedule
     entities:
-      - exams: false
-  - slot_was_set:
-    - exams: false
+      - exams: False
   - action: action_correct_examform_slots
   - user: |
       yes
@@ -48,19 +44,19 @@ stories:
   - user: |
       [undergrad]{"entity": "grad_studies_type", "value": "PPS"}
     intent: inform_programme
-  - action: action_button_semester
+  - action: action_button_period_semester
   - user: |
-      [Sprinf]{"entity": "semester", "value": "spring"}
-    intent: inform_semester
+      [Spring]{"entity": "semester", "value": "spring"}
+    intent: inform_period_semester
   - action: action_button_year
   - user: |
-      [2021](academic_year)
+      [2019](academic_year)
     intent: inform_year
   - action: action_correct_examform_slots
   - user: |
       no
     intent: deny
-  - action: action_uni_class_schedule
+  - action: action_class_exam_timetable
   - action: utter_further_action
   - user: |
       bye pal
@@ -79,9 +75,7 @@ stories:
       what [undergraduate]{"entity": "grad_studies_type", "value": "PPS"}  class lectures are there for winter 2021
     intent: request_class_schedule
     entities:
-      - exams: false
-  - slot_was_set:
-    - exams: false
+      - exams: False
   - action: action_correct_examform_slots
   - user: |
       yes
@@ -90,19 +84,19 @@ stories:
   - user: |
       [undergrad]{"entity": "grad_studies_type", "value": "PPS"}
     intent: inform_programme
-  - action: action_button_semester
+  - action: action_button_period_semester
   - user: |
-      [Sprinf]{"entity": "semester", "value": "spring"}
-    intent: inform_semester
+      [Spring]{"entity": "semester", "value": "spring"}
+    intent: inform_period_semester
   - action: action_button_year
   - user: |
-      [2021](academic_year)
+      [2020](academic_year)
     intent: inform_year
   - action: action_correct_examform_slots
   - user: |
       no
     intent: deny
-  - action: action_uni_class_schedule
+  - action: action_class_exam_timetable
   - action: utter_further_action
   - user: |
       bye pal
@@ -114,18 +108,16 @@ stories:
 - story: 3a - UniPal Request Exams Timetable complex
   steps:
   - user: |
-      hello unipal
+      hello 
     intent: greet
   - action: utter_greet
   - action: action_UniPal_services
   - action: action_resetSlots
   - user: |
       i would like to check the exams
-    intent: request_exams_schedule
+    intent: request_exam_schedule
     entities:
-      - exams: false
-  - slot_was_set:
-    - exams: false
+      - exams: True
   - action: action_correct_examform_slots
   - user: |
       yes
@@ -134,19 +126,19 @@ stories:
   - user: |
       [undergrad]{"entity": "grad_studies_type", "value": "PPS"}
     intent: inform_programme
-  - action: action_button_semester
+  - action: action_button_period_semester
   - user: |
-      [Spring]{"entity": "semester", "value": "spring"}
-    intent: inform_semester
+      [June]{"entity": "exam_period", "value": "jun"}
+    intent: inform_period_semester
   - action: action_button_year
   - user: |
-      [2021](academic_year)
+      [2019](academic_year)
     intent: inform_year
   - action: action_correct_examform_slots
   - user: |
       no
     intent: deny
-  - action: action_uni_class_schedule
+  - action: action_class_exam_timetable
   - action: utter_further_action
   - user: |
       bye pal
@@ -165,9 +157,7 @@ stories:
       i would like to check the exams schedule
     intent: request_exam_schedule
     entities:
-      - exams: false
-  - slot_was_set:
-    - exams: false
+      - exams: True
   - action: action_correct_examform_slots
   - user: |
       yes
@@ -176,19 +166,19 @@ stories:
   - user: |
       [undergrad]{"entity": "grad_studies_type", "value": "PPS"}
     intent: inform_programme
-  - action: action_button_semester
+  - action: action_button_period_semester
   - user: |
-      [Spring]{"entity": "period", "value": "spring"}
-    intent: inform_period
+      [september]{"entity": "exam_period", "value": "sep"}
+    intent: inform_period_semester
   - action: action_button_year
   - user: |
-      [2021](academic_year)
+      [2018](academic_year)
     intent: inform_year
   - action: action_correct_examform_slots
   - user: |
       no
     intent: deny
-  - action: action_uni_class_schedule
+  - action: action_class_exam_timetable
   - action: utter_further_action
   - user: |
       bye pal
@@ -237,14 +227,14 @@ stories:
   - action: action_uni_staff_info
   - action: utter_further_action
   - user: |
-     no thanks
+     no thank you
     intent: deny
   - action: utter_goodbye
 
 - story: 5b - UniPal Request Staff Information 
   steps:          
   - user: |
-      yo bro, me [tina](user_name)
+      hi, it's [Maria](user_name)
     intent: greet
   - action: utter_greet
   - action: action_UniPal_services
@@ -260,7 +250,7 @@ stories:
   - action: action_UniPal_services
   - action: action_resetSlots
   - user: |
-      ok thanks, bye
+      ok, bye
     intent: goodbye
   - action: utter_goodbye
 

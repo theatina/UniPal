@@ -405,7 +405,7 @@ def ActionUniClassSchedule():
 
     print(print_str)
     return None
-    
+
 
 
 
@@ -417,9 +417,10 @@ ________________________________________________________________________________
 
 # ActionUniPsychoSupportInfo()
 # ActionUniAnnouncements()
-ActionUniClassSchedule()
-# ActionUniExamSchedule()
+# ActionUniClassSchedule()
+ActionUniExamSchedule()
 # ActionUniStaffInfo()
 # ActionUniAccessInfo()
 # ActionUniRetrieveAllFiles()
 # ActionUniAcademicTimetable()
+# ActionUniClassExamTimetable()

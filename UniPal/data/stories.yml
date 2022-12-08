@@ -13,7 +13,7 @@ stories:
     - exams: True
   - action: action_correct_examform_slots
   - intent: deny
-  - action: action_uni_exam_schedule
+  - action: action_class_exam_timetable
   # - action: utter_create_gCalendar_event
   # - intent: deny
   - action: utter_further_action
@@ -41,7 +41,7 @@ stories:
   - slot_was_set:
     - grad_studies_type: PMS
   - action: action_button_period_semester
-  - intent: inform_period
+  - intent: inform_period_semester
     entities:
       - exam_period: jun
   - slot_was_set:
@@ -54,7 +54,7 @@ stories:
     - academic_year: 2021
   - action: action_correct_examform_slots
   - intent: deny
-  - action: action_uni_exam_schedule
+  - action: action_class_exam_timetable
   # - action: utter_create_gCalendar_event
   # - intent: deny
   - action: utter_further_action
@@ -75,7 +75,7 @@ stories:
     - exams: True
   - action: action_correct_examform_slots
   - intent: deny
-  - action: action_uni_exam_schedule
+  - action: action_class_exam_timetable
   - action: utter_further_action
   - or:
     - intent: deny
@@ -100,7 +100,7 @@ stories:
   - slot_was_set:
     - grad_studies_type: PPS
   - action: action_button_period_semester
-  - intent: inform_period
+  - intent: inform_period_semester
     entities:
       - exam_period: sep
   - slot_was_set:
@@ -113,7 +113,7 @@ stories:
     - academic_year: 2019
   - action: action_correct_examform_slots
   - intent: deny
-  - action: action_uni_exam_schedule
+  - action: action_class_exam_timetable
   - action: utter_further_action
   - or:
     - intent: deny
@@ -218,7 +218,7 @@ stories:
     - academic_year: 2020
   - action: action_correct_examform_slots
   - intent: deny
-  - action: action_uni_exam_schedule
+  - action: action_class_exam_timetable
   - action: utter_further_action
   - or:
     - intent: deny
@@ -234,7 +234,7 @@ stories:
   - action: action_resetSlots
   - intent: request_exam_schedule
     entities:
-    - grad_studies_type: PPS
+    - grad_studies_type: PMS
     - exam_period: jan
     - academic_year: 2020
   # - action: exam_schedule_form
@@ -243,12 +243,12 @@ stories:
   - slot_was_set:
     - exam_period: jan
   - slot_was_set:
-    - grad_studies_type: PPS
+    - grad_studies_type: PMS
   - slot_was_set:
     - academic_year: 2020
   - action: action_correct_examform_slots
   - intent: deny
-  - action: action_uni_exam_schedule
+  - action: action_class_exam_timetable
   - action: utter_further_action
   - intent: deny
   - action: utter_goodbye
@@ -266,20 +266,20 @@ stories:
   - intent: request_exam_schedule
     entities:
     - grad_studies_type: PPS
-    - exam_period: jan
+    - exam_period: sep
     - academic_year: 21
   # - action: exam_schedule_form
   - slot_was_set:
     - exams: True
   - slot_was_set:
-    - exam_period: jan
+    - exam_period: sep
   - slot_was_set:
     - grad_studies_type: PPS
   - slot_was_set:
     - academic_year: 21
   - action: action_correct_examform_slots
   - intent: deny
-  - action: action_uni_exam_schedule
+  - action: action_class_exam_timetable
   - action: utter_further_action
   - intent: request_exam_schedule
   # - action: exam_schedule_form
@@ -294,7 +294,7 @@ stories:
   - slot_was_set:
     - grad_studies_type: PMS
   - action: action_button_period_semester
-  - intent: inform_period
+  - intent: inform_period_semester
     entities:
     - exam_period: sep
   - slot_was_set:
@@ -307,7 +307,7 @@ stories:
     - academic_year: 2012
   - action: action_correct_examform_slots
   - intent: deny
-  - action: action_uni_exam_schedule
+  - action: action_class_exam_timetable
   - action: utter_further_action
   - intent: deny
   - action: utter_goodbye
@@ -356,7 +356,7 @@ stories:
   # - action: exam_schedule_form
   - action: action_correct_examform_slots
   - intent: deny
-  - action: action_uni_class_schedule
+  - action: action_class_exam_timetable
   - action: utter_further_action
   - or:
     - intent: deny
@@ -382,11 +382,11 @@ stories:
   - slot_was_set:
     - grad_studies_type: PMS
   - action: action_button_period_semester
-  - intent: inform_semester
+  - intent: inform_period_semester
     entities:
-      - exam_period: winter
+      - semester: winter
   - slot_was_set:
-    - exam_period: winter
+    - semester: winter
   - action: action_button_year
   - intent: inform_year
     entities:
@@ -395,7 +395,7 @@ stories:
     - academic_year: 2021
   - action: action_correct_examform_slots
   - intent: deny
-  - action: action_uni_class_schedule
+  - action: action_class_exam_timetable
   - action: utter_further_action
   - or:
     - intent: deny
@@ -423,7 +423,7 @@ stories:
   - slot_was_set:
     - exams: False
   - intent: deny
-  - action: action_uni_class_schedule
+  - action: action_class_exam_timetable
   - action: utter_further_action
   - intent: affirm
   - action: action_UniPal_services
@@ -443,7 +443,7 @@ stories:
   - slot_was_set:
     - exams: False
   - intent: deny
-  - action: action_uni_class_schedule
+  - action: action_class_exam_timetable
   - action: utter_further_action
   - intent: deny
   - action: utter_goodbye

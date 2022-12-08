@@ -1,57 +1,5 @@
 version: "3.1"
 stories:
-- story: 1a - UniPal Request Announcements (C:\Users\Theatina\Desktop\MSc_FinalCountdown\M913\Project\LatestV\UniPal\tests\test_UniPal_stories.yml)
-  steps:
-  - intent: greet  # predicted: greet: hi, my name is [Tin](user_name)
-  - action: utter_greet
-  - action: action_UniPal_services
-  - action: action_resetSlots
-  - intent: request_announcements
-    entities:
-    - num_of_announcements: '2'
-  - slot_was_set:
-    - num_of_announcements: '2'
-  - slot_was_set:
-    - num_of_announcements: 2
-  - action: action_uni_announcements
-  - action: utter_further_action
-  - intent: deny
-  - action: utter_goodbye
-- story: 2a - UniPal Request Class Timetable complex (C:\Users\Theatina\Desktop\MSc_FinalCountdown\M913\Project\LatestV\UniPal\tests\test_UniPal_stories.yml)
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: action_UniPal_services
-  - action: action_resetSlots
-  - intent: request_class_schedule
-  - slot_was_set:
-    - exams: false
-  - action: action_correct_examform_slots
-  - intent: affirm
-  - action: action_button_programme
-  - intent: inform_programme
-    entities:
-    - grad_studies_type: PPS
-  - slot_was_set:
-    - grad_studies_type: PPS
-  - action: action_button_semester  # predicted: action_button_period
-  - intent: inform_semester
-    entities:
-    - semester: spring
-  - slot_was_set:
-    - semester: spring
-  - action: action_button_year  # predicted: action_default_fallback
-  - intent: inform_year
-    entities:
-    - academic_year: '2021'
-  - slot_was_set:
-    - academic_year: '2021'
-  - action: action_correct_examform_slots
-  - intent: deny
-  - action: action_uni_class_schedule
-  - action: utter_further_action
-  - intent: goodbye
-  - action: utter_goodbye
 - story: 2b - UniPal Request Class Timetable simple (C:\Users\Theatina\Desktop\MSc_FinalCountdown\M913\Project\LatestV\UniPal\tests\test_UniPal_stories.yml)
   steps:
   - intent: greet
@@ -63,8 +11,6 @@ stories:
     - grad_studies_type: PPS
   - slot_was_set:
     - grad_studies_type: PPS
-  - slot_was_set:
-    - exams: false
   - action: action_correct_examform_slots
   - intent: affirm
   - action: action_button_programme
@@ -73,56 +19,21 @@ stories:
     - grad_studies_type: PPS
   - slot_was_set:
     - grad_studies_type: PPS
-  - action: action_button_semester
-  - intent: inform_semester
+  - action: action_button_period_semester
+  - intent: inform_period_semester
     entities:
     - semester: spring
   - slot_was_set:
     - semester: spring
-  - action: action_button_year  # predicted: action_default_fallback
+  - action: action_button_year
   - intent: inform_year
     entities:
-    - academic_year: '2021'
+    - academic_year: '2020'
   - slot_was_set:
-    - academic_year: '2021'
+    - academic_year: '2020'
   - action: action_correct_examform_slots
   - intent: deny
-  - action: action_uni_class_schedule
-  - action: utter_further_action
-  - intent: goodbye
-  - action: utter_goodbye
-- story: 3a - UniPal Request Exams Timetable complex (C:\Users\Theatina\Desktop\MSc_FinalCountdown\M913\Project\LatestV\UniPal\tests\test_UniPal_stories.yml)
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: action_UniPal_services
-  - action: action_resetSlots
-  - intent: request_exams_schedule  # predicted: request_class_schedule: i would like to check the exams
-  - slot_was_set:
-    - exams: false
-  - action: action_correct_examform_slots  # predicted: action_default_fallback
-  - intent: affirm
-  - action: action_button_programme  # predicted: action_UniPal_services
-  - intent: inform_programme
-    entities:
-    - grad_studies_type: PPS
-  - slot_was_set:
-    - grad_studies_type: PPS
-  - action: action_button_semester
-  - intent: inform_semester
-    entities:
-    - semester: spring
-  - slot_was_set:
-    - semester: spring
-  - action: action_button_year  # predicted: action_default_fallback
-  - intent: inform_year
-    entities:
-    - academic_year: '2021'
-  - slot_was_set:
-    - academic_year: '2021'
-  - action: action_correct_examform_slots
-  - intent: deny
-  - action: action_uni_class_schedule
+  - action: action_class_exam_timetable
   - action: utter_further_action
   - intent: goodbye
   - action: utter_goodbye
@@ -132,9 +43,7 @@ stories:
   - action: utter_greet
   - action: action_UniPal_services
   - action: action_resetSlots
-  - intent: request_exam_schedule  # predicted: nlu_fallback: i would like to check the exams schedule
-  - slot_was_set:
-    - exams: false
+  - intent: request_exam_schedule
   - action: action_correct_examform_slots
   - intent: affirm
   - action: action_button_programme
@@ -143,52 +52,21 @@ stories:
     - grad_studies_type: PPS
   - slot_was_set:
     - grad_studies_type: PPS
-  - action: action_button_semester  # predicted: action_button_period
-  - intent: inform_period  # predicted: inform_semester: [Spring]{"entity": "semester", "value": "spring"}
+  - action: action_button_period_semester
+  - intent: inform_period_semester  # predicted: nlu_fallback: [september]{"entity": "exam_period", "value": "sep"}
     entities:
-    - period: spring  # predicted: semester: spring
-  - action: action_button_year  # predicted: action_default_fallback
+    - exam_period: sep
+  - slot_was_set:
+    - exam_period: sep
+  - action: action_button_year
   - intent: inform_year
     entities:
-    - academic_year: '2021'
+    - academic_year: '2018'
   - slot_was_set:
-    - academic_year: '2021'
+    - academic_year: '2018'
   - action: action_correct_examform_slots
   - intent: deny
-  - action: action_uni_class_schedule
+  - action: action_class_exam_timetable
   - action: utter_further_action
   - intent: goodbye
-  - action: utter_goodbye
-- story: 5a - UniPal Request Staff Information (C:\Users\Theatina\Desktop\MSc_FinalCountdown\M913\Project\LatestV\UniPal\tests\test_UniPal_stories.yml)
-  steps:
-  - intent: greet
-    entities:
-    - user_name: tina
-  - slot_was_set:
-    - user_name: tina
-  - action: utter_greet
-  - action: action_UniPal_services
-  - action: action_resetSlots
-  - intent: request_staff_info
-  - action: action_uni_staff_info
-  - action: utter_further_action
-  - intent: deny  # predicted: thank_bot: no thanks
-  - action: utter_goodbye
-- story: 5b - UniPal Request Staff Information (C:\Users\Theatina\Desktop\MSc_FinalCountdown\M913\Project\LatestV\UniPal\tests\test_UniPal_stories.yml)
-  steps:
-  - intent: greet
-    entities:
-    - user_name: tina
-  - slot_was_set:
-    - user_name: tina
-  - action: utter_greet
-  - action: action_UniPal_services
-  - action: action_resetSlots
-  - intent: request_staff_info
-  - action: action_uni_staff_info
-  - action: utter_further_action
-  - intent: affirm
-  - action: action_UniPal_services
-  - action: action_resetSlots
-  - intent: goodbye  # predicted: thank_bot: ok thanks, bye
   - action: utter_goodbye

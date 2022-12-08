@@ -470,8 +470,24 @@ class ActionUniExamSchedule(Action):
         dispatcher.utter_message(f"\nFound this timetable: \n{class_str}\n")
         
         #TODO: insert buttons for subject choice ?
-        return [SlotSet("exams", False)]
+        return []
 
+class ActionUniClassExamTimetable(Action):
+    def name(self) -> Text:
+        return "action_class_exam_timetable"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        exams_flag=tracker.get_slot("exams")
+        if exams_flag:
+            return [FollowupAction("action_uni_exam_schedule")]
+        else:
+            return [FollowupAction("action_uni_class_schedule")]
+        
 
 class ActionCheckExamsFormSlots(Action):
     def name(self) -> Text:
@@ -490,6 +506,13 @@ class ActionCheckExamsFormSlots(Action):
         per={"jan":"January", "jun":"June", "sep":"September"}
         academic_year=tracker.get_slot("academic_year")
         
+        # get_entities
+        # check_entities=["user_name", "exams", "grad_studies_type", "exam_period", "semester", "academic_year"]
+        # for entity_name in check_entities:
+        #     entity_val=next(tracker.get_latest_entity_values(entity_name), None)
+            
+        #     dispatcher.utter_message(f"{entity_name}: {entity_val}")
+
         # exams = tracker.get_slot("exams")
         # exams_str="exams" if exams else "classes"
 
@@ -743,6 +766,7 @@ class ActionUniContactLocInfo(Action):
 
         
         return []
+
 
 
 # write action to fill all the slots from intent values after step-by-step intent filling ?!

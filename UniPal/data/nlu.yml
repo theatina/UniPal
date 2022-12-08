@@ -15,6 +15,7 @@ nlu:
     - goodmorning
     - goodevening
     - hey, my name is [Pam](user_name)
+    - hi, i'm [Maria](user_name)
 
 - intent: thank_bot
   examples: |
@@ -23,6 +24,7 @@ nlu:
     - that's cool
     - cool, thanks UniPal
     - no, thank you bye!
+    - thank you pal!
 
 - intent: goodbye
   examples: |
@@ -62,6 +64,7 @@ nlu:
     - don't think so
     - no thank you
     - nah
+    - no thanks
 
 - intent: mood_great
   examples: |
@@ -156,18 +159,29 @@ nlu:
     - [undergraduate]{"entity": "grad_studies_type", "value": "PPS"} exams
     - [pps]{"entity": "grad_studies_type", "value": "PPS"} exams of [january]{"entity": "exam_period", "value": "jan"} [2020](academic_year)
 
-- intent: inform_period
-  examples: |
-    - [january]{"entity": "exam_period", "value": "jan"}
-    - [jan](exam_period)
-    - exams of [January]{"entity": "exam_period", "value": "jan"}
+# - intent: inform_period
+#   examples: |
+#     - [january]{"entity": "exam_period", "value": "jan"}
+#     - [jan](exam_period)
+#     - exams of [January]{"entity": "exam_period", "value": "jan"}
 
-- intent: inform_semester
+# - intent: inform_semester
+#   examples: |
+#     - [Winter]{"entity": "semester", "value": "winter"}
+#     - [spring](semester)
+#     - classes of [Spring]{"entity": "semester", "value": "spring"} semester
+#     - [winter](semester) semester
+
+- intent: inform_period_semester
   examples: |
     - [Winter]{"entity": "semester", "value": "winter"}
     - [spring](semester)
     - classes of [Spring]{"entity": "semester", "value": "spring"} semester
     - [winter](semester) semester
+    - [january]{"entity": "exam_period", "value": "jan"}
+    - [jan](exam_period)
+    - exams of [January]{"entity": "exam_period", "value": "jan"}
+    - [June]{"entity": "exam_period", "value": "jun"}
 
 - intent: inform_programme
   examples: |

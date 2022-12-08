@@ -5,8 +5,9 @@ intents:
 - deny
 - goodbye
 - greet
-- inform_period
-- inform_semester
+# - inform_period
+# - inform_semester
+- inform_period_semester
 - inform_programme
 - inform_year
 - mood_great
@@ -34,6 +35,7 @@ actions:
 - action_uni_announcements
 - action_uni_class_schedule
 - action_uni_exam_schedule
+- action_class_exam_timetable
 - action_uni_psychoSupport_info
 - action_uni_staff_info
 - action_uni_contact_loc_info
@@ -100,7 +102,6 @@ slots:
     - PMS
     - FULL
     # initial_value: PPS
-    
     # check filling in interactive when correcting intent!!!
     mappings:
     - type: from_entity
