@@ -1,21 +1,75 @@
 {
-  "utter_greet": {
+  "goodbye": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6
+  },
+  "action_button_programme": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4
+  },
+  "affirm": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6
+  },
+  "request_staff_info": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "[2018](academic_year)": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "greet": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 8
   },
-  "action_listen": {
+  "[June]{\"entity\": \"exam_period\", \"value\": \"jun\"}": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 46
+    "support": 1
   },
-  "utter_goodbye": {
+  "action_correct_examform_slots": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 8
+  },
+  "[september]{\"entity\": \"exam_period\", \"value\": \"sep\"}": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "inform_period_semester": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4
+  },
+  "[Spring]{\"entity\": \"semester\", \"value\": \"spring\"}": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "action_uni_staff_info": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
   },
   "inform_programme": {
     "precision": 1.0,
@@ -23,11 +77,11 @@
     "f1-score": 1.0,
     "support": 4
   },
-  "action_correct_examform_slots": {
+  "action_resetSlots": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 8
+    "support": 10
   },
   "request_contact_loc_info": {
     "precision": 1.0,
@@ -41,37 +95,19 @@
     "f1-score": 1.0,
     "support": 1
   },
-  "[tina](user_name)": {
+  "[2](num_of_announcements)": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 1
   },
-  "action_class_exam_timetable": {
+  "request_announcements": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 4
+    "support": 1
   },
-  "action_uni_staff_info": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2
-  },
-  "action_button_programme": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4
-  },
-  "action_resetSlots": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 10
-  },
-  "affirm": {
+  "deny": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
@@ -83,17 +119,35 @@
     "f1-score": 1.0,
     "support": 4
   },
-  "action_UniPal_services": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 10
-  },
-  "action_uni_announcements": {
+  "[tina](user_name)": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 1
+  },
+  "utter_further_action": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 8
+  },
+  "action_listen": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 46
+  },
+  "[2020](academic_year)": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "action_class_exam_timetable": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4
   },
   "action_button_year": {
     "precision": 1.0,
@@ -107,83 +161,23 @@
     "f1-score": 1.0,
     "support": 2
   },
-  "request_announcements": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1
-  },
-  "greet": {
+  "utter_goodbye": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 8
   },
-  "[Spring]{\"entity\": \"semester\", \"value\": \"spring\"}": {
+  "inform_year": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 2
-  },
-  "deny": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6
-  },
-  "[2018](academic_year)": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1
-  },
-  "[June]{\"entity\": \"exam_period\", \"value\": \"jun\"}": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1
-  },
-  "utter_further_action": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 8
-  },
-  "request_exam_schedule": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2
-  },
-  "[2](num_of_announcements)": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1
-  },
-  "inform_period_semester": {
-    "precision": 1.0,
-    "recall": 0.75,
-    "f1-score": 0.8571428571428571,
     "support": 4
   },
-  "action_uni_contact_loc_info": {
+  "action_UniPal_services": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 1
-  },
-  "[Theatina](user_name)": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1
-  },
-  "request_staff_info": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2
+    "support": 10
   },
   "[undergraduate]{\"entity\": \"grad_studies_type\", \"value\": \"PPS\"}": {
     "precision": 1.0,
@@ -191,13 +185,25 @@
     "f1-score": 1.0,
     "support": 1
   },
+  "request_exam_schedule": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
   "request_class_schedule": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 2
   },
-  "[september]{\"entity\": \"exam_period\", \"value\": \"sep\"}": {
+  "[Theatina](user_name)": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "action_uni_announcements": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
@@ -215,46 +221,40 @@
     "f1-score": 0.0,
     "support": 2
   },
-  "inform_year": {
+  "utter_greet": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 4
+    "support": 8
   },
-  "[2020](academic_year)": {
+  "action_uni_contact_loc_info": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 1
   },
-  "goodbye": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6
-  },
   "micro avg": {
     "precision": 1.0,
-    "recall": 0.9836065573770492,
-    "f1-score": 0.9917355371900827,
+    "recall": 0.9890710382513661,
+    "f1-score": 0.9945054945054945,
     "support": 183
   },
   "macro avg": {
     "precision": 0.9743589743589743,
-    "recall": 0.967948717948718,
-    "f1-score": 0.9706959706959708,
+    "recall": 0.9743589743589743,
+    "f1-score": 0.9743589743589743,
     "support": 183
   },
   "weighted avg": {
     "precision": 0.9890710382513661,
-    "recall": 0.9836065573770492,
-    "f1-score": 0.9859484777517565,
+    "recall": 0.9890710382513661,
+    "f1-score": 0.9890710382513661,
     "support": 183
   },
-  "accuracy": 0.9836065573770492,
+  "accuracy": 0.9890710382513661,
   "conversation_accuracy": {
-    "accuracy": 0.75,
-    "correct": 6,
+    "accuracy": 0.875,
+    "correct": 7,
     "with_warnings": 0,
     "total": 8
   }

@@ -1,0 +1,20 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - HEY there
+- intent: request_exam_schedule
+  examples: |
+    - exams
+- intent: affirm
+  examples: |
+    - y
+- intent: inform_programme
+  examples: |
+    - [postgrad]{"entity": "grad_studies_type", "value": "PMS"}
+- intent: inform_period_semester
+  examples: |
+    - [JAN]{"entity": "exam_period", "value": "jan"}
+- intent: inform_year
+  examples: |
+    - [2019](academic_year)

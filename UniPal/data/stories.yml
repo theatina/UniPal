@@ -519,3 +519,53 @@ stories:
 #   - intent: goodbye
 #   - action: utter_goodbye
 
+
+- story: interactive_story_6
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_UniPal_services
+  - action: action_resetSlots
+  - slot_was_set:
+    - num_of_announcements: null
+  - slot_was_set:
+    - exams: false
+  - slot_was_set:
+    - grad_studies_type: null
+  - slot_was_set:
+    - semester: null
+  - slot_was_set:
+    - academic_year: null
+  - slot_was_set:
+    - exam_period: null
+  - intent: request_exam_schedule
+  - action: action_correct_examform_slots
+  - slot_was_set:
+    - exams: true
+  - intent: affirm
+  - action: action_button_programme
+  - intent: inform_programme
+    entities:
+    - grad_studies_type: PMS
+  - slot_was_set:
+    - grad_studies_type: PMS
+  - action: action_button_period_semester
+  - intent: inform_period_semester
+    entities:
+    - exam_period: jan
+  - slot_was_set:
+    - exam_period: jan
+  - action: action_button_year
+  - intent: inform_year
+    entities:
+    - academic_year: 2019
+  - slot_was_set:
+    - academic_year: 2019
+  - action: action_correct_examform_slots
+  - slot_was_set:
+    - exams: true
+  - intent: deny
+  - action: action_class_exam_timetable
+  - action: utter_further_action
+  - intent: deny
+  - action: utter_goodbye
