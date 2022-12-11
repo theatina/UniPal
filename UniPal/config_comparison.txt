@@ -3,6 +3,6 @@ rasa test nlu --nlu data/nlu.yml --config config1_pipeline.yml config2_pipeline.
 
 
 #Policy Comparisons
-rasa train core -c config1_policy.yml config2_policy.yml config3_policy.yml --out comparison_models --runs 2 --percentages 0 20 80
+rasa train core -c config1_policy.yml config2_policy.yml config3_policy.yml --out comparison_models --runs 2 --percentages 20 80
 
 rasa test core -m comparison_models --stories .\tests\test_UniPal_stories.yml --out comparison_results --evaluate-model-directory 
