@@ -1,0 +1,86 @@
+[
+  {
+    "text": "can i have the latest 2 announcements of the uni?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 23,
+        "value": "2",
+        "entity": "num_of_announcements"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "jan",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "jan",
+        "entity": "exam_period"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "hi, i'm Maria",
+    "entities": [
+      {
+        "start": 8,
+        "end": 13,
+        "value": "Maria",
+        "entity": "user_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "hey, my name is Pam",
+    "entities": [
+      {
+        "start": 16,
+        "end": 19,
+        "value": "Pam",
+        "entity": "user_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "jun exams schedule",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "jun",
+        "entity": "exam_period"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "jun exams",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "jun",
+        "entity": "exam_period"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "undergraduate classes",
+    "entities": [
+      {
+        "start": 0,
+        "end": 13,
+        "value": "PPS",
+        "entity": "grad_studies_type"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

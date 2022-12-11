@@ -1,0 +1,185 @@
+version: "3.1"
+nlu:
+- intent: thank_bot
+  examples: |
+    - thank you pal!
+    - no, thank you bye!
+    - thank you
+- intent: request_psychoSupport_info
+  examples: |
+    - is there any psychological support at the university?
+    - can you help me find psychological support?
+    - i am not ok
+    - i need psychological support
+- intent: request_staff_info
+  examples: |
+    - staff contact details
+    - staff contact
+    - uni staff members phones
+    - professors' email
+- intent: request_announcements
+  examples: |
+    - [10](num_of_announcements) announcements
+    - new announcements?
+    - are there any new announcements?
+    - any news from uni?
+    - can i have the latest [2](num_of_announcements) announcements of the uni?
+- intent: request_contact_loc_info
+  examples: |
+    - how can i get to uni
+    - location
+    - uni contact info
+    - access to uni
+    - uni access info
+- intent: inform_period_semester
+  examples: |
+    - classes of [Spring]{"entity": "semester", "value": "spring"} semester
+    - [June]{"entity": "exam_period", "value": "jun"}
+    - [january]{"entity": "exam_period", "value": "jan"}
+    - [Winter]{"entity": "semester", "value": "winter"}
+    - [winter](semester) semester
+    - [jan](exam_period)
+- intent: affirm
+  examples: |
+    - indeed
+    - of course
+    - correct
+    - yes
+    - y
+    - yeap
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - bye
+    - see you later
+    - see you around
+    - good night
+    - bye bye
+    - cu
+- intent: deny
+  examples: |
+    - never
+    - no
+    - no thanks
+    - nope
+    - no thank you
+    - n
+    - not really
+    - nah
+    - I don't think so
+- intent: greet
+  examples: |
+    - goodevening
+    - hey
+    - hello there, my name is [Nick](user_name)
+    - hi, it's [Theatina](user_name)
+    - moin
+    - hey, my name is [Pam](user_name)
+    - hi, i'm [Maria](user_name)
+    - hello
+    - hey there
+    - good evening
+- intent: mood_great
+  examples: |
+    - I am going to save the world
+    - so so perfect
+    - extremely good
+    - I am amazing
+    - so good
+    - super stoked
+    - great
+    - wonderful
+    - I am great
+    - amazing
+- intent: request_exam_schedule
+  examples: |
+    - did they announce the exam schedule?
+    - [jan](exam_period) [PPS](grad_studies_type) exams schedule for [2020](academic_year)
+    - exams schedule
+    - [jan](exam_period) exams schedule
+    - exams
+    - [sep](exam_period) exams schedule
+    - [sep](exam_period) exam timetable
+    - [undergraduate]{"entity": "grad_studies_type", "value": "PPS"} exams
+    - [sep](exam_period) [PMS](grad_studies_type) exams schedule for [2019](academic_year)
+    - [PPS](grad_studies_type) exams schedule of [january]{"entity": "exam_period", "value": "jan"} [2020](academic_year)
+    - [pps]{"entity": "grad_studies_type", "value": "PPS"} exams of [january]{"entity": "exam_period", "value": "jan"} [2020](academic_year)
+- intent: mood_unhappy
+  examples: |
+    - super sad
+    - so sad
+    - feeling sad
+    - very sad
+    - sad
+    - I am sad
+    - my day was horrible
+    - not feeling well
+    - not very good
+    - extremly sad
+    - I'm so sad
+    - not good
+- intent: request_class_schedule
+  examples: |
+    - did they announce the class schedule?
+    - [spring](semester) [PPS](grad_studies_type) classes schedule for [2020](academic_year)
+    - class timetable
+    - [winter](semester) class schedule
+    - [PPS](grad_studies_type) classes schedule of [Spring]{"entity": "semester", "value": "spring"} [2020](academic_year)
+    - class
+    - [pps]{"entity": "grad_studies_type", "value": "PPS"} classes of [Winter]{"entity": "semester", "value": "winter"} [2020](academic_year)
+    - lectures
+    - [winter](semester) [PMS](grad_studies_type) class schedule for [2019](academic_year)
+    - [spring](semester) class schedule
+    - [winter](semester) class timetable
+    - class schedule
+    - classes
+    - class lectures
+- synonym: spring
+  examples: |
+    - Spring
+    - Sprin
+    - sprin
+- synonym: PPS
+  examples: |
+    - undergraduate
+    - pps
+    - undergrad
+    - Undergraduate
+- synonym: winter
+  examples: |
+    - Winter
+    - wint
+    - Wint
+- synonym: jan
+  examples: |
+    - january
+    - January
+    - Jan
+- synonym: jun
+  examples: |
+    - June
+    - june
+    - Jun
+- synonym: PMS
+  examples: |
+    - pms
+    - postgraduate
+    - Postgraduate
+    - postgrad
+- synonym: sep
+  examples: |
+    - september
+    - September
+    - Sep
+- synonym: University
+  examples: |
+    - uni
+    - NKUA
+    - university
+    - EKPA
+- regex: academic_year
+  examples: |
+    - \d{2,4}
+- regex: num_of_announcements
+  examples: |
+    - \d{1,2}

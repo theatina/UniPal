@@ -1,0 +1,122 @@
+[
+  {
+    "text": "i am not ok",
+    "intent": "request_psychoSupport_info",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.96773362159729
+    }
+  },
+  {
+    "text": "staff contact details",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "request_contact_loc_info",
+      "confidence": 0.9995796084403992
+    }
+  },
+  {
+    "text": "staff info",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "request_contact_loc_info",
+      "confidence": 0.998895525932312
+    }
+  },
+  {
+    "text": "winter semester",
+    "intent": "inform_period_semester",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.9978939890861511
+    }
+  },
+  {
+    "text": "access",
+    "intent": "request_contact_loc_info",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.2623307704925537
+    }
+  },
+  {
+    "text": "good night",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.9976266026496887
+    }
+  },
+  {
+    "text": "don't think so",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "request_contact_loc_info",
+      "confidence": 0.3909994959831238
+    }
+  },
+  {
+    "text": "nope",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.43350842595100403
+    }
+  },
+  {
+    "text": "hello there, my name is Nick",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "request_announcements",
+      "confidence": 0.8402243852615356
+    }
+  },
+  {
+    "text": "hi, it's Theatina",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "request_contact_loc_info",
+      "confidence": 0.3916148543357849
+    }
+  },
+  {
+    "text": "so perfect",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.6352883577346802
+    }
+  },
+  {
+    "text": "super stoked",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.8132937550544739
+    }
+  },
+  {
+    "text": "PPS exams schedule of january 2020",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.8093171119689941
+    }
+  },
+  {
+    "text": "sad",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.7745268940925598
+    }
+  },
+  {
+    "text": "my day was horrible",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.45324113965034485
+    }
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "text": "that's cool",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.5916437113837915
+    }
+  },
+  {
+    "text": "thanks",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.018290457553632747
+    }
+  },
+  {
+    "text": "i am not ok",
+    "intent": "request_psychoSupport_info",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.917901309113602
+    }
+  },
+  {
+    "text": "any news from uni?",
+    "intent": "request_announcements",
+    "intent_prediction": {
+      "name": "request_contact_loc_info",
+      "confidence": 0.44799008736353696
+    }
+  },
+  {
+    "text": "staff contact details",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "request_contact_loc_info",
+      "confidence": 0.0012887591451090298
+    }
+  },
+  {
+    "text": "staff info",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "request_contact_loc_info",
+      "confidence": 0.004860603516845452
+    }
+  },
+  {
+    "text": "good night",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.7551184730627837
+    }
+  },
+  {
+    "text": "I am going to save the world",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.268718837634556
+    }
+  },
+  {
+    "text": "PPS exams schedule of january 2020",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.015094265613287701
+    }
+  },
+  {
+    "text": "sep PMS exams schedule for 2019",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.027422357787722795
+    }
+  },
+  {
+    "text": "spring classes",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.9009993072179906
+    }
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "text": "hello there, my name is Nick",
+    "entities": [
+      {
+        "start": 24,
+        "end": 28,
+        "value": "Nick",
+        "entity": "user_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "hi, it's Theatina",
+    "entities": [
+      {
+        "start": 9,
+        "end": 17,
+        "value": "Theatina",
+        "entity": "user_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "undergraduate classes",
+    "entities": [
+      {
+        "start": 0,
+        "end": 13,
+        "value": "PPS",
+        "entity": "grad_studies_type"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

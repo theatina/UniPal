@@ -1,0 +1,114 @@
+[
+  {
+    "text": "thank you",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.0642713370035534
+    }
+  },
+  {
+    "text": "thank you pal!",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.05527723153418836
+    }
+  },
+  {
+    "text": "is there any psychological support at the university?",
+    "intent": "request_psychoSupport_info",
+    "intent_prediction": {
+      "name": "request_announcements",
+      "confidence": 0.3803945757535719
+    }
+  },
+  {
+    "text": "phone numbers of lecturers",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.8392998467790282
+    }
+  },
+  {
+    "text": "professors' email",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.5525462943676669
+    }
+  },
+  {
+    "text": "yes",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.530668793419328
+    }
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.45514426735588265
+    }
+  },
+  {
+    "text": "cu",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.18004012610501507
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5501780771507254
+    }
+  },
+  {
+    "text": "I am going to save the world",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "request_contact_loc_info",
+      "confidence": 0.33068177910912383
+    }
+  },
+  {
+    "text": "jun exams schedule",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.018053596004359313
+    }
+  },
+  {
+    "text": "jun exams",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "request_contact_loc_info",
+      "confidence": 0.024493547502071736
+    }
+  },
+  {
+    "text": "not good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.7157453700065716
+    }
+  },
+  {
+    "text": "not very good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6738917331258953
+    }
+  }
+]

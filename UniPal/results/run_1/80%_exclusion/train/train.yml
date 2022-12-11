@@ -1,0 +1,103 @@
+version: "3.1"
+nlu:
+- intent: thank_bot
+  examples: |
+    - no, thank you bye!
+- intent: request_psychoSupport_info
+  examples: |
+    - need help
+- intent: request_staff_info
+  examples: |
+    - staff
+- intent: request_announcements
+  examples: |
+    - university announcements
+- intent: request_contact_loc_info
+  examples: |
+    - uni location
+    - how can i get to uni
+- intent: inform_period_semester
+  examples: |
+    - [spring](semester)
+- intent: affirm
+  examples: |
+    - ok
+- intent: goodbye
+  examples: |
+    - bye
+    - have a nice day
+- intent: deny
+  examples: |
+    - not really
+    - nah
+- intent: greet
+  examples: |
+    - hi, it's [Theatina](user_name)
+    - good evening
+- intent: mood_great
+  examples: |
+    - wonderful
+    - so so perfect
+- intent: request_exam_schedule
+  examples: |
+    - [sep](exam_period) exams schedule
+    - [sep](exam_period) [PMS](grad_studies_type) exams schedule for [2019](academic_year)
+    - [jan](exam_period) exams schedule
+- intent: mood_unhappy
+  examples: |
+    - super sad
+    - extremly sad
+- intent: request_class_schedule
+  examples: |
+    - [spring](semester) class schedule
+    - lectures
+    - did they announce the class schedule?
+- synonym: spring
+  examples: |
+    - Spring
+    - Sprin
+    - sprin
+- synonym: PPS
+  examples: |
+    - undergraduate
+    - pps
+    - undergrad
+    - Undergraduate
+- synonym: winter
+  examples: |
+    - Winter
+    - wint
+    - Wint
+- synonym: jan
+  examples: |
+    - january
+    - January
+    - Jan
+- synonym: jun
+  examples: |
+    - June
+    - june
+    - Jun
+- synonym: PMS
+  examples: |
+    - pms
+    - postgraduate
+    - Postgraduate
+    - postgrad
+- synonym: sep
+  examples: |
+    - september
+    - September
+    - Sep
+- synonym: University
+  examples: |
+    - uni
+    - NKUA
+    - university
+    - EKPA
+- regex: academic_year
+  examples: |
+    - \d{2,4}
+- regex: num_of_announcements
+  examples: |
+    - \d{1,2}

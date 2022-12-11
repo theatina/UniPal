@@ -1,0 +1,98 @@
+[
+  {
+    "text": "thank you",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.16632995835850764
+    }
+  },
+  {
+    "text": "thank you pal!",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.020707872752627726
+    }
+  },
+  {
+    "text": "is there any psychological support at the university?",
+    "intent": "request_psychoSupport_info",
+    "intent_prediction": {
+      "name": "request_announcements",
+      "confidence": 0.11077189289683381
+    }
+  },
+  {
+    "text": "professors' email",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.38763001298142513
+    }
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.46049600966936494
+    }
+  },
+  {
+    "text": "cu",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.7903391173595732
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.6875133700442349
+    }
+  },
+  {
+    "text": "did they announce the exam schedule?",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.004038053192486104
+    }
+  },
+  {
+    "text": "jun exams schedule",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.004735960136285206
+    }
+  },
+  {
+    "text": "jun exams",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.01925399331314244
+    }
+  },
+  {
+    "text": "not good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.7801767823855907
+    }
+  },
+  {
+    "text": "not very good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.41278545955491475
+    }
+  }
+]

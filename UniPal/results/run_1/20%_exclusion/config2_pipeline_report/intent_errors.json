@@ -1,0 +1,90 @@
+[
+  {
+    "text": "thank you",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9682621359825134
+    }
+  },
+  {
+    "text": "phone numbers of lecturers",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.934144139289856
+    }
+  },
+  {
+    "text": "professors' email",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5819449424743652
+    }
+  },
+  {
+    "text": "uni contact info",
+    "intent": "request_contact_loc_info",
+    "intent_prediction": {
+      "name": "request_staff_info",
+      "confidence": 0.8682149648666382
+    }
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.3217090368270874
+    }
+  },
+  {
+    "text": "cu",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.7400263547897339
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.2884359061717987
+    }
+  },
+  {
+    "text": "great",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.45874327421188354
+    }
+  },
+  {
+    "text": "I am going to save the world",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5050956010818481
+    }
+  },
+  {
+    "text": "not good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "request_psychoSupport_info",
+      "confidence": 0.662729024887085
+    }
+  },
+  {
+    "text": "not very good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.8549264073371887
+    }
+  }
+]

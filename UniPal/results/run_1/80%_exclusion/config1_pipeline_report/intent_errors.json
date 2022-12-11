@@ -1,0 +1,202 @@
+[
+  {
+    "text": "thank you",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "request_contact_loc_info",
+      "confidence": 0.11697681675464784
+    }
+  },
+  {
+    "text": "thank you pal!",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.12178025375780573
+    }
+  },
+  {
+    "text": "is there any psychological support at the university?",
+    "intent": "request_psychoSupport_info",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.1472645448336781
+    }
+  },
+  {
+    "text": "can i have the latest 2 announcements of the uni?",
+    "intent": "request_announcements",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.1433371044301629
+    }
+  },
+  {
+    "text": "phone numbers of lecturers",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.16219206849767798
+    }
+  },
+  {
+    "text": "professors' email",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.1725100298504749
+    }
+  },
+  {
+    "text": "jan",
+    "intent": "inform_period_semester",
+    "intent_prediction": {
+      "name": "request_exam_schedule",
+      "confidence": 0.17212455808808014
+    }
+  },
+  {
+    "text": "uni access info",
+    "intent": "request_contact_loc_info",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.13496236379521265
+    }
+  },
+  {
+    "text": "uni contact info",
+    "intent": "request_contact_loc_info",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.13743426578508333
+    }
+  },
+  {
+    "text": "yes",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.12135709021977838
+    }
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "request_contact_loc_info",
+      "confidence": 0.11669006218650084
+    }
+  },
+  {
+    "text": "cu",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "request_contact_loc_info",
+      "confidence": 0.11536186482481785
+    }
+  },
+  {
+    "text": "see you later",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.13177581824849371
+    }
+  },
+  {
+    "text": "I don't think so",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.11618402853902443
+    }
+  },
+  {
+    "text": "don't think so",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.11230457630200849
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.13142113375048767
+    }
+  },
+  {
+    "text": "hi, i'm Maria",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.12343492501704936
+    }
+  },
+  {
+    "text": "hey, my name is Pam",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.12625895730020062
+    }
+  },
+  {
+    "text": "great",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "request_contact_loc_info",
+      "confidence": 0.11862215566614999
+    }
+  },
+  {
+    "text": "so perfect",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.11144866401914535
+    }
+  },
+  {
+    "text": "I am going to save the world",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.12236224688768743
+    }
+  },
+  {
+    "text": "did they announce the exam schedule?",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.16037821122602547
+    }
+  },
+  {
+    "text": "not good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.12549506777205274
+    }
+  },
+  {
+    "text": "sad",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "request_staff_info",
+      "confidence": 0.09472732834514659
+    }
+  },
+  {
+    "text": "not very good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "request_contact_loc_info",
+      "confidence": 0.11556803125288223
+    }
+  }
+]

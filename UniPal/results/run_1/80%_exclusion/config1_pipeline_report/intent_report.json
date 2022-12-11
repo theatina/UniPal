@@ -1,0 +1,154 @@
+{
+  "request_exam_schedule": {
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.6666666666666666,
+    "support": 3,
+    "confused_with": {
+      "request_class_schedule": 1
+    }
+  },
+  "mood_great": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3,
+    "confused_with": {
+      "request_contact_loc_info": 1,
+      "request_class_schedule": 1,
+      "greet": 1
+    }
+  },
+  "goodbye": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "request_contact_loc_info": 1,
+      "request_class_schedule": 1
+    }
+  },
+  "request_staff_info": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "request_class_schedule": 2
+    }
+  },
+  "affirm": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "request_contact_loc_info": 1,
+      "mood_great": 1
+    }
+  },
+  "request_announcements": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {
+      "request_class_schedule": 1
+    }
+  },
+  "thank_bot": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "request_contact_loc_info": 1,
+      "mood_great": 1
+    }
+  },
+  "mood_unhappy": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3,
+    "confused_with": {
+      "request_staff_info": 1,
+      "request_contact_loc_info": 1,
+      "mood_great": 1
+    }
+  },
+  "request_contact_loc_info": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "request_class_schedule": 2
+    }
+  },
+  "greet": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3,
+    "confused_with": {
+      "mood_great": 2,
+      "request_class_schedule": 1
+    }
+  },
+  "deny": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "mood_great": 1,
+      "greet": 1
+    }
+  },
+  "request_psychoSupport_info": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {
+      "request_class_schedule": 1
+    }
+  },
+  "request_class_schedule": {
+    "precision": 0.2857142857142857,
+    "recall": 1.0,
+    "f1-score": 0.4444444444444445,
+    "support": 4,
+    "confused_with": {}
+  },
+  "inform_period_semester": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {
+      "request_exam_schedule": 1
+    }
+  },
+  "accuracy": 0.1935483870967742,
+  "macro avg": {
+    "precision": 0.06802721088435373,
+    "recall": 0.11904761904761904,
+    "f1-score": 0.07936507936507937,
+    "support": 31
+  },
+  "weighted avg": {
+    "precision": 0.10138248847926266,
+    "recall": 0.1935483870967742,
+    "f1-score": 0.12186379928315412,
+    "support": 31
+  },
+  "micro avg": {
+    "precision": 0.1935483870967742,
+    "recall": 0.1935483870967742,
+    "f1-score": 0.1935483870967742,
+    "support": 31
+  }
+}

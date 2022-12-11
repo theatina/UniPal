@@ -1,0 +1,138 @@
+[
+  {
+    "text": "is there any psychological support at the university?",
+    "intent": "request_psychoSupport_info",
+    "intent_prediction": {
+      "name": "request_announcements",
+      "confidence": 0.9498412013053894
+    }
+  },
+  {
+    "text": "phone numbers of lecturers",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.9809638261795044
+    }
+  },
+  {
+    "text": "professors' email",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.30202430486679077
+    }
+  },
+  {
+    "text": "jan",
+    "intent": "inform_period_semester",
+    "intent_prediction": {
+      "name": "request_exam_schedule",
+      "confidence": 0.9826822280883789
+    }
+  },
+  {
+    "text": "yes",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.8883959054946899
+    }
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.995826780796051
+    }
+  },
+  {
+    "text": "cu",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8399741053581238
+    }
+  },
+  {
+    "text": "see you later",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "thank_bot",
+      "confidence": 0.9466416239738464
+    }
+  },
+  {
+    "text": "I don't think so",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "request_contact_loc_info",
+      "confidence": 0.375602126121521
+    }
+  },
+  {
+    "text": "don't think so",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5921074151992798
+    }
+  },
+  {
+    "text": "hey, my name is Pam",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.4614129364490509
+    }
+  },
+  {
+    "text": "great",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.4134662449359894
+    }
+  },
+  {
+    "text": "I am going to save the world",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.7335124611854553
+    }
+  },
+  {
+    "text": "did they announce the exam schedule?",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.9991262555122375
+    }
+  },
+  {
+    "text": "not good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9800741076469421
+    }
+  },
+  {
+    "text": "not very good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9841079711914062
+    }
+  },
+  {
+    "text": "PPS classes schedule of Spring 2020",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "request_exam_schedule",
+      "confidence": 0.9675103425979614
+    }
+  }
+]

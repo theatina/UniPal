@@ -1,0 +1,103 @@
+version: "3.1"
+nlu:
+- intent: thank_bot
+  examples: |
+    - thank you pal!
+- intent: request_psychoSupport_info
+  examples: |
+    - help me
+- intent: request_staff_info
+  examples: |
+    - professors' email
+- intent: request_announcements
+  examples: |
+    - are there any new announcements?
+- intent: request_contact_loc_info
+  examples: |
+    - uni contact info
+    - uni location
+- intent: inform_period_semester
+  examples: |
+    - exams of [January]{"entity": "exam_period", "value": "jan"}
+- intent: affirm
+  examples: |
+    - y
+- intent: goodbye
+  examples: |
+    - goodbye
+    - see you later
+- intent: deny
+  examples: |
+    - never
+    - nah
+- intent: greet
+  examples: |
+    - goodevening
+    - goodmorning
+- intent: mood_great
+  examples: |
+    - extremely good
+    - I am feeling very good
+- intent: request_exam_schedule
+  examples: |
+    - [sep](exam_period) exam timetable
+    - exams schedule
+    - [sep](exam_period) exams schedule
+- intent: mood_unhappy
+  examples: |
+    - unhappy
+    - not good
+- intent: request_class_schedule
+  examples: |
+    - [winter](semester) class timetable
+    - class lectures
+    - [spring](semester) [PPS](grad_studies_type) classes schedule for [2020](academic_year)
+- synonym: spring
+  examples: |
+    - Spring
+    - Sprin
+    - sprin
+- synonym: PPS
+  examples: |
+    - undergraduate
+    - pps
+    - undergrad
+    - Undergraduate
+- synonym: winter
+  examples: |
+    - Winter
+    - wint
+    - Wint
+- synonym: jan
+  examples: |
+    - january
+    - January
+    - Jan
+- synonym: jun
+  examples: |
+    - June
+    - june
+    - Jun
+- synonym: PMS
+  examples: |
+    - pms
+    - postgraduate
+    - Postgraduate
+    - postgrad
+- synonym: sep
+  examples: |
+    - september
+    - September
+    - Sep
+- synonym: University
+  examples: |
+    - uni
+    - NKUA
+    - university
+    - EKPA
+- regex: academic_year
+  examples: |
+    - \d{2,4}
+- regex: num_of_announcements
+  examples: |
+    - \d{1,2}

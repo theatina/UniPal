@@ -1,0 +1,50 @@
+[
+  {
+    "text": "that's cool",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6985552906990051
+    }
+  },
+  {
+    "text": "i am not ok",
+    "intent": "request_psychoSupport_info",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.996640682220459
+    }
+  },
+  {
+    "text": "any news from uni?",
+    "intent": "request_announcements",
+    "intent_prediction": {
+      "name": "request_contact_loc_info",
+      "confidence": 0.8592362999916077
+    }
+  },
+  {
+    "text": "good night",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.7526982426643372
+    }
+  },
+  {
+    "text": "super stoked",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.2815089821815491
+    }
+  },
+  {
+    "text": "my day was horrible",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5295630693435669
+    }
+  }
+]

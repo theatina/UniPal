@@ -1,0 +1,98 @@
+[
+  {
+    "text": "that's cool",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.20053342137713445
+    }
+  },
+  {
+    "text": "i am not ok",
+    "intent": "request_psychoSupport_info",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.33275491231392973
+    }
+  },
+  {
+    "text": "yeap",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2889018417849979
+    }
+  },
+  {
+    "text": "correct",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.1338882856043831
+    }
+  },
+  {
+    "text": "good night",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2673508205283334
+    }
+  },
+  {
+    "text": "nope",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2567630680858772
+    }
+  },
+  {
+    "text": "good morning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.3243066661632897
+    }
+  },
+  {
+    "text": "I am going to save the world",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.1480214663209758
+    }
+  },
+  {
+    "text": "super sad",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.30307735537804414
+    }
+  },
+  {
+    "text": "my day was horrible",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.24442281544284603
+    }
+  },
+  {
+    "text": "undergraduate classes",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.3299779389765644
+    }
+  },
+  {
+    "text": "spring classes",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.4224606150017013
+    }
+  }
+]

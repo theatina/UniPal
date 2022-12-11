@@ -119,28 +119,30 @@ slots:
     mappings:
     - type: from_entity
       entity: academic_year
-forms:
-  class_schedule_form:
-    required_slots:
-    - grad_studies_type
-    - semester
-    - academic_year
-  exam_schedule_form:
-    ignored_intents: 
-      - request_announcements
-      - request_class_schedule
-      - request_psychoSupport_info
-    required_slots:
-    - grad_studies_type
-    - exam_period
-    - academic_year
+# forms:
+#   class_schedule_form:
+#     required_slots:
+#     - grad_studies_type
+#     - semester
+#     - academic_year
+#   exam_schedule_form:
+#     ignored_intents: 
+#       - request_announcements
+#       - request_class_schedule
+#       - request_psychoSupport_info
+#     required_slots:
+#     - grad_studies_type
+#     - exam_period
+#     - academic_year
 responses:
+  utter_default:
+  - text: Sorry {user_name} I didn't get that. Can you rephrase?
   utter_greet:
   - text: Hey {user_name}! How are you?
   - text: Hi there! What's up {user_name}?
   - text: How can I help you {user_name}?
   utter_cheer_up:
-  - text: 'Here is something to cheer you up:'
+  - text: 'Here is something to cheer you up {user_name}:'
     # image: https://i.imgur.com/nGF1K8f.jpg
     image: https://scontent.fath4-2.fna.fbcdn.net/v/t39.30808-6/301541142_5088115794651173_7751236870145359519_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5b7eaf&_nc_eui2=AeE1AUW6-B8ERw_AQMEjfpna0zTAYv89tWPTNMBi_z21Y_a1j2ImbibbJlrJdJgyIswLZKvjHbL1kpr5L2k9oWGr&_nc_ohc=phxk5_pWpzMAX83odOz&_nc_ht=scontent.fath4-2.fna&oh=00_AfCIGCuwqWsQU1PBV2ABWDZOqgc0C-0GN_zRiKLeGHtfLg&oe=638879F1
   utter_welcome:
@@ -151,7 +153,7 @@ responses:
   - text: Did that help you {user_name}?
   - text: Was that helpful to you?
   utter_further_action:
-  - text: Would you like anything else?
+  - text: Would you like anything else {user_name}?
   - text: Can I help you with anything else?
   - text: Would you need further assistance {user_name}?
   utter_goodbye:

@@ -1,0 +1,175 @@
+version: "3.1"
+nlu:
+- intent: thank_bot
+  examples: |
+    - cool, thanks UniPal
+    - no, thank you bye!
+    - that's cool
+- intent: request_psychoSupport_info
+  examples: |
+    - i am not ok
+    - help me
+    - need help
+    - i need psychological support
+- intent: request_staff_info
+  examples: |
+    - staff contact details
+    - uni staff members phones
+    - staff contact
+    - staff
+- intent: request_announcements
+  examples: |
+    - [3](num_of_announcements) news
+    - [10](num_of_announcements) announcements
+    - university announcements
+    - new announcements?
+    - any news from uni?
+- intent: request_contact_loc_info
+  examples: |
+    - access
+    - access to uni
+    - uni location
+    - how can i get to uni
+    - uni location info
+- intent: inform_period_semester
+  examples: |
+    - [spring](semester)
+    - [january]{"entity": "exam_period", "value": "jan"}
+    - classes of [Spring]{"entity": "semester", "value": "spring"} semester
+    - [winter](semester) semester
+    - [Winter]{"entity": "semester", "value": "winter"}
+    - [June]{"entity": "exam_period", "value": "jun"}
+- intent: affirm
+  examples: |
+    - correct
+    - indeed
+    - ok
+    - of course
+    - k
+- intent: goodbye
+  examples: |
+    - good night
+    - goodbye
+    - see you around
+    - good by
+    - bye
+    - have a nice day
+    - bye bye
+- intent: deny
+  examples: |
+    - don't like that
+    - no thanks
+    - no way
+    - no thank you
+    - nope
+    - no
+    - nah
+    - never
+- intent: greet
+  examples: |
+    - hey dude, im [Tina](user_name)
+    - good evening
+    - goodevening
+    - hi, it's [Theatina](user_name)
+    - hello there, my name is [Nick](user_name)
+    - hey
+    - hello
+    - hey there
+    - moin
+- intent: mood_great
+  examples: |
+    - I am feeling very good
+    - super stoked
+    - so good
+    - feeling like a king
+    - amazing
+    - I am amazing
+    - extremely good
+    - so so perfect
+- intent: request_exam_schedule
+  examples: |
+    - [jan](exam_period) exams schedule
+    - exams
+    - any new information on exams schedule?
+    - exams schedule
+    - [pps]{"entity": "grad_studies_type", "value": "PPS"} exams of [january]{"entity": "exam_period", "value": "jan"} [2020](academic_year)
+    - [undergraduate]{"entity": "grad_studies_type", "value": "PPS"} exams
+    - [sep](exam_period) exam timetable
+    - exams timetable
+    - [sep](exam_period) [PMS](grad_studies_type) exams schedule for [2019](academic_year)
+    - [PPS](grad_studies_type) exams schedule of [january]{"entity": "exam_period", "value": "jan"} [2020](academic_year)
+- intent: mood_unhappy
+  examples: |
+    - I don't feel very well
+    - I'm so sad
+    - unhappy
+    - my day was horrible
+    - not feeling well
+    - feeling sad
+    - so saad
+    - very sad
+    - super sad
+    - I am sad
+- intent: request_class_schedule
+  examples: |
+    - class schedule
+    - [winter](semester) class schedule
+    - lectures
+    - [spring](semester) classes
+    - any new information on class timetable?
+    - [winter](semester) [PMS](grad_studies_type) class schedule for [2019](academic_year)
+    - [spring](semester) [PPS](grad_studies_type) classes schedule for [2020](academic_year)
+    - classes schedule
+    - class timetable
+    - [pps]{"entity": "grad_studies_type", "value": "PPS"} classes of [Winter]{"entity": "semester", "value": "winter"} [2020](academic_year)
+    - class
+    - [spring](semester) class schedule
+- synonym: spring
+  examples: |
+    - Spring
+    - Sprin
+    - sprin
+- synonym: PPS
+  examples: |
+    - undergraduate
+    - pps
+    - undergrad
+    - Undergraduate
+- synonym: winter
+  examples: |
+    - Winter
+    - wint
+    - Wint
+- synonym: jan
+  examples: |
+    - january
+    - January
+    - Jan
+- synonym: jun
+  examples: |
+    - June
+    - june
+    - Jun
+- synonym: PMS
+  examples: |
+    - pms
+    - postgraduate
+    - Postgraduate
+    - postgrad
+- synonym: sep
+  examples: |
+    - september
+    - September
+    - Sep
+- synonym: University
+  examples: |
+    - uni
+    - NKUA
+    - university
+    - EKPA
+- regex: academic_year
+  examples: |
+    - \d{2,4}
+- regex: num_of_announcements
+  examples: |
+    - \d{1,2}
