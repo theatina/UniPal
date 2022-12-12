@@ -33,7 +33,7 @@ policies:
 # - name: MemoizationPolicy
 
 - name: RulePolicy
-  core_fallback_threshold: 0.25
+  core_fallback_threshold: 0.2
   core_fallback_action_name: action_default_fallback
   enable_fallback_prediction: True
   restrict_rules: True
