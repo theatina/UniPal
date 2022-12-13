@@ -1,9 +1,16 @@
 {
-  "num_of_announcements": {
+  "academic_year": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
-    "support": 1,
+    "support": 4,
+    "confused_with": {}
+  },
+  "exam_period": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
     "confused_with": {}
   },
   "grad_studies_type": {
@@ -13,14 +20,14 @@
     "support": 5,
     "confused_with": {}
   },
-  "semester": {
+  "num_of_announcements": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
-    "support": 2,
+    "support": 1,
     "confused_with": {}
   },
-  "exam_period": {
+  "semester": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
@@ -32,13 +39,6 @@
     "recall": 0.0,
     "f1-score": 0.0,
     "support": 3,
-    "confused_with": {}
-  },
-  "academic_year": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 4,
     "confused_with": {}
   },
   "micro avg": {

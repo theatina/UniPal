@@ -1,0 +1,441 @@
+2022-12-13 19:28:36 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_1\config1_policy__percentage__0.tar.gz'
+2022-12-13 19:28:36 INFO     rasa.core.processor  - Loading model comparison_models\run_1\config1_policy__percentage__0.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 274.76it/s, # trackers=1]
+2022-12-13 19:29:07 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:02<00:00,  4.39it/s] 
+2022-12-13 19:29:09 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:29:09 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:29:09 INFO     rasa.core.test  -  Correct:          7 / 9
+2022-12-13 19:29:09 INFO     rasa.core.test  -  Accuracy:         0.778
+2022-12-13 19:29:09 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_1\config1_policy__percentage__20.tar.gz'
+2022-12-13 19:29:09 INFO     rasa.core.processor  - Loading model comparison_models\run_1\config1_policy__percentage__20.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 282.82it/s, # trackers=1]
+2022-12-13 19:29:32 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:02<00:00,  4.15it/s] 
+2022-12-13 19:29:35 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:29:35 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:29:35 INFO     rasa.core.test  -  Correct:          5 / 9
+2022-12-13 19:29:35 INFO     rasa.core.test  -  Accuracy:         0.556
+2022-12-13 19:29:35 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_1\config1_policy__percentage__5.tar.gz'
+2022-12-13 19:29:35 INFO     rasa.core.processor  - Loading model comparison_models\run_1\config1_policy__percentage__5.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 442.22it/s, # trackers=1]
+2022-12-13 19:29:58 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:02<00:00,  4.44it/s] 
+2022-12-13 19:30:00 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:30:00 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:30:00 INFO     rasa.core.test  -  Correct:          9 / 9
+2022-12-13 19:30:00 INFO     rasa.core.test  -  Accuracy:         1.000
+2022-12-13 19:30:00 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_1\config1_policy__percentage__50.tar.gz'
+2022-12-13 19:30:00 INFO     rasa.core.processor  - Loading model comparison_models\run_1\config1_policy__percentage__50.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 220.34it/s, # trackers=1]
+2022-12-13 19:30:22 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  4.50it/s] 
+2022-12-13 19:30:24 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:30:24 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:30:24 INFO     rasa.core.test  -  Correct:          6 / 9
+2022-12-13 19:30:24 INFO     rasa.core.test  -  Accuracy:         0.667
+2022-12-13 19:30:24 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_1\config1_policy__percentage__95.tar.gz'
+2022-12-13 19:30:24 INFO     rasa.core.processor  - Loading model comparison_models\run_1\config1_policy__percentage__95.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 227.78it/s, # trackers=1]
+2022-12-13 19:30:50 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:02<00:00,  3.47it/s] 
+2022-12-13 19:30:53 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:30:53 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:30:53 INFO     rasa.core.test  -  Correct:          0 / 9
+2022-12-13 19:30:53 INFO     rasa.core.test  -  Accuracy:         0.000
+2022-12-13 19:30:53 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_1\config2_policy__percentage__0.tar.gz'
+2022-12-13 19:30:53 INFO     rasa.core.processor  - Loading model comparison_models\run_1\config2_policy__percentage__0.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 436.94it/s, # trackers=1]
+2022-12-13 19:31:14 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  5.05it/s] 
+2022-12-13 19:31:16 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:31:16 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:31:16 INFO     rasa.core.test  -  Correct:          9 / 9
+2022-12-13 19:31:16 INFO     rasa.core.test  -  Accuracy:         1.000
+2022-12-13 19:31:16 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_1\config2_policy__percentage__20.tar.gz'
+2022-12-13 19:31:16 INFO     rasa.core.processor  - Loading model comparison_models\run_1\config2_policy__percentage__20.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 501.30it/s, # trackers=1]
+2022-12-13 19:31:37 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  5.08it/s]
+2022-12-13 19:31:39 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:31:39 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:31:39 INFO     rasa.core.test  -  Correct:          6 / 9
+2022-12-13 19:31:39 INFO     rasa.core.test  -  Accuracy:         0.667
+2022-12-13 19:31:39 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_1\config2_policy__percentage__5.tar.gz'
+2022-12-13 19:31:39 INFO     rasa.core.processor  - Loading model comparison_models\run_1\config2_policy__percentage__5.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 269.65it/s, # trackers=1]
+2022-12-13 19:32:00 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  4.77it/s] 
+2022-12-13 19:32:02 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:32:02 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:32:02 INFO     rasa.core.test  -  Correct:          9 / 9
+2022-12-13 19:32:02 INFO     rasa.core.test  -  Accuracy:         1.000
+2022-12-13 19:32:02 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_1\config2_policy__percentage__50.tar.gz'
+2022-12-13 19:32:02 INFO     rasa.core.processor  - Loading model comparison_models\run_1\config2_policy__percentage__50.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 572.46it/s, # trackers=1]
+2022-12-13 19:32:26 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  4.55it/s] 
+2022-12-13 19:32:28 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:32:28 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:32:28 INFO     rasa.core.test  -  Correct:          4 / 9
+2022-12-13 19:32:28 INFO     rasa.core.test  -  Accuracy:         0.444
+2022-12-13 19:32:28 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_1\config2_policy__percentage__95.tar.gz'
+2022-12-13 19:32:28 INFO     rasa.core.processor  - Loading model comparison_models\run_1\config2_policy__percentage__95.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 189.05it/s, # trackers=1]
+2022-12-13 19:32:51 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  4.69it/s] 
+2022-12-13 19:32:53 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:32:53 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:32:53 INFO     rasa.core.test  -  Correct:          0 / 9
+2022-12-13 19:32:53 INFO     rasa.core.test  -  Accuracy:         0.000
+2022-12-13 19:32:53 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_1\config3_policy__percentage__0.tar.gz'
+2022-12-13 19:32:53 INFO     rasa.core.processor  - Loading model comparison_models\run_1\config3_policy__percentage__0.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 372.02it/s, # trackers=1]
+2022-12-13 19:33:17 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  4.95it/s] 
+2022-12-13 19:33:19 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:33:19 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:33:19 INFO     rasa.core.test  -  Correct:          9 / 9
+2022-12-13 19:33:19 INFO     rasa.core.test  -  Accuracy:         1.000
+2022-12-13 19:33:19 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_1\config3_policy__percentage__20.tar.gz'
+2022-12-13 19:33:19 INFO     rasa.core.processor  - Loading model comparison_models\run_1\config3_policy__percentage__20.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 257.72it/s, # trackers=1]
+2022-12-13 19:33:43 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  4.87it/s] 
+2022-12-13 19:33:45 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:33:45 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:33:45 INFO     rasa.core.test  -  Correct:          8 / 9
+2022-12-13 19:33:45 INFO     rasa.core.test  -  Accuracy:         0.889
+2022-12-13 19:33:45 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_1\config3_policy__percentage__5.tar.gz'
+2022-12-13 19:33:45 INFO     rasa.core.processor  - Loading model comparison_models\run_1\config3_policy__percentage__5.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 283.21it/s, # trackers=1]
+2022-12-13 19:34:06 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  5.18it/s] 
+2022-12-13 19:34:08 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:34:08 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:34:08 INFO     rasa.core.test  -  Correct:          9 / 9
+2022-12-13 19:34:08 INFO     rasa.core.test  -  Accuracy:         1.000
+2022-12-13 19:34:08 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_1\config3_policy__percentage__50.tar.gz'
+2022-12-13 19:34:08 INFO     rasa.core.processor  - Loading model comparison_models\run_1\config3_policy__percentage__50.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 283.96it/s, # trackers=1]
+2022-12-13 19:34:30 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  5.18it/s] 
+2022-12-13 19:34:32 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:34:32 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:34:32 INFO     rasa.core.test  -  Correct:          5 / 9
+2022-12-13 19:34:32 INFO     rasa.core.test  -  Accuracy:         0.556
+2022-12-13 19:34:32 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_1\config3_policy__percentage__95.tar.gz'
+2022-12-13 19:34:32 INFO     rasa.core.processor  - Loading model comparison_models\run_1\config3_policy__percentage__95.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 231.13it/s, # trackers=1]
+2022-12-13 19:34:52 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:02<00:00,  4.29it/s] 
+2022-12-13 19:34:54 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:34:54 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:34:54 INFO     rasa.core.test  -  Correct:          0 / 9
+2022-12-13 19:34:54 INFO     rasa.core.test  -  Accuracy:         0.000
+2022-12-13 19:34:54 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_2\config1_policy__percentage__0.tar.gz'
+2022-12-13 19:34:54 INFO     rasa.core.processor  - Loading model comparison_models\run_2\config1_policy__percentage__0.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 295.05it/s, # trackers=1]
+2022-12-13 19:35:20 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+2022-12-13 19:35:51 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:35:51 INFO     rasa.core.test  -  Correct:          7 / 9
+2022-12-13 19:35:51 INFO     rasa.core.test  -  Accuracy:         0.778
+2022-12-13 19:35:51 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_2\config1_policy__percentage__5.tar.gz'
+2022-12-13 19:35:51 INFO     rasa.core.processor  - Loading model comparison_models\run_2\config1_policy__percentage__5.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 281.49it/s, # trackers=1]
+2022-12-13 19:36:12 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:02<00:00,  3.89it/s]
+2022-12-13 19:36:15 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:36:15 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level:
+2022-12-13 19:36:15 INFO     rasa.core.test  -  Correct:          9 / 9
+2022-12-13 19:36:15 INFO     rasa.core.test  -  Accuracy:         1.000
+2022-12-13 19:36:15 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_2\config1_policy__percentage__50.tar.gz'
+2022-12-13 19:36:15 INFO     rasa.core.processor  - Loading model comparison_models\run_2\config1_policy__percentage__50.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 331.94it/s, # trackers=1]
+2022-12-13 19:36:37 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:02<00:00,  4.34it/s] 
+2022-12-13 19:36:39 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:36:39 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:36:39 INFO     rasa.core.test  -  Correct:          5 / 9
+2022-12-13 19:36:39 INFO     rasa.core.test  -  Accuracy:         0.556
+2022-12-13 19:36:39 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_2\config1_policy__percentage__95.tar.gz'
+2022-12-13 19:36:39 INFO     rasa.core.processor  - Loading model comparison_models\run_2\config1_policy__percentage__95.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 340.87it/s, # trackers=1]
+2022-12-13 19:36:39 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:00<00:00, 16.89it/s]
+2022-12-13 19:36:40 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:36:40 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:36:40 INFO     rasa.core.test  -  Correct:          0 / 9
+2022-12-13 19:36:40 INFO     rasa.core.test  -  Accuracy:         0.000
+2022-12-13 19:36:40 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_2\config2_policy__percentage__0.tar.gz'
+2022-12-13 19:36:40 INFO     rasa.core.processor  - Loading model comparison_models\run_2\config2_policy__percentage__0.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 524.03it/s, # trackers=1]
+2022-12-13 19:37:00 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  5.02it/s] 
+2022-12-13 19:37:02 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:37:02 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:37:02 INFO     rasa.core.test  -  Correct:          9 / 9
+2022-12-13 19:37:02 INFO     rasa.core.test  -  Accuracy:         1.000
+2022-12-13 19:37:02 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_2\config2_policy__percentage__20.tar.gz'
+2022-12-13 19:37:02 INFO     rasa.core.processor  - Loading model comparison_models\run_2\config2_policy__percentage__20.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 268.67it/s, # trackers=1]
+2022-12-13 19:37:22 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  5.04it/s] 
+2022-12-13 19:37:24 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:37:24 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:37:24 INFO     rasa.core.test  -  Correct:          8 / 9
+2022-12-13 19:37:24 INFO     rasa.core.test  -  Accuracy:         0.889
+2022-12-13 19:37:24 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_2\config2_policy__percentage__5.tar.gz'
+2022-12-13 19:37:24 INFO     rasa.core.processor  - Loading model comparison_models\run_2\config2_policy__percentage__5.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 268.93it/s, # trackers=1]
+2022-12-13 19:37:49 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  4.58it/s] 
+2022-12-13 19:37:51 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:37:51 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:37:51 INFO     rasa.core.test  -  Correct:          8 / 9
+2022-12-13 19:37:51 INFO     rasa.core.test  -  Accuracy:         0.889
+2022-12-13 19:37:51 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_2\config2_policy__percentage__50.tar.gz'
+2022-12-13 19:37:51 INFO     rasa.core.processor  - Loading model comparison_models\run_2\config2_policy__percentage__50.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 276.87it/s, # trackers=1]
+2022-12-13 19:38:12 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  5.10it/s] 
+2022-12-13 19:38:14 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:38:14 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:38:14 INFO     rasa.core.test  -  Correct:          5 / 9
+2022-12-13 19:38:14 INFO     rasa.core.test  -  Accuracy:         0.556
+2022-12-13 19:38:14 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_2\config2_policy__percentage__95.tar.gz'
+2022-12-13 19:38:14 INFO     rasa.core.processor  - Loading model comparison_models\run_2\config2_policy__percentage__95.tar.gz...
+Processed story blocks: 100%|█████████████| 9/9 [00:00<00:00, 1037.65it/s, # trackers=1]
+2022-12-13 19:38:14 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:00<00:00, 25.48it/s] 
+2022-12-13 19:38:15 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:38:15 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:38:15 INFO     rasa.core.test  -  Correct:          0 / 9
+2022-12-13 19:38:15 INFO     rasa.core.test  -  Accuracy:         0.000
+2022-12-13 19:38:15 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_2\config3_policy__percentage__0.tar.gz'
+2022-12-13 19:38:15 INFO     rasa.core.processor  - Loading model comparison_models\run_2\config3_policy__percentage__0.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 275.16it/s, # trackers=1]
+2022-12-13 19:38:35 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  5.48it/s] 
+2022-12-13 19:38:36 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:38:36 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:38:36 INFO     rasa.core.test  -  Correct:          9 / 9
+2022-12-13 19:38:36 INFO     rasa.core.test  -  Accuracy:         1.000
+2022-12-13 19:38:36 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_2\config3_policy__percentage__20.tar.gz'
+2022-12-13 19:38:36 INFO     rasa.core.processor  - Loading model comparison_models\run_2\config3_policy__percentage__20.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 287.14it/s, # trackers=1]
+2022-12-13 19:38:58 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  5.40it/s] 
+2022-12-13 19:38:59 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:38:59 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:38:59 INFO     rasa.core.test  -  Correct:          9 / 9
+2022-12-13 19:38:59 INFO     rasa.core.test  -  Accuracy:         1.000
+2022-12-13 19:38:59 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_2\config3_policy__percentage__5.tar.gz'
+2022-12-13 19:38:59 INFO     rasa.core.processor  - Loading model comparison_models\run_2\config3_policy__percentage__5.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 209.23it/s, # trackers=1]
+2022-12-13 19:39:19 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  4.63it/s] 
+2022-12-13 19:39:21 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:39:21 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:39:21 INFO     rasa.core.test  -  Correct:          8 / 9
+2022-12-13 19:39:21 INFO     rasa.core.test  -  Accuracy:         0.889
+2022-12-13 19:39:21 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_2\config3_policy__percentage__50.tar.gz'
+2022-12-13 19:39:21 INFO     rasa.core.processor  - Loading model comparison_models\run_2\config3_policy__percentage__50.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 350.18it/s, # trackers=1]
+2022-12-13 19:39:42 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  5.12it/s] 
+2022-12-13 19:39:44 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:39:44 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:39:44 INFO     rasa.core.test  -  Correct:          6 / 9
+2022-12-13 19:39:44 INFO     rasa.core.test  -  Accuracy:         0.667
+2022-12-13 19:39:44 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_2\config3_policy__percentage__95.tar.gz'
+2022-12-13 19:39:44 INFO     rasa.core.processor  - Loading model comparison_models\run_2\config3_policy__percentage__95.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 367.91it/s, # trackers=1]
+2022-12-13 19:39:45 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:00<00:00, 24.60it/s] 
+2022-12-13 19:39:45 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:39:45 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:39:45 INFO     rasa.core.test  -  Correct:          0 / 9
+2022-12-13 19:39:45 INFO     rasa.core.test  -  Accuracy:         0.000
+2022-12-13 19:39:45 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_3\config1_policy__percentage__0.tar.gz'
+2022-12-13 19:39:45 INFO     rasa.core.processor  - Loading model comparison_models\run_3\config1_policy__percentage__0.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 257.29it/s, # trackers=1]
+2022-12-13 19:40:06 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:02<00:00,  4.22it/s] 
+2022-12-13 19:40:08 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:40:08 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:40:08 INFO     rasa.core.test  -  Correct:          9 / 9
+2022-12-13 19:40:08 INFO     rasa.core.test  -  Accuracy:         1.000
+2022-12-13 19:40:08 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_3\config1_policy__percentage__20.tar.gz'
+2022-12-13 19:40:08 INFO     rasa.core.processor  - Loading model comparison_models\run_3\config1_policy__percentage__20.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 572.77it/s, # trackers=1]
+2022-12-13 19:40:30 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:02<00:00,  4.25it/s] 
+2022-12-13 19:40:32 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:40:32 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:40:32 INFO     rasa.core.test  -  Correct:          7 / 9
+2022-12-13 19:40:32 INFO     rasa.core.test  -  Accuracy:         0.778
+2022-12-13 19:40:32 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_3\config1_policy__percentage__5.tar.gz'
+2022-12-13 19:40:32 INFO     rasa.core.processor  - Loading model comparison_models\run_3\config1_policy__percentage__5.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 576.45it/s, # trackers=1]
+2022-12-13 19:40:54 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:02<00:00,  4.13it/s] 
+2022-12-13 19:40:56 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:40:56 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:40:56 INFO     rasa.core.test  -  Correct:          7 / 9
+2022-12-13 19:40:56 INFO     rasa.core.test  -  Accuracy:         0.778
+2022-12-13 19:40:56 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_3\config1_policy__percentage__50.tar.gz'
+2022-12-13 19:40:56 INFO     rasa.core.processor  - Loading model comparison_models\run_3\config1_policy__percentage__50.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 379.47it/s, # trackers=1]
+2022-12-13 19:41:16 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:02<00:00,  4.15it/s] 
+2022-12-13 19:41:19 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:41:19 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:41:19 INFO     rasa.core.test  -  Correct:          8 / 9
+2022-12-13 19:41:19 INFO     rasa.core.test  -  Accuracy:         0.889
+2022-12-13 19:41:19 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_3\config1_policy__percentage__95.tar.gz'
+2022-12-13 19:41:19 INFO     rasa.core.processor  - Loading model comparison_models\run_3\config1_policy__percentage__95.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 273.21it/s, # trackers=1]
+2022-12-13 19:41:19 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:00<00:00, 15.91it/s] 
+2022-12-13 19:41:20 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:41:20 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:41:20 INFO     rasa.core.test  -  Correct:          0 / 9
+2022-12-13 19:41:20 INFO     rasa.core.test  -  Accuracy:         0.000
+2022-12-13 19:41:20 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_3\config2_policy__percentage__0.tar.gz'
+2022-12-13 19:41:20 INFO     rasa.core.processor  - Loading model comparison_models\run_3\config2_policy__percentage__0.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 275.98it/s, # trackers=1]
+2022-12-13 19:41:41 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  4.68it/s] 
+2022-12-13 19:41:42 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:41:42 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:41:42 INFO     rasa.core.test  -  Correct:          9 / 9
+2022-12-13 19:41:42 INFO     rasa.core.test  -  Accuracy:         1.000
+2022-12-13 19:41:42 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_3\config2_policy__percentage__20.tar.gz'
+2022-12-13 19:41:42 INFO     rasa.core.processor  - Loading model comparison_models\run_3\config2_policy__percentage__20.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 310.35it/s, # trackers=1]
+2022-12-13 19:42:03 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  4.76it/s] 
+2022-12-13 19:42:05 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:42:05 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:42:05 INFO     rasa.core.test  -  Correct:          6 / 9
+2022-12-13 19:42:05 INFO     rasa.core.test  -  Accuracy:         0.667
+2022-12-13 19:42:05 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_3\config2_policy__percentage__5.tar.gz'
+2022-12-13 19:42:05 INFO     rasa.core.processor  - Loading model comparison_models\run_3\config2_policy__percentage__5.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 223.31it/s, # trackers=1]
+2022-12-13 19:42:25 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  4.78it/s] 
+2022-12-13 19:42:27 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:42:27 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:42:27 INFO     rasa.core.test  -  Correct:          5 / 9
+2022-12-13 19:42:27 INFO     rasa.core.test  -  Accuracy:         0.556
+2022-12-13 19:42:27 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_3\config2_policy__percentage__50.tar.gz'
+2022-12-13 19:42:27 INFO     rasa.core.processor  - Loading model comparison_models\run_3\config2_policy__percentage__50.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 270.49it/s, # trackers=1]
+2022-12-13 19:42:47 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  4.87it/s]
+2022-12-13 19:42:49 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:42:49 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:42:49 INFO     rasa.core.test  -  Correct:          6 / 9
+2022-12-13 19:42:49 INFO     rasa.core.test  -  Accuracy:         0.667
+2022-12-13 19:42:49 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_3\config2_policy__percentage__95.tar.gz'
+2022-12-13 19:42:49 INFO     rasa.core.processor  - Loading model comparison_models\run_3\config2_policy__percentage__95.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 312.09it/s, # trackers=1]
+2022-12-13 19:43:09 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  4.91it/s] 
+2022-12-13 19:43:11 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:43:11 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:43:11 INFO     rasa.core.test  -  Correct:          0 / 9
+2022-12-13 19:43:11 INFO     rasa.core.test  -  Accuracy:         0.000
+2022-12-13 19:43:11 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_3\config3_policy__percentage__0.tar.gz'
+2022-12-13 19:43:11 INFO     rasa.core.processor  - Loading model comparison_models\run_3\config3_policy__percentage__0.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 576.07it/s, # trackers=1]
+2022-12-13 19:43:31 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  5.06it/s] 
+2022-12-13 19:43:33 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:43:33 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:43:33 INFO     rasa.core.test  -  Correct:          9 / 9
+2022-12-13 19:43:33 INFO     rasa.core.test  -  Accuracy:         1.000
+2022-12-13 19:43:33 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_3\config3_policy__percentage__20.tar.gz'
+2022-12-13 19:43:33 INFO     rasa.core.processor  - Loading model comparison_models\run_3\config3_policy__percentage__20.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 266.93it/s, # trackers=1]
+2022-12-13 19:43:53 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  5.04it/s] 
+2022-12-13 19:43:55 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:43:55 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:43:55 INFO     rasa.core.test  -  Correct:          8 / 9
+2022-12-13 19:43:55 INFO     rasa.core.test  -  Accuracy:         0.889
+2022-12-13 19:43:55 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_3\config3_policy__percentage__5.tar.gz'
+2022-12-13 19:43:55 INFO     rasa.core.processor  - Loading model comparison_models\run_3\config3_policy__percentage__5.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 388.54it/s, # trackers=1]
+2022-12-13 19:44:15 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  4.84it/s] 
+2022-12-13 19:44:17 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:44:17 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:44:17 INFO     rasa.core.test  -  Correct:          8 / 9
+2022-12-13 19:44:17 INFO     rasa.core.test  -  Accuracy:         0.889
+2022-12-13 19:44:17 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_3\config3_policy__percentage__50.tar.gz'
+2022-12-13 19:44:17 INFO     rasa.core.processor  - Loading model comparison_models\run_3\config3_policy__percentage__50.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 371.90it/s, # trackers=1]
+2022-12-13 19:44:37 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  5.10it/s] 
+2022-12-13 19:44:39 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:44:39 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:44:39 INFO     rasa.core.test  -  Correct:          6 / 9
+2022-12-13 19:44:39 INFO     rasa.core.test  -  Accuracy:         0.667
+2022-12-13 19:44:39 INFO     rasa.core.test  - Evaluating model 'comparison_models\run_3\config3_policy__percentage__95.tar.gz'
+2022-12-13 19:44:39 INFO     rasa.core.processor  - Loading model comparison_models\run_3\config3_policy__percentage__95.tar.gz...
+Processed story blocks: 100%|██████████████| 9/9 [00:00<00:00, 309.02it/s, # trackers=1]
+2022-12-13 19:44:57 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|█████████████████████████████████████████████████████| 9/9 [00:01<00:00,  5.51it/s] 
+2022-12-13 19:44:59 INFO     rasa.core.test  - Finished collecting predictions.
+2022-12-13 19:44:59 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level: 
+2022-12-13 19:44:59 INFO     rasa.core.test  -  Correct:          0 / 9
+2022-12-13 19:44:59 INFO     rasa.core.test  -  Accuracy:         0.000
+2022-12-13 19:45:00 INFO     rasa.utils.plotting  - Comparison graph saved to 'comparison_results\core_model_comparison_graph.pdf'.
+Failed stories written to 'comparison_results\failed_test_stories.yml'
+Stories with prediction warnings written to 'comparison_results\stories_with_warnings.yml

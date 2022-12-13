@@ -148,10 +148,11 @@
     "text": "september",
     "entities": [
       {
+        "text": "september",
         "start": 0,
         "end": 9,
-        "value": "sep",
-        "entity": "exam_period"
+        "entity": "exam_period",
+        "value": "sep"
       }
     ],
     "predicted_entities": []

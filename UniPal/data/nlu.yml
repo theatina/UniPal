@@ -42,6 +42,8 @@ nlu:
 - intent: affirm
   examples: |
     - yes
+    - yes, thank you
+    - yes thanks bot
     - y
     - indeed
     - of course
@@ -50,6 +52,8 @@ nlu:
     - yeap
     - ok
     - k
+    - yeah
+    - yas
 
 - intent: deny
   examples: |
@@ -65,6 +69,7 @@ nlu:
     - no thank you
     - nah
     - no thanks
+    
 
 - intent: mood_great
   examples: |
@@ -101,6 +106,8 @@ nlu:
     - so sad
     - not feeling well
     - feeling sad
+    - meh
+    - not feeling ok
 
 - intent: ask_about_services
   examples: |

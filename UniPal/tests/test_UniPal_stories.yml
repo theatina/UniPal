@@ -255,3 +255,32 @@ stories:
   - action: utter_goodbye
 
 
+- story: 6a - UniPal Request Psychological Support 
+  steps:          
+  - user: |
+      hey
+    intent: greet
+  - action: utter_greet
+  - action: action_UniPal_services
+  - action: action_resetSlots
+  - user: |
+      im not ok
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      no
+    intent: deny
+  - action: action_uni_psychoSupport_info
+  - action: utter_did_that_help
+  - user: |
+      yes, thanks
+    intent: affirm
+  - action: utter_further_action
+  - user: |
+      nah
+    intent: deny
+  - action: utter_goodbye
+
+
+
