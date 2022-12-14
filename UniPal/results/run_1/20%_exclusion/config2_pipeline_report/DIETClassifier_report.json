@@ -1,5 +1,12 @@
 {
-  "semester": {
+  "user_name": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {}
+  },
+  "exam_period": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
@@ -13,53 +20,44 @@
     "support": 2,
     "confused_with": {}
   },
-  "user_name": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 2,
-    "confused_with": {}
-  },
-  "exam_period": {
+  "academic_year": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 3,
-    "confused_with": {}
-  },
-  "academic_year": {
-    "precision": 0.5,
-    "recall": 1.0,
-    "f1-score": 0.6666666666666666,
-    "support": 1,
+    "support": 2,
     "confused_with": {}
   },
   "num_of_announcements": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
     "support": 1,
-    "confused_with": {
-      "academic_year": 1
-    }
+    "confused_with": {}
+  },
+  "semester": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
   },
   "micro avg": {
-    "precision": 0.8888888888888888,
-    "recall": 0.7272727272727273,
-    "f1-score": 0.7999999999999999,
-    "support": 11
+    "precision": 1.0,
+    "recall": 0.9,
+    "f1-score": 0.9473684210526316,
+    "support": 10
   },
   "macro avg": {
-    "precision": 0.5833333333333334,
-    "recall": 0.6666666666666666,
-    "f1-score": 0.611111111111111,
-    "support": 11
+    "precision": 0.8333333333333334,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.8333333333333334,
+    "support": 10
   },
   "weighted avg": {
-    "precision": 0.6818181818181818,
-    "recall": 0.7272727272727273,
-    "f1-score": 0.696969696969697,
-    "support": 11
+    "precision": 0.9,
+    "recall": 0.9,
+    "f1-score": 0.9,
+    "support": 10
   },
-  "accuracy": 0.9714285714285714
+  "accuracy": 0.9878048780487805
 }

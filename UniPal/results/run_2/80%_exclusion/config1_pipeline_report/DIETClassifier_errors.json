@@ -1,15 +1,24 @@
 [
   {
-    "text": "hello there, my name is Nick",
+    "text": "can i have the latest 2 announcements of the uni?",
     "entities": [
       {
-        "start": 24,
-        "end": 28,
-        "value": "Nick",
-        "entity": "user_name"
+        "start": 22,
+        "end": 23,
+        "value": "2",
+        "entity": "num_of_announcements"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "academic_year",
+        "start": 22,
+        "end": 23,
+        "confidence_entity": 0.7586632370948792,
+        "value": "2",
+        "extractor": "DIETClassifier"
+      }
+    ]
   },
   {
     "text": "hi, it's Theatina",
@@ -50,7 +59,7 @@
         "entity": "exam_period",
         "start": 0,
         "end": 3,
-        "confidence_entity": 0.9996252059936523,
+        "confidence_entity": 0.9989972710609436,
         "value": "sep",
         "extractor": "DIETClassifier",
         "processors": [
@@ -61,22 +70,10 @@
         "entity": "academic_year",
         "start": 27,
         "end": 31,
-        "confidence_entity": 0.9993009567260742,
+        "confidence_entity": 0.9990277290344238,
         "value": "2019",
         "extractor": "DIETClassifier"
       }
     ]
-  },
-  {
-    "text": "undergraduate classes",
-    "entities": [
-      {
-        "start": 0,
-        "end": 13,
-        "value": "PPS",
-        "entity": "grad_studies_type"
-      }
-    ],
-    "predicted_entities": []
   }
 ]

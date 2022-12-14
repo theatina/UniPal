@@ -1,16 +1,16 @@
 {
-  "semester": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4,
-    "confused_with": {}
-  },
   "user_name": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
-    "support": 2,
+    "support": 1,
+    "confused_with": {}
+  },
+  "exam_period": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3,
     "confused_with": {}
   },
   "grad_studies_type": {
@@ -22,35 +22,42 @@
   },
   "academic_year": {
     "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.8,
+    "support": 3,
     "confused_with": {}
   },
-  "exam_period": {
+  "num_of_announcements": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {}
+  },
+  "semester": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 3,
+    "support": 1,
     "confused_with": {}
   },
   "micro avg": {
     "precision": 1.0,
-    "recall": 0.7857142857142857,
-    "f1-score": 0.88,
-    "support": 14
+    "recall": 0.6666666666666666,
+    "f1-score": 0.8,
+    "support": 12
   },
   "macro avg": {
-    "precision": 0.8,
-    "recall": 0.7333333333333333,
-    "f1-score": 0.76,
-    "support": 14
+    "precision": 0.6666666666666666,
+    "recall": 0.5555555555555555,
+    "f1-score": 0.6,
+    "support": 12
   },
   "weighted avg": {
-    "precision": 0.8571428571428571,
-    "recall": 0.7857142857142857,
-    "f1-score": 0.8142857142857143,
-    "support": 14
+    "precision": 0.8333333333333334,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.7333333333333334,
+    "support": 12
   },
-  "accuracy": 0.9655172413793104
+  "accuracy": 0.9540229885057471
 }

@@ -1,98 +1,74 @@
 [
   {
+    "text": "thanks",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.22010111043456815
+    }
+  },
+  {
     "text": "thank you",
     "intent": "thank_bot",
     "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.16632995835850764
+      "name": "affirm",
+      "confidence": 0.1371752503276964
     }
   },
   {
-    "text": "thank you pal!",
-    "intent": "thank_bot",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.020707872752627726
-    }
-  },
-  {
-    "text": "is there any psychological support at the university?",
+    "text": "can you help me find psychological support?",
     "intent": "request_psychoSupport_info",
     "intent_prediction": {
-      "name": "request_announcements",
-      "confidence": 0.11077189289683381
+      "name": "mood_unhappy",
+      "confidence": 0.0003233715358356892
     }
   },
   {
-    "text": "professors' email",
+    "text": "uni staff members phones",
     "intent": "request_staff_info",
     "intent_prediction": {
-      "name": "request_class_schedule",
-      "confidence": 0.38763001298142513
+      "name": "request_contact_loc_info",
+      "confidence": 0.06880833109517734
     }
   },
   {
-    "text": "that sounds good",
-    "intent": "affirm",
+    "text": "staff contact",
+    "intent": "request_staff_info",
     "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.46049600966936494
+      "name": "request_contact_loc_info",
+      "confidence": 0.016138698201441
     }
   },
   {
-    "text": "cu",
-    "intent": "goodbye",
+    "text": "don't like that",
+    "intent": "deny",
     "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.7903391173595732
+      "name": "mood_unhappy",
+      "confidence": 0.5774050025910374
     }
   },
   {
-    "text": "let's go",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.6875133700442349
-    }
-  },
-  {
-    "text": "did they announce the exam schedule?",
+    "text": "jan PPS exams schedule for 2020",
     "intent": "request_exam_schedule",
     "intent_prediction": {
       "name": "request_class_schedule",
-      "confidence": 0.004038053192486104
+      "confidence": 0.017576960786890476
     }
   },
   {
-    "text": "jun exams schedule",
+    "text": "exams schedule",
     "intent": "request_exam_schedule",
     "intent_prediction": {
       "name": "request_class_schedule",
-      "confidence": 0.004735960136285206
+      "confidence": 0.0053065956964437845
     }
   },
   {
-    "text": "jun exams",
+    "text": "sep exams schedule",
     "intent": "request_exam_schedule",
     "intent_prediction": {
-      "name": "inform_period_semester",
-      "confidence": 0.01925399331314244
-    }
-  },
-  {
-    "text": "not good",
-    "intent": "mood_unhappy",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.7801767823855907
-    }
-  },
-  {
-    "text": "not very good",
-    "intent": "mood_unhappy",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.41278545955491475
+      "name": "request_class_schedule",
+      "confidence": 0.003403397975802731
     }
   }
 ]

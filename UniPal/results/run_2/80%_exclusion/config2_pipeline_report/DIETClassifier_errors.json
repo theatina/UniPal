@@ -1,27 +1,68 @@
 [
   {
-    "text": "hello there, my name is Nick",
+    "text": "can i have the latest 2 announcements of the uni?",
     "entities": [
       {
-        "start": 24,
-        "end": 28,
-        "value": "Nick",
-        "entity": "user_name"
+        "start": 22,
+        "end": 23,
+        "value": "2",
+        "entity": "num_of_announcements"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "academic_year",
+        "start": 22,
+        "end": 23,
+        "confidence_entity": 0.9987515211105347,
+        "value": "2",
+        "extractor": "DIETClassifier"
+      }
+    ]
   },
   {
-    "text": "hi, it's Theatina",
+    "text": "pps exams of january 2020",
     "entities": [
       {
-        "start": 9,
-        "end": 17,
-        "value": "Theatina",
-        "entity": "user_name"
+        "start": 0,
+        "end": 3,
+        "value": "PPS",
+        "entity": "grad_studies_type"
+      },
+      {
+        "start": 13,
+        "end": 20,
+        "value": "jan",
+        "entity": "exam_period"
+      },
+      {
+        "start": 21,
+        "end": 25,
+        "value": "2020",
+        "entity": "academic_year"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "grad_studies_type",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.9952179789543152,
+        "value": "PPS",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "academic_year",
+        "start": 21,
+        "end": 25,
+        "confidence_entity": 0.9991104006767273,
+        "value": "2020",
+        "extractor": "DIETClassifier"
+      }
+    ]
   },
   {
     "text": "sep PMS exams schedule for 2019",
@@ -50,7 +91,7 @@
         "entity": "exam_period",
         "start": 0,
         "end": 3,
-        "confidence_entity": 0.999566376209259,
+        "confidence_entity": 0.9989880919456482,
         "value": "sep",
         "extractor": "DIETClassifier",
         "processors": [
@@ -61,34 +102,10 @@
         "entity": "academic_year",
         "start": 27,
         "end": 31,
-        "confidence_entity": 0.999396562576294,
+        "confidence_entity": 0.999128520488739,
         "value": "2019",
         "extractor": "DIETClassifier"
       }
     ]
-  },
-  {
-    "text": "jun exams",
-    "entities": [
-      {
-        "start": 0,
-        "end": 3,
-        "value": "jun",
-        "entity": "exam_period"
-      }
-    ],
-    "predicted_entities": []
-  },
-  {
-    "text": "undergraduate classes",
-    "entities": [
-      {
-        "start": 0,
-        "end": 13,
-        "value": "PPS",
-        "entity": "grad_studies_type"
-      }
-    ],
-    "predicted_entities": []
   }
 ]

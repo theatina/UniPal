@@ -10,17 +10,5 @@
       }
     ],
     "predicted_entities": []
-  },
-  {
-    "text": "hey, my name is Pam",
-    "entities": [
-      {
-        "start": 16,
-        "end": 19,
-        "value": "Pam",
-        "entity": "user_name"
-      }
-    ],
-    "predicted_entities": []
   }
 ]

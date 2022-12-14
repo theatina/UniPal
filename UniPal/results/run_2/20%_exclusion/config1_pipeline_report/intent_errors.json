@@ -1,98 +1,82 @@
 [
   {
+    "text": "no, thank you bye!",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.21980867561307119
+    }
+  },
+  {
     "text": "that's cool",
     "intent": "thank_bot",
     "intent_prediction": {
       "name": "greet",
-      "confidence": 0.20053342137713445
+      "confidence": 0.18022507211971958
     }
   },
   {
-    "text": "i am not ok",
+    "text": "help me",
     "intent": "request_psychoSupport_info",
     "intent_prediction": {
-      "name": "mood_unhappy",
-      "confidence": 0.33275491231392973
-    }
-  },
-  {
-    "text": "yeap",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.2889018417849979
-    }
-  },
-  {
-    "text": "correct",
-    "intent": "affirm",
-    "intent_prediction": {
       "name": "deny",
-      "confidence": 0.1338882856043831
+      "confidence": 0.136293115582034
     }
   },
   {
-    "text": "good night",
+    "text": "can i have the latest 2 announcements of the uni?",
+    "intent": "request_announcements",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.11018135159438193
+    }
+  },
+  {
+    "text": "location",
+    "intent": "request_contact_loc_info",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.12904857824196148
+    }
+  },
+  {
+    "text": "bye",
     "intent": "goodbye",
     "intent_prediction": {
       "name": "greet",
-      "confidence": 0.2673508205283334
+      "confidence": 0.4260758801643905
     }
   },
   {
-    "text": "nope",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.2567630680858772
-    }
-  },
-  {
-    "text": "good morning",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.3243066661632897
-    }
-  },
-  {
-    "text": "I am going to save the world",
-    "intent": "mood_great",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.1480214663209758
-    }
-  },
-  {
-    "text": "super sad",
-    "intent": "mood_unhappy",
+    "text": "have a nice day",
+    "intent": "goodbye",
     "intent_prediction": {
       "name": "mood_great",
-      "confidence": 0.30307735537804414
+      "confidence": 0.19537559985327577
     }
   },
   {
-    "text": "my day was horrible",
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.21877475374438166
+    }
+  },
+  {
+    "text": "yeah",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.2064257813714953
+    }
+  },
+  {
+    "text": "so saad",
     "intent": "mood_unhappy",
     "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.24442281544284603
-    }
-  },
-  {
-    "text": "undergraduate classes",
-    "intent": "request_class_schedule",
-    "intent_prediction": {
-      "name": "inform_period_semester",
-      "confidence": 0.3299779389765644
-    }
-  },
-  {
-    "text": "spring classes",
-    "intent": "request_class_schedule",
-    "intent_prediction": {
-      "name": "inform_period_semester",
-      "confidence": 0.4224606150017013
+      "name": "greet",
+      "confidence": 0.15502298236582995
     }
   }
 ]

@@ -1,57 +1,74 @@
 {
-  "request_exam_schedule": {
+  "request_psychoSupport_info": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {
+      "mood_unhappy": 1
+    }
+  },
+  "request_announcements": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {
+      "mood_great": 1
+    }
+  },
+  "greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3,
+    "confused_with": {}
+  },
+  "mood_unhappy": {
+    "precision": 0.6,
+    "recall": 0.75,
+    "f1-score": 0.6666666666666665,
+    "support": 4,
+    "confused_with": {
+      "mood_great": 1
+    }
+  },
+  "inform_period_semester": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {
+      "request_class_schedule": 1
+    }
+  },
+  "affirm": {
     "precision": 1.0,
     "recall": 0.3333333333333333,
     "f1-score": 0.5,
     "support": 3,
     "confused_with": {
-      "request_contact_loc_info": 1,
-      "request_class_schedule": 1
+      "goodbye": 2
     }
   },
-  "mood_great": {
-    "precision": 1.0,
-    "recall": 0.6666666666666666,
-    "f1-score": 0.8,
+  "request_exam_schedule": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
     "support": 3,
     "confused_with": {
-      "request_contact_loc_info": 1
+      "request_class_schedule": 2,
+      "inform_period_semester": 1
     }
   },
-  "goodbye": {
-    "precision": 0.25,
+  "deny": {
+    "precision": 1.0,
     "recall": 0.5,
-    "f1-score": 0.3333333333333333,
-    "support": 2,
-    "confused_with": {
-      "deny": 1
-    }
-  },
-  "request_staff_info": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 2,
-    "confused_with": {
-      "request_class_schedule": 2
-    }
-  },
-  "affirm": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 2,
-    "confused_with": {
-      "greet": 1,
-      "deny": 1
-    }
-  },
-  "request_announcements": {
-    "precision": 0.5,
-    "recall": 1.0,
     "f1-score": 0.6666666666666666,
-    "support": 1,
-    "confused_with": {}
+    "support": 2,
+    "confused_with": {
+      "mood_unhappy": 1
+    }
   },
   "thank_bot": {
     "precision": 0.0,
@@ -62,13 +79,13 @@
       "goodbye": 2
     }
   },
-  "mood_unhappy": {
-    "precision": 1.0,
-    "recall": 0.3333333333333333,
-    "f1-score": 0.5,
-    "support": 3,
+  "request_staff_info": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
     "confused_with": {
-      "deny": 2
+      "request_contact_loc_info": 2
     }
   },
   "request_contact_loc_info": {
@@ -78,30 +95,12 @@
     "support": 2,
     "confused_with": {}
   },
-  "greet": {
-    "precision": 0.6666666666666666,
-    "recall": 0.6666666666666666,
-    "f1-score": 0.6666666666666666,
-    "support": 3,
-    "confused_with": {
-      "goodbye": 1
-    }
-  },
-  "deny": {
+  "goodbye": {
     "precision": 0.3333333333333333,
     "recall": 1.0,
     "f1-score": 0.5,
     "support": 2,
     "confused_with": {}
-  },
-  "request_psychoSupport_info": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 1,
-    "confused_with": {
-      "request_announcements": 1
-    }
   },
   "request_class_schedule": {
     "precision": 0.5714285714285714,
@@ -110,30 +109,30 @@
     "support": 4,
     "confused_with": {}
   },
-  "inform_period_semester": {
-    "precision": 1.0,
+  "mood_great": {
+    "precision": 0.5,
     "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1,
+    "f1-score": 0.6666666666666666,
+    "support": 2,
     "confused_with": {}
   },
-  "accuracy": 0.5483870967741935,
+  "accuracy": 0.5625,
   "macro avg": {
-    "precision": 0.48724489795918363,
-    "recall": 0.5357142857142857,
-    "f1-score": 0.4543290043290043,
-    "support": 31
+    "precision": 0.3931972789115646,
+    "recall": 0.47023809523809523,
+    "f1-score": 0.3852813852813853,
+    "support": 32
   },
   "weighted avg": {
-    "precision": 0.5468509984639017,
-    "recall": 0.5483870967741935,
-    "f1-score": 0.483088954056696,
-    "support": 31
+    "precision": 0.4797619047619047,
+    "recall": 0.5625,
+    "f1-score": 0.47111742424242425,
+    "support": 32
   },
   "micro avg": {
-    "precision": 0.5483870967741935,
-    "recall": 0.5483870967741935,
-    "f1-score": 0.5483870967741935,
-    "support": 31
+    "precision": 0.5625,
+    "recall": 0.5625,
+    "f1-score": 0.5625,
+    "support": 32
   }
 }

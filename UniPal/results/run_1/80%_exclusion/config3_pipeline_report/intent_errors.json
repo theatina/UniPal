@@ -1,114 +1,114 @@
 [
   {
+    "text": "thanks",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.1303444969451486
+    }
+  },
+  {
     "text": "thank you",
     "intent": "thank_bot",
     "intent_prediction": {
       "name": "goodbye",
-      "confidence": 0.0642713370035534
+      "confidence": 0.15210861795568167
     }
   },
   {
-    "text": "thank you pal!",
-    "intent": "thank_bot",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.05527723153418836
-    }
-  },
-  {
-    "text": "is there any psychological support at the university?",
+    "text": "can you help me find psychological support?",
     "intent": "request_psychoSupport_info",
     "intent_prediction": {
-      "name": "request_announcements",
-      "confidence": 0.3803945757535719
+      "name": "mood_unhappy",
+      "confidence": 0.024081475937468712
     }
   },
   {
-    "text": "phone numbers of lecturers",
+    "text": "3 news",
+    "intent": "request_announcements",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.21799254225293924
+    }
+  },
+  {
+    "text": "uni staff members phones",
     "intent": "request_staff_info",
     "intent_prediction": {
-      "name": "request_class_schedule",
-      "confidence": 0.8392998467790282
+      "name": "request_contact_loc_info",
+      "confidence": 0.33822409464237296
     }
   },
   {
-    "text": "professors' email",
+    "text": "staff contact",
     "intent": "request_staff_info",
     "intent_prediction": {
+      "name": "request_contact_loc_info",
+      "confidence": 0.01622522384817355
+    }
+  },
+  {
+    "text": "winter semester",
+    "intent": "inform_period_semester",
+    "intent_prediction": {
       "name": "request_class_schedule",
-      "confidence": 0.5525462943676669
+      "confidence": 0.6242329603798229
     }
   },
   {
-    "text": "yes",
+    "text": "don't like that",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.7857987928028428
+    }
+  },
+  {
+    "text": "of course",
     "intent": "affirm",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.530668793419328
-    }
-  },
-  {
-    "text": "that sounds good",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.45514426735588265
-    }
-  },
-  {
-    "text": "cu",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.18004012610501507
-    }
-  },
-  {
-    "text": "let's go",
-    "intent": "greet",
     "intent_prediction": {
       "name": "goodbye",
-      "confidence": 0.5501780771507254
+      "confidence": 0.4330545791099419
     }
   },
   {
-    "text": "I am going to save the world",
-    "intent": "mood_great",
+    "text": "correct",
+    "intent": "affirm",
     "intent_prediction": {
-      "name": "request_contact_loc_info",
-      "confidence": 0.33068177910912383
+      "name": "goodbye",
+      "confidence": 0.32163559051000334
     }
   },
   {
-    "text": "jun exams schedule",
+    "text": "jan PPS exams schedule for 2020",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.005975396657417959
+    }
+  },
+  {
+    "text": "exams schedule",
     "intent": "request_exam_schedule",
     "intent_prediction": {
       "name": "request_class_schedule",
-      "confidence": 0.018053596004359313
+      "confidence": 0.02612331383845562
     }
   },
   {
-    "text": "jun exams",
+    "text": "sep exams schedule",
     "intent": "request_exam_schedule",
     "intent_prediction": {
-      "name": "request_contact_loc_info",
-      "confidence": 0.024493547502071736
+      "name": "request_class_schedule",
+      "confidence": 0.043332473888211785
     }
   },
   {
-    "text": "not good",
+    "text": "very sad",
     "intent": "mood_unhappy",
     "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.7157453700065716
-    }
-  },
-  {
-    "text": "not very good",
-    "intent": "mood_unhappy",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.6738917331258953
+      "name": "mood_great",
+      "confidence": 0.5365433057435364
     }
   }
 ]

@@ -2,128 +2,132 @@ version: "3.1"
 nlu:
 - intent: thank_bot
   examples: |
-    - thank you
-    - no, thank you bye!
+    - cool, thanks UniPal
+    - thanks
     - thank you pal!
 - intent: request_psychoSupport_info
   examples: |
-    - need help
+    - i am not ok
     - i need psychological support
-    - help me
+    - need help
     - is there any psychological support at the university?
 - intent: request_staff_info
   examples: |
+    - staff
     - uni staff members phones
     - staff contact
-    - staff
     - phone numbers of lecturers
 - intent: request_announcements
   examples: |
+    - [3](num_of_announcements) news
     - are there any new announcements?
-    - can i have the latest [2](num_of_announcements) announcements of the uni?
     - new announcements?
     - university announcements
     - [10](num_of_announcements) announcements
 - intent: request_contact_loc_info
   examples: |
-    - access to uni
     - how can i get to uni
-    - location
+    - access
     - uni location
+    - access to uni
     - uni access info
 - intent: inform_period_semester
   examples: |
-    - classes of [Spring]{"entity": "semester", "value": "spring"} semester
-    - exams of [January]{"entity": "exam_period", "value": "jan"}
-    - [january]{"entity": "exam_period", "value": "jan"}
-    - [spring](semester)
     - [Winter]{"entity": "semester", "value": "winter"}
-    - [June]{"entity": "exam_period", "value": "jun"}
+    - [spring](semester)
+    - exams of [January]{"entity": "exam_period", "value": "jan"}
+    - classes of [Spring]{"entity": "semester", "value": "spring"} semester
+    - [jan](exam_period)
+    - [winter](semester) semester
+- intent: goodbye
+  examples: |
+    - bye bye
+    - goodbye
+    - see you around
+    - see you later
+    - cu
+    - good by
+- intent: deny
+  examples: |
+    - nah
+    - no thank you
+    - I don't think so
+    - n
+    - nope
+    - don't like that
+    - no
+    - not really
 - intent: affirm
   examples: |
     - yes
-    - of course
-    - indeed
-    - that sounds good
+    - yas
     - k
-- intent: goodbye
-  examples: |
-    - cu
-    - goodbye
-    - good afternoon
-    - see you later
-    - good by
-    - have a nice day
-    - bye bye
-- intent: deny
-  examples: |
-    - no
-    - not really
-    - nah
-    - don't like that
-    - never
-    - n
-    - no thank you
-    - no way
+    - yes, thank you
+    - yes thanks bot
+    - of course
+    - correct
+    - y
 - intent: greet
   examples: |
-    - moin
-    - goodevening
-    - hey dude, im [Tina](user_name)
-    - hey
-    - hey, my name is [Pam](user_name)
     - hey there
-    - good evening
-    - hi, i'm [Maria](user_name)
     - let's go
+    - moin
+    - hey, my name is [Pam](user_name)
+    - hey dude, im [Tina](user_name)
+    - good evening
+    - hey
+    - hello
+    - hi, i'm [Maria](user_name)
 - intent: mood_great
   examples: |
-    - I am great
-    - so so perfect
-    - feeling like a king
-    - perfect
-    - so good
     - I am amazing
+    - so good
+    - wonderful
     - great
+    - I am going to save the world
+    - I am feeling very good
     - amazing
+    - feeling like a king
+    - so perfect
+    - perfect
 - intent: request_exam_schedule
   examples: |
-    - [jun](exam_period) exams schedule
-    - did they announce the exam schedule?
     - [sep](exam_period) exam timetable
-    - [sep](exam_period) exams schedule
-    - [jan](exam_period) [PPS](grad_studies_type) exams schedule for [2020](academic_year)
-    - exams schedule
-    - exams
     - [jan](exam_period) exams schedule
-    - [pps]{"entity": "grad_studies_type", "value": "PPS"} exams of [january]{"entity": "exam_period", "value": "jan"} [2020](academic_year)
+    - [jun](exam_period) exams
     - exams timetable
+    - [sep](exam_period) exams schedule
+    - [undergraduate]{"entity": "grad_studies_type", "value": "PPS"} exams
+    - exams schedule
+    - [jan](exam_period) [PPS](grad_studies_type) exams schedule for [2020](academic_year)
+    - [PPS](grad_studies_type) exams schedule of [january]{"entity": "exam_period", "value": "jan"} [2020](academic_year)
 - intent: mood_unhappy
   examples: |
-    - unhappy
-    - so saad
-    - so sad
-    - I am disappointed
+    - not feeling ok
     - I'm so sad
-    - extremly sad
+    - I am disappointed
+    - my day was horrible
     - not good
-    - feeling sad
-    - I am sad
-    - I don't feel very well
+    - so sad
+    - super sad
+    - meh
+    - extremly sad
+    - very sad
+    - sad
 - intent: request_class_schedule
   examples: |
-    - [spring](semester) [PPS](grad_studies_type) classes schedule for [2020](academic_year)
+    - [undergraduate]{"entity": "grad_studies_type", "value": "PPS"} classes
     - [pps]{"entity": "grad_studies_type", "value": "PPS"} classes of [Winter]{"entity": "semester", "value": "winter"} [2020](academic_year)
-    - class timetable
-    - class schedule
+    - [spring](semester) classes
     - [winter](semester) classes schedule
-    - lectures
     - [PPS](grad_studies_type) classes schedule of [Spring]{"entity": "semester", "value": "spring"} [2020](academic_year)
-    - [winter](semester) [PMS](grad_studies_type) class schedule for [2019](academic_year)
-    - classes
-    - class lectures
+    - class schedule
     - any new information on class timetable?
     - did they announce the class schedule?
+    - [spring](semester) class schedule
+    - [winter](semester) class timetable
+    - classes
+    - class
 - synonym: spring
   examples: |
     - Spring

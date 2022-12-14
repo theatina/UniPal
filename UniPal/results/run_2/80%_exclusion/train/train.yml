@@ -2,56 +2,57 @@ version: "3.1"
 nlu:
 - intent: thank_bot
   examples: |
-    - thank you pal!
+    - thanks
 - intent: request_psychoSupport_info
   examples: |
-    - help me
+    - can you help me find psychological support?
 - intent: request_staff_info
   examples: |
     - professors' email
 - intent: request_announcements
   examples: |
-    - are there any new announcements?
+    - any news from uni?
 - intent: request_contact_loc_info
   examples: |
-    - uni contact info
-    - uni location
+    - uni location info
+    - access
 - intent: inform_period_semester
   examples: |
-    - exams of [January]{"entity": "exam_period", "value": "jan"}
-- intent: affirm
-  examples: |
-    - y
+    - [spring](semester)
 - intent: goodbye
   examples: |
-    - goodbye
     - see you later
+    - bye bye
 - intent: deny
   examples: |
-    - never
-    - nah
+    - don't like that
+    - no
+- intent: affirm
+  examples: |
+    - yes thanks bot
+    - indeed
 - intent: greet
   examples: |
+    - hey dude, im [Tina](user_name)
     - goodevening
-    - goodmorning
 - intent: mood_great
   examples: |
     - extremely good
-    - I am feeling very good
+    - wonderful
 - intent: request_exam_schedule
   examples: |
+    - did they announce the exam schedule?
+    - [jan](exam_period) [PPS](grad_studies_type) exams schedule for [2020](academic_year)
     - [sep](exam_period) exam timetable
-    - exams schedule
-    - [sep](exam_period) exams schedule
 - intent: mood_unhappy
   examples: |
-    - unhappy
-    - not good
+    - my day was horrible
+    - so sad
 - intent: request_class_schedule
   examples: |
-    - [winter](semester) class timetable
-    - class lectures
-    - [spring](semester) [PPS](grad_studies_type) classes schedule for [2020](academic_year)
+    - [spring](semester) classes
+    - class
+    - classes
 - synonym: spring
   examples: |
     - Spring

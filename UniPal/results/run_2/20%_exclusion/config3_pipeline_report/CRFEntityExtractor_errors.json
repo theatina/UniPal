@@ -1,12 +1,12 @@
 [
   {
-    "text": "hello there, my name is Nick",
+    "text": "can i have the latest 2 announcements of the uni?",
     "entities": [
       {
-        "start": 24,
-        "end": 28,
-        "value": "Nick",
-        "entity": "user_name"
+        "start": 22,
+        "end": 23,
+        "value": "2",
+        "entity": "num_of_announcements"
       }
     ],
     "predicted_entities": []
@@ -24,15 +24,39 @@
     "predicted_entities": []
   },
   {
-    "text": "undergraduate classes",
+    "text": "sep PMS exams schedule for 2019",
     "entities": [
       {
         "start": 0,
-        "end": 13,
-        "value": "PPS",
+        "end": 3,
+        "value": "sep",
+        "entity": "exam_period"
+      },
+      {
+        "start": 4,
+        "end": 7,
+        "value": "PMS",
         "entity": "grad_studies_type"
+      },
+      {
+        "start": 27,
+        "end": 31,
+        "value": "2019",
+        "entity": "academic_year"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "exam_period",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.7144011082496987,
+        "value": "sep",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
   }
 ]

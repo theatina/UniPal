@@ -1,26 +1,58 @@
 [
   {
-    "text": "hello there, my name is Nick",
+    "text": "hi, it's Theatina",
     "entities": [
       {
-        "start": 24,
-        "end": 28,
-        "value": "Nick",
+        "start": 9,
+        "end": 17,
+        "value": "Theatina",
         "entity": "user_name"
       }
     ],
     "predicted_entities": []
   },
   {
-    "text": "undergraduate classes",
+    "text": "sep PMS exams schedule for 2019",
     "entities": [
       {
         "start": 0,
-        "end": 13,
-        "value": "PPS",
+        "end": 3,
+        "value": "sep",
+        "entity": "exam_period"
+      },
+      {
+        "start": 4,
+        "end": 7,
+        "value": "PMS",
         "entity": "grad_studies_type"
+      },
+      {
+        "start": 27,
+        "end": 31,
+        "value": "2019",
+        "entity": "academic_year"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "exam_period",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.9994732737541199,
+        "value": "sep",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "academic_year",
+        "start": 27,
+        "end": 31,
+        "confidence_entity": 0.9901635050773621,
+        "value": "2019",
+        "extractor": "DIETClassifier"
+      }
+    ]
   }
 ]

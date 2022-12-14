@@ -2,63 +2,64 @@ version: "3.1"
 nlu:
 - intent: thank_bot
   examples: |
+    - thanks
     - thank you
-    - thank you pal!
 - intent: request_psychoSupport_info
   examples: |
-    - is there any psychological support at the university?
+    - can you help me find psychological support?
 - intent: request_announcements
   examples: |
-    - can i have the latest [2](num_of_announcements) announcements of the uni?
+    - [3](num_of_announcements) news
 - intent: request_staff_info
   examples: |
-    - phone numbers of lecturers
-    - professors' email
+    - uni staff members phones
+    - staff contact
 - intent: inform_period_semester
   examples: |
-    - [jan](exam_period)
+    - [winter](semester) semester
 - intent: request_contact_loc_info
   examples: |
+    - location
     - uni access info
-    - uni contact info
+- intent: goodbye
+  examples: |
+    - goodbye
+    - bye bye
+- intent: deny
+  examples: |
+    - don't like that
+    - no thanks
 - intent: affirm
   examples: |
     - yes
-    - that sounds good
-- intent: goodbye
-  examples: |
-    - cu
-    - see you later
-- intent: deny
-  examples: |
-    - I don't think so
-    - don't think so
+    - of course
+    - correct
 - intent: greet
   examples: |
-    - let's go
     - hi, i'm [Maria](user_name)
-    - hey, my name is [Pam](user_name)
+    - hey
+    - hello
 - intent: mood_great
   examples: |
-    - great
+    - feeling like a king
     - so perfect
-    - I am going to save the world
 - intent: request_exam_schedule
   examples: |
-    - did they announce the exam schedule?
-    - [jun](exam_period) exams schedule
-    - [jun](exam_period) exams
+    - [jan](exam_period) [PPS](grad_studies_type) exams schedule for [2020](academic_year)
+    - exams schedule
+    - [sep](exam_period) exams schedule
 - intent: mood_unhappy
   examples: |
-    - not good
-    - sad
+    - very sad
     - not very good
+    - I'm so sad
+    - so sad
 - intent: request_class_schedule
   examples: |
-    - [winter](semester) class timetable
     - [PPS](grad_studies_type) classes schedule of [Spring]{"entity": "semester", "value": "spring"} [2020](academic_year)
-    - [undergraduate]{"entity": "grad_studies_type", "value": "PPS"} classes
-    - class lectures
+    - classes schedule
+    - class schedule
+    - class
 - synonym: spring
   examples: |
     - Spring

@@ -1,202 +1,186 @@
 [
   {
+    "text": "thanks",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.12832470543182092
+    }
+  },
+  {
     "text": "thank you",
     "intent": "thank_bot",
     "intent_prediction": {
-      "name": "request_contact_loc_info",
-      "confidence": 0.11697681675464784
+      "name": "affirm",
+      "confidence": 0.12856412579942134
     }
   },
   {
-    "text": "thank you pal!",
-    "intent": "thank_bot",
-    "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.12178025375780573
-    }
-  },
-  {
-    "text": "is there any psychological support at the university?",
+    "text": "can you help me find psychological support?",
     "intent": "request_psychoSupport_info",
     "intent_prediction": {
       "name": "request_class_schedule",
-      "confidence": 0.1472645448336781
+      "confidence": 0.1282710780060957
     }
   },
   {
-    "text": "can i have the latest 2 announcements of the uni?",
+    "text": "3 news",
     "intent": "request_announcements",
     "intent_prediction": {
-      "name": "request_class_schedule",
-      "confidence": 0.1433371044301629
+      "name": "request_exam_schedule",
+      "confidence": 0.14168408480843417
     }
   },
   {
-    "text": "phone numbers of lecturers",
+    "text": "uni staff members phones",
     "intent": "request_staff_info",
     "intent_prediction": {
       "name": "request_class_schedule",
-      "confidence": 0.16219206849767798
+      "confidence": 0.1358048373906567
     }
   },
   {
-    "text": "professors' email",
+    "text": "staff contact",
     "intent": "request_staff_info",
-    "intent_prediction": {
-      "name": "request_class_schedule",
-      "confidence": 0.1725100298504749
-    }
-  },
-  {
-    "text": "jan",
-    "intent": "inform_period_semester",
     "intent_prediction": {
       "name": "request_exam_schedule",
-      "confidence": 0.17212455808808014
+      "confidence": 0.14640292061158142
     }
   },
   {
-    "text": "uni access info",
-    "intent": "request_contact_loc_info",
+    "text": "winter semester",
+    "intent": "inform_period_semester",
     "intent_prediction": {
       "name": "request_class_schedule",
-      "confidence": 0.13496236379521265
+      "confidence": 0.15134282680512517
     }
   },
   {
-    "text": "uni contact info",
+    "text": "location",
     "intent": "request_contact_loc_info",
     "intent_prediction": {
       "name": "request_class_schedule",
-      "confidence": 0.13743426578508333
+      "confidence": 0.13283179868415865
+    }
+  },
+  {
+    "text": "goodbye",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.1368317847170858
+    }
+  },
+  {
+    "text": "bye bye",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.10667879836766939
+    }
+  },
+  {
+    "text": "don't like that",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "request_class_schedule",
+      "confidence": 0.12587781245863816
+    }
+  },
+  {
+    "text": "no thanks",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.1293537293061224
     }
   },
   {
     "text": "yes",
     "intent": "affirm",
     "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.12135709021977838
+      "name": "greet",
+      "confidence": 0.11457671158478526
     }
   },
   {
-    "text": "that sounds good",
+    "text": "of course",
     "intent": "affirm",
     "intent_prediction": {
-      "name": "request_contact_loc_info",
-      "confidence": 0.11669006218650084
+      "name": "request_exam_schedule",
+      "confidence": 0.14785771579725315
     }
   },
   {
-    "text": "cu",
-    "intent": "goodbye",
+    "text": "correct",
+    "intent": "affirm",
     "intent_prediction": {
-      "name": "request_contact_loc_info",
-      "confidence": 0.11536186482481785
+      "name": "request_exam_schedule",
+      "confidence": 0.1351147000962125
     }
   },
   {
-    "text": "see you later",
-    "intent": "goodbye",
+    "text": "hey",
+    "intent": "greet",
     "intent_prediction": {
-      "name": "request_class_schedule",
-      "confidence": 0.13177581824849371
+      "name": "goodbye",
+      "confidence": 0.11600214904529173
     }
   },
   {
-    "text": "I don't think so",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.11618402853902443
-    }
-  },
-  {
-    "text": "don't think so",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.11230457630200849
-    }
-  },
-  {
-    "text": "let's go",
+    "text": "hello",
     "intent": "greet",
     "intent_prediction": {
       "name": "request_class_schedule",
-      "confidence": 0.13142113375048767
+      "confidence": 0.10423161152691135
     }
   },
   {
-    "text": "hi, i'm Maria",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.12343492501704936
-    }
-  },
-  {
-    "text": "hey, my name is Pam",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.12625895730020062
-    }
-  },
-  {
-    "text": "great",
+    "text": "feeling like a king",
     "intent": "mood_great",
     "intent_prediction": {
-      "name": "request_contact_loc_info",
-      "confidence": 0.11862215566614999
+      "name": "affirm",
+      "confidence": 0.13225873110231473
     }
   },
   {
     "text": "so perfect",
     "intent": "mood_great",
     "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.11144866401914535
+      "name": "affirm",
+      "confidence": 0.1349181733741863
     }
   },
   {
-    "text": "I am going to save the world",
-    "intent": "mood_great",
-    "intent_prediction": {
-      "name": "request_class_schedule",
-      "confidence": 0.12236224688768743
-    }
-  },
-  {
-    "text": "did they announce the exam schedule?",
-    "intent": "request_exam_schedule",
-    "intent_prediction": {
-      "name": "request_class_schedule",
-      "confidence": 0.16037821122602547
-    }
-  },
-  {
-    "text": "not good",
+    "text": "very sad",
     "intent": "mood_unhappy",
     "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.12549506777205274
-    }
-  },
-  {
-    "text": "sad",
-    "intent": "mood_unhappy",
-    "intent_prediction": {
-      "name": "request_staff_info",
-      "confidence": 0.09472732834514659
+      "name": "affirm",
+      "confidence": 0.14649338518544852
     }
   },
   {
     "text": "not very good",
     "intent": "mood_unhappy",
     "intent_prediction": {
-      "name": "request_contact_loc_info",
-      "confidence": 0.11556803125288223
+      "name": "mood_great",
+      "confidence": 0.1286431913477587
+    }
+  },
+  {
+    "text": "I'm so sad",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.11165829129858891
+    }
+  },
+  {
+    "text": "so sad",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.12609542452896388
     }
   }
 ]

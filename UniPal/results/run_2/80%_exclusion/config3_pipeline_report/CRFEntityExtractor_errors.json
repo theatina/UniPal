@@ -1,12 +1,24 @@
 [
   {
-    "text": "hello there, my name is Nick",
+    "text": "can i have the latest 2 announcements of the uni?",
     "entities": [
       {
-        "start": 24,
-        "end": 28,
-        "value": "Nick",
-        "entity": "user_name"
+        "start": 22,
+        "end": 23,
+        "value": "2",
+        "entity": "num_of_announcements"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "january",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "jan",
+        "entity": "exam_period"
       }
     ],
     "predicted_entities": []
@@ -24,7 +36,7 @@
     "predicted_entities": []
   },
   {
-    "text": "PPS exams schedule of january 2020",
+    "text": "pps exams of january 2020",
     "entities": [
       {
         "start": 0,
@@ -33,14 +45,14 @@
         "entity": "grad_studies_type"
       },
       {
-        "start": 22,
-        "end": 29,
+        "start": 13,
+        "end": 20,
         "value": "jan",
         "entity": "exam_period"
       },
       {
-        "start": 30,
-        "end": 34,
+        "start": 21,
+        "end": 25,
         "value": "2020",
         "entity": "academic_year"
       }
@@ -48,9 +60,9 @@
     "predicted_entities": [
       {
         "entity": "academic_year",
-        "start": 30,
-        "end": 34,
-        "confidence_entity": 0.7828607393166164,
+        "start": 21,
+        "end": 25,
+        "confidence_entity": 0.6963738940318839,
         "value": "2020",
         "extractor": "CRFEntityExtractor"
       }
@@ -83,7 +95,7 @@
         "entity": "exam_period",
         "start": 0,
         "end": 3,
-        "confidence_entity": 0.8756496751335543,
+        "confidence_entity": 0.718000641845456,
         "value": "sep",
         "extractor": "CRFEntityExtractor",
         "processors": [
@@ -91,53 +103,5 @@
         ]
       }
     ]
-  },
-  {
-    "text": "jun exams",
-    "entities": [
-      {
-        "start": 0,
-        "end": 3,
-        "value": "jun",
-        "entity": "exam_period"
-      }
-    ],
-    "predicted_entities": []
-  },
-  {
-    "text": "spring class schedule",
-    "entities": [
-      {
-        "start": 0,
-        "end": 6,
-        "value": "spring",
-        "entity": "semester"
-      }
-    ],
-    "predicted_entities": []
-  },
-  {
-    "text": "undergraduate classes",
-    "entities": [
-      {
-        "start": 0,
-        "end": 13,
-        "value": "PPS",
-        "entity": "grad_studies_type"
-      }
-    ],
-    "predicted_entities": []
-  },
-  {
-    "text": "spring classes",
-    "entities": [
-      {
-        "start": 0,
-        "end": 6,
-        "value": "spring",
-        "entity": "semester"
-      }
-    ],
-    "predicted_entities": []
   }
 ]

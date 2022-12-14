@@ -1,34 +1,26 @@
 [
   {
+    "text": "no, thank you bye!",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.3072891432909853
+    }
+  },
+  {
     "text": "that's cool",
     "intent": "thank_bot",
     "intent_prediction": {
       "name": "mood_great",
-      "confidence": 0.1749772989019885
+      "confidence": 0.382318905342832
     }
   },
   {
-    "text": "thanks",
-    "intent": "thank_bot",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.07190680634505978
-    }
-  },
-  {
-    "text": "i am not ok",
+    "text": "help me",
     "intent": "request_psychoSupport_info",
     "intent_prediction": {
-      "name": "mood_unhappy",
-      "confidence": 0.8691131485521243
-    }
-  },
-  {
-    "text": "any news from uni?",
-    "intent": "request_announcements",
-    "intent_prediction": {
-      "name": "request_contact_loc_info",
-      "confidence": 0.7304107333582386
+      "name": "goodbye",
+      "confidence": 0.21184411512304405
     }
   },
   {
@@ -36,7 +28,7 @@
     "intent": "request_staff_info",
     "intent_prediction": {
       "name": "request_contact_loc_info",
-      "confidence": 0.6347487048310768
+      "confidence": 0.5533390499853242
     }
   },
   {
@@ -44,15 +36,15 @@
     "intent": "request_staff_info",
     "intent_prediction": {
       "name": "request_contact_loc_info",
-      "confidence": 0.4734902815300946
+      "confidence": 0.7099333787174913
     }
   },
   {
-    "text": "winter semester",
-    "intent": "inform_period_semester",
+    "text": "have a nice day",
+    "intent": "goodbye",
     "intent_prediction": {
-      "name": "request_class_schedule",
-      "confidence": 0.8538552373934735
+      "name": "greet",
+      "confidence": 0.4935352106006469
     }
   },
   {
@@ -60,79 +52,47 @@
     "intent": "affirm",
     "intent_prediction": {
       "name": "deny",
-      "confidence": 0.5852808906236074
+      "confidence": 0.3894905109160747
     }
   },
   {
-    "text": "correct",
+    "text": "that sounds good",
     "intent": "affirm",
     "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.1681161815500777
-    }
-  },
-  {
-    "text": "good night",
-    "intent": "goodbye",
-    "intent_prediction": {
       "name": "greet",
-      "confidence": 0.5724160020189574
+      "confidence": 0.3720410005967952
     }
   },
   {
-    "text": "don't think so",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "mood_unhappy",
-      "confidence": 0.4100783596353173
-    }
-  },
-  {
-    "text": "hello there, my name is Nick",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.2936453496131467
-    }
-  },
-  {
-    "text": "hi, it's Theatina",
-    "intent": "greet",
+    "text": "pps exams of january 2020",
+    "intent": "request_exam_schedule",
     "intent_prediction": {
       "name": "request_contact_loc_info",
-      "confidence": 0.1975835323633475
+      "confidence": 0.015900341282271843
     }
   },
   {
-    "text": "I am going to save the world",
-    "intent": "mood_great",
-    "intent_prediction": {
-      "name": "request_class_schedule",
-      "confidence": 0.17223791243122985
-    }
-  },
-  {
-    "text": "PPS exams schedule of january 2020",
+    "text": "sep PMS exams schedule for 2019",
     "intent": "request_exam_schedule",
     "intent_prediction": {
       "name": "request_class_schedule",
-      "confidence": 0.4129689288048484
+      "confidence": 0.002245585208013134
     }
   },
   {
-    "text": "jun exams",
-    "intent": "request_exam_schedule",
-    "intent_prediction": {
-      "name": "inform_period_semester",
-      "confidence": 0.5920674343195572
-    }
-  },
-  {
-    "text": "my day was horrible",
+    "text": "so saad",
     "intent": "mood_unhappy",
     "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.20205964543914154
+      "name": "affirm",
+      "confidence": 0.2789766950611996
+    }
+  },
+  {
+    "text": "not very good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6876211028962899
     }
   }
 ]

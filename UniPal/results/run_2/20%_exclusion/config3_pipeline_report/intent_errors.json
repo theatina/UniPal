@@ -1,34 +1,18 @@
 [
   {
-    "text": "that's cool",
-    "intent": "thank_bot",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.5916437113837915
-    }
-  },
-  {
-    "text": "thanks",
+    "text": "no, thank you bye!",
     "intent": "thank_bot",
     "intent_prediction": {
       "name": "deny",
-      "confidence": 0.018290457553632747
+      "confidence": 0.900835126165497
     }
   },
   {
-    "text": "i am not ok",
-    "intent": "request_psychoSupport_info",
+    "text": "that's cool",
+    "intent": "thank_bot",
     "intent_prediction": {
-      "name": "mood_unhappy",
-      "confidence": 0.917901309113602
-    }
-  },
-  {
-    "text": "any news from uni?",
-    "intent": "request_announcements",
-    "intent_prediction": {
-      "name": "request_contact_loc_info",
-      "confidence": 0.44799008736353696
+      "name": "mood_great",
+      "confidence": 0.7168864501278939
     }
   },
   {
@@ -36,7 +20,7 @@
     "intent": "request_staff_info",
     "intent_prediction": {
       "name": "request_contact_loc_info",
-      "confidence": 0.0012887591451090298
+      "confidence": 0.0008285043916077143
     }
   },
   {
@@ -44,31 +28,47 @@
     "intent": "request_staff_info",
     "intent_prediction": {
       "name": "request_contact_loc_info",
-      "confidence": 0.004860603516845452
+      "confidence": 0.002318231474135751
     }
   },
   {
-    "text": "good night",
+    "text": "have a nice day",
     "intent": "goodbye",
     "intent_prediction": {
       "name": "greet",
-      "confidence": 0.7551184730627837
+      "confidence": 0.6976968023099297
     }
   },
   {
-    "text": "I am going to save the world",
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.831047553532823
+    }
+  },
+  {
+    "text": "super stoked",
     "intent": "mood_great",
     "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.268718837634556
+      "name": "mood_unhappy",
+      "confidence": 0.3716764172292743
     }
   },
   {
-    "text": "PPS exams schedule of january 2020",
+    "text": "pps exams of january 2020",
     "intent": "request_exam_schedule",
     "intent_prediction": {
-      "name": "request_class_schedule",
-      "confidence": 0.015094265613287701
+      "name": "inform_period_semester",
+      "confidence": 0.10127674436001302
+    }
+  },
+  {
+    "text": "exams",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.00813562254148533
     }
   },
   {
@@ -76,15 +76,15 @@
     "intent": "request_exam_schedule",
     "intent_prediction": {
       "name": "request_class_schedule",
-      "confidence": 0.027422357787722795
+      "confidence": 0.002349700436735093
     }
   },
   {
-    "text": "spring classes",
-    "intent": "request_class_schedule",
+    "text": "so saad",
+    "intent": "mood_unhappy",
     "intent_prediction": {
-      "name": "inform_period_semester",
-      "confidence": 0.9009993072179906
+      "name": "affirm",
+      "confidence": 0.5693634338538472
     }
   }
 ]

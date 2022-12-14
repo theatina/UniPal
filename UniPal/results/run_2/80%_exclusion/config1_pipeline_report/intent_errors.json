@@ -1,34 +1,34 @@
 [
   {
+    "text": "no, thank you bye!",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.1369404797367178
+    }
+  },
+  {
     "text": "that's cool",
     "intent": "thank_bot",
     "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.16001398386406324
+      "name": "mood_unhappy",
+      "confidence": 0.1309302196914997
     }
   },
   {
-    "text": "thanks",
-    "intent": "thank_bot",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.16305309009630314
-    }
-  },
-  {
-    "text": "i am not ok",
+    "text": "help me",
     "intent": "request_psychoSupport_info",
     "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.1386721327050581
+      "name": "deny",
+      "confidence": 0.12487844768165979
     }
   },
   {
-    "text": "any news from uni?",
+    "text": "can i have the latest 2 announcements of the uni?",
     "intent": "request_announcements",
     "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.14069480545798538
+      "name": "request_exam_schedule",
+      "confidence": 0.12662660756217187
     }
   },
   {
@@ -36,7 +36,7 @@
     "intent": "request_staff_info",
     "intent_prediction": {
       "name": "request_contact_loc_info",
-      "confidence": 0.14111468640514632
+      "confidence": 0.1394511247581044
     }
   },
   {
@@ -44,39 +44,23 @@
     "intent": "request_staff_info",
     "intent_prediction": {
       "name": "request_contact_loc_info",
-      "confidence": 0.14941878902120428
+      "confidence": 0.13069709821071662
     }
   },
   {
-    "text": "winter semester",
+    "text": "january",
     "intent": "inform_period_semester",
     "intent_prediction": {
-      "name": "request_class_schedule",
-      "confidence": 0.1328412059519936
+      "name": "request_exam_schedule",
+      "confidence": 0.1608125014239074
     }
   },
   {
-    "text": "uni location info",
+    "text": "location",
     "intent": "request_contact_loc_info",
     "intent_prediction": {
       "name": "greet",
-      "confidence": 0.10868126048301718
-    }
-  },
-  {
-    "text": "yeap",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "mood_unhappy",
-      "confidence": 0.15725386737112337
-    }
-  },
-  {
-    "text": "correct",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.15419424832049056
+      "confidence": 0.11377326514869894
     }
   },
   {
@@ -84,127 +68,103 @@
     "intent": "goodbye",
     "intent_prediction": {
       "name": "mood_unhappy",
-      "confidence": 0.13238445020450906
+      "confidence": 0.12343315874025769
     }
   },
   {
-    "text": "good night",
+    "text": "have a nice day",
     "intent": "goodbye",
     "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.1436756114977787
+      "name": "affirm",
+      "confidence": 0.11884996926658435
     }
   },
   {
-    "text": "don't think so",
+    "text": "no way",
     "intent": "deny",
     "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.1804369073591446
+      "name": "mood_unhappy",
+      "confidence": 0.12014860513413048
     }
   },
   {
-    "text": "nope",
+    "text": "never",
     "intent": "deny",
     "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.1381941960501747
+      "name": "mood_unhappy",
+      "confidence": 0.10306101098296373
     }
   },
   {
-    "text": "hello there, my name is Nick",
-    "intent": "greet",
+    "text": "yeap",
+    "intent": "affirm",
     "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.14308220336627953
+      "name": "mood_unhappy",
+      "confidence": 0.1113493640779729
+    }
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.11972979641739379
+    }
+  },
+  {
+    "text": "yeah",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.10697039035714967
     }
   },
   {
     "text": "good morning",
     "intent": "greet",
     "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.14837521628298453
+      "name": "affirm",
+      "confidence": 0.11964572530815229
     }
   },
   {
-    "text": "hi, it's Theatina",
+    "text": "goodmorning",
     "intent": "greet",
     "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.14735225227613902
-    }
-  },
-  {
-    "text": "super stoked",
-    "intent": "mood_great",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.13106418520493468
-    }
-  },
-  {
-    "text": "PPS exams schedule of january 2020",
-    "intent": "request_exam_schedule",
-    "intent_prediction": {
-      "name": "request_class_schedule",
-      "confidence": 0.17867131324767632
-    }
-  },
-  {
-    "text": "sep PMS exams schedule for 2019",
-    "intent": "request_exam_schedule",
-    "intent_prediction": {
-      "name": "request_class_schedule",
-      "confidence": 0.1737126938396748
-    }
-  },
-  {
-    "text": "jun exams",
-    "intent": "request_exam_schedule",
-    "intent_prediction": {
-      "name": "request_class_schedule",
-      "confidence": 0.12551431511700847
-    }
-  },
-  {
-    "text": "super sad",
-    "intent": "mood_unhappy",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.13203338272574408
-    }
-  },
-  {
-    "text": "sad",
-    "intent": "mood_unhappy",
-    "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.13981969817016401
-    }
-  },
-  {
-    "text": "my day was horrible",
-    "intent": "mood_unhappy",
-    "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.15115444523664726
-    }
-  },
-  {
-    "text": "undergraduate classes",
-    "intent": "request_class_schedule",
-    "intent_prediction": {
       "name": "request_contact_loc_info",
-      "confidence": 0.11931554432000815
+      "confidence": 0.12981517720316801
     }
   },
   {
-    "text": "spring classes",
+    "text": "I am sad",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.10303909960626864
+    }
+  },
+  {
+    "text": "feeling sad",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.11810984533444918
+    }
+  },
+  {
+    "text": "lectures",
     "intent": "request_class_schedule",
     "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.10661131445921064
+      "name": "request_exam_schedule",
+      "confidence": 0.15645395986892643
+    }
+  },
+  {
+    "text": "spring PPS classes schedule for 2020",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "request_exam_schedule",
+      "confidence": 0.16162492077407054
     }
   }
 ]

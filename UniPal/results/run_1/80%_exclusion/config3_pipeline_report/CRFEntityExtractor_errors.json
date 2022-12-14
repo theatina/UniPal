@@ -1,12 +1,24 @@
 [
   {
-    "text": "can i have the latest 2 announcements of the uni?",
+    "text": "3 news",
     "entities": [
       {
-        "start": 22,
-        "end": 23,
-        "value": "2",
+        "start": 0,
+        "end": 1,
+        "value": "3",
         "entity": "num_of_announcements"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "winter semester",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "winter",
+        "entity": "semester"
       }
     ],
     "predicted_entities": []
@@ -24,49 +36,49 @@
     "predicted_entities": []
   },
   {
-    "text": "hey, my name is Pam",
-    "entities": [
-      {
-        "start": 16,
-        "end": 19,
-        "value": "Pam",
-        "entity": "user_name"
-      }
-    ],
-    "predicted_entities": []
-  },
-  {
-    "text": "jun exams schedule",
+    "text": "jan PPS exams schedule for 2020",
     "entities": [
       {
         "start": 0,
         "end": 3,
-        "value": "jun",
+        "value": "jan",
         "entity": "exam_period"
+      },
+      {
+        "start": 4,
+        "end": 7,
+        "value": "PPS",
+        "entity": "grad_studies_type"
+      },
+      {
+        "start": 27,
+        "end": 31,
+        "value": "2020",
+        "entity": "academic_year"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "exam_period",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.6363489338964796,
+        "value": "jan",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
   },
   {
-    "text": "jun exams",
+    "text": "sep exams schedule",
     "entities": [
       {
         "start": 0,
         "end": 3,
-        "value": "jun",
+        "value": "sep",
         "entity": "exam_period"
-      }
-    ],
-    "predicted_entities": []
-  },
-  {
-    "text": "winter class timetable",
-    "entities": [
-      {
-        "start": 0,
-        "end": 6,
-        "value": "winter",
-        "entity": "semester"
       }
     ],
     "predicted_entities": []
@@ -93,18 +105,15 @@
         "entity": "academic_year"
       }
     ],
-    "predicted_entities": []
-  },
-  {
-    "text": "undergraduate classes",
-    "entities": [
+    "predicted_entities": [
       {
-        "start": 0,
-        "end": 13,
-        "value": "PPS",
-        "entity": "grad_studies_type"
+        "entity": "academic_year",
+        "start": 31,
+        "end": 35,
+        "confidence_entity": 0.5368129102331268,
+        "value": "2020",
+        "extractor": "CRFEntityExtractor"
       }
-    ],
-    "predicted_entities": []
+    ]
   }
 ]

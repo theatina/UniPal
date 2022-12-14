@@ -1,30 +1,9 @@
 {
-  "semester": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4,
-    "confused_with": {}
-  },
   "user_name": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 2,
-    "confused_with": {}
-  },
-  "grad_studies_type": {
-    "precision": 1.0,
-    "recall": 0.3333333333333333,
-    "f1-score": 0.5,
-    "support": 3,
-    "confused_with": {}
-  },
-  "academic_year": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 2,
+    "support": 1,
     "confused_with": {}
   },
   "exam_period": {
@@ -34,23 +13,53 @@
     "support": 3,
     "confused_with": {}
   },
-  "micro avg": {
+  "grad_studies_type": {
     "precision": 1.0,
-    "recall": 0.6428571428571429,
-    "f1-score": 0.782608695652174,
-    "support": 14
+    "recall": 0.6666666666666666,
+    "f1-score": 0.8,
+    "support": 3,
+    "confused_with": {}
+  },
+  "academic_year": {
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1-score": 0.8571428571428571,
+    "support": 3,
+    "confused_with": {}
+  },
+  "num_of_announcements": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {
+      "academic_year": 1
+    }
+  },
+  "semester": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.9,
+    "recall": 0.75,
+    "f1-score": 0.8181818181818182,
+    "support": 12
   },
   "macro avg": {
-    "precision": 0.8,
-    "recall": 0.5999999999999999,
-    "f1-score": 0.6599999999999999,
-    "support": 14
+    "precision": 0.7916666666666666,
+    "recall": 0.7222222222222222,
+    "f1-score": 0.7428571428571429,
+    "support": 12
   },
   "weighted avg": {
-    "precision": 0.8571428571428571,
-    "recall": 0.6428571428571429,
-    "f1-score": 0.7071428571428572,
-    "support": 14
+    "precision": 0.8541666666666666,
+    "recall": 0.75,
+    "f1-score": 0.780952380952381,
+    "support": 12
   },
-  "accuracy": 0.9425287356321839
+  "accuracy": 0.9655172413793104
 }
