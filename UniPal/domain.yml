@@ -43,6 +43,7 @@ actions:
 - utter_further_action
 - utter_goodbye
 - utter_greet
+- utter_default
 entities:
 - academic_year
 - user_name
