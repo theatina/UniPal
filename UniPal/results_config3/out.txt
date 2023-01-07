@@ -1,0 +1,47 @@
+2023-01-07 17:56:36 INFO     rasa.core.processor  - Loading model .\models\20221223-170241-broad-breakout_config3Policy.tar.gz...
+Processed story blocks: 100%|█████████████████████████████████████████████████████████████████████████████████| 9/9 [00:00<00:00, 642.40it/s, # trackers=1]
+2023-01-07 17:57:15 INFO     rasa.core.test  - Evaluating 9 stories
+Progress:
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 9/9 [00:01<00:00,  6.38it/s]
+2023-01-07 17:57:17 INFO     rasa.core.test  - Finished collecting predictions.
+2023-01-07 17:57:17 INFO     rasa.core.test  - Evaluation Results on CONVERSATION level:
+2023-01-07 17:57:17 INFO     rasa.core.test  -  Correct:          9 / 9
+2023-01-07 17:57:17 INFO     rasa.core.test  -  Accuracy:         1.000
+2023-01-07 17:57:17 INFO     rasa.core.test  - Stories report saved to results_config3\story_report.json.
+2023-01-07 17:57:17 INFO     rasa.nlu.test  - Evaluation for entity extractor: TEDPolicy 
+2023-01-07 17:57:17 INFO     rasa.nlu.test  - Classification report saved to results_config3\TEDPolicy_report.json.
+2023-01-07 17:57:17 INFO     rasa.nlu.test  - Incorrect entity predictions saved to results_config3\TEDPolicy_errors.json.
+2023-01-07 17:57:18 INFO     rasa.utils.plotting  - Confusion matrix, without normalization: 
+[[ 0  0  0  4  0  0  0]
+ [ 0  0  0  2  0  0  0]
+ [ 0  0  0  5  0  0  0]
+ [ 0  0  0 23  0  0  0]
+ [ 0  0  0  1  0  0  0]
+ [ 0  0  0  2  0  0  0]
+ [ 0  0  0  3  0  0  0]]
+2023-01-07 17:57:20 INFO     rasa.core.test  - Evaluation Results on ACTION level:
+2023-01-07 17:57:20 INFO     rasa.core.test  -  Correct:          132 / 132
+2023-01-07 17:57:20 INFO     rasa.core.test  -  F1-Score:         1.000
+2023-01-07 17:57:20 INFO     rasa.core.test  -  Precision:        1.000
+2023-01-07 17:57:20 INFO     rasa.core.test  -  Accuracy:         1.000
+2023-01-07 17:57:20 INFO     rasa.core.test  -  In-data fraction: 0
+2023-01-07 17:57:20 INFO     rasa.utils.plotting  - Confusion matrix, without normalization: 
+[[11  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  4  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  4  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  8  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0 51  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0 11  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  2  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  2  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  9  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  9  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  9]]
+Failed stories written to 'results_config3\failed_test_stories.yml'
+Stories with prediction warnings written to 'results_config3\stories_with_warnings.yml'

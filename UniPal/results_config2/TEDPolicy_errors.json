@@ -1,0 +1,206 @@
+[
+  {
+    "text": "what about fist 2 uni news?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 17,
+        "value": "2",
+        "entity": "num_of_announcements"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "undergrad",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "PPS",
+        "entity": "grad_studies_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Spring",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "spring",
+        "entity": "semester"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "2019",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "2019",
+        "entity": "academic_year"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "what undergraduate  class lectures are there for winter 2021",
+    "entities": [
+      {
+        "start": 5,
+        "end": 18,
+        "value": "PPS",
+        "entity": "grad_studies_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "undergrad",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "PPS",
+        "entity": "grad_studies_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Spring",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "spring",
+        "entity": "semester"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "2020",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "2020",
+        "entity": "academic_year"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "undergrad",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "PPS",
+        "entity": "grad_studies_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "June",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "jun",
+        "entity": "exam_period"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "2019",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "2019",
+        "entity": "academic_year"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "undergrad",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "PPS",
+        "entity": "grad_studies_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "september",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "sep",
+        "entity": "exam_period"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "2018",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "2018",
+        "entity": "academic_year"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "hey there, I'm Theatina",
+    "entities": [
+      {
+        "start": 15,
+        "end": 23,
+        "value": "Theatina",
+        "entity": "user_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "yo bro, me tina",
+    "entities": [
+      {
+        "start": 11,
+        "end": 15,
+        "value": "tina",
+        "entity": "user_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "hi, it's Maria",
+    "entities": [
+      {
+        "start": 9,
+        "end": 14,
+        "value": "Maria",
+        "entity": "user_name"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

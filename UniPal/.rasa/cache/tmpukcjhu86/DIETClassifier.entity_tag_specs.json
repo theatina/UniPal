@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-academic_year",
+      "2": "I-academic_year",
+      "3": "L-academic_year",
+      "4": "U-academic_year",
+      "5": "B-exam_period",
+      "6": "I-exam_period",
+      "7": "L-exam_period",
+      "8": "U-exam_period",
+      "9": "B-grad_studies_type",
+      "10": "I-grad_studies_type",
+      "11": "L-grad_studies_type",
+      "12": "U-grad_studies_type",
+      "13": "B-semester",
+      "14": "I-semester",
+      "15": "L-semester",
+      "16": "U-semester",
+      "17": "B-user_name",
+      "18": "I-user_name",
+      "19": "L-user_name",
+      "20": "U-user_name",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-academic_year": 1,
+      "I-academic_year": 2,
+      "L-academic_year": 3,
+      "U-academic_year": 4,
+      "B-exam_period": 5,
+      "I-exam_period": 6,
+      "L-exam_period": 7,
+      "U-exam_period": 8,
+      "B-grad_studies_type": 9,
+      "I-grad_studies_type": 10,
+      "L-grad_studies_type": 11,
+      "U-grad_studies_type": 12,
+      "B-semester": 13,
+      "I-semester": 14,
+      "L-semester": 15,
+      "U-semester": 16,
+      "B-user_name": 17,
+      "I-user_name": 18,
+      "L-user_name": 19,
+      "U-user_name": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

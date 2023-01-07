@@ -1,0 +1,40 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"utter_greet\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}}]": "action_UniPal_services",
+      "[{\"prev_action\": {\"action_name\": \"utter_greet\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}}, {\"prev_action\": {\"action_name\": \"action_UniPal_services\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}}]": "action_resetSlots",
+      "[{\"prev_action\": {\"action_name\": \"utter_greet\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}}, {\"prev_action\": {\"action_name\": \"action_UniPal_services\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}}, {\"prev_action\": {\"action_name\": \"action_resetSlots\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"inform_period_semester\"}}]": "action_button_year",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"inform_period_semester\"}}, {\"prev_action\": {\"action_name\": \"action_button_year\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"inform_period_semester\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"ask_about_services\"}}]": "action_UniPal_services",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"ask_about_services\"}}, {\"prev_action\": {\"action_name\": \"action_UniPal_services\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"ask_about_services\"}}]": "action_resetSlots",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"ask_about_services\"}}, {\"prev_action\": {\"action_name\": \"action_UniPal_services\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"ask_about_services\"}}, {\"prev_action\": {\"action_name\": \"action_resetSlots\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"ask_about_services\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"request_exam_schedule\"}}]": "action_correct_examform_slots",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"request_exam_schedule\"}}, {\"prev_action\": {\"action_name\": \"action_correct_examform_slots\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"request_exam_schedule\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_UniPal_services\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}}]": "action_resetSlots",
+      "[{\"prev_action\": {\"action_name\": \"action_UniPal_services\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}}, {\"prev_action\": {\"action_name\": \"action_resetSlots\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"thank_bot\"}}]": "utter_welcome",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"thank_bot\"}}, {\"prev_action\": {\"action_name\": \"utter_welcome\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"thank_bot\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"inform_programme\"}}]": "action_button_period_semester",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"inform_programme\"}}, {\"prev_action\": {\"action_name\": \"action_button_period_semester\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"inform_programme\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"inform_year\"}}]": "action_correct_examform_slots",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"inform_year\"}}, {\"prev_action\": {\"action_name\": \"action_correct_examform_slots\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"inform_year\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"request_class_schedule\"}}]": "action_correct_examform_slots",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"request_class_schedule\"}}, {\"prev_action\": {\"action_name\": \"action_correct_examform_slots\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"request_class_schedule\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"ask_about_services\"}}, {\"prev_action\": {\"action_name\": \"action_UniPal_services\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"ask_about_services\"}}]",
+      "predicting default action with intent session_start",
+      "predicting default action with intent restart",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"ask_about_services\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"request_exam_schedule\"}}, {\"prev_action\": {\"action_name\": \"action_correct_examform_slots\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"request_exam_schedule\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"ask_about_services\"}}, {\"prev_action\": {\"action_name\": \"action_UniPal_services\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"ask_about_services\"}}, {\"prev_action\": {\"action_name\": \"action_resetSlots\"}, \"slots\": {\"exams\": [1.0, 0.0], \"user_name\": [1.0]}, \"user\": {\"intent\": \"ask_about_services\"}}]"
+    ]
+  }
+}

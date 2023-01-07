@@ -1,0 +1,18 @@
+version: "3.1"
+stories:
+- story: 6a - UniPal Request Psychological Support (C:\Users\Theatina\Desktop\MSc_FinalCountdown\M913\Project\LatestV\UniPal\tests\test_UniPal_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_UniPal_services
+  - action: action_resetSlots
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: action_uni_psychoSupport_info  # predicted: action_class_exam_timetable
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_further_action
+  - intent: deny
+  - action: utter_goodbye

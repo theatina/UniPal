@@ -1,0 +1,10 @@
+[
+  {
+    "name": "academic_year",
+    "pattern": "\\d{2,4}"
+  },
+  {
+    "name": "num_of_announcements",
+    "pattern": "\\d{1,2}"
+  }
+]
