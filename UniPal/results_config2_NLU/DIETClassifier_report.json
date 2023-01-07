@@ -1,11 +1,4 @@
 {
-  "semester": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 13,
-    "confused_with": {}
-  },
   "num_of_announcements": {
     "precision": 1.0,
     "recall": 1.0,
@@ -39,6 +32,13 @@
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 11,
+    "confused_with": {}
+  },
+  "semester": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 13,
     "confused_with": {}
   },
   "micro avg": {

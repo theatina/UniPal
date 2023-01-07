@@ -1,10 +1,538 @@
 [
   {
-    "text": "undergraduate exams",
+    "text": "thank you",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.002793225207782355
+    }
+  },
+  {
+    "text": "thanks",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.006613921714379134
+    }
+  },
+  {
+    "text": "that's cool",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.005528807307710765
+    }
+  },
+  {
+    "text": "cool, thanks UniPal",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "inform_programme",
+      "confidence": 0.0015428861007534208
+    }
+  },
+  {
+    "text": "no, thank you bye!",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.020254608967876633
+    }
+  },
+  {
+    "text": "thank you pal!",
+    "intent": "thank_bot",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.000591054670984534
+    }
+  },
+  {
+    "text": "classes",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.0002251020774331697
+    }
+  },
+  {
+    "text": "did they announce the class schedule?",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.0001505951923766344
+    }
+  },
+  {
+    "text": "classes schedule",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 3.4927954856745524e-05
+    }
+  },
+  {
+    "text": "any new information on class timetable?",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.0002367022982156254
+    }
+  },
+  {
+    "text": "class",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.0018609998986221707
+    }
+  },
+  {
+    "text": "lectures",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.005422883382969622
+    }
+  },
+  {
+    "text": "class lectures",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "inform_programme",
+      "confidence": 9.047384173209453e-05
+    }
+  },
+  {
+    "text": "class schedule",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 5.8891366081544096e-05
+    }
+  },
+  {
+    "text": "class timetable",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.00016490755715372726
+    }
+  },
+  {
+    "text": "spring classes",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.05696325856999726
+    }
+  },
+  {
+    "text": "winter class timetable",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.006350235380482104
+    }
+  },
+  {
+    "text": "spring class schedule",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.0068035469237195546
+    }
+  },
+  {
+    "text": "winter class schedule",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.002359592289158775
+    }
+  },
+  {
+    "text": "winter classes schedule",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.001687337397670847
+    }
+  },
+  {
+    "text": "winter PMS class schedule for 2019",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.0007516502557049222
+    }
+  },
+  {
+    "text": "spring PPS classes schedule for 2020",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "inform_year",
+      "confidence": 0.0006376849040495931
+    }
+  },
+  {
+    "text": "PPS classes schedule of Spring 2020",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "inform_year",
+      "confidence": 0.0008052876877397191
+    }
+  },
+  {
+    "text": "undergraduate classes",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "inform_programme",
+      "confidence": 0.022152937931443635
+    }
+  },
+  {
+    "text": "pps classes of Winter 2020",
+    "intent": "request_class_schedule",
+    "intent_prediction": {
+      "name": "inform_year",
+      "confidence": 0.008257061093586553
+    }
+  },
+  {
+    "text": "is there any psychological support at the university?",
+    "intent": "request_psychoSupport_info",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.0005573937196302973
+    }
+  },
+  {
+    "text": "i need psychological support",
+    "intent": "request_psychoSupport_info",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.00017198559406275614
+    }
+  },
+  {
+    "text": "can you help me find psychological support?",
+    "intent": "request_psychoSupport_info",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.0002560372574228446
+    }
+  },
+  {
+    "text": "i am not ok",
+    "intent": "request_psychoSupport_info",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.010559846962813976
+    }
+  },
+  {
+    "text": "need help",
+    "intent": "request_psychoSupport_info",
+    "intent_prediction": {
+      "name": "ask_about_services",
+      "confidence": 0.0009215866995974578
+    }
+  },
+  {
+    "text": "help me",
+    "intent": "request_psychoSupport_info",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.0019061708852174946
+    }
+  },
+  {
+    "text": "exams",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "inform_year",
+      "confidence": 0.004598427929264762
+    }
+  },
+  {
+    "text": "did they announce the exam schedule?",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.00024002495231573214
+    }
+  },
+  {
+    "text": "exams schedule",
     "intent": "request_exam_schedule",
     "intent_prediction": {
       "name": "inform_programme",
-      "confidence": 0.5605921149253845
+      "confidence": 0.00024314761984115497
+    }
+  },
+  {
+    "text": "exams timetable",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "inform_programme",
+      "confidence": 0.0006054856373606157
+    }
+  },
+  {
+    "text": "any new information on exams schedule?",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.00015578686401908936
+    }
+  },
+  {
+    "text": "jun exams",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.031094391723887102
+    }
+  },
+  {
+    "text": "sep exam timetable",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.0032791638156195947
+    }
+  },
+  {
+    "text": "jan exams schedule",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.0055930589987461775
+    }
+  },
+  {
+    "text": "jun exams schedule",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.0015686497591733163
+    }
+  },
+  {
+    "text": "sep exams schedule",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.0008959346600130107
+    }
+  },
+  {
+    "text": "sep PMS exams schedule for 2019",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "inform_year",
+      "confidence": 0.0006260045305068322
+    }
+  },
+  {
+    "text": "jan PPS exams schedule for 2020",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "inform_year",
+      "confidence": 0.002236377749453744
+    }
+  },
+  {
+    "text": "PPS exams schedule of january 2020",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "inform_year",
+      "confidence": 0.0016755759156870979
+    }
+  },
+  {
+    "text": "pps exams of january 2020",
+    "intent": "request_exam_schedule",
+    "intent_prediction": {
+      "name": "inform_year",
+      "confidence": 0.018578992106543728
+    }
+  },
+  {
+    "text": "any news from uni?",
+    "intent": "request_announcements",
+    "intent_prediction": {
+      "name": "inform_period_semester",
+      "confidence": 0.0008645872735256813
+    }
+  },
+  {
+    "text": "university announcements",
+    "intent": "request_announcements",
+    "intent_prediction": {
+      "name": "inform_programme",
+      "confidence": 0.0009037088460079942
+    }
+  },
+  {
+    "text": "new announcements?",
+    "intent": "request_announcements",
+    "intent_prediction": {
+      "name": "ask_about_services",
+      "confidence": 0.00014384572634666782
+    }
+  },
+  {
+    "text": "are there any new announcements?",
+    "intent": "request_announcements",
+    "intent_prediction": {
+      "name": "ask_about_services",
+      "confidence": 7.176659114543073e-05
+    }
+  },
+  {
+    "text": "can i have the latest 2 announcements of the uni?",
+    "intent": "request_announcements",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.00010546032258756916
+    }
+  },
+  {
+    "text": "10 announcements",
+    "intent": "request_announcements",
+    "intent_prediction": {
+      "name": "inform_year",
+      "confidence": 0.001215426684405233
+    }
+  },
+  {
+    "text": "3 news",
+    "intent": "request_announcements",
+    "intent_prediction": {
+      "name": "inform_year",
+      "confidence": 0.0014791423729728467
+    }
+  },
+  {
+    "text": "staff info",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "ask_about_services",
+      "confidence": 0.00031963458448548547
+    }
+  },
+  {
+    "text": "staff",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "ask_about_services",
+      "confidence": 0.0015248958277741978
+    }
+  },
+  {
+    "text": "staff contact details",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "ask_about_services",
+      "confidence": 9.095837605458606e-05
+    }
+  },
+  {
+    "text": "professors' email",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "inform_programme",
+      "confidence": 0.0010169418078459242
+    }
+  },
+  {
+    "text": "phone numbers of lecturers",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.0005242160491168153
+    }
+  },
+  {
+    "text": "staff contact",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "ask_about_services",
+      "confidence": 0.00018382342695433525
+    }
+  },
+  {
+    "text": "uni staff members phones",
+    "intent": "request_staff_info",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.0007896138144803593
+    }
+  },
+  {
+    "text": "uni contact info",
+    "intent": "request_contact_loc_info",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.0007447706018496405
+    }
+  },
+  {
+    "text": "uni location info",
+    "intent": "request_contact_loc_info",
+    "intent_prediction": {
+      "name": "inform_programme",
+      "confidence": 0.0002502421831660661
+    }
+  },
+  {
+    "text": "uni access info",
+    "intent": "request_contact_loc_info",
+    "intent_prediction": {
+      "name": "inform_programme",
+      "confidence": 0.0005111454873416842
+    }
+  },
+  {
+    "text": "access",
+    "intent": "request_contact_loc_info",
+    "intent_prediction": {
+      "name": "inform_programme",
+      "confidence": 0.00220429600637683
+    }
+  },
+  {
+    "text": "location",
+    "intent": "request_contact_loc_info",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.0023090216264333883
+    }
+  },
+  {
+    "text": "how can i get to uni",
+    "intent": "request_contact_loc_info",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.0008491012275535946
+    }
+  },
+  {
+    "text": "uni location",
+    "intent": "request_contact_loc_info",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.0007641377798580396
+    }
+  },
+  {
+    "text": "access to uni",
+    "intent": "request_contact_loc_info",
+    "intent_prediction": {
+      "name": "inform_programme",
+      "confidence": 0.0004991194336460903
     }
   }
 ]

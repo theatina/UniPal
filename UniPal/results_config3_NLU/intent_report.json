@@ -1,142 +1,168 @@
 {
-  "mood_unhappy": {
-    "precision": 1.0,
+  "greet": {
+    "precision": 0.6086956521739131,
     "recall": 1.0,
-    "f1-score": 1.0,
+    "f1-score": 0.7567567567567568,
+    "support": 14,
+    "confused_with": {}
+  },
+  "inform_period_semester": {
+    "precision": 0.34782608695652173,
+    "recall": 1.0,
+    "f1-score": 0.5161290322580645,
+    "support": 8,
+    "confused_with": {}
+  },
+  "mood_great": {
+    "precision": 0.875,
+    "recall": 1.0,
+    "f1-score": 0.9333333333333333,
+    "support": 14,
+    "confused_with": {}
+  },
+  "goodbye": {
+    "precision": 0.9090909090909091,
+    "recall": 1.0,
+    "f1-score": 0.9523809523809523,
+    "support": 10,
+    "confused_with": {}
+  },
+  "mood_unhappy": {
+    "precision": 0.8571428571428571,
+    "recall": 1.0,
+    "f1-score": 0.923076923076923,
     "support": 18,
     "confused_with": {}
   },
   "inform_year": {
-    "precision": 1.0,
+    "precision": 0.23076923076923078,
     "recall": 1.0,
-    "f1-score": 1.0,
+    "f1-score": 0.375,
     "support": 3,
     "confused_with": {}
   },
-  "deny": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 12,
-    "confused_with": {}
-  },
-  "greet": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 14,
-    "confused_with": {}
+  "request_announcements": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 7,
+    "confused_with": {
+      "inform_year": 2,
+      "ask_about_services": 2,
+      "mood_great": 1
+    }
   },
   "thank_bot": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
     "support": 6,
-    "confused_with": {}
+    "confused_with": {
+      "affirm": 3,
+      "deny": 1,
+      "goodbye": 1
+    }
   },
-  "mood_great": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 14,
-    "confused_with": {}
+  "request_staff_info": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 7,
+    "confused_with": {
+      "ask_about_services": 4,
+      "affirm": 1,
+      "greet": 1
+    }
   },
-  "affirm": {
-    "precision": 1.0,
+  "ask_about_services": {
+    "precision": 0.3,
     "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 13,
+    "f1-score": 0.4615384615384615,
+    "support": 3,
     "confused_with": {}
   },
   "request_exam_schedule": {
     "precision": 1.0,
-    "recall": 0.9333333333333333,
-    "f1-score": 0.9655172413793104,
+    "recall": 0.06666666666666667,
+    "f1-score": 0.125,
     "support": 15,
     "confused_with": {
-      "inform_programme": 1
+      "inform_period_semester": 6,
+      "inform_year": 5,
+      "inform_programme": 2
     }
   },
-  "request_staff_info": {
-    "precision": 1.0,
+  "affirm": {
+    "precision": 0.6190476190476191,
     "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 7,
-    "confused_with": {}
-  },
-  "ask_about_services": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 3,
-    "confused_with": {}
-  },
-  "request_psychoSupport_info": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6,
-    "confused_with": {}
-  },
-  "request_announcements": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 7,
-    "confused_with": {}
-  },
-  "goodbye": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 10,
+    "f1-score": 0.7647058823529412,
+    "support": 13,
     "confused_with": {}
   },
   "inform_programme": {
-    "precision": 0.75,
+    "precision": 0.21428571428571427,
     "recall": 1.0,
-    "f1-score": 0.8571428571428571,
+    "f1-score": 0.35294117647058826,
     "support": 3,
     "confused_with": {}
   },
-  "inform_period_semester": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 8,
-    "confused_with": {}
-  },
   "request_contact_loc_info": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
     "support": 8,
-    "confused_with": {}
+    "confused_with": {
+      "inform_programme": 4,
+      "greet": 3,
+      "mood_great": 1
+    }
   },
   "request_class_schedule": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
     "support": 19,
+    "confused_with": {
+      "inform_period_semester": 8,
+      "greet": 4,
+      "inform_year": 3
+    }
+  },
+  "request_psychoSupport_info": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 6,
+    "confused_with": {
+      "mood_unhappy": 3,
+      "affirm": 1,
+      "ask_about_services": 1
+    }
+  },
+  "deny": {
+    "precision": 0.9230769230769231,
+    "recall": 1.0,
+    "f1-score": 0.9600000000000001,
+    "support": 12,
     "confused_with": {}
   },
-  "accuracy": 0.9939759036144579,
+  "accuracy": 0.5963855421686747,
   "macro avg": {
-    "precision": 0.9852941176470589,
-    "recall": 0.996078431372549,
-    "f1-score": 0.9895682410895392,
+    "precision": 0.4049961760319817,
+    "recall": 0.592156862745098,
+    "f1-score": 0.41887426577458947,
     "support": 166
   },
   "weighted avg": {
-    "precision": 0.9954819277108434,
-    "recall": 0.9939759036144579,
-    "f1-score": 0.99430233248264,
+    "precision": 0.5086357548510508,
+    "recall": 0.5963855421686747,
+    "f1-score": 0.4869524279706946,
     "support": 166
   },
   "micro avg": {
-    "precision": 0.9939759036144579,
-    "recall": 0.9939759036144579,
-    "f1-score": 0.9939759036144579,
+    "precision": 0.5963855421686747,
+    "recall": 0.5963855421686747,
+    "f1-score": 0.5963855421686747,
     "support": 166
   }
 }

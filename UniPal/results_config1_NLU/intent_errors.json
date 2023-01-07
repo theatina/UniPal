@@ -1,10 +1,18 @@
 [
   {
-    "text": "undergraduate exams",
-    "intent": "request_exam_schedule",
+    "text": "Undergraduate exams",
+    "intent": "inform_programme",
     "intent_prediction": {
-      "name": "inform_programme",
-      "confidence": 0.5605921149253845
+      "name": "request_exam_schedule",
+      "confidence": 0.42582568745479055
+    }
+  },
+  {
+    "text": "exams of 2020",
+    "intent": "inform_year",
+    "intent_prediction": {
+      "name": "request_exam_schedule",
+      "confidence": 0.275191827630891
     }
   }
 ]
