@@ -1,1 +1,0 @@
-{"py/object": "numpy.ndarray", "dtype": "<U26", "values": ["affirm", "deny", "goodbye", "greet", "inform_period_semester", "mood_great", "mood_unhappy", "request_announcements", "request_class_schedule", "request_contact_loc_info", "request_exam_schedule", "request_psychoSupport_info", "request_staff_info", "thank_bot"]}

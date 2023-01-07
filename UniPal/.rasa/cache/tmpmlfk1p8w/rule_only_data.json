@@ -1,7 +1,0 @@
-{
-  "rule_only_slots": [
-    "exams",
-    "user_name"
-  ],
-  "rule_only_loops": []
-}
