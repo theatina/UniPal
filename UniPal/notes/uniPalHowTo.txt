@@ -5,6 +5,13 @@ __________________________
 3. rasa run actions
 4. rasa shell
 
+
+________
+> Facebook
+1. ngrok http 5002
+2. rasa run --port 5002 --connector facebook / rasa run --credentials credentials.yml
+3. rasa run actions 
+
 ________
 > Slack
 1. rasa run actions

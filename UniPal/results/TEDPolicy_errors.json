@@ -51,11 +51,10 @@
     "text": "what undergraduate  class lectures are there for winter 2021",
     "entities": [
       {
-        "text": "what undergraduate  class lectures are there for winter 2021",
         "start": 5,
         "end": 18,
-        "entity": "grad_studies_type",
-        "value": "PPS"
+        "value": "PPS",
+        "entity": "grad_studies_type"
       }
     ],
     "predicted_entities": []
@@ -148,11 +147,10 @@
     "text": "september",
     "entities": [
       {
-        "text": "september",
         "start": 0,
         "end": 9,
-        "entity": "exam_period",
-        "value": "sep"
+        "value": "sep",
+        "entity": "exam_period"
       }
     ],
     "predicted_entities": []

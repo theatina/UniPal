@@ -1,16 +1,9 @@
 {
-  "academic_year": {
+  "user_name": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 11,
-    "confused_with": {}
-  },
-  "exam_period": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 13,
+    "support": 5,
     "confused_with": {}
   },
   "grad_studies_type": {
@@ -27,6 +20,13 @@
     "support": 3,
     "confused_with": {}
   },
+  "exam_period": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 13,
+    "confused_with": {}
+  },
   "semester": {
     "precision": 1.0,
     "recall": 1.0,
@@ -34,11 +34,11 @@
     "support": 13,
     "confused_with": {}
   },
-  "user_name": {
+  "academic_year": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 5,
+    "support": 11,
     "confused_with": {}
   },
   "micro avg": {

@@ -14,6 +14,7 @@ stories:
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_class_exam_timetable
+  - action: action_resetSlots
   # - action: utter_create_gCalendar_event
   # - intent: deny
   - action: utter_further_action
@@ -55,6 +56,7 @@ stories:
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_class_exam_timetable
+  - action: action_resetSlots
   # - action: utter_create_gCalendar_event
   # - intent: deny
   - action: utter_further_action
@@ -76,6 +78,7 @@ stories:
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_class_exam_timetable
+  - action: action_resetSlots
   - action: utter_further_action
   - or:
     - intent: deny
@@ -114,6 +117,7 @@ stories:
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_class_exam_timetable
+  - action: action_resetSlots
   - action: utter_further_action
   - or:
     - intent: deny
@@ -173,6 +177,7 @@ stories:
   - slot_was_set:
     - num_of_announcements: 3
   - action: action_uni_announcements
+  - action: action_resetSlots
   - action: utter_further_action
   - or:
     - intent: deny
@@ -188,6 +193,7 @@ stories:
   - action: action_resetSlots
   - intent: request_announcements
   - action: action_uni_announcements
+  - action: action_resetSlots
   - action: utter_further_action
   - intent: affirm
   - action: action_UniPal_services
@@ -219,6 +225,7 @@ stories:
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_class_exam_timetable
+  - action: action_resetSlots
   - action: utter_further_action
   - or:
     - intent: deny
@@ -249,6 +256,7 @@ stories:
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_class_exam_timetable
+  - action: action_resetSlots
   - action: utter_further_action
   - intent: deny
   - action: utter_goodbye
@@ -280,6 +288,7 @@ stories:
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_class_exam_timetable
+  - action: action_resetSlots
   - action: utter_further_action
   - intent: request_exam_schedule
   # - action: exam_schedule_form
@@ -308,6 +317,7 @@ stories:
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_class_exam_timetable
+  - action: action_resetSlots
   - action: utter_further_action
   - intent: deny
   - action: utter_goodbye
@@ -321,6 +331,7 @@ stories:
   - action: action_resetSlots
   - intent: request_staff_info
   - action: action_uni_staff_info
+  - action: action_resetSlots
   - action: utter_further_action
   - intent: affirm
   - action: action_UniPal_services
@@ -336,6 +347,7 @@ stories:
   - action: action_resetSlots
   - intent: request_contact_loc_info
   - action: action_uni_contact_loc_info
+  - action: action_resetSlots
   - action: utter_further_action
   - intent: affirm
   - action: action_UniPal_services
@@ -357,6 +369,7 @@ stories:
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_class_exam_timetable
+  - action: action_resetSlots
   - action: utter_further_action
   - or:
     - intent: deny
@@ -396,6 +409,7 @@ stories:
   - action: action_correct_examform_slots
   - intent: deny
   - action: action_class_exam_timetable
+  - action: action_resetSlots
   - action: utter_further_action
   - or:
     - intent: deny
@@ -424,6 +438,7 @@ stories:
     - exams: False
   - intent: deny
   - action: action_class_exam_timetable
+  - action: action_resetSlots
   - action: utter_further_action
   - intent: affirm
   - action: action_UniPal_services
@@ -444,6 +459,7 @@ stories:
     - exams: False
   - intent: deny
   - action: action_class_exam_timetable
+  - action: action_resetSlots
   - action: utter_further_action
   - intent: deny
   - action: utter_goodbye
@@ -566,6 +582,7 @@ stories:
     - exams: true
   - intent: deny
   - action: action_class_exam_timetable
+  - action: action_resetSlots
   - action: utter_further_action
   - intent: deny
   - action: utter_goodbye

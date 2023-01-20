@@ -15,6 +15,7 @@ stories:
     entities:
     - num_of_announcements: 2
   - action: action_uni_announcements
+  - action: action_resetSlots
   - action: utter_further_action
   - user: |
       nah
@@ -57,6 +58,7 @@ stories:
       no
     intent: deny
   - action: action_class_exam_timetable
+  - action: action_resetSlots
   - action: utter_further_action
   - user: |
       bye pal
@@ -97,6 +99,7 @@ stories:
       no
     intent: deny
   - action: action_class_exam_timetable
+  - action: action_resetSlots
   - action: utter_further_action
   - user: |
       bye pal
@@ -139,6 +142,7 @@ stories:
       no
     intent: deny
   - action: action_class_exam_timetable
+  - action: action_resetSlots
   - action: utter_further_action
   - user: |
       bye pal
@@ -179,6 +183,7 @@ stories:
       no
     intent: deny
   - action: action_class_exam_timetable
+  - action: action_resetSlots
   - action: utter_further_action
   - user: |
       bye pal
@@ -200,6 +205,7 @@ stories:
       What is the university's location?
     intent: request_contact_loc_info
   - action: action_uni_contact_loc_info
+  - action: action_resetSlots
   - action: utter_further_action
   - user: |
       yes
@@ -225,6 +231,7 @@ stories:
       Uni staff information please
     intent: request_staff_info
   - action: action_uni_staff_info
+  - action: action_resetSlots
   - action: utter_further_action
   - user: |
      no thank you
@@ -243,6 +250,7 @@ stories:
       Uni staff information please
     intent: request_staff_info
   - action: action_uni_staff_info
+  - action: action_resetSlots
   - action: utter_further_action
   - user: |
       y
