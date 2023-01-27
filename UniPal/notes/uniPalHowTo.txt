@@ -14,8 +14,8 @@ ________
 
 ________
 > Slack
-1. rasa run actions
+1. ngrok http 5002
 2. rasa run --port 5002 --connector slack
-3. ngrok http 5002
-4. https://api.slack.com/apps/A02LRHXS7U2/event-subscriptions -> Request URL from ngrok from step.4 (forwarding + "webhooks/slack/webhook")
-
+3. rasa run actions
+4. https://api.slack.com/apps/A02LRHXS7U2/event-subscriptions /webhooks/slack/webhook -> Request URL from ngrok from step.4 (forwarding + "webhooks/slack/webhook")
+https://561a-2a02-586-4b33-b9a3-2598-ba05-2f55-5df1.eu.ngrok.io/webhooks/slack/webhook
